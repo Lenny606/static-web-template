@@ -90,18 +90,15 @@
 .hero-image-container {
     position: absolute;
     top: 0;
-    right: 0;
-    transform: none;
-    width: 50%;
-    /* Occupy half the screen for dramatic effect, or stick to px */
+    left: 0;
+    /* Align left */
+    width: 100%;
+    /* Full Width */
     height: 100%;
     z-index: 0;
     overflow: hidden;
-    border-left: 2px solid transparent;
-    /* Border on left instead of all around */
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    border: none;
+    /* No borders for background mode */
     transition: all 0.5s ease;
 }
 
@@ -137,8 +134,8 @@
 
 /* Hover State - Reveal */
 .hero-image-container:hover {
-    border-left: 2px solid var(--color-primary);
-    box-shadow: -10px 0 0 rgba(0, 255, 0, 0.2);
+    border: none;
+    box-shadow: none;
     transform: none;
 }
 
@@ -156,17 +153,15 @@
 
 @media (max-width: 900px) {
     .hero-image-container {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none !important;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        max-width: 400px;
-        height: auto;
-        /* Reset height for stacked layout */
-        aspect-ratio: 16/9;
-        /* Maintain a nice ratio */
-        margin: 2rem auto;
-        z-index: 1;
+        height: 100%;
+        /* Keep full height on mobile too? Or maybe auto? Let's keep full background */
+        max-width: none;
+        margin: 0;
+        display: block;
+        z-index: 0;
     }
 }
