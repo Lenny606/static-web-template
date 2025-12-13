@@ -3,52 +3,53 @@
    ========================================= */
 
 :root {
-  /* Colors - Bright Portfolio Theme */
-  --color-primary: #4F46E5;
-  /* Indigo */
-  --color-primary-dark: #4338ca;
-  --color-secondary: #EC4899;
-  /* Rose */
-  --color-accent: #06B6D4;
-  /* Cyan */
+  /* Colors - Dark/Glint Theme */
+  --color-primary: #39b54a;
+  /* Vibrant Green */
+  --color-primary-dark: #2ca03b;
+  --color-secondary: #FFFFFF;
+  /* White for accents */
 
-  --color-text-main: #111827;
+  --color-text-main: #FFFFFF;
+  /* White */
+  --color-text-light: #888888;
+  /* Gray */
+
+  --color-bg-body: #0c0c0c;
+  /* Deep Black */
+  --color-bg-light: #151515;
   /* Dark Gray */
-  --color-text-light: #6B7280;
-
-  --color-bg-body: #F9FAFB;
-  /* Very light cool gray */
-  --color-bg-light: #ffffff;
-  --color-border: #E5E7EB;
-  --color-white: #ffffff;
+  --color-border: #333333;
+  --color-white: #FFFFFF;
 
   /* Typography */
   --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --line-height-base: 1.6;
+  --line-height-base: 1.7;
 
   /* Fluid Typography System */
-  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+  --fs-sm: clamp(0.75rem, 0.17vi + 0.71rem, 0.84rem);
+  --fs-base: clamp(0.95rem, 0.34vi + 0.86rem, 1.14rem);
+  --fs-md: clamp(1.2rem, 0.61vi + 1.05rem, 1.53rem);
+  --fs-lg: clamp(1.5rem, 1vi + 1.25rem, 2.05rem);
+  --fs-xl: clamp(2.5rem, 2vi + 2rem, 4.5rem);
+  /* Much larger Headline */
+  --fs-xxl: clamp(3rem, 3vi + 2.25rem, 5.5rem);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 6rem;
+  --spacing-sm: 1.25rem;
+  --spacing-md: 2.5rem;
+  --spacing-lg: 5rem;
+  --spacing-xl: 9rem;
 
   /* Layout */
   --container-width: 1200px;
-  --container-padding: 1.5rem;
-  --border-radius: 1rem;
-  /* More rounded */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --container-padding: 2rem;
+  --border-radius: 0;
+  /* Sharp edges for elegance */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
 }
 
 /* Reset */

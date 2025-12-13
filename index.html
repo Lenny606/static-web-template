@@ -16,6 +16,46 @@
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/utilities.css">
+    <style>
+        /* Specific overrides for this page/theme */
+        body {
+            background-color: var(--color-bg-body);
+        }
+
+        /* Dark overlay for hero if image is missing or too bright */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            color: var(--color-white);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            color: var(--color-white);
+        }
+    </style>
 </head>
 
 <body>
@@ -24,13 +64,17 @@
             <a href="index.html" class="logo" aria-label="Domů">DEV.PORTFOLIO</a>
             <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
                 <span class="hamburger"></span>
+                <span style="display:none">Menu</span> <!-- Accessible text -->
             </button>
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Domů</a></li>
-                    <li><a href="pages/projects.html" class="nav-link">Projekty</a></li>
-                    <li><a href="pages/about.html" class="nav-link">O mně</a></li>
-                    <li><a href="pages/contact.html" class="nav-link">Kontakt</a></li>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="pages/projects.html" class="nav-link">About</a></li>
+                    <!-- Mapping to existing pages for now -->
+                    <li><a href="pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="pages/projects.html" class="nav-link">Works</a></li>
+                    <li><a href="pages/contact.html" class="nav-link">Clients</a></li>
+                    <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,45 +82,45 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section text-center">
-            <div class="container hero-content">
-                <img src="assets/img/profile-pic.png" alt="Profile"
-                    style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; object-fit: cover; box-shadow: var(--shadow-lg);">
-                <h1 class="hero-title">Tvořím moderní digitální světy</h1>
-                <p class="hero-text text-muted" style="font-size: 1.25rem;">Jsem kreativní vývojář se zaměřením na
-                    design a interaktivitu. Pomáhám značkám růst v digitálním prostoru.</p>
-                <div class="hero-actions">
-                    <a href="pages/projects.html" class="btn btn-primary">Moje práce</a>
-                    <a href="pages/contact.html" class="btn btn-secondary">Napište mi</a>
-                </div>
-            </div>
-            <!-- decorative bg element if needed, or handled via CSS on .hero-section -->
+        <section class="hero-section">
+            <!-- Fallback if image gen failed: simple dark gradient or existing image with overlay -->
             <div class="hero-bg-visual"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url('assets/img/hero-bg.png') center/cover no-repeat; opacity: 0.15; pointer-events: none;">
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url('assets/img/hero-bg.png') center/cover no-repeat; opacity: 0.4;">
+            </div>
+
+            <div class="container hero-content">
+                <span class="section-title" style="color: var(--color-white); opacity: 0.7;">Welcome</span>
+                <h1 class="hero-title" style="font-size: var(--fs-xxl); max-width: 800px; margin-bottom: 3rem;">We are a
+                    creative group of people who design influential brands and digital experiences.</h1>
+
+                <div class="hero-actions" style="justify-content: flex-start;">
+                    <a href="pages/contact.html" class="btn btn-outline"
+                        style="border-color: var(--color-white); padding: 1rem 2.5rem;">Start a Project</a>
+                    <a href="pages/about.html" class="btn btn-outline"
+                        style="border-color: var(--color-white); padding: 1rem 2.5rem; margin-left: 1rem;">More About
+                        Us</a>
+                </div>
             </div>
         </section>
 
-        <!-- Featured Projects Section -->
-        <section class="section">
+        <!-- Featured Projects Section (Works) -->
+        <section class="section" style="background-color: var(--color-bg-light);">
             <div class="container">
-                <div class="d-flex justify-between align-center mb-4">
-                    <h2 class="section-title mb-0">Vybrané projekty</h2>
-                    <a href="pages/projects.html" class="btn btn-sm btn-outline">Všechny projekty &rarr;</a>
+                <div class="text-center mb-5">
+                    <span class="section-title">Recent Works</span>
+                    <h2 class="section-heading">We love what we do, check out some of our latest works</h2>
                 </div>
 
-                <div class="grid grid-3">
+                <div class="grid grid-2">
                     <article class="card">
                         <div class="card-image-wrapper">
                             <img src="assets/img/project-1.png" alt="Project 1" loading="lazy">
                         </div>
                         <div class="card-content">
-                            <div class="card-tags">
-                                <span class="tag">Analytics</span>
-                                <span class="tag">Dashboard</span>
-                            </div>
-                            <h3 class="card-title">Analytics Dashboard</h3>
-                            <p class="text-muted">Komplexní nástroj pro vizualizaci dat s moderním UI.</p>
-                            <a href="pages/projects.html" class="btn btn-sm btn-outline mt-2">Detail projektu</a>
+                            <h3 class="card-title"
+                                style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                                Shutterbug</h3>
+                            <p class="text-muted" style="color: var(--color-text-light);">Branding / Web Design</p>
                         </div>
                     </article>
                     <article class="card">
@@ -84,13 +128,10 @@
                             <img src="assets/img/project-2.png" alt="Project 2" loading="lazy">
                         </div>
                         <div class="card-content">
-                            <div class="card-tags">
-                                <span class="tag">Mobile App</span>
-                                <span class="tag">Fitness</span>
-                            </div>
-                            <h3 class="card-title">Fitness Tracker</h3>
-                            <p class="text-muted">Mobilní aplikace pro sledování zdraví a pohybu.</p>
-                            <a href="pages/projects.html" class="btn btn-sm btn-outline mt-2">Detail projektu</a>
+                            <h3 class="card-title"
+                                style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                                Fuji</h3>
+                            <p class="text-muted" style="color: var(--color-text-light);">App Design / UI</p>
                         </div>
                     </article>
                     <article class="card">
@@ -98,26 +139,70 @@
                             <img src="assets/img/project-3.png" alt="Project 3" loading="lazy">
                         </div>
                         <div class="card-content">
-                            <div class="card-tags">
-                                <span class="tag">E-commerce</span>
-                                <span class="tag">Web Design</span>
-                            </div>
-                            <h3 class="card-title">Aura Store</h3>
-                            <p class="text-muted">Prémiový e-shop s elektronikou a čistým designem.</p>
-                            <a href="pages/projects.html" class="btn btn-sm btn-outline mt-2">Detail projektu</a>
+                            <h3 class="card-title"
+                                style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                                Skaterboy</h3>
+                            <p class="text-muted" style="color: var(--color-text-light);">Web Development / React</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-image-wrapper">
+                            <!-- Reuse placeholder for demo -->
+                            <img src="assets/img/project-1.png" alt="Project 4" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title"
+                                style="color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                                Beetle</h3>
+                            <p class="text-muted" style="color: var(--color-text-light);">Branding / Identity</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="section section-cta text-center">
+        <!-- Clients / Stats Section -->
+        <section class="section text-center" style="background-color: #39b54a; color: #ffffff;">
             <div class="container">
-                <h2>Máte nápad na projekt?</h2>
-                <p>Pojďme společně vytvořit něco úžasného.</p>
+                <div class="grid grid-2" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                    <div>
+                        <h3 style="font-size: 3rem; font-weight: 700;">127</h3>
+                        <span
+                            style="font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.8; font-size: 0.8rem;">Awards
+                            Received</span>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 3rem; font-weight: 700;">1505</h3>
+                        <span
+                            style="font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.8; font-size: 0.8rem;">Cups
+                            of Coffee</span>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 3rem; font-weight: 700;">109</h3>
+                        <span
+                            style="font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.8; font-size: 0.8rem;">Projects
+                            Completed</span>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 3rem; font-weight: 700;">102</h3>
+                        <span
+                            style="font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.8; font-size: 0.8rem;">Happy
+                            Clients</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section-cta text-center"
+            style="background-image: url('assets/img/hero-bg.png'); background-size: cover; background-position: center; position: relative;">
+            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8);"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <span class="section-title" style="color: var(--color-primary);">Contact Us</span>
+                <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 2rem;">Reach out for a new project or just say
+                    hello</h2>
                 <a href="pages/contact.html" class="btn btn-primary"
-                    style="background: var(--color-white); color: var(--color-primary);">Kontaktujte mě</a>
+                    style="padding: 1rem 2.5rem; text-transform: uppercase; font-size: 0.9rem;">Contact Us</a>
             </div>
         </section>
     </main>
@@ -125,34 +210,46 @@
     <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <span class="logo mb-2 d-flex">DEV.PORTFOLIO</span>
-                <p class="text-muted">&copy; 2024 Tomas. Všechna práva vyhrazena.</p>
+                <span class="logo mb-2 d-flex">Portfolio</span>
+                <p class="text-muted" style="color: #555;">Proin eget tortor risus. Mauris blandit aliquet elit, eget
+                    tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+                </p>
             </div>
             <div class="footer-col">
-                <h4>Menu</h4>
-                <ul class="footer-links">
-                    <li><a href="pages/projects.html">Projekty</a></li>
-                    <li><a href="pages/about.html">O mně</a></li>
-                    <li><a href="pages/contact.html">Kontakt</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Sociální sítě</h4>
-                <div class="d-flex" style="gap: 1rem;">
-                    <a href="#" class="text-muted">LinkedIn</a>
-                    <a href="#" class="text-muted">GitHub</a>
-                    <a href="#" class="text-muted">Twitter</a>
+                <h4>Get Notified</h4>
+                <p class="text-muted" style="color: #555;">Quia quo qui sed odit. Quaerat voluptas autem necessitatibus
+                    vitae aut non alias sed quia.</p>
+                <!-- Simple form for newsletter -->
+                <div style="display: flex;">
+                    <input type="email" placeholder="Email Address"
+                        style="background: #000; border: none; padding: 1rem; color: #fff; width: 100%;">
+                    <button class="btn btn-primary" style="border-radius: 0; padding: 0 1.5rem;">GO</button>
                 </div>
             </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p class="text-muted" style="color: #555;">
+                    1600 Amphitheatre Parkway<br>
+                    Mountain View, CA<br>
+                    94043 US<br>
+                    <br>
+                    info@glintsite.com<br>
+                    +1 123 456 7890
+                </p>
+            </div>
+        </div>
+        <div class="container text-center mt-5" style="border-top: 1px solid #111; padding-top: 2rem;">
+            <p class="text-muted" style="font-size: 0.8rem;">&copy; 2024 Glint. Design template by <span
+                    style="color: #fff;">Antigravity</span></p>
         </div>
     </footer>
 
     <div id="cookie-banner" class="cookie-banner" hidden>
         <div class="banner-inner">
-            <p class="mb-0">Tento web používá cookies pro zlepšení zážitku.</p>
+            <p class="mb-0">We use cookies to ensure you get the best experience on our website.</p>
             <div class="banner-actions">
-                <button id="btn-accept" class="btn btn-sm btn-primary">Přijmout</button>
-                <button id="btn-deny" class="btn btn-sm btn-outline">Odmítnout</button>
+                <button id="btn-accept" class="btn btn-sm btn-primary">Accept</button>
+                <button id="btn-deny" class="btn btn-sm btn-outline">Decline</button>
             </div>
         </div>
     </div>
