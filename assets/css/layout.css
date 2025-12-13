@@ -46,6 +46,7 @@
 .grid {
     display: grid;
     gap: var(--spacing-md);
+    align-items: stretch;
 }
 
 .grid-2 {
