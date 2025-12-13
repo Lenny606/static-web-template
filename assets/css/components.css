@@ -7,19 +7,19 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.9rem 2.2rem;
-    font-weight: 600;
+    padding: 1rem 2.5rem;
+    font-weight: 700;
     border-radius: 0;
     /* Square edges */
-    transition: all 0.3s ease;
+    transition: all 0.1s steps(2);
     cursor: pointer;
-    border: 2px solid var(--color-white);
+    border: var(--border-width) solid var(--color-white);
     /* Default white border */
     text-align: center;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    background: transparent;
+    font-size: 1rem;
+    background: var(--color-bg-body);
     color: var(--color-white);
 }
 
@@ -37,12 +37,11 @@
 
 .btn-primary:hover {
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-bg-body);
+    box-shadow: 4px 4px 0 var(--color-white);
 }
 
-.btn-secondary {
-    /* Default white outline */
-}
+
 
 .btn-secondary:hover {
     border-color: var(--color-text-main);
@@ -73,10 +72,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent;
+    background-color: var(--color-bg-body);
     z-index: 1000;
     padding: 1.5rem 0;
-    border-bottom: none;
+    border-bottom: var(--border-width) solid var(--color-border);
 }
 
 .header-inner {
@@ -93,15 +92,9 @@
     position: relative;
 }
 
-/* Green dot accent */
+/* Green dot accent - Removed for Brutalist */
 .logo::after {
-    content: ".";
-    color: var(--color-primary);
-    font-size: 2rem;
-    line-height: 0;
-    position: absolute;
-    right: -0.6rem;
-    bottom: 0.3rem;
+    display: none;
 }
 
 .main-nav {
@@ -215,17 +208,19 @@
 
 /* Cards (Projects) */
 .card {
-    background-color: transparent;
-    border: none;
+    background-color: var(--color-bg-body);
+    border: var(--border-width) solid var(--color-border);
     border-radius: 0;
     overflow: visible;
-    transition: opacity 0.3s ease;
+    transition: none;
+    height: 100%;
 }
 
 .card:hover {
-    transform: none;
-    box-shadow: none;
-    opacity: 0.8;
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--color-primary);
+    opacity: 1;
+    border-color: var(--color-primary);
 }
 
 .card-image-wrapper {
@@ -268,12 +263,13 @@
 }
 
 .tag {
-    background-color: var(--color-bg-body);
-    color: var(--color-text-light);
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    font-weight: 500;
+    background-color: var(--color-white);
+    color: var(--color-bg-body);
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0;
+    font-weight: 700;
+    border: 1px solid var(--color-bg-body);
 }
 
 /* Forms */

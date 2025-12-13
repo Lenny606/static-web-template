@@ -3,37 +3,33 @@
    ========================================= */
 
 :root {
-  /* Colors - Architecture Theme */
-  --color-primary: #C5A059;
-  /* Premium Gold/Ochre */
-  --color-primary-dark: #A38243;
+  /* Colors - Raw Brutalist Theme */
+  --color-primary: #00FF00;
+  /* Neon Green */
+  --color-primary-dark: #00CC00;
   --color-secondary: #FFFFFF;
-  /* White for accents */
+  /* White */
 
   --color-text-main: #FFFFFF;
-  /* White */
-  --color-text-light: #888888;
-  /* Gray */
+  --color-text-light: #CCCCCC;
 
-  --color-bg-body: #0c0c0c;
-  /* Deep Black */
-  --color-bg-light: #151515;
-  /* Dark Gray */
-  --color-border: #333333;
+  --color-bg-body: #000000;
+  --color-bg-light: #111111;
+  --color-border: #FFFFFF;
+  /* Visible White Borders */
   --color-white: #FFFFFF;
 
   /* Typography */
-  --font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --line-height-base: 1.7;
+  --font-family-base: 'Courier New', Courier, monospace;
+  --line-height-base: 1.4;
 
-  /* Fluid Typography System */
-  --fs-sm: clamp(0.75rem, 0.17vi + 0.71rem, 0.84rem);
-  --fs-base: clamp(0.95rem, 0.34vi + 0.86rem, 1.14rem);
-  --fs-md: clamp(1.2rem, 0.61vi + 1.05rem, 1.53rem);
-  --fs-lg: clamp(1.5rem, 1vi + 1.25rem, 2.05rem);
-  --fs-xl: clamp(2.5rem, 2vi + 2rem, 4.5rem);
-  /* Much larger Headline */
-  --fs-xxl: clamp(3rem, 3vi + 2.25rem, 5.5rem);
+  /* Fluid Typography System - Oversized */
+  --fs-sm: 1rem;
+  --fs-base: 1.2rem;
+  --fs-md: 2rem;
+  --fs-lg: 3rem;
+  --fs-xl: 5rem;
+  --fs-xxl: 8rem;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -46,10 +42,11 @@
   --container-width: 1200px;
   --container-padding: 2rem;
   --border-radius: 0;
-  /* Sharp edges for elegance */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --border-width: 2px;
+  /* No shadows, flat design */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: 10px 10px 0px var(--color-primary);
 }
 
 /* Reset */
@@ -84,7 +81,9 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-bg-body);
 }
 
 ul,
@@ -133,4 +132,13 @@ p {
 
 [hidden] {
   display: none !important;
+}
+/* Brutalist Global Borders */
+.container {
+    border-left: var(--border-width) solid var(--color-border);
+    border-right: var(--border-width) solid var(--color-border);
+}
+
+section {
+    border-bottom: var(--border-width) solid var(--color-border);
 }
