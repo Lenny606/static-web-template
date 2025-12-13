@@ -82,3 +82,91 @@
         clip: rect(15px, 9999px, 63px, 0);
     }
 }
+
+/* =========================================
+   Hero Image - Scanline Reveal
+   ========================================= */
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: none;
+    width: 50%;
+    /* Occupy half the screen for dramatic effect, or stick to px */
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    border-left: 2px solid transparent;
+    /* Border on left instead of all around */
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    transition: all 0.5s ease;
+}
+
+/* Base Image State - Hidden/Grayscale */
+.hero-img-scanline {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%) brightness(0.4) contrast(1.5);
+    transition: all 0.5s ease;
+    opacity: 0.7;
+}
+
+/* Scanline Overlay */
+.scanlines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.8) 0px,
+            rgba(0, 0, 0, 0.8) 2px,
+            rgba(0, 255, 0, 0.1) 3px,
+            rgba(0, 255, 0, 0.1) 4px);
+    z-index: 2;
+    pointer-events: none;
+    /* Let clicks pass through */
+    transition: all 0.5s ease;
+    clip-path: inset(0 0 0 0);
+}
+
+/* Hover State - Reveal */
+.hero-image-container:hover {
+    border-left: 2px solid var(--color-primary);
+    box-shadow: -10px 0 0 rgba(0, 255, 0, 0.2);
+    transform: none;
+}
+
+.hero-image-container:hover .hero-img-scanline {
+    filter: grayscale(0%) brightness(1) contrast(1);
+    opacity: 1;
+}
+
+.hero-image-container:hover .scanlines {
+    /* "Open" the scanlines or make them disappear */
+    clip-path: inset(50% 0 50% 0);
+    /* Collapse vertically to center then vanish */
+    opacity: 0;
+}
+
+@media (max-width: 900px) {
+    .hero-image-container {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none !important;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        /* Reset height for stacked layout */
+        aspect-ratio: 16/9;
+        /* Maintain a nice ratio */
+        margin: 2rem auto;
+        z-index: 1;
+    }
+}

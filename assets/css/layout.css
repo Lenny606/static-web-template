@@ -16,7 +16,17 @@
 .section {
     padding-top: var(--spacing-lg);
     padding-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
     position: relative;
+    border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 .page-header {
