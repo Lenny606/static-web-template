@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Služba | O nás</title>
-    <meta name="description" content="Informace o naší společnosti a našem týmu.">
+    <title>O mně | Portfolio</title>
+    <meta name="description" content="Více o mých zkušenostech a dovednostech.">
 
     <link rel="canonical" href="https://example.com/pages/about.html">
-
-    <meta property="og:title" content="Služba | O nás">
-    <meta property="og:description" content="Kdo jsme a co děláme.">
 
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
@@ -21,15 +18,15 @@
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a href="../index.html" class="logo" aria-label="Domů">LOGO</a>
+            <a href="../index.html" class="logo" aria-label="Domů">DEV.PORTFOLIO</a>
             <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="../index.html" class="nav-link">Domů</a></li>
-                    <li><a href="about.html" class="nav-link active">O nás</a></li>
-                    <li><a href="services.html" class="nav-link">Služby</a></li>
+                    <li><a href="projects.html" class="nav-link">Projekty</a></li>
+                    <li><a href="about.html" class="nav-link active">O mně</a></li>
                     <li><a href="contact.html" class="nav-link">Kontakt</a></li>
                 </ul>
             </nav>
@@ -39,19 +36,73 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>O nás</h1>
-                <p class="lead">Náš příběh a naše mise.</p>
+                <h1>O mně</h1>
+                <p class="lead text-muted">Vývojář, designér, nadšenec do technologií.</p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
-                <div class="content">
-                    <h2>Kdo jsme</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
-                        arcu sed erat molestie vehicula.</p>
-                    <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus
-                        molestie magna non est bibendum non venenatis nisl tempor.</p>
+                <div class="grid grid-2" style="align-items: center;">
+                    <div>
+                        <h2>Můj příběh</h2>
+                        <p>Ahoj! Jsem Tomas, kreativní vývojář s vášní pro vytváření user-friendly webových aplikací.
+                            Věřím v čistý kód, moderní design a přístupnost.</p>
+                        <p>Specializuji se na frontendové technologie, ale nebojím se ani backendu. Mým cílem je tvořit
+                            digitální produkty, které mají duši a pomáhají lidem.</p>
+
+                        <h3 class="mt-4">Dovednosti</h3>
+                        <div class="card-tags mt-2">
+                            <span class="tag" style="background: var(--color-primary); color: white;">HTML5</span>
+                            <span class="tag" style="background: var(--color-primary); color: white;">CSS3</span>
+                            <span class="tag" style="background: var(--color-primary); color: white;">JavaScript</span>
+                            <span class="tag" style="background: var(--color-secondary); color: white;">React</span>
+                            <span class="tag" style="background: var(--color-accent); color: white;">UI/UX</span>
+                            <span class="tag">Git</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../assets/img/profile-pic.png" alt="Tomas"
+                            style="width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-lg);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <div class="container">
+                <h2 class="text-center mb-4">Zkušenosti</h2>
+                <div
+                    style="max-width: 800px; margin: 0 auto; border-left: 2px solid var(--color-border); padding-left: 2rem;">
+
+                    <div class="mb-5" style="position: relative;">
+                        <div
+                            style="position: absolute; left: -2.6rem; top: 0.25rem; width: 1.2rem; height: 1.2rem; background: var(--color-primary); border-radius: 50%;">
+                        </div>
+                        <h3 class="mb-1">Senior Frontend Developer</h3>
+                        <p class="text-muted mb-2">TechCorp | 2022 - Současnost</p>
+                        <p>Vedení frontend týmu, architektura nových aplikací v Reactu, mentoring juniorů.</p>
+                    </div>
+
+                    <div class="mb-5" style="position: relative;">
+                        <div
+                            style="position: absolute; left: -2.6rem; top: 0.25rem; width: 1.2rem; height: 1.2rem; background: var(--color-secondary); border-radius: 50%;">
+                        </div>
+                        <h3 class="mb-1">Web Developer</h3>
+                        <p class="text-muted mb-2">Creative Agency | 2019 - 2022</p>
+                        <p>Tvorba webových stránek pro klienty, implementace pixel-perfect designů.</p>
+                    </div>
+
+                    <div style="position: relative;">
+                        <div
+                            style="position: absolute; left: -2.6rem; top: 0.25rem; width: 1.2rem; height: 1.2rem; background: var(--color-accent); border-radius: 50%;">
+                        </div>
+                        <h3 class="mb-1">Freelancer</h3>
+                        <p class="text-muted mb-2">2017 - 2019</p>
+                        <p>Samostatná práce na menších projektech, e-shopy na míru.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -60,34 +111,27 @@
     <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <span class="footer-logo">LOGO</span>
-                <p>&copy; 2024 Všechna práva vyhrazena.</p>
+                <span class="logo mb-2 d-flex">DEV.PORTFOLIO</span>
+                <p class="text-muted">&copy; 2024 Tomas. Všechna práva vyhrazena.</p>
             </div>
             <div class="footer-col">
-                <h4>Odkazy</h4>
+                <h4>Menu</h4>
                 <ul class="footer-links">
-                    <li><a href="about.html">O nás</a></li>
-                    <li><a href="services.html">Služby</a></li>
+                    <li><a href="projects.html">Projekty</a></li>
+                    <li><a href="about.html">O mně</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Kontakt</h4>
-                <p>email@example.com</p>
-                <p>+420 123 456 789</p>
+                <h4>Sociální sítě</h4>
+                <div class="d-flex" style="gap: 1rem;">
+                    <a href="#" class="text-muted">LinkedIn</a>
+                    <a href="#" class="text-muted">GitHub</a>
+                    <a href="#" class="text-muted">Twitter</a>
+                </div>
             </div>
         </div>
     </footer>
-
-    <div id="cookie-banner" class="cookie-banner" hidden>
-        <div class="container banner-inner">
-            <p>Používáme soubory cookies pouze pro analytické účely.</p>
-            <div class="banner-actions">
-                <button id="btn-accept" class="btn btn-sm btn-primary">Přijmout</button>
-                <button id="btn-deny" class="btn btn-sm btn-outline">Odmítnout</button>
-            </div>
-        </div>
-    </div>
 
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/nav.js"></script>

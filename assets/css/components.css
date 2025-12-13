@@ -1,5 +1,5 @@
 /* =========================================
-   Components CSS
+   Components CSS - Portfolio Theme
    ========================================= */
 
 /* Buttons */
@@ -7,35 +7,40 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 2rem;
     font-weight: 600;
-    border-radius: var(--border-radius);
-    transition: all 0.2s ease;
+    border-radius: 50px;
+    /* Pill shape */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border: 2px solid transparent;
     text-align: center;
+    letter-spacing: 0.025em;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
-    background-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
     color: var(--color-white);
-    border-color: var(--color-primary);
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.25);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.35);
     text-decoration: none;
 }
 
 .btn-secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    border-color: var(--color-secondary);
+    background: var(--color-bg-light);
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
 }
 
 .btn-secondary:hover {
-    opacity: 0.9;
+    border-color: var(--color-text-main);
+    transform: translateY(-2px);
     text-decoration: none;
 }
 
@@ -52,18 +57,19 @@
 }
 
 .btn-sm {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
     font-size: 0.875rem;
 }
 
 /* Header & Nav */
 .site-header {
-    border-bottom: 1px solid var(--color-border);
     position: sticky;
     top: 0;
-    background-color: var(--color-bg-body);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
     z-index: 1000;
     padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header-inner {
@@ -75,7 +81,11 @@
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--color-primary);
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.05em;
 }
 
 .main-nav {
@@ -85,9 +95,10 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--color-bg-body);
+    background-color: var(--color-white);
     border-bottom: 1px solid var(--color-border);
     padding: 1rem 0;
+    box-shadow: var(--shadow-md);
 }
 
 .main-nav.is-open {
@@ -104,6 +115,24 @@
 .nav-link {
     color: var(--color-text-main);
     font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
 }
 
 .nav-link:hover,
@@ -161,6 +190,8 @@
         width: auto;
         border: none;
         padding: 0;
+        background: transparent;
+        box-shadow: none;
     }
 
     .nav-list {
@@ -174,67 +205,105 @@
 .hero-section {
     padding: var(--spacing-xl) 0;
     text-align: center;
-    background-color: var(--color-bg-light);
+    background-color: var(--color-bg-body);
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: var(--spacing-md);
-    flex-wrap: wrap;
-}
-
-/* Cards */
+/* Cards (Projects) */
 .card {
     background-color: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
-    padding: 1.5rem;
-    transition: transform 0.2s;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+}
+
+.card-image-wrapper {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background-color: var(--color-bg-light);
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
 }
 
 .card-title {
+    margin-bottom: 0.5rem;
+    color: var(--color-text-main);
+}
+
+.card-tags {
+    display: flex;
+    gap: 0.5rem;
     margin-bottom: 1rem;
-    color: var(--color-primary);
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--color-bg-body);
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 500;
 }
 
 /* Forms */
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--color-border);
+    padding: 1rem;
+    border: 2px solid var(--color-border);
     border-radius: var(--border-radius);
+    background-color: var(--color-bg-body);
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+    background-color: var(--color-white);
 }
 
 /* Footer */
 .site-footer {
     margin-top: auto;
-    background-color: var(--color-text-main);
-    color: var(--color-white);
+    background-color: var(--color-white);
+    color: var(--color-text-main);
     padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--color-border);
 }
 
 .footer-content {
@@ -244,18 +313,18 @@
 }
 
 .footer-col h4 {
-    color: var(--color-white);
+    color: var(--color-text-main);
     margin-bottom: 1rem;
 }
 
 .footer-links a {
-    color: #adb5bd;
+    color: var(--color-text-light);
     display: block;
     margin-bottom: 0.5rem;
 }
 
 .footer-links a:hover {
-    color: var(--color-white);
+    color: var(--color-primary);
 }
 
 @media (min-width: 768px) {
@@ -267,13 +336,16 @@
 /* Cookie Banner */
 .cookie-banner {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 1rem;
+    right: 1rem;
+    left: auto;
+    width: calc(100% - 2rem);
+    max-width: 400px;
     background-color: var(--color-white);
-    border-top: 1px solid var(--color-border);
-    padding: 1rem 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-lg);
     z-index: 2000;
 }
 
@@ -281,19 +353,9 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: center;
-    text-align: center;
 }
 
 .banner-actions {
     display: flex;
-    gap: 1rem;
-}
-
-@media (min-width: 768px) {
-    .banner-inner {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
+    gap: 0.5rem;
 }

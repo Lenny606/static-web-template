@@ -4,41 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Služba | Hlavní stránka</title>
-    <meta name="description" content="Popis hlavní stránky pro SEO. Stručný a výstižný.">
+    <title>Portfolio | Creative Developer</title>
+    <meta name="description" content="Portfolio of a creative developer specializing in modern web experiences.">
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://example.com/">
 
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Služba | Hlavní stránka">
-    <meta property="og:description" content="Popis hlavní stránky pro sociální sítě.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/">
-    <meta property="og:image" content="https://example.com/assets/img/og-image.jpg">
+    <meta property="og:title" content="Portfolio | Creative Developer">
+    <meta property="og:description" content="Check out my latest work and projects.">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/utilities.css">
-
-    <!-- GTM Head Hook (placeholder for analytics.js injection) -->
 </head>
 
 <body>
-    <!-- Header -->
     <header class="site-header">
         <div class="container header-inner">
-            <a href="index.html" class="logo" aria-label="Domů">LOGO</a>
+            <a href="index.html" class="logo" aria-label="Domů">DEV.PORTFOLIO</a>
             <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link active">Domů</a></li>
-                    <li><a href="pages/about.html" class="nav-link">O nás</a></li>
-                    <li><a href="pages/services.html" class="nav-link">Služby</a></li>
+                    <li><a href="pages/projects.html" class="nav-link">Projekty</a></li>
+                    <li><a href="pages/about.html" class="nav-link">O mně</a></li>
                     <li><a href="pages/contact.html" class="nav-link">Kontakt</a></li>
                 </ul>
             </nav>
@@ -47,75 +38,118 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section text-center">
             <div class="container hero-content">
-                <h1 class="hero-title">Hlavní nadpis stránky</h1>
-                <p class="hero-text">Poutavý podnadpis nebo krátký úvodní text, který zaujme návštěvníka.</p>
+                <img src="assets/img/profile-pic.png" alt="Profile"
+                    style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1.5rem; object-fit: cover; box-shadow: var(--shadow-lg);">
+                <h1 class="hero-title">Tvořím moderní digitální světy</h1>
+                <p class="hero-text text-muted" style="font-size: 1.25rem;">Jsem kreativní vývojář se zaměřením na
+                    design a interaktivitu. Pomáhám značkám růst v digitálním prostoru.</p>
                 <div class="hero-actions">
-                    <a href="pages/contact.html" class="btn btn-primary">Kontaktujte nás</a>
-                    <a href="pages/services.html" class="btn btn-secondary">Naše služby</a>
+                    <a href="pages/projects.html" class="btn btn-primary">Moje práce</a>
+                    <a href="pages/contact.html" class="btn btn-secondary">Napište mi</a>
                 </div>
+            </div>
+            <!-- decorative bg element if needed, or handled via CSS on .hero-section -->
+            <div class="hero-bg-visual"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url('assets/img/hero-bg.png') center/cover no-repeat; opacity: 0.15; pointer-events: none;">
             </div>
         </section>
 
-        <!-- Features / Content Section -->
+        <!-- Featured Projects Section -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title">Proč si vybrat nás</h2>
+                <div class="d-flex justify-between align-center mb-4">
+                    <h2 class="section-title mb-0">Vybrané projekty</h2>
+                    <a href="pages/projects.html" class="btn btn-sm btn-outline">Všechny projekty &rarr;</a>
+                </div>
+
                 <div class="grid grid-3">
                     <article class="card">
-                        <h3 class="card-title">Rychlost</h3>
-                        <p>Text o rychlosti a efektivitě.</p>
+                        <div class="card-image-wrapper">
+                            <img src="assets/img/project-1.png" alt="Project 1" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span class="tag">Analytics</span>
+                                <span class="tag">Dashboard</span>
+                            </div>
+                            <h3 class="card-title">Analytics Dashboard</h3>
+                            <p class="text-muted">Komplexní nástroj pro vizualizaci dat s moderním UI.</p>
+                            <a href="pages/projects.html" class="btn btn-sm btn-outline mt-2">Detail projektu</a>
+                        </div>
                     </article>
                     <article class="card">
-                        <h3 class="card-title">Kvalita</h3>
-                        <p>Text o kvalitě a spolehlivosti.</p>
+                        <div class="card-image-wrapper">
+                            <img src="assets/img/project-2.png" alt="Project 2" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span class="tag">Mobile App</span>
+                                <span class="tag">Fitness</span>
+                            </div>
+                            <h3 class="card-title">Fitness Tracker</h3>
+                            <p class="text-muted">Mobilní aplikace pro sledování zdraví a pohybu.</p>
+                            <a href="pages/projects.html" class="btn btn-sm btn-outline mt-2">Detail projektu</a>
+                        </div>
                     </article>
                     <article class="card">
-                        <h3 class="card-title">Podpora</h3>
-                        <p>Text o zákaznické podpoře.</p>
+                        <div class="card-image-wrapper">
+                            <img src="assets/img/project-3.png" alt="Project 3" loading="lazy">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span class="tag">E-commerce</span>
+                                <span class="tag">Web Design</span>
+                            </div>
+                            <h3 class="card-title">Aura Store</h3>
+                            <p class="text-muted">Prémiový e-shop s elektronikou a čistým designem.</p>
+                            <a href="pages/projects.html" class="btn btn-sm btn-outline mt-2">Detail projektu</a>
+                        </div>
                     </article>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="section section-cta">
-            <div class="container text-center">
-                <h2>Připraveni začít?</h2>
-                <p>Nezávazně nás kontaktujte ještě dnes.</p>
-                <a href="pages/contact.html" class="btn btn-primary">Mám zájem</a>
+        <section class="section section-cta text-center">
+            <div class="container">
+                <h2>Máte nápad na projekt?</h2>
+                <p>Pojďme společně vytvořit něco úžasného.</p>
+                <a href="pages/contact.html" class="btn btn-primary"
+                    style="background: var(--color-white); color: var(--color-primary);">Kontaktujte mě</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <span class="footer-logo">LOGO</span>
-                <p>&copy; 2024 Všechna práva vyhrazena.</p>
+                <span class="logo mb-2 d-flex">DEV.PORTFOLIO</span>
+                <p class="text-muted">&copy; 2024 Tomas. Všechna práva vyhrazena.</p>
             </div>
             <div class="footer-col">
-                <h4>Odkazy</h4>
+                <h4>Menu</h4>
                 <ul class="footer-links">
-                    <li><a href="pages/about.html">O nás</a></li>
-                    <li><a href="pages/services.html">Služby</a></li>
+                    <li><a href="pages/projects.html">Projekty</a></li>
+                    <li><a href="pages/about.html">O mně</a></li>
                     <li><a href="pages/contact.html">Kontakt</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Kontakt</h4>
-                <p>email@example.com</p>
-                <p>+420 123 456 789</p>
+                <h4>Sociální sítě</h4>
+                <div class="d-flex" style="gap: 1rem;">
+                    <a href="#" class="text-muted">LinkedIn</a>
+                    <a href="#" class="text-muted">GitHub</a>
+                    <a href="#" class="text-muted">Twitter</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner Placeholder -->
     <div id="cookie-banner" class="cookie-banner" hidden>
-        <div class="container banner-inner">
-            <p>Používáme soubory cookies pouze pro analytické účely.</p>
+        <div class="banner-inner">
+            <p class="mb-0">Tento web používá cookies pro zlepšení zážitku.</p>
             <div class="banner-actions">
                 <button id="btn-accept" class="btn btn-sm btn-primary">Přijmout</button>
                 <button id="btn-deny" class="btn btn-sm btn-outline">Odmítnout</button>
@@ -123,7 +157,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/analytics.js"></script>
