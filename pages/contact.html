@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Služba | Kontakt</title>
-    <meta name="description" content="Kontaktujte nás.">
+    <title>Contact | DBDA studio (DBArchitects) - Get in Touch</title>
+    <meta name="description"
+        content="Contact DBDA studio Architects for inquiries about our global projects, expertise, or potential collaborations.">
 
-    <link rel="canonical" href="https://example.com/pages/contact.html">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    <meta property="og:title" content="Služba | Kontakt">
-    <meta property="og:description" content="Kontaktní informace a formulář.">
-
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
     <link rel="stylesheet" href="../assets/css/components.css">
@@ -19,57 +23,55 @@
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="../index.html" class="logo" aria-label="Domů">LOGO</a>
-            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="main-nav" id="main-nav">
-                <ul class="nav-list">
-                    <li><a href="../index.html" class="nav-link">Domů</a></li>
-                    <li><a href="about.html" class="nav-link">O nás</a></li>
-                    <li><a href="services.html" class="nav-link">Služby</a></li>
-                    <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
-                </ul>
-            </nav>
+    <!-- Sticky Header -->
+    <header class="header-sticky flex-between">
+        <div class="flex-center">
+            <a href="../index.html" class="header-logo">
+                <img src="../assets/images/DBDA_logo.png" alt="DBDA studio Logo" class="logo-img">
+            </a>
         </div>
+        <nav class="flex-center gap-sm">
+            <button class="menu-toggle btn btn-sm" aria-label="Open Menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div id="desktop-nav" class="flex-center gap-sm">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">Studio</a>
+                <a href="services.html" class="nav-link">Expertise</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section class="page-header">
+        <section class="section-padding">
             <div class="container">
-                <h1>Kontakt</h1>
-                <p class="lead">Ozvěte se nám.</p>
-            </div>
-        </section>
+                <h1 class="mb-md">CONTACT US</h1>
+                <div class="grid-brutal">
+                    <div class="col-span-3 content-block">
+                        <h2 class="mb-sm">LONDON STUDIO</h2>
+                        <ul class="mb-md">
+                            <li class="mb-xs"><strong>Address:</strong> Riverside, 22 Hester Road, London SW11 4AN</li>
+                            <li class="mb-xs"><strong>Email:</strong> london@dba-architects.com</li>
+                            <li class="mb-xs"><strong>Phone:</strong> +44 (0)20 7738 0455</li>
+                        </ul>
 
-        <section class="section">
-            <div class="container">
-                <div class="grid grid-2">
-                    <div class="contact-info">
-                        <h2>Kontaktní údaje</h2>
-                        <ul class="no-list">
-                            <li><strong>Adresa:</strong> Ulice 123, 110 00 Praha</li>
-                            <li><strong>Email:</strong> email@example.com</li>
-                            <li><strong>Telefon:</strong> +420 123 456 789</li>
+                        <h2 class="mb-sm">NEW YORK STUDIO</h2>
+                        <ul>
+                            <li class="mb-xs"><strong>Address:</strong> 123 Industrial Ave, NY 10001</li>
+                            <li class="mb-xs"><strong>Email:</strong> ny@dba-architects.com</li>
+                            <li class="mb-xs"><strong>Phone:</strong> +1 (212) 555-0123</li>
                         </ul>
                     </div>
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" action="#" method="POST">
-                            <div class="form-group">
-                                <label for="name">Jméno</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Zpráva</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Odeslat</button>
+
+                    <div class="col-span-3 content-block">
+                        <h2 class="mb-sm">GENERAL INQUIRIES</h2>
+                        <form id="contact-form">
+                            <input type="text" class="input-brutal mb-sm" placeholder="FULL NAME..." required>
+                            <input type="email" class="input-brutal mb-sm" placeholder="EMAIL ADDRESS..." required>
+                            <textarea class="input-brutal mb-md" rows="5" placeholder="YOUR MESSAGE..."
+                                required></textarea>
+                            <button type="submit" class="btn w-full">SEND MESSAGE</button>
                         </form>
                     </div>
                 </div>
@@ -77,41 +79,26 @@
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <span class="footer-logo">LOGO</span>
-                <p>&copy; 2024 Všechna práva vyhrazena.</p>
+    <footer class="main-content">
+        <div class="container">
+            <div class="flex-between mb-md">
+                <h3 class="header-logo">DBDA studio</h3>
+                <div class="flex-center gap-sm">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Privacy</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Odkazy</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">O nás</a></li>
-                    <li><a href="services.html">Služby</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Kontakt</h4>
-                <p>email@example.com</p>
-                <p>+420 123 456 789</p>
-            </div>
+            <p class="text-accent text-uppercase" style="font-size: 0.7rem;">&copy; 2026 DBDA studio (DBArchitects)
+                Global
+                Studio. All industrial rights reserved.</p>
         </div>
     </footer>
 
-    <div id="cookie-banner" class="cookie-banner" hidden>
-        <div class="container banner-inner">
-            <p>Používáme soubory cookies pouze pro analytické účely.</p>
-            <div class="banner-actions">
-                <button id="btn-accept" class="btn btn-sm btn-primary">Přijmout</button>
-                <button id="btn-deny" class="btn btn-sm btn-outline">Odmítnout</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/nav.js"></script>
+    <!-- Scripts -->
     <script src="../assets/js/analytics.js"></script>
+    <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

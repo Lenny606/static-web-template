@@ -2,86 +2,111 @@
    Layout CSS - Grid, Sections, Spacing
    ========================================= */
 
-/* Container */
 .container {
     width: 100%;
-    max-width: var(--container-width);
+    max-width: var(--container-max-width);
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
 }
 
-/* Sections */
-.section {
-    padding-top: var(--spacing-lg);
-    padding-bottom: var(--spacing-lg);
+header,
+section,
+footer {
+    border-bottom: var(--border-width-md) solid var(--color-border);
 }
 
-.page-header {
-    padding: var(--spacing-lg) 0;
-    background-color: var(--color-bg-light);
-    margin-bottom: var(--spacing-lg);
-    text-align: center;
+/* Specific Sections */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: flex-end;
 }
 
-.section-cta {
-    background-color: var(--color-bg-light);
+.hero-content {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-sm);
+    background: rgba(26, 26, 26, 0.8);
+    border-top: var(--border-width-md) solid var(--color-border);
+    z-index: 2;
 }
 
-/* Grid System */
-.grid {
+.main-content {
+    background-color: var(--color-bg);
+    padding: var(--spacing-md) 0;
+}
+
+/* Brutalist Grid System */
+.grid-brutal {
     display: grid;
-    gap: var(--spacing-md);
-}
-
-.grid-2 {
     grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
 }
 
-.grid-3 {
-    grid-template-columns: 1fr;
-}
-
-/* Responsive Grid */
 @media (min-width: 768px) {
-    .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
+    .grid-brutal {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
-    .grid-3 {
-        grid-template-columns: repeat(3, 1fr);
+    .grid-brutal {
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
-/* Text Alignment */
-.text-center {
-    text-align: center;
+.col-span-full {
+    grid-column: 1 / -1;
 }
 
-/* Flex Helpers */
-.d-flex {
+.col-span-2 {
+    grid-column: span 2;
+}
+
+.col-span-3 {
+    grid-column: span 3;
+}
+
+.col-span-4 {
+    grid-column: span 4;
+}
+
+/* Spacing & Flex */
+.section-padding {
+    padding: var(--spacing-lg) 0;
+}
+
+.flex-center {
     display: flex;
-}
-
-.flex-column {
-    flex-direction: column;
-}
-
-.align-center {
     align-items: center;
-}
-
-.justify-center {
     justify-content: center;
 }
 
-.justify-between {
+.flex-between {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+.gap-sm {
+    gap: var(--spacing-sm);
+}
+
+.gap-md {
+    gap: var(--spacing-md);
+}
+
+/* Sticky Header */
+.header-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-bg);
+    padding: var(--spacing-sm) var(--spacing-md);
 }

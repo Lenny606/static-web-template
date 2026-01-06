@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Služba | Hlavní stránka</title>
-    <meta name="description" content="Popis hlavní stránky pro SEO. Stručný a výstižný.">
+    <title>DBDA studio (DBArchitects) | Home - Global Sustainable Architecture Studio</title>
+    <meta name="description"
+        content="DBDA studio Architects is a global studio dedicated to sustainable architecture, urbanism, engineering, and design. Crafting the future of the built environment.">
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://example.com/">
-
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Služba | Hlavní stránka">
-    <meta property="og:description" content="Popis hlavní stránky pro sociální sítě.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/">
-    <meta property="og:image" content="https://example.com/assets/img/og-image.jpg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/base.css">
@@ -23,110 +21,163 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/utilities.css">
 
-    <!-- GTM Head Hook (placeholder for analytics.js injection) -->
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ArchitectureBusiness",
+      "name": "DBDA studio (DBArchitects)",
+      "url": "https://example.com/",
+      "logo": "https://example.com/assets/img/logo.png",
+      "description": "Global studio for sustainable architecture and urbanism.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Global Offices",
+        "addressCountry": "Global"
+      }
+    }
+    </script>
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="index.html" class="logo" aria-label="Domů">LOGO</a>
-            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="main-nav" id="main-nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Domů</a></li>
-                    <li><a href="pages/about.html" class="nav-link">O nás</a></li>
-                    <li><a href="pages/services.html" class="nav-link">Služby</a></li>
-                    <li><a href="pages/contact.html" class="nav-link">Kontakt</a></li>
-                </ul>
-            </nav>
+    <!-- Sticky Header -->
+    <header class="header-sticky flex-between">
+        <div class="flex-center">
+            <a href="index.html" class="header-logo">
+                <img src="assets/images/DBDA_logo.png" alt="DBDA studio Logo" class="logo-img">
+            </a>
         </div>
+        <nav class="flex-center gap-sm">
+            <button class="menu-toggle btn btn-sm" aria-label="Open Menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div id="desktop-nav" class="flex-center gap-sm">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/about.html" class="nav-link">Studio</a>
+                <a href="pages/services.html" class="nav-link">Expertise</a>
+                <a href="pages/contact.html" class="nav-link">Contact</a>
+            </div>
+        </nav>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="pages/about.html" class="nav-link">Studio</a>
+            <a href="pages/services.html" class="nav-link">Expertise</a>
+            <a href="pages/contact.html" class="nav-link">Contact</a>
+        </nav>
+    </div>
+
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container hero-content">
-                <h1 class="hero-title">Hlavní nadpis stránky</h1>
-                <p class="hero-text">Poutavý podnadpis nebo krátký úvodní text, který zaujme návštěvníka.</p>
-                <div class="hero-actions">
-                    <a href="pages/contact.html" class="btn btn-primary">Kontaktujte nás</a>
-                    <a href="pages/services.html" class="btn btn-secondary">Naše služby</a>
+        <!-- Hero -->
+        <section class="hero">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_CB1KVouWP1M9_o_ewZLNo60Dq3kdIuKXJXQ5SdszXtAmxAkJgm6z-qDKQ-Rgm4-kEM2DEgw5xijypv2wBJgc2pRebNuStXWRB2yG1UqtUE__Z7gvbOTZ2nJ_CMkDLShiMhxJ3C40fclIoNXHEfOCaVqh1ynd3L1IUtOBUDkg1DLnNTfwx9FRl_M2sB3BVwkIOle17oPTJhqk71pGr6IH-JMao5CRzdFwqwDCTfXDOXqBZRZxkeWaXyhJyyRHyGEUzqG00_IT1mnH"
+                alt="City skyline architecture" class="w-full h-full object-cover">
+            <div class="hero-content">
+                <div class="container">
+                    <span class="font-stencil text-accent mb-xs">Featured Project</span>
+                    <h1>JPMorganChase's new global headquarters completes</h1>
+                    <p class="text-accent mt-sm">A landmark project delivered by DBDA studio, shaping the future of
+                        urban design.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Features / Content Section -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Proč si vybrat nás</h2>
-                <div class="grid grid-3">
-                    <article class="card">
-                        <h3 class="card-title">Rychlost</h3>
-                        <p>Text o rychlosti a efektivitě.</p>
-                    </article>
-                    <article class="card">
-                        <h3 class="card-title">Kvalita</h3>
-                        <p>Text o kvalitě a spolehlivosti.</p>
-                    </article>
-                    <article class="card">
-                        <h3 class="card-title">Podpora</h3>
-                        <p>Text o zákaznické podpoře.</p>
-                    </article>
+        <!-- Studio Section -->
+        <section class="main-content">
+            <div class="container grid-brutal">
+                <h2 class="col-span-full mb-md">STUDIO</h2>
+
+                <div class="col-span-4 img-container" style="height: 500px;">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp9NKTrd1P3w5AkOrOuLx9XITHAir7iZ4W5P0hSSahzjipz6KHtIMwI6O4eu59t3v0quye1IoMGUdD44t7LUItarsbBaU4mLq9T4z-Yh9OM3vsvX6ZqxkhAodAE2kIPq5aRmIjs4LQVPNyHSxezg5VyKegX9lvhHOQDqyoURtN5718xjk9PLNJQiRZpEAXOncDVrU2iHCpY50DdZ_d73u0URlyDXRjbBBGPZRSNzGUtW55qR6Ampq2JYzBD-7SjSGPjjObv3ur-QNe"
+                        alt="DBDA studio" class="w-full h-full object-cover">
+                    <div class="img-overlay">
+                        <span class="img-label">ABOUT DBDA studio</span>
+                    </div>
+                </div>
+
+                <div class="col-span-2 content-block" style="height: 500px;">
+                    <blockquote class="quote-brutal">
+                        "We are a global studio for sustainable architecture, urbanism, engineering and design,
+                        dedicated to crafting the future of the built environment."
+                    </blockquote>
+                    <cite class="font-stencil text-accent">DBDA studio (DBArchitects)</cite>
+                </div>
+
+                <div class="col-span-3 img-container mt-md" style="height: 300px;">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN8DeOVOMkTHaeFEcKeDVrr9SGPyunFtEQpBXqvnpvuq46OD87G7EXi3k3-roJgDWIVmGZyMTX8ath-dPqawaw8VKK0_VGGxX6pN8nhT8gVEayfT1LiX14NnEF8tQZaMxZlaV9TEKKuxHf_AJPMx8LPao5KkXOrc8CWEc9pxZEPWQvzcLVMtXa49RFEq5cplO0M572JzlRP8BhNtgIZ_wU4TfVHSQxSXZQQ0JjhGkShSDCRbUhcweV568W7QfgqDrJKdJHva3kU7Ya"
+                        alt="Life at DBDA studio">
+                    <div class="img-overlay">
+                        <span class="img-label">LIFE AT DBDA studio</span>
+                    </div>
+                </div>
+
+                <div class="col-span-3 img-container mt-md" style="height: 300px;">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6tPTnLKhmXEoWEJjT0GOI7BtG4ryCtb6tYI8QsQkTp_bAEHWs9N1Ylb15TzEGummhXU4ouha5NGFBTBGaXc0FoT2tdi71omiOwMe9vGEMgl5um_3hyznM16qXeKKHYCf_BLmGF8rwmK-SKmUvwKrQXJRZ4FfwNOiSE0jKkqAqa4rOKVa4qfdK-bCkLxpHHvOIZr-YCq95e9vs4YHUKPoiEGF9nxe-Fp-K5GWPrC-3AvRGQ6BXjxXYnD__P1wpzKmdCuJHMDAKYCd2"
+                        alt="Careers at DBDA studio">
+                    <div class="img-overlay">
+                        <span class="img-label">VACANCIES</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="section section-cta">
-            <div class="container text-center">
-                <h2>Připraveni začít?</h2>
-                <p>Nezávazně nás kontaktujte ještě dnes.</p>
-                <a href="pages/contact.html" class="btn btn-primary">Mám zájem</a>
+        <!-- Newsletter CTA -->
+        <section class="main-content">
+            <div class="container grid-brutal">
+                <div class="col-span-4 img-container" style="height: 450px;">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIcNl546-rJbQO31b8kW8P6Qv4KrdjGEk6tQuGwnpp9yxAtN5OubTGy6mF46AqblqJQsCtt_vJ7OP8HeEeiQnx8-Zzc5LhC0X1vwbEDZC-8aF87aQInIqqwTL32DGKhJ7d2jeFaVBh7ztubJ4XMWZREMoghMh4j1uCWcnvRpH7T5Ca5CfJA_ShaeRNWmym70S9e7-rFVYcFyKmIEpAmzL1j4nrDy_bH25XvHHcPjrW3ag9MNi3oD_X_8isRjOuBaP_f-FBeNYlDhOZ"
+                        alt="News">
+                </div>
+                <div class="col-span-2 content-block" style="height: 450px;">
+                    <h3 class="mb-sm">STAY UPDATED</h3>
+                    <p class="mb-md text-accent">Latest reflections from our global team of experts.</p>
+                    <form id="newsletter-form">
+                        <input type="email" class="input-brutal mb-sm" placeholder="EMAIL ADDRESS..." required>
+                        <button type="submit" class="btn btn-sm w-full">SUBSCRIBE</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <span class="footer-logo">LOGO</span>
-                <p>&copy; 2024 Všechna práva vyhrazena.</p>
+    <footer class="main-content">
+        <div class="container">
+            <div class="flex-between mb-md">
+                <h3 class="header-logo">DBDA studio</h3>
+                <div class="flex-center gap-sm">
+                    <a href="pages/contact.html" class="nav-link">Contact</a>
+                    <a href="pages/about.html" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Privacy</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Odkazy</h4>
-                <ul class="footer-links">
-                    <li><a href="pages/about.html">O nás</a></li>
-                    <li><a href="pages/services.html">Služby</a></li>
-                    <li><a href="pages/contact.html">Kontakt</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Kontakt</h4>
-                <p>email@example.com</p>
-                <p>+420 123 456 789</p>
-            </div>
+            <p class="text-accent text-uppercase" style="font-size: 0.7rem;">&copy; 2026 DBDA studio (DBArchitects)
+                Global
+                Studio. All industrial rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Cookie Consent Banner Placeholder -->
-    <div id="cookie-banner" class="cookie-banner" hidden>
-        <div class="container banner-inner">
-            <p>Používáme soubory cookies pouze pro analytické účely.</p>
-            <div class="banner-actions">
-                <button id="btn-accept" class="btn btn-sm btn-primary">Přijmout</button>
-                <button id="btn-deny" class="btn btn-sm btn-outline">Odmítnout</button>
+    <!-- Consent Banner -->
+    <div id="consent-banner" class="consent-banner">
+        <div class="consent-inner">
+            <p class="consent-text">
+                We use cookies to enhance your experience and analyze site traffic.
+                By clicking "Accept All", you consent to our use of cookies.
+            </p>
+            <div class="consent-actions">
+                <button id="consent-deny" class="btn btn-sm">NO, SETTINGS</button>
+                <button id="consent-accept" class="btn btn-sm bg-white" style="color: var(--color-bg);">YES, I
+                    AGREE</button>
             </div>
         </div>
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/nav.js"></script>
     <script src="assets/js/analytics.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

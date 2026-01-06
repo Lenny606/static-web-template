@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Služba | O nás</title>
-    <meta name="description" content="Informace o naší společnosti a našem týmu.">
+    <title>Studio | DBDA studio (DBArchitects) - Global Architecture Studio</title>
+    <meta name="description"
+        content="Learn about DBDA studio Architects, our global history, sustainable philosophy, and the team behind our landmark projects.">
 
-    <link rel="canonical" href="https://example.com/pages/about.html">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Oswald:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-    <meta property="og:title" content="Služba | O nás">
-    <meta property="og:description" content="Kdo jsme a co děláme.">
-
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/layout.css">
     <link rel="stylesheet" href="../assets/css/components.css">
@@ -19,79 +23,89 @@
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a href="../index.html" class="logo" aria-label="Domů">LOGO</a>
-            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="main-nav" id="main-nav">
-                <ul class="nav-list">
-                    <li><a href="../index.html" class="nav-link">Domů</a></li>
-                    <li><a href="about.html" class="nav-link active">O nás</a></li>
-                    <li><a href="services.html" class="nav-link">Služby</a></li>
-                    <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-                </ul>
-            </nav>
+    <!-- Sticky Header -->
+    <header class="header-sticky flex-between">
+        <div class="flex-center">
+            <a href="../index.html" class="header-logo">
+                <img src="../assets/images/DBDA_logo.png" alt="DBDA studio Logo" class="logo-img">
+            </a>
         </div>
+        <nav class="flex-center gap-sm">
+            <button class="menu-toggle btn btn-sm" aria-label="Open Menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div id="desktop-nav" class="flex-center gap-sm">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">Studio</a>
+                <a href="services.html" class="nav-link">Expertise</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </nav>
     </header>
 
     <main>
-        <section class="page-header">
+        <section class="section-padding">
             <div class="container">
-                <h1>O nás</h1>
-                <p class="lead">Náš příběh a naše mise.</p>
+                <h1 class="mb-md">OUR STUDIO</h1>
+                <div class="grid-brutal">
+                    <div class="col-span-4 content-block">
+                        <h2 class="mb-sm">PHILOSOPHY</h2>
+                        <p class="lead mb-sm">"Design is not just about aesthetics; it's about solving the challenges of
+                            our future."</p>
+                        <p>From the very beginning, our practice was founded on a philosophy of innovation,
+                            sustainability, and design. We continue to learn from the past and creatively embrace the
+                            challenges of the future, with a firm belief that good design makes a difference.</p>
+                    </div>
+                    <div class="col-span-2 img-container" style="height: 400px;">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM_de46NZWd5anrlsdJtfsYQM8F9QjEhgqamh3AtE9wCprIUl2_GRoyN6ebmr00xzj-lFFV4nCqr4bE0Euh4m3EU_cYUHXnaUMn-kaY4J8R5JcH7VbpNe1mKeCzh5xmEZ8aCsrKzD4Dhyk6uHTX8dKA4PmkrAdGwyfs5Gxr4aKRz03yfFmtVWEGv6mVxUmS0xcIzFVDX0bWfmzkrEr-Ha0euZy1LXNtSgpQrBZRQFo2vpTKiwMD30XVXGPa2ya7fKKYlBbyi2-ovEm"
+                            alt="Studio Life">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section-padding bg-concrete">
             <div class="container">
-                <div class="content">
-                    <h2>Kdo jsme</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit
-                        arcu sed erat molestie vehicula.</p>
-                    <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus
-                        molestie magna non est bibendum non venenatis nisl tempor.</p>
+                <h2 class="mb-md text-white">GLOBAL REACH</h2>
+                <div class="grid-brutal">
+                    <div class="col-span-2 content-block">
+                        <h3 class="mb-xs">50+ YEARS</h3>
+                        <p class="text-accent">Of sustainable design and urban planning across 40 countries.</p>
+                    </div>
+                    <div class="col-span-2 content-block">
+                        <h3 class="mb-xs">600+ AWARDS</h3>
+                        <p class="text-accent">Recognizing excellence in architecture, engineering and research.</p>
+                    </div>
+                    <div class="col-span-2 content-block">
+                        <h3 class="mb-xs">1500+ TEAM</h3>
+                        <p class="text-accent"><cite class="font-stencil text-accent">DBDA studio (DBArchitects)</cite>
+                            collective of thinkers, makers, and innovators.</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <span class="footer-logo">LOGO</span>
-                <p>&copy; 2024 Všechna práva vyhrazena.</p>
+    <footer class="main-content">
+        <div class="container">
+            <div class="flex-between mb-md">
+                <h3 class="header-logo">DBDA studio</h3>
+                <div class="flex-center gap-sm">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Privacy</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Odkazy</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">O nás</a></li>
-                    <li><a href="services.html">Služby</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Kontakt</h4>
-                <p>email@example.com</p>
-                <p>+420 123 456 789</p>
-            </div>
+            <p class="text-accent text-uppercase" style="font-size: 0.7rem;">&copy; 2026 DBDA studio (DBArchitects)
+                Global
+                Studio. All industrial rights reserved.</p>
         </div>
     </footer>
 
-    <div id="cookie-banner" class="cookie-banner" hidden>
-        <div class="container banner-inner">
-            <p>Používáme soubory cookies pouze pro analytické účely.</p>
-            <div class="banner-actions">
-                <button id="btn-accept" class="btn btn-sm btn-primary">Přijmout</button>
-                <button id="btn-deny" class="btn btn-sm btn-outline">Odmítnout</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/nav.js"></script>
+    <!-- Scripts -->
     <script src="../assets/js/analytics.js"></script>
+    <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

@@ -6,3 +6,4 @@ dist
 .env
 *.log
 reusable_static_web_template_technical_business_blueprint.md
+.agent

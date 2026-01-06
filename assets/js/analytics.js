@@ -2,11 +2,13 @@
    Analytics & Consent Mode
    ========================================= */
 
-const CONSENT_KEY = 'cookieConsent';
-const GTM_ID = 'GTM-XXXXXXX'; // Placeholder GTM ID
+const CONSENT_KEY = 'dbda_consent_status';
+const GTM_ID = 'GTM-XXXXXXX'; // Replace with client GTM ID
 
 // Initialize GTM
 function loadGTM() {
+    if (window.gtmLoaded) return;
+
     (function (w, d, s, l, i) {
         w[l] = w[l] || []; w[l].push({
             'gtm.start':
@@ -16,53 +18,72 @@ function loadGTM() {
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', GTM_ID);
 
-    console.log('GTM loaded');
+    window.gtmLoaded = true;
+    console.log('DBDA studio Analytics: GTM initialized');
 }
 
-// Push to dataLayer
-function pushEvent(eventData) {
+// Push to dataLayer helper
+function pushToDataLayer(eventData) {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(eventData);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const banner = document.getElementById('cookie-banner');
-    const btnAccept = document.getElementById('btn-accept');
-    const btnDeny = document.getElementById('btn-deny');
+    const banner = document.getElementById('consent-banner');
+    const btnAccept = document.getElementById('consent-accept');
+    const btnDeny = document.getElementById('consent-deny');
 
     const savedConsent = localStorage.getItem(CONSENT_KEY);
 
+    // Initial check
     if (!savedConsent) {
-        // Show banner
-        if (banner) banner.hidden = false;
+        banner.classList.add('show');
     } else if (savedConsent === 'granted') {
         loadGTM();
-        pushEvent({
-            'event': 'consent_granted',
-            'consent_status': 'granted'
+        pushToDataLayer({
+            'event': 'consent_status',
+            'status': 'granted'
         });
     }
 
+    // Accept Logic
     if (btnAccept) {
         btnAccept.addEventListener('click', () => {
             localStorage.setItem(CONSENT_KEY, 'granted');
-            if (banner) banner.hidden = true;
+            banner.classList.remove('show');
             loadGTM();
-            pushEvent({
-                'event': 'consent_granted',
-                'consent_status': 'granted'
+            pushToDataLayer({
+                'event': 'consent_status',
+                'status': 'granted'
             });
         });
     }
 
+    // Deny Logic
     if (btnDeny) {
         btnDeny.addEventListener('click', () => {
             localStorage.setItem(CONSENT_KEY, 'denied');
-            if (banner) banner.hidden = true;
-            pushEvent({
-                'event': 'consent_denied',
-                'consent_status': 'denied'
+            banner.classList.remove('show');
+            pushToDataLayer({
+                'event': 'consent_status',
+                'status': 'denied'
             });
         });
     }
+
+    // CTA Tracking
+    document.querySelectorAll('.btn, a').forEach(el => {
+        el.addEventListener('click', (e) => {
+            const label = el.textContent.trim() || el.getAttribute('aria-label') || 'unlabeled';
+            const category = el.classList.contains('btn') ? 'button' : 'link';
+
+            pushToDataLayer({
+                'event': 'interaction',
+                'interaction_type': 'click',
+                'interaction_category': category,
+                'interaction_label': label
+            });
+        });
+    });
 });
+

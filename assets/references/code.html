@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DBA (DBArchitects) - Architecture Studio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;family=Oswald:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        'brutal-bg': '#1a1a1a', // Dark concrete
+                        'brutal-text': '#e0e0e0', // Light grey text
+                        'brutal-border': '#000000', // Heavy black borders
+                        'brutal-accent': '#a0a0a0', // Lighter grey for subtle highlights
+                        'brutal-white': '#ffffff', // Pure white for stark contrast
+                    },
+                    fontFamily: {
+                        sans: ['Roboto Mono', 'monospace'], // Industrial/blueprint feel
+                        display: ['Oswald', 'sans-serif'], // Bold for titles
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px", // Absolutely no rounding
+                    },
+                    borderWidth: {
+                        DEFAULT: '1px',
+                        '2': '2px',
+                        '4': '4px', // Heavy borders
+                        '8': '8px',
+                    }
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">::-webkit-scrollbar {
+    width: 8px;
+    background-color: #1a1a1a
+    }
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border: 2px solid #1a1a1a
+    }
+html {
+    scroll-behavior: smooth
+    }
+.img-container {
+    overflow: hidden;
+    position: relative
+    }
+.img-container img {
+    transition: transform 0.3s ease-out
+    }.bg-concrete {
+    background-color: #333;background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuARPSSMU6aoXXAOlBKV-d8YyGV6zeMTNhm5cZ8loKLxJY5sHirBaAmb67kjN8HcOERoH0Zomq61BlG77N8ZapOX--sOD7WMgu1-RfMOuNHzrmuGtIajeEhplxhxGWQJQyuuLorrYkVJo814vbHQiPYtfg9Tb9GL9FwafWhTf2HEBs6SQkTuXiCVRmkb9lVslhwoTGqctykl9IdjQX1Ab7723UIOVoNcSNdHtnLSCmAnILqiMHP0ntqYwwUUN8J4ELOyT948DUyDW1IG);
+    background-size: 10px 10px;}.font-stencil {
+    font-family: "Oswald", sans-serif;letter-spacing: 0.1em;
+    text-transform: uppercase
+    }</style>
+</head>
+<body class="bg-brutal-bg text-brutal-text font-sans transition-colors duration-300 antialiased">
+<header class="fixed w-full z-50 p-6 flex justify-between items-center bg-brutal-bg border-b-4 border-brutal-border text-brutal-white">
+<div class="font-display text-4xl tracking-widest uppercase font-bold border-r-4 border-brutal-border pr-6">DBA</div>
+<div class="text-sm font-sans tracking-tight hidden md:block pl-6">DBARCHITECTS STUDIO</div>
+<div class="flex items-center gap-4">
+<button class="p-2 border-2 border-brutal-border text-brutal-white hover:bg-brutal-white hover:text-brutal-bg transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-xl">brightness_6</span>
+</button>
+<span class="material-symbols-outlined text-brutal-white cursor-pointer hover:opacity-75 border-2 border-brutal-border p-2">search</span>
+<span class="material-symbols-outlined text-brutal-white cursor-pointer hover:opacity-75 border-2 border-brutal-border p-2">menu</span>
+</div>
+</header>
+<section class="relative h-[100vh] w-full overflow-hidden bg-brutal-bg border-b-8 border-brutal-border">
+<img alt="City skyline at sunset with prominent skyscrapers" class="absolute inset-0 w-full h-full object-cover grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_CB1KVouWP1M9_o_ewZLNo60Dq3kdIuKXJXQ5SdszXtAmxAkJgm6z-qDKQ-Rgm4-kEM2DEgw5xijypv2wBJgc2pRebNuStXWRB2yG1UqtUE__Z7gvbOTZ2nJ_CMkDLShiMhxJ3C40fclIoNXHEfOCaVqh1ynd3L1IUtOBUDkg1DLnNTfwx9FRl_M2sB3BVwkIOle17oPTJhqk71pGr6IH-JMao5CRzdFwqwDCTfXDOXqBZRZxkeWaXyhJyyRHyGEUzqG00_IT1mnH"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 md:p-12 pb-16 border-t-4 border-brutal-border bg-brutal-bg/80">
+<div class="max-w-7xl mx-auto flex flex-col items-start gap-2">
+<span class="text-xl font-stencil text-brutal-accent mb-1">DBA (DBArchitects)</span>
+<h1 class="text-4xl md:text-7xl font-display text-brutal-white max-w-4xl leading-tight border-b-4 border-brutal-white pb-4 mb-4">
+                    JPMorganChase's new global headquarters completes
+                </h1>
+<p class="text-brutal-accent text-sm md:text-base font-sans mt-4">A landmark project delivered by DBArchitects, shaping the future of urban design.</p>
+</div>
+</div>
+<div class="absolute right-12 bottom-12 flex flex-col items-center gap-2 opacity-60">
+<span class="material-symbols-outlined text-brutal-white text-3xl">arrow_downward</span>
+</div>
+</section>
+<main class="max-w-[1920px] mx-auto px-4 md:px-8 py-12 bg-brutal-bg">
+<section class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 py-8 border-b-4 border-brutal-border">
+<h2 class="col-span-full text-5xl font-display text-brutal-white mb-8 border-b-4 border-brutal-accent pb-2">STUDIO</h2>
+<div class="md:col-span-3 lg:col-span-4 relative group cursor-pointer h-[500px] img-container bg-brutal-accent border-4 border-brutal-border">
+<img alt="Modern open plan office studio" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp9NKTrd1P3w5AkOrOuLx9XITHAir7iZ4W5P0hSSahzjipz6KHtIMwI6O4eu59t3v0quye1IoMGUdD44t7LUItarsbBaU4mLq9T4z-Yh9OM3vsvX6ZqxkhAodAE2kIPq5aRmIjs4LQVPNyHSxezg5VyKegX9lvhHOQDqyoURtN5718xjk9PLNJQiRZpEAXOncDVrU2iHCpY50DdZ_d73u0URlyDXRjbBBGPZRSNzGUtW55qR6Ampq2JYzBD-7SjSGPjjObv3ur-QNe"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-3xl font-display">ABOUT DBA</span>
+</div>
+<div class="md:col-span-1 lg:col-span-2 bg-brutal-bg bg-concrete p-6 border-4 border-brutal-border flex flex-col justify-center h-[500px]">
+<blockquote class="text-brutal-text font-sans text-lg leading-relaxed mb-6 border-l-2 border-brutal-accent pl-4">
+                        "We are a global studio for sustainable architecture, urbanism, engineering and design, dedicated to crafting the future of the built environment."
+                    </blockquote>
+<cite class="text-sm font-stencil text-brutal-accent not-italic">DBA (DBArchitects)</cite>
+</div>
+<div class="md:col-span-2 relative group cursor-pointer h-64 img-container bg-brutal-accent border-4 border-brutal-border mt-4">
+<img alt="People talking on stairs" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN8DeOVOMkTHaeFEcKeDVrr9SGPyunFtEQpBXqvnpvuq46OD87G7EXi3k3-roJgDWIVmGZyMTX8ath-dPqawaw8VKK0_VGGxX6pN8nhT8gVEayfT1LiX14NnEF8tQZaMxZlaV9TEKKuxHf_AJPMx8LPao5KkXOrc8CWEc9pxZEPWQvzcLVMtXa49RFEq5cplO0M572JzlRP8BhNtgIZ_wU4TfVHSQxSXZQQ0JjhGkShSDCRbUhcweV568W7QfgqDrJKdJHva3kU7Ya"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-xl font-stencil">LIFE AT DBA</span>
+</div>
+<div class="md:col-span-2 relative group cursor-pointer h-64 img-container bg-brutal-accent border-4 border-brutal-border mt-4">
+<img alt="People working in a bright office" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6tPTnLKhmXEoWEJjT0GOI7BtG4ryCtb6tYI8QsQkTp_bAEHWs9N1Ylb15TzEGummhXU4ouha5NGFBTBGaXc0FoT2tdi71omiOwMe9vGEMgl5um_3hyznM16qXeKKHYCf_BLmGF8rwmK-SKmUvwKrQXJRZ4FfwNOiSE0jKkqAqa4rOKVa4qfdK-bCkLxpHHvOIZr-YCq95e9vs4YHUKPoiEGF9nxe-Fp-K5GWPrC-3AvRGQ6BXjxXYnD__P1wpzKmdCuJHMDAKYCd2"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-xl font-stencil">VACANCIES</span>
+</div>
+<div class="md:col-span-2 lg:col-span-2 relative group cursor-pointer h-[300px] img-container bg-brutal-accent border-4 border-brutal-border mt-4">
+<img alt="Green corporate campus aerial view" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEcA4XO6JQ29d72xow9Bp3_vx6St11MxmwPvTdtllQOd3j4W6vyU2DNeRAXEjkOMr3p7wVhxE8sQQ9fplp5hqveAKhPKr7NyoGNfIP9uW2VIIdzzYJir_-6DGgVph6TSnJrSQ1CITUSmEOwHa3OUnTg0NSyUbNiLsHlzCXWorV9zJcqM2IWS7gAy-Y_20hC8ayiIaXqFO_pElP18vrKh93QcuINci-5pmsaG8bkWoJiL1E1KVzWEIUhBhvRZDu03Ob156RwiF6aLi7"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-2xl font-stencil">CSR</span>
+</div>
+<div class="md:col-span-2 lg:col-span-2 relative group cursor-pointer h-[300px] img-container bg-brutal-accent border-4 border-brutal-border mt-4">
+<img alt="Office meeting with city view" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtrgoMYn_Qrgt4XqXxGJw7nczfWlmZ3Dwb9JNL46nD4HFARkWy7MOdKdR0ZMBcKvsqoqdeHgSxdBpVLGtfNkWP6a51xGchwgLvR1UJDFUZa8Oe3iS6LTiMwyGPEkf44SU_OxIAflTA-qFEcODXX0meCkhdNvgmptG3Kw-2tLY268gPuBFv2uXo1_-_4leQJImhZ6OMyL0LIJ4d9BQWQc5g4Ymh3gsF2ZuZsI6XiQtoDm2qjzlamScv6A4DXH9TVpNjiUj77mte6alM"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-2xl font-stencil">GLOBAL STUDIOS</span>
+</div>
+<div class="md:col-span-2 lg:col-span-2 relative group cursor-pointer h-[300px] img-container bg-brutal-accent border-4 border-brutal-border mt-4">
+<img alt="Group of diverse people" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEcaBjZGNCQAlMH52LRlkvtIZ_q_Du1UKw3IfMjK7PIoowC5MdLZVXVUaf1o4LLCg2P70IMcmH4vxbT8tx-MbT49WMiheJ01_tgsOWBqte8JOg44tWxeTvSfts5Cn1do7IGuZzuWrBqJ6aVSk9yrJM4R7vZUoRGnQDlZ8XIb3kyhtHUP04GK9Ns1zUu3CY5dpF3fn1qZnNAOqztA3UXp5L3F1Ha6nKbO61mjk6e205dlmKkOIIzbO3k6fD9HXog8OVN43AuDLrBx7m"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-2xl font-stencil">DIVERSITY &amp; INCLUSION</span>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 py-8 border-b-4 border-brutal-border mt-8">
+<h2 class="col-span-full text-5xl font-display text-brutal-white mb-8 border-b-4 border-brutal-accent pb-2">ARCHITECTURE</h2>
+<div class="md:col-span-3 lg:col-span-4 relative group cursor-pointer h-[600px] img-container bg-brutal-accent border-4 border-brutal-border">
+<img alt="Modern timber architecture structure" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIAoNuvJjgcGQouwsZqJ0gt16Oa505Jn3FHqOEbEoEWS0IfL6eL1WASFhOIYOT2JEgj5Mb-t14VpX34IWKNVnwTQyskbjN5MfEtmk8GzcMUR5Ni_Hb5YEp9bORk-s0IKyBS9-nNe4UQYgvrUINS_PS4DlldFdx4pui-E8Saul47cSrccpahR66G3aVYKCLNlYrVSlSunF4LJXLaoWJtJPVJEcI4iGZf_SApjcg4AD9zZWgUdhJWARmsVg0nT7klXSWLqcHv8DRzYkc"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-3xl font-display">ARCHITECTURE PROJECTS</span>
+</div>
+<div class="md:col-span-1 lg:col-span-2 bg-brutal-bg bg-concrete p-6 border-4 border-brutal-border flex flex-col justify-center h-[600px]">
+<p class="text-brutal-text text-sm leading-7 mb-8 font-sans border-l-2 border-brutal-accent pl-4">
+                        "From the very beginning our practice was founded on a philosophy of innovation, sustainability and design. We continue to learn from the past and creatively embrace the challenges of the future, with a firm belief that good design makes a difference."
+                    </p>
+<cite class="text-xs font-stencil text-brutal-accent not-italic">DBA PRINCIPALS</cite>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 py-8 border-b-4 border-brutal-border mt-8">
+<h2 class="col-span-full text-5xl font-display text-brutal-white mb-8 border-b-4 border-brutal-accent pb-2">EXPERTISE</h2>
+<div class="md:col-span-2 lg:col-span-3 relative group cursor-pointer h-[400px] img-container bg-brutal-accent border-4 border-brutal-border">
+<img alt="Modern architectural ceiling detail" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi0g1WtxZqgUaALxeLjseEf3sLYmvG1Hz6NDwWbi7rI8PbSeZbmFbE60msMc6Bm006ocwcwYek15Tx8LEl9z9S3-8W_6NqTFv8cTDXb-l26G5shGFe_7I7SIgJW5SheDROEG1tBPD3DQT4G4y6L5gBm30u0NF_HEOYI7ozlijKJSRhvFVtndoCY8I2gFn1tZVFRHoi2g15f5rMk6ZqGZ5FJkV0NxXV6QTtt8oYwOy6KnOs4W4DbI1zuP7jVhSrzJy77X4QKemynkTm"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-2xl font-stencil">ENGINEERING</span>
+</div>
+<div class="md:col-span-2 lg:col-span-3 relative group cursor-pointer h-[400px] img-container bg-brutal-accent border-4 border-brutal-border">
+<img alt="Researchers in lab coats with technology" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU0iNE-9-Uxpz1ZfbCWAU7_Fi8KqKAyY78Vws13s4TSOdZ6zXSmTVxWQFDGEWxsqWgiYayMvYGEQ9TZ3UIcSDMH23Nl1iwu_ZynV0yz72NphqtqNWoQi2iCvJeyWX0YB_7sisi38y8IUfWvBg-VvhynT--lftDR795jW9UxBTdzh3Lb-xzjsZrqjVJO1eGx7SYgnvxXB9ErXq8ESNQsEciAW4IjT9X1XI2kWkmAgkWS_dyQxkL2zp7rj-r1skbPwmCCnbYiqn2aGvn"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-2xl font-stencil">TECHNOLOGY &amp; RESEARCH</span>
+</div>
+<div class="md:col-span-2 lg:col-span-2 relative group cursor-pointer h-64 img-container bg-brutal-accent border-4 border-brutal-border mt-4">
+<img alt="Luxury interior living room" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIMVZQWu0z7gnggUtD2EaXjTe1IheQfVsjZeGnK6qcBtISamoyUZIi0t8jewHW8bbNq44eciblpL_I5B4o-jAPbqBPeoV2zdbXWWW9-9R_LGfN2QuuPRDSpcoz9iEYWEdZgrBX8VZklM70xogIXo_WAZXCvcuUjEO8WJa6905lQJajzs2POcq3e1tdRXlpBprWgVrpG2yVR9b79bJ__PAVvLAo4dGHYruQCYrXVvgr5XviriQnnWcAMQcs4k2AMAmBh2kqnDkJwqMy"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-xl font-stencil">INTERIORS</span>
+</div>
+<div class="md:col-span-2 lg:col-span-2 relative group cursor-pointer h-64 img-container bg-brutal-accent border-4 border-brutal-border mt-4">
+<img alt="Urban park walkway" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM_de46NZWd5anrlsdJtfsYQM8F9QjEhgqamh3AtE9wCprIUl2_GRoyN6ebmr00xzj-lFFV4nCqr4bE0Euh4m3EU_cYUHXnaUMn-kaY4J8R5JcH7VbpNe1mKeCzh5xmEZ8aCsrKzD4Dhyk6uHTX8dKA4PmkrAdGwyfs5Gxr4aKRz03yfFmtVWEGv6mVxUmS0xcIzFVDX0bWfmzkrEr-Ha0euZy1LXNtSgpQrBZRQFo2vpTKiwMD30XVXGPa2ya7fKKYlBbyi2-ovEm"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-xl font-stencil">URBAN DESIGN</span>
+</div>
+<div class="md:col-span-2 lg:col-span-2 relative group cursor-pointer h-64 img-container bg-brutal-accent border-4 border-brutal-border mt-4">
+<img alt="Modern office interior" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGiHwYbUpYf7isVIQuEERqNJ4MN4h0h5FI2DP0g483mDUQz_ossgxgJF58vRUUKDxcO3kd302bPDr0hCF6IOvsI2hbW_h70t3_6K1d3SnjKM0uQfDSluQVXI3HzIbzpAtBq_VmElOa9zaMrDIpThu7GkyOi7A9jJLKBp5pe-DSSF3-6zNu_Ebn3PSuLgRQ0hryU3-RzF6nbC7invi8nCVKMsD4-eU6B1ndfaYuopEeZTj_E91atmqFHMup5zNL0-kkLGBV8ON5C9W5"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-xl font-stencil">WORKPLACE CONSULTANCY</span>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 py-8 border-b-4 border-brutal-border mt-8">
+<h2 class="col-span-full text-5xl font-display text-brutal-white mb-8 border-b-4 border-brutal-accent pb-2">NEWS</h2>
+<div class="md:col-span-3 lg:col-span-4 relative group cursor-pointer h-[450px] img-container bg-brutal-accent border-4 border-brutal-border">
+<img alt="Abstract architectural roof detail at night" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIcNl546-rJbQO31b8kW8P6Qv4KrdjGEk6tQuGwnpp9yxAtN5OubTGy6mF46AqblqJQsCtt_vJ7OP8HeEeiQnx8-Zzc5LhC0X1vwbEDZC-8aF87aQInIqqwTL32DGKhJ7d2jeFaVBh7ztubJ4XMWZREMoghMh4j1uCWcnvRpH7T5Ca5CfJA_ShaeRNWmym70S9e7-rFVYcFyKmIEpAmzL1j4nrDy_bH25XvHHcPjrW3ag9MNi3oD_X_8isRjOuBaP_f-FBeNYlDhOZ"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<div class="absolute bottom-6 left-6 border-l-4 border-brutal-white pl-4">
+<h3 class="text-brutal-white text-3xl font-display mb-1">DBA (DBArchitects)</h3>
+<p class="text-brutal-accent text-sm font-sans">LATEST STUDIO UPDATES</p>
+</div>
+</div>
+<div class="md:col-span-1 lg:col-span-2 bg-brutal-bg bg-concrete p-6 border-4 border-brutal-border flex flex-col justify-between h-[450px]">
+<h3 class="text-2xl font-display text-brutal-white mb-6 leading-tight">
+                        Stay up to date with the latest <span class="text-brutal-accent">DBA</span> projects and news.
+                    </h3>
+<form class="space-y-4">
+<div class="relative">
+<input class="w-full bg-transparent border-b-2 border-brutal-accent py-3 text-brutal-white font-sans focus:outline-none focus:border-brutal-white placeholder-brutal-accent transition-colors" placeholder="EMAIL ADDRESS..." type="email"/>
+</div>
+<button class="text-sm font-stencil tracking-widest text-brutal-accent hover:text-brutal-white border-2 border-brutal-accent hover:border-brutal-white py-2 px-4 transition-colors w-full" type="button">
+                            SUBSCRIBE
+                        </button>
+</form>
+<div class="flex justify-end gap-4 pt-8 border-t-2 border-brutal-accent mt-4">
+<span class="material-symbols-outlined text-brutal-accent text-lg cursor-pointer hover:text-brutal-white">search</span>
+<span class="material-symbols-outlined text-brutal-accent text-lg cursor-pointer hover:text-brutal-white">menu</span>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 py-8 mt-8">
+<h2 class="col-span-full text-5xl font-display text-brutal-white mb-8 border-b-4 border-brutal-accent pb-2">SUSTAINABLE DESIGN</h2>
+<div class="md:col-span-3 lg:col-span-4 relative group cursor-pointer h-[500px] img-container bg-brutal-accent border-4 border-brutal-border">
+<img alt="Lush green garden with trees" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa0QVaoSWLK4bSJuUk_2vDwVfpbRxVaXCcrujgggh6Yb6bQTxhFKZU5gDGcCJMPmvkuQWWHy2JFCxxl7polQ3sLpkaye_Lu0Yo8t9nCjBWmiylab8924SwoVip0CYGX4_Sp9H1LLviJHYmMqt7DCSIIEiKyLpjgdKPTXcSJWFOyYTLazO4bomxCh2JgOxg3SSi_z5P_5Q9MnFScDidDGosGpIOKqLd2DrNYf1O164EPKJ7dbLqUYrWGnjSlMKpOlLe1LOR0VB_nax8"/>
+<div class="absolute inset-0 bg-brutal-bg/60"></div>
+<span class="absolute bottom-4 left-4 text-brutal-white text-3xl font-display">CLIMATE &amp; SUSTAINABLE DESIGN</span>
+</div>
+<div class="md:col-span-1 lg:col-span-2 bg-brutal-bg bg-concrete p-6 border-4 border-brutal-border flex flex-col justify-center h-[500px]">
+<p class="text-brutal-text text-sm leading-7 mb-8 font-sans border-l-2 border-brutal-accent pl-4">
+                        "Sustainability has been a central theme of our work for more than five decades. We work closely with our clients to develop bespoke design solutions that are optimised for their operations and the planet."
+                    </p>
+<cite class="text-xs font-stencil text-brutal-accent not-italic">DBA (DBArchitects)</cite>
+</div>
+</section>
+</main>
+<footer class="bg-brutal-bg text-brutal-text py-12 border-t-4 border-brutal-border mt-12">
+<div class="max-w-[1920px] mx-auto px-4 md:px-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="flex flex-col gap-6">
+<h3 class="font-display text-3xl text-brutal-white">DBA (DBArchitects)</h3>
+<nav class="flex flex-wrap gap-6 text-sm font-stencil text-brutal-accent">
+<a class="hover:text-brutal-white transition-colors border-r-2 border-brutal-accent pr-6" href="#">PROJECTS</a>
+<a class="hover:text-brutal-white transition-colors border-r-2 border-brutal-accent pr-6" href="#">EXPERTISE</a>
+<a class="hover:text-brutal-white transition-colors border-r-2 border-brutal-accent pr-6" href="#">STUDIO</a>
+<a class="hover:text-brutal-white transition-colors border-r-2 border-brutal-accent pr-6" href="#">NEWS</a>
+<a class="hover:text-brutal-white transition-colors border-r-2 border-brutal-accent pr-6" href="#">CAREERS</a>
+<a class="hover:text-brutal-white transition-colors" href="#">CONTACT</a>
+</nav>
+</div>
+<div class="bg-brutal-bg text-brutal-white p-4 border-4 border-brutal-border flex flex-col md:flex-row items-center gap-4 text-xs max-w-xl self-end">
+<p class="leading-relaxed opacity-80 px-2 font-sans">
+                        We use cookies to enhance site navigation, analyse site usage and assist in our marketing efforts. Please let us know if you agree to all of these cookies. <a class="underline text-brutal-accent hover:text-brutal-white transition-colors" href="#">Click here to find out more.</a>
+</p>
+<div class="flex gap-2 shrink-0">
+<button class="bg-brutal-white text-brutal-bg px-4 py-2 font-stencil text-sm border-2 border-brutal-border hover:bg-brutal-accent transition-colors">NO, SETTINGS</button>
+<button class="bg-brutal-white text-brutal-bg px-4 py-2 font-stencil text-sm border-2 border-brutal-border hover:bg-brutal-accent transition-colors">YES, I AGREE</button>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Force dark mode initially for demo purposes to match screenshot and brutalist theme
+        document.documentElement.classList.add('dark');
+    </script>
+
+</body></html>

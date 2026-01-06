@@ -3,7 +3,7 @@ name: Deploy via SCP
 on:
   push:
     branches:
-      - main
+      - dba-page
   workflow_dispatch:
 
 jobs:
