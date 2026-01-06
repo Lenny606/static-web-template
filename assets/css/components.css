@@ -84,6 +84,25 @@
     }
 }
 
+/* Navigation */
+#desktop-nav {
+    display: none;
+}
+
+.menu-toggle {
+    display: flex;
+}
+
+@media (min-width: 1024px) {
+    #desktop-nav {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
 .nav-link {
     font-family: var(--font-sans);
     font-size: var(--fs-sm);
