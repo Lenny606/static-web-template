@@ -9,15 +9,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu Toggle
     if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', (e) => {
+        // Handle menu toggle with better mobile support
+        const handleToggle = (e) => {
             e.preventDefault();
+            e.stopPropagation();
+            
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             const newState = !isExpanded;
-            menuToggle.setAttribute('aria-expanded', newState);
+            
+            menuToggle.setAttribute('aria-expanded', newState.toString());
             mobileMenu.classList.toggle('active');
 
             // Toggle body scroll
-            document.body.style.overflow = newState ? 'hidden' : 'auto';
+            if (newState) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+        // Add click event
+        menuToggle.addEventListener('click', handleToggle);
+        
+        // Add touch event for better mobile support (prevent double-tap zoom)
+        menuToggle.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            handleToggle(e);
+        }, { passive: false });
+    } else {
+        // Debug: log if elements are not found
+        console.warn('Menu toggle elements not found:', {
+            menuToggle: !!menuToggle,
+            mobileMenu: !!mobileMenu
         });
     }
 

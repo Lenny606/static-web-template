@@ -376,6 +376,23 @@ body {
 .menu-toggle {
     position: relative;
     z-index: 10000;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-toggle span {
+    pointer-events: none;
+    display: block;
 }
 
 .menu-toggle[aria-expanded="true"] span:nth-child(1) {
