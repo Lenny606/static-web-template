@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DBDA Studio - Selected Projects Grid</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#000000",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#121212",
+                        "text-light": "#1f1f1f",
+                        "text-dark": "#e5e5e5",
+                        "muted-light": "#6b7280",
+                        "muted-dark": "#9ca3af",
+                        accent: "#1a1a1a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .line-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: opacity 0.3s;
+        }
+
+        .line-link:hover {
+            opacity: 0.7;
+        }
+
+        .line-link::before {
+            content: '';
+            width: 40px;
+            height: 1px;
+            background: currentColor;
+        }
+
+        /* Square Grid Background Pattern */
+        .square-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.03;
+            background-image:
+                linear-gradient(to right, currentColor 1px, transparent 1px),
+                linear-gradient(to bottom, currentColor 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .dark .square-pattern {
+            color: #fff;
+        }
+
+        /* Decorative Squares */
+        .square-decor {
+            position: relative;
+        }
+
+        .square-decor::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 1px solid currentColor;
+            transition: all 0.5s ease;
+        }
+
+        .square-decor-top-left::before {
+            top: -20px;
+            left: -20px;
+        }
+
+        .square-decor-bottom-right::before {
+            bottom: -20px;
+            right: -20px;
+            width: 12px;
+            height: 12px;
+        }
+
+        .square-decor-top-right::before {
+            top: -20px;
+            right: -20px;
+        }
+
+        .square-decor-bottom-left::before {
+            bottom: -20px;
+            left: -20px;
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Animated square on hover */
+        .project-card:hover .square-hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .square-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border: 1px solid currentColor;
+            transition: all 0.4s ease;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        /* Corner squares animation */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        /* Square badge */
+        .square-badge {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid currentColor;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* Logo square styling */
+        .logo-square {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .logo-square::before,
+        .logo-square::after {
+            content: '';
+            position: absolute;
+            background: currentColor;
+        }
+
+        .logo-square::before {
+            width: 10px;
+            height: 10px;
+            top: 0;
+            left: 0;
+        }
+
+        .logo-square::after {
+            width: 10px;
+            height: 10px;
+            bottom: 0;
+            right: 0;
+        }
+
+        .logo-square span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: currentColor;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Square grid in content */
+        .square-grid-item {
+            aspect-ratio: 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .square-grid-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid currentColor;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .square-grid-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Footer square decoration */
+        .footer-square {
+            width: 8px;
+            height: 8px;
+            background: currentColor;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 antialiased selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
+    <!-- Square Grid Background Pattern -->
+    <div class="square-pattern"></div>
+
+    <nav
+        class="fixed top-0 w-full z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm py-6 px-6 md:px-12 flex justify-between items-center border-b border-gray-200 dark:border-gray-800">
+        <div class="font-bold text-xl tracking-tight flex items-center">
+            <!-- <span class="logo-square"><span></span></span> -->
+            <img src="/assets/images/DBDA_logo.png">
+        </div>
+        <div class="hidden md:flex space-x-10 text-xs uppercase tracking-widest font-medium">
+            <a class="hover:text-muted-light dark:hover:text-white transition-colors relative group"
+                href="#">Residential
+                <span class="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all group-hover:w-full"></span>
+            </a>
+            <a class="hover:text-muted-light dark:hover:text-white transition-colors relative group" href="#">Commercial
+                <span class="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all group-hover:w-full"></span>
+            </a>
+            <a class="hover:text-muted-light dark:hover:text-white transition-colors relative group" href="#">Cultural
+                <span class="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all group-hover:w-full"></span>
+            </a>
+            <a class="hover:text-muted-light dark:hover:text-white transition-colors relative group" href="#">Studio
+                <span class="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all group-hover:w-full"></span>
+            </a>
+            <a class="hover:text-muted-light dark:hover:text-white transition-colors relative group" href="#">Contact
+                <span class="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all group-hover:w-full"></span>
+            </a>
+        </div>
+        <button class="md:hidden text-2xl p-2 border border-current">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                </path>
+            </svg>
+        </button>
+    </nav>
+    <main class="pt-40 pb-20 px-6 md:px-12 max-w-[1800px] mx-auto relative z-10">
+        <!-- Decorative square elements -->
+        <div class="fixed top-32 right-12 w-16 h-16 border border-current opacity-20 hidden lg:block"></div>
+        <div class="fixed top-48 right-20 w-8 h-8 bg-current opacity-10 hidden lg:block"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-20 md:gap-y-32">
+            <div class="md:col-span-12 lg:col-span-5 lg:col-start-1 mb-12 lg:mb-0 relative">
+                <!-- Decorative square -->
+                <div class="absolute -top-4 -left-4 w-8 h-8 border border-current opacity-40"></div>
+                <div class="absolute -top-8 -left-8 w-4 h-4 bg-current opacity-20"></div>
+
+                <span
+                    class="block text-xs font-bold uppercase tracking-widest text-muted-light dark:text-muted-dark mb-8 pl-1">Selected
+                    Works</span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-light leading-tight mb-8">
+                    We care about the environment we live in.
+                </h1>
+                <p class="text-muted-light dark:text-muted-dark text-lg leading-relaxed mb-8 max-w-md">
+                    That is why we design buildings that serve down to the last detail, bringing quality architecture
+                    closer to people.
+                </p>
+                <a class="line-link text-black dark:text-white" href="#">More about studio</a>
+            </div>
+
+            <!-- Villa Sidonius - Main Project with square emphasis -->
+            <div class="md:col-span-12 lg:col-span-10 lg:col-start-3 relative group cursor-pointer project-card">
+                <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100 dark:bg-gray-800 square-hover">
+                    <div
+                        class="absolute top-4 left-4 z-20 w-10 h-10 border border-white/80 flex items-center justify-center">
+                        <div class="w-3 h-3 bg-white/80"></div>
+                    </div>
+                    <div
+                        class="absolute top-4 right-4 z-20 w-10 h-10 border border-white/80 flex items-center justify-center">
+                        <div class="w-3 h-3 bg-white/80"></div>
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 z-20 w-10 h-10 border border-white/80 flex items-center justify-center">
+                        <div class="w-3 h-3 bg-white/80"></div>
+                    </div>
+                    <div
+                        class="absolute bottom-4 right-4 z-20 w-10 h-10 border border-white/80 flex items-center justify-center">
+                        <div class="w-3 h-3 bg-white/80"></div>
+                    </div>
+                    <img alt="Villa Sidonius exterior"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqn4CvDNNaF-jr0Mc1mF-jLW3LKxLs9KxQ44uRkXATpkb7uEpvuUjuhtlDV9CBzNpWx96ma2fSiGMGRlia5S3S6yQrN6XiRWGMSGPdA8PY-K4-hRvTRj9C8JErrF0Nf2G83sT0UAHJTdll-y8N0fC-64X-5qgnCj2o4ZeY3twl-v_yO6c75dh72gGvfoJAIMQgVdBUCYBB8HSkk9MDw-laIwfScT7gfmy2-t9fObsPpxrGICcRv8wE9ruPRuEBTGe-xV1A6_YKadDi" />
+                </div>
+                <div
+                    class="flex flex-col md:flex-row md:items-baseline md:justify-between border-t border-gray-200 dark:border-gray-800 pt-5 relative">
+                    <!-- Corner square decoration -->
+                    <div class="absolute -top-1 -left-1 w-3 h-3 border border-current opacity-50"></div>
+                    <div class="absolute -bottom-1 -right-1 w-3 h-3 border border-current opacity-50"></div>
+
+                    <h3 class="text-3xl md:text-5xl font-light group-hover:text-muted-light transition-colors">Villa
+                        Sidonius</h3>
+                    <span class="text-xs font-mono uppercase tracking-widest text-muted-light mt-3 md:mt-0">Realized —
+                        2023</span>
+                </div>
+            </div>
+
+            <!-- Philosophy Section with square motif -->
+            <div
+                class="md:col-span-6 lg:col-span-4 lg:col-start-2 self-center pr-8 order-last lg:order-none relative square-decor square-decor-top-left">
+                <div class="absolute -bottom-4 -right-4 w-6 h-6 border border-current opacity-30"></div>
+
+                <span
+                    class="block text-xs font-bold uppercase tracking-widest text-muted-light dark:text-muted-dark mb-6 pl-1">Philosophy</span>
+                <h2 class="text-2xl md:text-3xl font-light leading-snug mb-6">
+                    A house is a network of relationships.
+                </h2>
+                <p class="text-muted-light dark:text-muted-dark text-base leading-relaxed mb-8">
+                    With the user and their needs, with the environment, with the place. The result is always unique,
+                    respecting its context.
+                </p>
+                <a class="line-link text-black dark:text-white" href="#">Our principles</a>
+            </div>
+
+            <!-- Bell Tower - Square image format -->
+            <div class="md:col-span-6 lg:col-span-5 lg:col-start-7 lg:mt-32 group cursor-pointer project-card">
+                <div class="relative overflow-hidden aspect-square mb-6 bg-gray-100 dark:bg-gray-800 square-hover">
+                    <!-- Inner square frame -->
+                    <div class="absolute inset-4 border border-current border-opacity-20 z-10"></div>
+                    <div class="absolute inset-8 border border-current border-opacity-10 z-10"></div>
+                    <img alt="Bell Tower, Bílovice - Lutotín"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQrUemxXffkGgI4i_72Pb4_aWAfZypZfmMeOFJBG3GWCrGlcVKZZMjutdsx6pz9Ph3MJk9uhrbLFFngE9tZZnOVFDPD0cJMjRVLQ6lt49crOv9TlGx6613WWoJDJoEcoQruodcb1pVVlRfvXHxUCSfRkLKnKgfsg4O3byfZRUfE6h_qxaaACdyUHx31B6UhEdy3TOlicc9deCyg20L3-_1G7CaIb_6r9yPwOye2FeRJaedo9JXT5sPksYbt0cRwqdDil9AUgKUMQT6" />
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-800 pt-5 relative">
+                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-current opacity-40"></div>
+                    <h3 class="text-3xl md:text-4xl font-light mb-3 group-hover:text-muted-light transition-colors">Bell
+                        Tower</h3>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs font-mono uppercase tracking-widest text-muted-light">Bílovice -
+                            Lutotín</span>
+                        <span
+                            class="text-xs text-muted-light dark:text-muted-dark uppercase tracking-widest">Realized</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mill Reconstruction - Wide square aspect -->
+            <div
+                class="md:col-span-12 lg:col-span-8 lg:col-start-4 group cursor-pointer mt-12 lg:mt-0 relative project-card">
+                <div class="relative overflow-hidden aspect-[4/3] mb-6 bg-gray-100 dark:bg-gray-800 square-hover">
+                    <!-- Corner squares -->
+                    <div class="absolute top-4 left-4 z-10 w-6 h-6">
+                        <div class="w-full h-px bg-current opacity-40"></div>
+                        <div class="h-full w-px bg-current opacity-40 absolute top-0 left-0"></div>
+                    </div>
+                    <div class="absolute top-4 right-4 z-10 w-6 h-6">
+                        <div class="w-full h-px bg-current opacity-40"></div>
+                        <div class="h-full w-px bg-current opacity-40 absolute top-0 right-0"></div>
+                    </div>
+                    <div class="absolute bottom-4 left-4 z-10 w-6 h-6">
+                        <div class="w-full h-px bg-current opacity-40"></div>
+                        <div class="h-full w-px bg-current opacity-40 absolute bottom-0 left-0"></div>
+                    </div>
+                    <div class="absolute bottom-4 right-4 z-10 w-6 h-6">
+                        <div class="w-full h-px bg-current opacity-40"></div>
+                        <div class="h-full w-px bg-current opacity-40 absolute bottom-0 right-0"></div>
+                    </div>
+                    <img alt="Mill Reconstruction, Central Bohemia"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjP1dKlTsWaQwqIBxWvQ95vaIgMGfnQ4xWjSNOZgGrb0cNTc0E-Bs24paWcG7uPFqlfV5RYRhbgdKq5NNIGJ0L6b-n_1nJmv6biTBJVSstHGe28rQBa7uD09s-vfpL8q3QIaDbklpFhQ04lqeeSFMtIQomHv0zq3EuDzkdu_vNgiGVgBI8t4p6QQd-pA-HBm2Q_n7Xi5Af-3N5ZQK536qZ7iPAf967o8JxAQcjK-4ZaVOzKXT-GKQS_7btT3dsQs6IX3fjRU3UENsB" />
+                </div>
+                <div
+                    class="flex flex-col md:flex-row md:items-baseline md:justify-between border-t border-gray-200 dark:border-gray-800 pt-5 relative">
+                    <div class="absolute -top-1 -left-1 w-2 h-2 bg-current opacity-40"></div>
+                    <div class="absolute -top-1 -right-1 w-2 h-2 bg-current opacity-40"></div>
+                    <h3 class="text-3xl md:text-5xl font-light group-hover:text-muted-light transition-colors">Mill
+                        Reconstruction</h3>
+                    <span class="text-xs font-mono uppercase tracking-widest text-muted-light mt-3 md:mt-0">Central
+                        Bohemia — Realized</span>
+                </div>
+            </div>
+
+            <!-- Studio Section -->
+            <div
+                class="md:col-span-12 lg:col-span-4 lg:col-start-2 flex flex-col justify-center mt-20 lg:mt-32 relative">
+                <div
+                    class="absolute -top-12 -left-12 w-16 h-16 border border-current opacity-20 animate-pulse-slow hidden lg:block">
+                </div>
+                <div class="absolute -top-8 -left-8 w-4 h-4 bg-current opacity-10"></div>
+                <div class="absolute top-0 right-0 w-3 h-3 bg-current opacity-30"></div>
+
+                <span
+                    class="block text-xs font-bold uppercase tracking-widest text-muted-light dark:text-muted-dark mb-6 pl-1">Studio</span>
+                <h2 class="text-2xl md:text-3xl font-light leading-snug mb-8">
+                    We are a boutique studio, meaning that every project under the DBDA Studio brand is designed
+                    exclusively by our partners.
+                </h2>
+                <a class="line-link text-black dark:text-white" href="#">More about us</a>
+            </div>
+
+            <!-- Partners Section - Square format -->
+            <div
+                class="md:col-span-8 md:col-start-3 lg:col-span-5 lg:col-start-7 lg:mt-56 grayscale hover:grayscale-0 transition-all duration-700 relative project-card">
+                <div class="relative aspect-square overflow-hidden bg-gray-100 dark:bg-gray-800 square-hover">
+                    <!-- Grid overlay squares -->
+                    <div class="absolute inset-0 grid grid-cols-3 grid-rows-3 z-10 opacity-20">
+                        <div class="border border-current"></div>
+                        <div class="border border-current"></div>
+                        <div class="border border-current"></div>
+                        <div class="border border-current"></div>
+                        <div class="border border-current"></div>
+                        <div class="border border-current"></div>
+                        <div class="border border-current"></div>
+                        <div class="border border-current"></div>
+                        <div class="border border-current"></div>
+                    </div>
+                    <img alt="DBDA Studio Partners" class="w-full h-full object-cover relative z-0"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD783BoqJ3k44RztJJ1Vi3VXvFc42yObWHkC4tNPuMUVgPeHosDepHKpo489LvYko9dLkSYfg8EcTuWnnZwPK4RJxvLxGQZLY7szAgEL9dNtP3F760iqRZr_4EC_6ANCe_Ngi7qRg0UpYP4zSmDS_m_2PwvHjDKuWQSOeZn-Sq1nR-hzgnQL0FbieYDAYH1WpDXQC2k2HkeojbrTHU2cpU-iaPuGqgvj65byWe7Zg4UMXJlxMeJQ6RcaYbX7at1x1LPU54JbytmAXe" />
+                </div>
+                <div class="pt-4 text-right relative">
+                    <div class="absolute -bottom-2 right-0 w-8 h-px bg-current opacity-40"></div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-muted-light">DBDA Studio
+                        Partners</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Square Motif Section -->
+        <div class="mt-32 border-t border-gray-200 dark:border-gray-800 pt-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div
+                    class="aspect-square bg-gray-50 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 border border-current opacity-10 group-hover:opacity-30 transition-opacity">
+                    </div>
+                    <div class="w-8 h-8 border border-current opacity-40 group-hover:scale-110 transition-transform">
+                    </div>
+                </div>
+                <div
+                    class="aspect-square bg-gray-50 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 border border-current opacity-10 group-hover:opacity-30 transition-opacity">
+                    </div>
+                    <div class="w-12 h-12 bg-current opacity-10 group-hover:opacity-20 transition-opacity"></div>
+                </div>
+                <div
+                    class="aspect-square bg-gray-50 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 border border-current opacity-10 group-hover:opacity-30 transition-opacity">
+                    </div>
+                    <div class="grid grid-cols-2 gap-1 opacity-40 group-hover:opacity-60 transition-opacity">
+                        <div class="w-4 h-4 bg-current"></div>
+                        <div class="w-4 h-4 border border-current"></div>
+                        <div class="w-4 h-4 border border-current"></div>
+                        <div class="w-4 h-4 bg-current"></div>
+                    </div>
+                </div>
+                <div
+                    class="aspect-square bg-gray-50 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden group">
+                    <div
+                        class="absolute inset-0 border border-current opacity-10 group-hover:opacity-30 transition-opacity">
+                    </div>
+                    <div class="relative">
+                        <div class="w-6 h-6 border-2 border-current opacity-40 absolute top-0 left-0"></div>
+                        <div class="w-6 h-6 border-2 border-current opacity-40 absolute bottom-0 right-0"></div>
+                        <div class="w-6 h-6 border border-current opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer with square motif -->
+    <footer
+        class="bg-background-light dark:bg-background-dark py-16 px-6 md:px-12 border-t border-gray-100 dark:border-gray-800 mt-20 relative">
+        <!-- Decorative squares in footer -->
+        <div
+            class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-current to-transparent opacity-20">
+        </div>
+        <div class="absolute -top-3 left-12 w-4 h-4 border border-current opacity-30 hidden md:block"></div>
+        <div class="absolute -top-2 right-12 w-2 h-2 bg-current opacity-20 hidden md:block"></div>
+
+        <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center max-w-[1800px] mx-auto gap-12">
+            <div>
+                <div class="flex items-center mb-4">
+                    <div class="w-6 h-6 mr-3 relative">
+                        <div class="absolute w-2.5 h-2.5 bg-current top-0 left-0"></div>
+                        <div class="absolute w-2.5 h-2.5 bg-current bottom-0 right-0"></div>
+                        <div
+                            class="absolute w-2.5 h-2.5 bg-current top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        </div>
+                    </div>
+                    <div class="font-bold text-lg tracking-tight">dbda studio</div>
+                </div>
+                <p class="text-xs text-muted-light dark:text-muted-dark max-w-xs">Architectural studio focused on
+                    individual housing and thoughtful concepts.</p>
+            </div>
+            <div
+                class="flex flex-wrap gap-x-12 gap-y-4 text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium">
+                <a class="hover:text-black dark:hover:text-white transition-colors relative group" href="#">Instagram
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all group-hover:w-full"></span>
+                </a>
+                <a class="hover:text-black dark:hover:text-white transition-colors relative group" href="#">Facebook
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all group-hover:w-full"></span>
+                </a>
+                <a class="hover:text-black dark:hover:text-white transition-colors relative group" href="#">Archdaily
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-px bg-current transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+            <div
+                class="text-[10px] text-muted-light dark:text-muted-dark uppercase tracking-widest opacity-60 flex items-center gap-2">
+                <div class="w-2 h-2 bg-current"></div>
+                © 2023 DBDA Studio
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div
+        class="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6 bg-white dark:bg-neutral-900 border-t border-gray-100 dark:border-neutral-800 shadow-2xl">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-center md:text-left">
+                <h4 class="font-semibold text-xs uppercase tracking-wider mb-1">Privacy Settings</h4>
+                <p class="text-xs text-muted-light dark:text-muted-dark max-w-xl leading-relaxed">
+                    This website uses cookies to ensure the best user experience. <a
+                        class="underline hover:text-black dark:hover:text-white" href="#">More info</a>.
+                </p>
+            </div>
+            <div class="flex gap-4 w-full md:w-auto">
+                <button
+                    class="flex-1 md:flex-none px-6 py-3 bg-gray-100 dark:bg-neutral-800 text-xs font-semibold uppercase tracking-wider hover:bg-gray-200 dark:hover:bg-neutral-700 transition-colors border border-transparent hover:border-current">
+                    Settings
+                </button>
+                <button
+                    class="flex-1 md:flex-none px-6 py-3 bg-black dark:bg-white text-white dark:text-black text-xs font-semibold uppercase tracking-wider hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors border border-current">
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
