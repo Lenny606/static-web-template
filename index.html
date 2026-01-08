@@ -39,15 +39,45 @@
             <a class="block" href="#">
                 <img src="assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto">
             </a>
-            <nav class="flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav" class="hidden lg:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
                 <a class="hover-underline-animation font-medium" href="pages/projects.html">Práce</a>
                 <a class="hover-underline-animation font-medium" href="#">Filozofie</a>
                 <a class="hover-underline-animation font-medium" href="pages/about.html">Ateliér</a>
                 <a class="hover-underline-animation font-medium" href="pages/contact.html">Kontakt</a>
                 <a class="hover-underline-animation font-medium" href="#">EN</a>
             </nav>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+            </button>
         </div>
     </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <!-- Decorative Squares -->
+            <div class="mobile-menu-rectangles">
+                <div class="rect rect-1"></div>
+                <div class="rect rect-2"></div>
+                <div class="rect rect-3"></div>
+                <div class="rect rect-4"></div>
+            </div>
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-logo">
+                    <img src="assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto">
+                </a>
+                <a href="pages/projects.html" class="mobile-nav-link nav-link">Práce</a>
+                <a href="#" class="mobile-nav-link nav-link">Filozofie</a>
+                <a href="pages/about.html" class="mobile-nav-link nav-link">Ateliér</a>
+                <a href="pages/contact.html" class="mobile-nav-link nav-link">Kontakt</a>
+                <a href="#" class="mobile-nav-link nav-link">EN</a>
+            </nav>
+        </div>
+    </div>
     <img alt="Modern glass house in forest - Vila Sidonius"
         class="w-full square-image transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
         src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5cT2duUJVRscY59uG_K-EV_XcvC9uKEOn4eXIh34OFr3HmN5SkJy4Ql_TfSq0Hq1fWcHMt4-G27oTa_-81H41bqnn3x9MUfcyvIyzROvM3pcMREfzfeyTjoQY9_D2ZfD_6UWogbgGiufKe8MINUjfruQ0_Ebaef2Lx4uJ-J9x2AFnnWXGID8liuEus1JzZ9L3M9dop5St7MNZBXMZ46AomdABo9XNR54Fo6oHBiyzEhXX2zL0jeld08wf05xFvGau04ZD2ebbChce" />
@@ -359,6 +389,9 @@
             </div>
         </div>
     </div>
+    
+    <!-- Navigation Script -->
+    <script src="assets/js/nav.js"></script>
 </body>
 
 </html>
