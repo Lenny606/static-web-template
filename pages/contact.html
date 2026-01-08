@@ -1,113 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Služba | Kontakt</title>
-    <meta name="description" content="Kontaktujte nás.">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DBDA Studio - Contact</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#111827",
+                        "background-light": "#ffffff",
+                        "background-dark": "#121212",
+                        "text-light": "#1f2937",
+                        "text-dark": "#e5e7eb",
+                        "muted-light": "#6b7280",
+                        "muted-dark": "#9ca3af",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
 
-    <link rel="canonical" href="https://example.com/pages/contact.html">
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
 
-    <meta property="og:title" content="Služba | Kontakt">
-    <meta property="og:description" content="Kontaktní informace a formulář.">
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: currentColor;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
 
-    <!-- Tailwind Play CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
 
-    <link rel="stylesheet" href="../assets/css/base.css">
-    <link rel="stylesheet" href="../assets/css/layout.css">
-    <link rel="stylesheet" href="../assets/css/components.css">
-    <link rel="stylesheet" href="../assets/css/utilities.css">
+        .square-image {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        /* Square Pattern Background */
+        .square-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.03;
+            background-image:
+                linear-gradient(to right, currentColor 1px, transparent 1px),
+                linear-gradient(to bottom, currentColor 1px, transparent 1px);
+            background-size: 80px 80px;
+        }
+
+        .dark .square-pattern {
+            color: #fff;
+        }
+
+        /* Decorative squares */
+        .square-decor {
+            position: relative;
+        }
+
+        .square-decor::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 1px solid currentColor;
+            transition: all 0.3s ease;
+        }
+
+        .square-decor-top-left::before {
+            top: -16px;
+            left: -16px;
+        }
+
+        .square-decor-bottom-right::before {
+            bottom: -16px;
+            right: -16px;
+        }
+
+        .square-decor-top-right::before {
+            top: -16px;
+            right: -16px;
+        }
+
+        .square-decor-bottom-left::before {
+            bottom: -16px;
+            left: -16px;
+        }
+
+        /* Animated corner squares */
+        .corner-square {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 1px solid currentColor;
+            opacity: 0.2;
+            transition: all 0.5s ease;
+        }
+
+        .corner-square-top-left {
+            top: 0;
+            left: 0;
+        }
+
+        .corner-square-top-right {
+            top: 0;
+            right: 0;
+        }
+
+        .corner-square-bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+
+        .corner-square-bottom-right {
+            bottom: 0;
+            right: 0;
+        }
+
+        .group:hover .corner-square {
+            opacity: 0.5;
+        }
+
+        /* Square badge */
+        .square-badge {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid currentColor;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        /* Grid squares overlay */
+        .grid-squares {
+            background-image:
+                linear-gradient(to right, currentColor 1px, transparent 1px),
+                linear-gradient(to bottom, currentColor 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.1;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Sticky Header -->
-    <header class="header-sticky flex-between">
-        <div class="flex-center">
-            <a href="../index.html" class="header-logo">
-                <img src="../assets/images/DBDA_logo.png" alt="DBDA studio Logo" class="logo-img">
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    <!-- Square Pattern Background -->
+    <div class="square-pattern"></div>
+
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 py-6 flex justify-between items-center">
+            <a class="block" href="../index.html">
+                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto">
             </a>
+            <nav class="flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
+                <a class="hover-underline-animation font-medium" href="projects.html">Práce</a>
+                <a class="hover-underline-animation font-medium" href="#">Filozofie</a>
+                <a class="hover-underline-animation font-medium" href="about.html">Ateliér</a>
+                <a class="hover-underline-animation font-medium" href="contact.html">Kontakt</a>
+                <a class="hover-underline-animation font-medium" href="#">EN</a>
+            </nav>
         </div>
-        <nav class="flex-center gap-sm">
-            <button class="menu-toggle btn btn-sm" aria-label="Open Menu">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-            <div id="desktop-nav" class="flex-center gap-sm">
-                <a href="../index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">Studio</a>
-                <a href="services.html" class="nav-link">Expertise</a>
-                <a href="contact.html" class="nav-link active">Contact</a>
-            </div>
-        </nav>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="mobile-menu-overlay">
-        <nav class="mobile-nav">
-            <a href="../index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">Studio</a>
-            <a href="services.html" class="nav-link">Expertise</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </nav>
-    </div>
+    <main class="max-w-7xl mx-auto px-6 sm:px-12 py-32 lg:py-48 space-y-24 relative z-10">
 
-    <main>
-        <section class="section-padding">
-            <div class="container">
-                <h1 class="mb-md">CONTACT US</h1>
-                <div class="grid-brutal">
-                    <div class="col-span-3 content-block">
-                        <h2 class="mb-sm">LONDON STUDIO</h2>
-                        <ul class="mb-md">
-                            <li class="mb-xs"><strong>Address:</strong> Riverside, 22 Hester Road, London SW11 4AN</li>
-                            <li class="mb-xs"><strong>Email:</strong> london@dba-architects.com</li>
-                            <li class="mb-xs"><strong>Phone:</strong> +44 (0)20 7738 0455</li>
-                        </ul>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Left Column: Info -->
+            <div>
+                <span
+                    class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-8">Contact
+                    Us</span>
+                <h1 class="text-4xl md:text-5xl font-light mb-16">Let's build something together.</h1>
 
-                        <h2 class="mb-sm">NEW YORK STUDIO</h2>
-                        <ul>
-                            <li class="mb-xs"><strong>Address:</strong> 123 Industrial Ave, NY 10001</li>
-                            <li class="mb-xs"><strong>Email:</strong> ny@dba-architects.com</li>
-                            <li class="mb-xs"><strong>Phone:</strong> +1 (212) 555-0123</li>
+                <div class="space-y-12">
+                    <div>
+                        <h2 class="text-lg font-medium mb-4 uppercase tracking-wider">London Studio</h2>
+                        <ul class="space-y-2 text-muted-light dark:text-muted-dark leading-relaxed">
+                            <li>Riverside, 22 Hester Road</li>
+                            <li>London SW11 4AN</li>
+                            <li><a href="mailto:london@dba-architects.com"
+                                    class="hover:text-primary dark:hover:text-white transition-colors">london@dba-architects.com</a>
+                            </li>
+                            <li>+44 (0)20 7738 0455</li>
                         </ul>
                     </div>
 
-                    <div class="col-span-3 content-block">
-                        <h2 class="mb-sm">GENERAL INQUIRIES</h2>
-                        <form id="contact-form">
-                            <input type="text" class="input-brutal mb-sm" placeholder="FULL NAME..." required>
-                            <input type="email" class="input-brutal mb-sm" placeholder="EMAIL ADDRESS..." required>
-                            <textarea class="input-brutal mb-md" rows="5" placeholder="YOUR MESSAGE..."
-                                required></textarea>
-                            <button type="submit" class="btn w-full">SEND MESSAGE</button>
-                        </form>
+                    <div>
+                        <h2 class="text-lg font-medium mb-4 uppercase tracking-wider">New York Studio</h2>
+                        <ul class="space-y-2 text-muted-light dark:text-muted-dark leading-relaxed">
+                            <li>123 Industrial Ave</li>
+                            <li>NY 10001, USA</li>
+                            <li><a href="mailto:ny@dba-architects.com"
+                                    class="hover:text-primary dark:hover:text-white transition-colors">ny@dba-architects.com</a>
+                            </li>
+                            <li>+1 (212) 555-0123</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-16">
+                    <div class="relative w-full aspect-video grayscale opacity-80">
+                        <!-- Map Placeholder / Decorative -->
+                        <div
+                            class="absolute inset-0 bg-gray-200 dark:bg-gray-800 flex items-center justify-center border border-gray-300 dark:border-gray-700">
+                            <span class="text-xs uppercase tracking-widest opacity-50">Map View</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Right Column: Form -->
+            <div class="bg-gray-50 dark:bg-gray-900 p-8 md:p-12 border border-gray-200 dark:border-gray-800">
+                <h3 class="text-2xl font-light mb-8">General Inquiries</h3>
+                <form class="space-y-8">
+                    <div>
+                        <label for="name"
+                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Full
+                            Name</label>
+                        <input type="text" id="name"
+                            class="block w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-white focus:ring-0 px-0 py-2 transition-colors"
+                            placeholder="JAN NOVAK">
+                    </div>
+                    <div>
+                        <label for="email"
+                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Email
+                            Address</label>
+                        <input type="email" id="email"
+                            class="block w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-white focus:ring-0 px-0 py-2 transition-colors"
+                            placeholder="EMAIL@EXAMPLE.COM">
+                    </div>
+                    <div>
+                        <label for="message"
+                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Your
+                            Message</label>
+                        <textarea id="message" rows="4"
+                            class="block w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-white focus:ring-0 px-0 py-2 transition-colors resize-none"
+                            placeholder="HOW CAN WE HELP?"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="group inline-flex items-center text-xs font-bold tracking-widest uppercase mt-4 text-primary dark:text-white hover:opacity-70 transition-opacity">
+                        <span>Send Message</span>
+                        <span class="w-8 h-[1px] bg-primary dark:bg-white ml-4 transition-all group-hover:w-12"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
     </main>
 
-    <footer class="main-content">
-        <div class="container">
-            <div class="flex-between mb-md">
-                <h3 class="header-logo">DBDA studio</h3>
-                <div class="flex-center gap-sm">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="#" class="nav-link">Privacy</a>
-                </div>
+    <footer
+        class="bg-background-light dark:bg-background-dark py-16 lg:py-24 border-t border-gray-100 dark:border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="col-span-1">
+                <a class="text-2xl font-bold tracking-tight text-primary dark:text-white" href="#">DBDA studio</a>
+                <p class="text-sm text-muted-light dark:text-muted-dark mt-4">Architektonický ateliér</p>
             </div>
-            <p class="text-accent text-uppercase" style="font-size: 0.7rem;">&copy; 2026 DBDA studio (DBArchitects)
-                Global
-                Studio. All industrial rights reserved.</p>
+            <div class="col-span-1">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-white mb-4">Kontakt
+                </h4>
+                <ul class="space-y-2 text-sm text-text-light dark:text-text-dark">
+                    <li><a class="hover-underline-animation" href="tel:+420123456789">+420 123 456 789</a></li>
+                    <li><a class="hover-underline-animation" href="mailto:info@dbdastudio.cz">info@dbdastudio.cz</a>
+                    </li>
+                    <li class="mt-4">
+                        <p class="text-muted-light dark:text-muted-dark">Hlavní ulice 123</p>
+                        <p class="text-muted-light dark:text-muted-dark">100 00 Praha</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-1">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-white mb-4">Sledujte
+                    nás</h4>
+                <ul class="flex space-x-4">
+                    <li>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                            href="https://facebook.com/dbdastudio" rel="noopener noreferrer" target="_blank">
+                            <span class="material-symbols-outlined text-xl">social_leaderboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                            href="https://instagram.com/dbdastudio" rel="noopener noreferrer" target="_blank">
+                            <span class="material-symbols-outlined text-xl">camera_alt</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                            href="https://linkedin.com/company/dbdastudio" rel="noopener noreferrer" target="_blank">
+                            <span class="material-symbols-outlined text-xl">link</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-1">
+                <h4 class="text-sm font-semibold uppercase tracking-wider text-primary dark:text-white mb-4">Rychlý
+                    náhled</h4>
+                <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed">
+                    Nahlédněte do našeho světa designu a inspirace na sociálních sítích. Pravidelně sdílíme novinky a
+                    procesy naší práce.
+                </p>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 sm:px-12 mt-16 pt-8 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-muted-light dark:text-muted-dark flex items-center justify-center gap-2">
+            <div class="w-2 h-2 bg-current"></div>
+            © 2023 DBDA studio. Všechna práva vyhrazena.
         </div>
     </footer>
-
-    <!-- Scripts -->
-    <script src="../assets/js/analytics.js"></script>
-    <script src="../assets/js/nav.js"></script>
-    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
