@@ -466,3 +466,13 @@ body {
     color: currentColor;
     /* Let opacity handle the lightness */
 }
+#lottie {
+    background-color: transparent;
+    width: 40%;
+    height: 40%;
+    display: block;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    text-align: center;
+    opacity: 1;
+}
