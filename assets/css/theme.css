@@ -412,7 +412,7 @@ body {
     .mobile-menu-overlay {
         display: none;
     }
-    
+
     .menu-toggle {
         display: none !important;
     }
@@ -420,42 +420,13 @@ body {
 
 /* Color Transition Text Effect */
 .color-transition-text {
-    background: linear-gradient(
-        90deg,
-        #1a1a1a 0%,
-        #4a5568 25%,
-        #1a1a1a 50%,
-        #4a5568 75%,
-        #1a1a1a 100%
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: colorShift 8s ease-in-out infinite;
-    transition: all 0.3s ease;
-}
-
-.dark .color-transition-text {
-    background: linear-gradient(
-        90deg,
-        #ffffff 0%,
-        #cbd5e0 25%,
-        #ffffff 50%,
-        #cbd5e0 75%,
-        #ffffff 100%
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-@keyframes colorShift {
-    0%, 100% {
-        background-position: 0% center;
-    }
-    50% {
-        background-position: 100% center;
-    }
+    /* Ensure spans behave correctly */
+    display: inline-block;
+    /* Remove old background clip */
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: initial;
+    color: currentColor;
+    /* Let opacity handle the lightness */
 }
