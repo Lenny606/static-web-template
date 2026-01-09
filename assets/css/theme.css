@@ -50,7 +50,43 @@ body {
     color: #fff;
 }
 
-/* Decorative squares */
+/* Fancy square hover link */
+.square-link {
+    position: relative;
+    /* create space so the corner lines have breathing room */
+    padding: 0.5rem 0.75rem;
+    /* ensure the gradient corners use current text color for light/dark */
+    color: inherit;
+    /* corner config */
+    --corner-size: 10px; /* initial corner segment length */
+    --corner-thickness: 1px;
+    --corner-radius: 2px; /* subtle rounding when fully expanded */
+    background:
+        /* top-left horizontal */ linear-gradient(currentColor, currentColor) left top / var(--corner-size) var(--corner-thickness) no-repeat,
+        /* top-left vertical   */ linear-gradient(currentColor, currentColor) left top / var(--corner-thickness) var(--corner-size) no-repeat,
+        /* bottom-right horizontal */ linear-gradient(currentColor, currentColor) right bottom / var(--corner-size) var(--corner-thickness) no-repeat,
+        /* bottom-right vertical   */ linear-gradient(currentColor, currentColor) right bottom / var(--corner-thickness) var(--corner-size) no-repeat;
+    transition: background-size 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+}
+
+.square-link:hover {
+    /* expand corner lines to form an elegant square frame */
+    background-size:
+        /* top */ 100% var(--corner-thickness),
+        /* left */ var(--corner-thickness) 100%,
+        /* bottom */ 100% var(--corner-thickness),
+        /* right */ var(--corner-thickness) 100%;
+    /* subtle inset glow to hint interaction */
+    box-shadow: inset 0 0 0 6px transparent, 0 0 0 0 transparent;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .square-link {
+        transition: none;
+    }
+}
+
 .square-decor {
     position: relative;
 }
