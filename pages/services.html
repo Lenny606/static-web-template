@@ -22,35 +22,53 @@
     <link rel="stylesheet" href="../assets/css/utilities.css">
 </head>
 
-<body>
-    <!-- Sticky Header -->
-    <header class="header-sticky flex-between">
-        <div class="flex-center">
-            <a href="../index.html" class="header-logo">
-                <img src="../assets/images/DBDA_logo.png" alt="DBDA studio Logo" class="logo-img">
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 py-6 flex justify-between items-center">
+            <a class="block" href="../index.html">
+                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto">
             </a>
-        </div>
-        <nav class="flex-center gap-sm">
-            <button class="menu-toggle btn btn-sm" aria-label="Open Menu">
-                <span class="material-symbols-outlined">menu</span>
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav" class="hidden lg:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
+                <a class="hover-underline-animation font-medium" href="projects.html">Práce</a>
+                <a class="hover-underline-animation font-medium" href="philosophy.html">Filozofie</a>
+                <a class="hover-underline-animation font-medium" href="studio.html">Ateliér</a>
+                <a class="hover-underline-animation font-medium" href="contact.html">Kontakt</a>
+                <a class="hover-underline-animation font-medium" href="#">EN</a>
+            </nav>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Toggle menu"
+                aria-expanded="false">
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
             </button>
-            <div id="desktop-nav" class="flex-center gap-sm">
-                <a href="../index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">Studio</a>
-                <a href="services.html" class="nav-link active">Expertise</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="mobile-menu-overlay">
-        <nav class="mobile-nav">
-            <a href="../index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">Studio</a>
-            <a href="services.html" class="nav-link">Expertise</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </nav>
+        <div class="mobile-menu-content">
+            <!-- Decorative Squares -->
+            <div class="mobile-menu-rectangles">
+                <div class="rect rect-1"></div>
+                <div class="rect rect-2"></div>
+                <div class="rect rect-3"></div>
+                <div class="rect rect-4"></div>
+            </div>
+            <nav class="mobile-nav">
+                <a href="../index.html" class="mobile-nav-logo">
+                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto">
+                </a>
+                <a href="projects.html" class="mobile-nav-link nav-link">Práce</a>
+                <a href="philosophy.html" class="mobile-nav-link nav-link">Filozofie</a>
+                <a href="studio.html" class="mobile-nav-link nav-link">Ateliér</a>
+                <a href="contact.html" class="mobile-nav-link nav-link">Kontakt</a>
+                <a href="#" class="mobile-nav-link nav-link">EN</a>
+            </nav>
+        </div>
     </div>
 
     <main>
@@ -107,10 +125,8 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="../assets/js/analytics.js"></script>
+    <!-- Navigation Script -->
     <script src="../assets/js/nav.js"></script>
-    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>DBDA Studio - Selected Projects</title>
+    <title>DBDA studio – Filozofie</title>
 
     <!-- Preconnect for Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
 <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
     <!-- Square Pattern Background -->
-    <div class="square-pattern"></div>
+    <!-- <div class="square-pattern"></div> -->
 
     <header
         class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm shadow-sm">
@@ -39,196 +39,191 @@
             <a class="block" href="../index.html">
                 <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto">
             </a>
-            <nav class="flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav" class="hidden lg:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
                 <a class="hover-underline-animation font-medium" href="projects.html">Práce</a>
-                <a class="hover-underline-animation font-medium" href="#">Filozofie</a>
-                <a class="hover-underline-animation font-medium" href="about.html">Ateliér</a>
+                <a class="hover-underline-animation font-medium" href="philosophy.html">Filozofie</a>
+                <a class="hover-underline-animation font-medium" href="studio.html">Ateliér</a>
                 <a class="hover-underline-animation font-medium" href="contact.html">Kontakt</a>
                 <a class="hover-underline-animation font-medium" href="#">EN</a>
             </nav>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Toggle menu"
+                aria-expanded="false">
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+            </button>
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <!-- Decorative Squares -->
+            <div class="mobile-menu-rectangles">
+                <div class="rect rect-1"></div>
+                <div class="rect rect-2"></div>
+                <div class="rect rect-3"></div>
+                <div class="rect rect-4"></div>
+            </div>
+            <nav class="mobile-nav">
+                <a href="../index.html" class="mobile-nav-logo">
+                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto">
+                </a>
+                <a href="projects.html" class="mobile-nav-link nav-link">Práce</a>
+                <a href="philosophy.html" class="mobile-nav-link nav-link">Filozofie</a>
+                <a href="studio.html" class="mobile-nav-link nav-link">Ateliér</a>
+                <a href="contact.html" class="mobile-nav-link nav-link">Kontakt</a>
+                <a href="#" class="mobile-nav-link nav-link">EN</a>
+            </nav>
+        </div>
+    </div>
+
     <main class="max-w-7xl mx-auto px-6 sm:px-12 py-32 lg:py-48 space-y-32 relative z-10">
-        <!-- Main Content of Projects -->
+        <!-- Filozofie (hero) -->
         <section class="mb-24 relative">
             <div class="absolute -top-8 -left-8 w-16 h-16 border border-current opacity-10 hidden md:block"></div>
             <h1 class="text-4xl md:text-5xl font-light mb-8 relative inline-block">
-                Selected Works
+                Filozofie
                 <span class="absolute -top-2 -right-2 w-2 h-2 bg-current opacity-40"></span>
             </h1>
-            <p class="text-xl text-muted-light max-w-2xl">A collection of our architectural projects, where every detail
-                matters.</p>
+            <p class="text-xl text-muted-light max-w-3xl leading-relaxed">
+                Záleží nám na prostředí, ve kterém žijeme. Věříme v architekturu, která slouží do posledního detailu –
+                je promyšlená, čitelná a dlouhodobě udržitelná. Každý projekt začíná respektem k místu a končí
+                poctivým řemeslem.
+            </p>
         </section>
 
-        <!-- Use the same project grid structure as was in projects.html but cleaned up to match new styling -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Zásady / principy -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+            <article class="space-y-4 p-6 border border-gray-200 dark:border-gray-800 bg-background-light/40 dark:bg-background-dark/40 relative">
+                <div class="corner-square corner-square-top-left"></div>
+                <div class="corner-square corner-square-bottom-right"></div>
+                <h3 class="text-2xl font-medium">Respekt k místu</h3>
+                <p class="text-muted-light leading-relaxed">
+                    Kontekst je východisko. Materiály, měřítko i kompozice vychází z charakteru lokality, aby nová vrstva
+                    přirozeně navázala a obohatila existující prostředí.
+                </p>
+            </article>
+            <article class="space-y-4 p-6 border border-gray-200 dark:border-gray-800 bg-background-light/40 dark:bg-background-dark/40 relative">
+                <div class="corner-square corner-square-top-left"></div>
+                <div class="corner-square corner-square-bottom-right"></div>
+                <h3 class="text-2xl font-medium">Funkce a čitelnost</h3>
+                <p class="text-muted-light leading-relaxed">
+                    Dobrá architektura je srozumitelná. Stavíme na jasném provozu, přehledné konstrukci a detailech, které
+                    slouží lidem – ne sami sobě.
+                </p>
+            </article>
+            <article class="space-y-4 p-6 border border-gray-200 dark:border-gray-800 bg-background-light/40 dark:bg-background-dark/40 relative">
+                <div class="corner-square corner-square-top-left"></div>
+                <div class="corner-square corner-square-bottom-right"></div>
+                <h3 class="text-2xl font-medium">Udržitelnost v praxi</h3>
+                <p class="text-muted-light leading-relaxed">
+                    Preferujeme trvanlivé materiály, jednoduché detaily a efektivní provozní řešení. Udržitelnost
+                    chápeme jako souběh technické kvality a dlouhodobé krásy.
+                </p>
+            </article>
+        </section>
 
-            <!-- Villa Sidonius -->
-            <div class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left">
-                <!-- Decorative Corner -->
-                <div
-                    class="absolute -top-3 -left-3 w-6 h-6 border-t border-l border-current opacity-30 transition-all duration-500 group-hover:w-12 group-hover:h-12">
-                </div>
+        <!-- Ilustrační figura (Villa) -->
+        <section class="mt-24">
+            <figure class="relative overflow-hidden aspect-[16/9] bg-gray-100 dark:bg-gray-800">
+                <img alt="Villa Sidonius"
+                     class="w-full h-full object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqn4CvDNNaF-jr0Mc1mF-jLW3LKxLs9KxQ44uRkXATpkb7uEpvuUjuhtlDV9CBzNpWx96ma2fSiGMGRlia5S3S6yQrN6XiRWGMSGPdA8PY-K4-hRvTRj9C8JErrF0Nf2G83sT0UAHJTdll-y8N0fC-64X-5qgnCj2o4ZeY3twl-v_yO6c75dh72gGvfoJAIMQgVdBUCYBB8HSkk9MDw-laIwfScT7gfmy2-t9fObsPpxrGICcRv8wE9ruPRuEBTGe-xV1A6_YKadDi" />
+                <figcaption class="absolute bottom-0 left-0 right-0 p-4 text-xs text-white/80 bg-gradient-to-t from-black/40 to-transparent">
+                    Villa Sidonius – promyšlené propojení soukromí, světla a krajiny.
+                </figcaption>
+            </figure>
+        </section>
 
-                <div class="relative overflow-hidden aspect-square bg-gray-100 dark:bg-gray-800">
-                    <img alt="Villa Sidonius exterior"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqn4CvDNNaF-jr0Mc1mF-jLW3LKxLs9KxQ44uRkXATpkb7uEpvuUjuhtlDV9CBzNpWx96ma2fSiGMGRlia5S3S6yQrN6XiRWGMSGPdA8PY-K4-hRvTRj9C8JErrF0Nf2G83sT0UAHJTdll-y8N0fC-64X-5qgnCj2o4ZeY3twl-v_yO6c75dh72gGvfoJAIMQgVdBUCYBB8HSkk9MDw-laIwfScT7gfmy2-t9fObsPpxrGICcRv8wE9ruPRuEBTGe-xV1A6_YKadDi" />
-                    <!-- Inner Grid Overlay -->
-                    <div
-                        class="absolute inset-0 grid grid-cols-2 grid-rows-2 opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none">
-                        <div class="border-r border-b border-white/50"></div>
-                        <div class="border-b border-white/50"></div>
-                        <div class="border-r border-white/50"></div>
-                        <div></div>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Villa Sidonius</h3>
-                    <div class="flex items-center gap-2">
-                        <div class="w-3 h-3 border border-current opacity-40"></div>
-                        <p class="text-sm text-muted-light">Realized — 2023</p>
-                    </div>
-                </div>
+        <!-- Jak pracujeme / proces -->
+        <section class="mt-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div class="lg:col-span-5 space-y-4">
+                <h2 class="text-3xl font-light">Jak pracujeme</h2>
+                <p class="text-muted-light leading-relaxed">
+                    Spolupráce je dialog. Od prvního setkání si vyjasňujeme cíle, rozpočet i čas. Dáváme dohromady tým,
+                    který projektu nejlépe prospěje, a postupujeme transparentně v jasných krocích.
+                </p>
             </div>
-
-            <!-- Bell Tower -->
-            <div class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative">
-                <!-- Decorative Elements -->
-                <div class="absolute top-16 right-0 w-16 h-16 border border-current opacity-5 hidden lg:block"></div>
-                <div class="absolute top-20 -right-4 w-4 h-4 border border-current opacity-20 hidden lg:block"></div>
-
-                <div class="relative overflow-hidden aspect-[3/4] bg-gray-100 dark:bg-gray-800">
-                    <!-- Corner squares internal -->
-                    <div class="corner-square corner-square-top-right z-10 bg-white/10 backdrop-blur-sm"></div>
-                    <div class="corner-square corner-square-bottom-left z-10 bg-white/10 backdrop-blur-sm"></div>
-
-                    <img alt="Bell Tower, Bílovice - Lutotín"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQrUemxXffkGgI4i_72Pb4_aWAfZypZfmMeOFJBG3GWCrGlcVKZZMjutdsx6pz9Ph3MJk9uhrbLFFngE9tZZnOVFDPD0cJMjRVLQ6lt49crOv9TlGx6613WWoJDJoEcoQruodcb1pVVlRfvXHxUCSfRkLKnKgfsg4O3byfZRUfE6h_qxaaACdyUHx31B6UhEdy3TOlicc9deCyg20L3-_1G7CaIb_6r9yPwOye2FeRJaedo9JXT5sPksYbt0cRwqdDil9AUgKUMQT6" />
-                </div>
-                <div class="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Bell Tower</h3>
-                    <div class="flex items-center gap-2">
-                        <div class="w-2 h-2 bg-current opacity-40"></div>
-                        <p class="text-sm text-muted-light">Bílovice - Lutotín</p>
+            <ol class="lg:col-span-7 space-y-6">
+                <li class="p-6 border border-gray-200 dark:border-gray-800 flex gap-4">
+                    <div class="w-6 h-6 border border-current flex items-center justify-center text-xs">1</div>
+                    <div>
+                        <h3 class="text-lg font-medium">Zadání a vize</h3>
+                        <p class="text-sm text-muted-light leading-relaxed">Společné porozumění ambicím, limitům a hodnotám.
+                        </p>
                     </div>
-                </div>
+                </li>
+                <li class="p-6 border border-gray-200 dark:border-gray-800 flex gap-4">
+                    <div class="w-6 h-6 border border-current flex items-center justify-center text-xs">2</div>
+                    <div>
+                        <h3 class="text-lg font-medium">Koncept a ověření</h3>
+                        <p class="text-sm text-muted-light leading-relaxed">Hledání nejjednoduššího funkčního řešení a jeho
+                            prověření v čase i provozu.</p>
+                    </div>
+                </li>
+                <li class="p-6 border border-gray-200 dark:border-gray-800 flex gap-4">
+                    <div class="w-6 h-6 border border-current flex items-center justify-center text-xs">3</div>
+                    <div>
+                        <h3 class="text-lg font-medium">Projekt a detaily</h3>
+                        <p class="text-sm text-muted-light leading-relaxed">Koordinace profesí, technická disciplína a
+                            poctivý detail.</p>
+                    </div>
+                </li>
+                <li class="p-6 border border-gray-200 dark:border-gray-800 flex gap-4">
+                    <div class="w-6 h-6 border border-current flex items-center justify-center text-xs">4</div>
+                    <div>
+                        <h3 class="text-lg font-medium">Realizace a dohled</h3>
+                        <p class="text-sm text-muted-light leading-relaxed">Partnerská spolupráce s dodavateli a dohled nad
+                            kvalitou provedení.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Udržitelnost / materiály (s obrazem zvonice) -->
+        <section class="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 space-y-4">
+                <h2 class="text-3xl font-light">Materiály a dlouhověkost</h2>
+                <p class="text-muted-light leading-relaxed">
+                    Volíme materiály, které stárnou s grácií – kámen, dřevo, keramiku, omítky. Důvěřujeme jednoduchým
+                    skladbám, které lze snadno udržovat a opravovat. Krása je výsledkem funkce, řemesla a míry.
+                </p>
             </div>
+            <figure class="order-1 lg:order-2 relative overflow-hidden aspect-[4/5] bg-gray-100 dark:bg-gray-800">
+                <img alt="Zvonice Bílovice-Lutotín"
+                     class="w-full h-full object-cover"
+                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQrUemxXffkGgI4i_72Pb4_aWAfZypZfmMeOFJBG3GWCrGlcVKZZMjutdsx6pz9Ph3MJk9uhrbLFFngE9tZZnOVFDPD0cJMjRVLQ6lt49crOv9TlGx6613WWoJDJoEcoQruodcb1pVVlRfvXHxUCSfRkLKnKgfsg4O3byfZRUfE6h_qxaaACdyUHx31B6UhEdy3TOlicc9deCyg20L3-_1G7CaIb_6r9yPwOye2FeRJaedo9JXT5sPksYbt0cRwqdDil9AUgKUMQT6" />
+            </figure>
+        </section>
 
-            <!-- Mill Reconstruction -->
-            <div class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-bottom-right">
-                <!-- Decorative Corner -->
-                <div
-                    class="absolute -bottom-3 -right-3 w-8 h-8 border-b border-r border-current opacity-30 transition-all duration-500 group-hover:w-16 group-hover:h-16">
+        <!-- Spolupráce / tým (partners image) -->
+        <section class="mt-24 border-t border-gray-200 dark:border-gray-800 pt-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <h2 class="text-3xl font-light">Spolupráce a odpovědnost</h2>
+                    <p class="text-muted-light leading-relaxed">
+                        Stavíme na otevřené komunikaci a zodpovědném vedení projektu. Vážně bereme čas investora i
+                        veřejného prostoru. Kvalita řešení je pro nás stejně důležitá jako kvalita vztahů.
+                    </p>
                 </div>
-
-                <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
-                    <img alt="Mill Reconstruction, Central Bohemia"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjP1dKlTsWaQwqIBxWvQ95vaIgMGfnQ4xWjSNOZgGrb0cNTc0E-Bs24paWcG7uPFqlfV5RYRhbgdKq5NNIGJ0L6b-n_1nJmv6biTBJVSstHGe28rQBa7uD09s-vfpL8q3QIaDbklpFhQ04lqeeSFMtIQomHv0zq3EuDzkdu_vNgiGVgBI8t4p6QQd-pA-HBm2Q_n7Xi5Af-3N5ZQK536qZ7iPAf967o8JxAQcjK-4ZaVOzKXT-GKQS_7btT3dsQs6IX3fjRU3UENsB" />
-                    <div
-                        class="absolute top-4 right-4 w-12 h-12 border border-white/30 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                        <span class="material-symbols-outlined text-white text-lg">arrow_outward</span>
-                    </div>
-                </div>
-                <div class="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Mill Reconstruction</h3>
-                    <div class="w-6 h-6 border border-current flex items-center justify-center opacity-40">
-                        <div class="w-2 h-2 border border-current"></div>
-                    </div>
-                </div>
+                <figure class="lg:col-span-5 relative overflow-hidden aspect-square bg-gray-100 dark:bg-gray-800">
+                    <img alt="DBDA – spolupráce"
+                         class="w-full h-full object-cover grayscale"
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD783BoqJ3k44RztJJ1Vi3VXvFc42yObWHkC4tNPuMUVgPeHosDepHKpo489LvYko9dLkSYfg8EcTuWnnZwPK4RJxvLxGQZLY7szAgEL9dNtP3F760iqRZr_4EC_6ANCe_Ngi7qRg0UpYP4zSmDS_m_2PwvHjDKuWQSOeZn-Sq1nR-hzgnQL0FbieYDAYH1WpDXQC2k2HkeojbrTHU2cpU-iaPuGqgvj65byWe7Zg4UMXJlxMeJQ6RcaYbX7at1x1LPU54JbytmAXe" />
+                </figure>
             </div>
+        </section>
 
-            <!-- Partners -->
-            <div class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative">
-                <div
-                    class="absolute top-0 right-0 w-full h-full border border-current opacity-5 -translate-y-4 translate-x-4 transition-transform duration-500 group-hover:translate-x-6">
-                </div>
-
-                <div class="relative overflow-hidden aspect-square bg-gray-100 dark:bg-gray-800">
-                    <!-- Grid overlay squares -->
-                    <div class="absolute inset-0 grid grid-cols-4 grid-rows-4 z-10 opacity-20 pointer-events-none">
-                        <div class="border-r border-b border-white/20"></div>
-                        <div class="border-b border-white/20"></div>
-                        <div class="border-b border-white/20"></div>
-                        <div class="border-b border-white/20"></div>
-                        <!-- Row 2 -->
-                        <div class="border-r border-b border-white/20"></div>
-                        <div class="border-b border-white/20"></div>
-                        <div class="border-b border-white/20"></div>
-                        <div class="border-b border-white/20"></div>
-                    </div>
-
-                    <img alt="DBDA Studio Partners"
-                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD783BoqJ3k44RztJJ1Vi3VXvFc42yObWHkC4tNPuMUVgPeHosDepHKpo489LvYko9dLkSYfg8EcTuWnnZwPK4RJxvLxGQZLY7szAgEL9dNtP3F760iqRZr_4EC_6ANCe_Ngi7qRg0UpYP4zSmDS_m_2PwvHjDKuWQSOeZn-Sq1nR-hzgnQL0FbieYDAYH1WpDXQC2k2HkeojbrTHU2cpU-iaPuGqgvj65byWe7Zg4UMXJlxMeJQ6RcaYbX7at1x1LPU54JbytmAXe" />
-                </div>
-                <div class="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Partners</h3>
-                    <div class="square-badge opacity-60">TEAM</div>
-                </div>
+        <!-- CTA -->
+        <section class="mt-24 flex items-center justify-between border border-gray-200 dark:border-gray-800 p-6 md:p-8">
+            <div class="space-y-2">
+                <h3 class="text-2xl font-medium">Pojďme se potkat</h3>
+                <p class="text-muted-light">Máte záměr nebo otázku? Rádi se s vámi potkáme nad prvními možnostmi.</p>
             </div>
-
-        </div>
-
-        <!-- Square Motif Section -->
-        <section class="py-20 border-t border-gray-200 dark:border-gray-800">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Abstract Square 1 -->
-                <div
-                    class="aspect-square bg-gray-50 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden group hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                    <div
-                        class="absolute inset-0 border border-current opacity-10 group-hover:opacity-30 transition-opacity">
-                    </div>
-                    <div
-                        class="w-8 h-8 border border-current opacity-40 group-hover:rotate-45 transition-transform duration-500">
-                    </div>
-                </div>
-                <!-- Abstract Square 2 -->
-                <div
-                    class="aspect-square bg-gray-50 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden group hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                    <div
-                        class="absolute inset-0 border border-current opacity-10 group-hover:opacity-30 transition-opacity">
-                    </div>
-                    <div
-                        class="w-12 h-12 bg-current opacity-10 group-hover:opacity-20 transition-opacity scale-75 group-hover:scale-100 duration-500">
-                    </div>
-                </div>
-                <!-- Abstract Square 3 -->
-                <div
-                    class="aspect-square bg-gray-50 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden group hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                    <div
-                        class="absolute inset-0 border border-current opacity-10 group-hover:opacity-30 transition-opacity">
-                    </div>
-                    <div
-                        class="grid grid-cols-2 gap-1 opacity-40 group-hover:opacity-60 transition-opacity group-hover:gap-2 duration-500">
-                        <div class="w-4 h-4 bg-current"></div>
-                        <div class="w-4 h-4 border border-current"></div>
-                        <div class="w-4 h-4 border border-current"></div>
-                        <div class="w-4 h-4 bg-current"></div>
-                    </div>
-                </div>
-                <!-- Abstract Square 4 -->
-                <div
-                    class="aspect-square bg-gray-50 dark:bg-gray-900 flex items-center justify-center relative overflow-hidden group hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                    <div
-                        class="absolute inset-0 border border-current opacity-10 group-hover:opacity-30 transition-opacity">
-                    </div>
-                    <div class="relative w-12 h-12">
-                        <div
-                            class="w-full h-full border border-current opacity-20 absolute top-0 left-0 transition-all duration-500 group-hover:top-1 group-hover:left-1">
-                        </div>
-                        <div
-                            class="w-full h-full border border-current opacity-20 absolute top-0 left-0 transition-all duration-500 group-hover:-top-1 group-hover:-left-1">
-                        </div>
-                        <div
-                            class="w-4 h-4 bg-current absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-40">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="contact.html" class="square-link text-xs font-bold tracking-widest uppercase">Kontakt</a>
         </section>
     </main>
 
@@ -291,6 +286,9 @@
             © 2023 DBDA studio. Všechna práva vyhrazena.
         </div>
     </footer>
+
+    <!-- Navigation Script -->
+    <script src="../assets/js/nav.js"></script>
 </body>
 
 </html>
