@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const handleToggle = (e) => {
             e.preventDefault();
             e.stopPropagation();
-            
+
             const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             const newState = !isExpanded;
-            
+
             menuToggle.setAttribute('aria-expanded', newState.toString());
             mobileMenu.classList.toggle('active');
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add click event
         menuToggle.addEventListener('click', handleToggle);
-        
+
         // Add touch event for better mobile support (prevent double-tap zoom)
         menuToggle.addEventListener('touchend', (e) => {
             e.preventDefault();
@@ -92,6 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = 'auto';
             }
         });
+    }
+
+    // Dynamic Year
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
 });
 
