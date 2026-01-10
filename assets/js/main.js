@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                console.log('Revealing element:', entry.target);
                 entry.target.classList.add('revealed');
                 observer.unobserve(entry.target);
             }
@@ -47,7 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Observe elements with reveal classes
-    document.querySelectorAll('.reveal-on-scroll, .img-container, .content-block').forEach(el => {
+    const revealElements = document.querySelectorAll('.reveal-on-scroll, .img-container, .content-block');
+    console.log(`Found ${revealElements.length} elements to observe for reveal`);
+
+    revealElements.forEach(el => {
         observer.observe(el);
     });
 });
