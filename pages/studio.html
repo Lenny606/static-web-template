@@ -12,6 +12,7 @@
 
     <!-- Preload Tailwind -->
     <link rel="preload" href="https://cdn.tailwindcss.com?plugins=forms,typography" as="script">
+    <link rel="preconnect" href="https://lh3.googleusercontent.com">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -37,7 +38,8 @@
         class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm shadow-sm">
         <div class="max-w-7xl mx-auto px-6 sm:px-12 py-6 flex justify-between items-center">
             <a class="block" href="../index.html">
-                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto">
+                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto" width="100" height="40"
+                    fetchpriority="high">
             </a>
             <!-- Desktop Navigation -->
             <nav id="desktop-nav" class="hidden lg:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
@@ -69,7 +71,8 @@
             </div>
             <nav class="mobile-nav">
                 <a href="../index.html" class="mobile-nav-logo">
-                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto">
+                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120"
+                        height="48" loading="lazy">
                 </a>
                 <a href="projects.html" class="mobile-nav-link nav-link">Práce</a>
                 <a href="philosophy.html" class="mobile-nav-link nav-link">Filozofie</a>
@@ -101,9 +104,10 @@
             <div class="relative">
                 <div class="absolute -top-4 -left-4 w-12 h-12 border border-current opacity-20"></div>
                 <div class="absolute -bottom-4 -right-4 w-12 h-12 border border-current opacity-20"></div>
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM_de46NZWd5anrlsdJtfsYQM8F9QjEhgqamh3AtE9wCprIUl2_GRoyN6ebmr00xzj-lFFV4nCqr4bE0Euh4m3EU_cYUHXnaUMn-kaY4J8R5JcH7VbpNe1mKeCzh5xmEZ8aCsrKzD4Dhyk6uHTX8dKA4PmkrAdGwyfs5Gxr4aKRz03yfFmtVWEGv6mVxUmS0xcIzFVDX0bWfmzkrEr-Ha0euZy1LXNtSgpQrBZRQFo2vpTKiwMD30XVXGPa2ya7fKKYlBbyi2-ovEm"
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM_de46NZWd5anrlsdJtfsYQM8F9QjEhgqamh3AtE9wCprIUl2_GRoyN6ebmr00xzj-lFFV4nCqr4bE0Euh4m3EU_cYUHXnaUMN-kaY4J8R5JcH7VbpNe1mKeCzh5xmEZ8aCsrKzD4Dhyk6uHTX8dKA4PmkrAdGwyfs5Gxr4aKRz03yfFVDX0bWfmzkrEr-Ha0euZy1LXNtSgpQrBZRQFo2vpTKiwMD30XVXGPa2ya7fKKYlBbyi2-ovEm"
                     alt="Studio Team"
-                    class="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700 bg-gray-100 dark:bg-gray-800">
+                    class="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all duration-700 bg-gray-100 dark:bg-gray-800"
+                    width="800" height="600" loading="lazy">
             </div>
         </section>
 

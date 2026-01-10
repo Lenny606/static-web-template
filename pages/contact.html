@@ -12,6 +12,7 @@
 
     <!-- Preload Tailwind -->
     <link rel="preload" href="https://cdn.tailwindcss.com?plugins=forms,typography" as="script">
+    <link rel="preconnect" href="https://lh3.googleusercontent.com">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -37,7 +38,8 @@
         class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm shadow-sm">
         <div class="max-w-7xl mx-auto px-6 sm:px-12 py-6 flex justify-between items-center">
             <a class="block" href="../index.html">
-                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto">
+                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto" width="100" height="40"
+                    fetchpriority="high">
             </a>
             <!-- Desktop Navigation -->
             <nav id="desktop-nav" class="hidden lg:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
@@ -69,7 +71,8 @@
             </div>
             <nav class="mobile-nav">
                 <a href="../index.html" class="mobile-nav-logo">
-                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto">
+                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120"
+                        height="48" loading="lazy">
                 </a>
                 <a href="projects.html" class="mobile-nav-link nav-link">Práce</a>
                 <a href="philosophy.html" class="mobile-nav-link nav-link">Filozofie</a>
