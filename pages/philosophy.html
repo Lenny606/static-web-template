@@ -86,17 +86,65 @@
 
     <main class="max-w-7xl mx-auto px-6 sm:px-12 py-32 lg:py-48 space-y-32 relative z-10">
         <!-- Filozofie (hero) -->
-        <section class="mb-24 relative">
-            <div class="absolute -top-8 -left-8 w-16 h-16 border border-current opacity-10 hidden md:block"></div>
-            <h1 class="text-4xl md:text-5xl font-light mb-8 relative inline-block">
-                Filozofie
-                <span class="absolute -top-2 -right-2 w-2 h-2 bg-current opacity-40"></span>
-            </h1>
-            <p class="text-xl text-muted-light max-w-3xl leading-relaxed">
-                Záleží nám na prostředí, ve kterém žijeme. Věříme v architekturu, která slouží do posledního detailu –
-                je promyšlená, čitelná a dlouhodobě udržitelná. Každý projekt začíná respektem k místu a končí
-                poctivým řemeslem.
-            </p>
+        <section class="min-h-[70vh] flex flex-col justify-center relative py-12 lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8 reveal-on-scroll">
+                    <div class="relative inline-block">
+                        <span
+                            class="text-xs uppercase tracking-[0.3em] text-muted-light dark:text-muted-dark font-semibold block mb-4 opacity-60">Filozofie</span>
+                        <h1 class="text-5xl md:text-7xl font-light leading-tight mb-8">
+                            Architektura <br>
+                            <span class="italic">s respektem.</span>
+                        </h1>
+                        <div class="absolute -top-6 -left-6 w-12 h-12 border-t border-l border-current opacity-10">
+                        </div>
+                    </div>
+
+                    <p
+                        class="text-xl md:text-2xl text-muted-light dark:text-muted-dark max-w-2xl leading-relaxed font-light">
+                        Záleží nám na prostředí, ve kterém žijeme. Věříme v architekturu, která slouží do posledního
+                        detailu –
+                        je promyšlená, čitelná a dlouhodobě udržitelná.
+                    </p>
+
+                    <div class="pt-4 flex items-center gap-6">
+                        <div class="w-16 h-px bg-current opacity-20"></div>
+                        <p class="text-sm uppercase tracking-widest opacity-40">Měřítko & Detail</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative group reveal-on-scroll reveal-delay-1">
+                    <div
+                        class="absolute -inset-4 border border-current opacity-5 -rotate-2 transition-transform group-hover:rotate-0 duration-700">
+                    </div>
+                    <div class="relative aspect-[4/5] overflow-hidden shadow-2xl">
+                        <img src="https://dbda.cz/images/bagallery/gallery-1/compression/0-zimam.jpg"
+                            alt="Imersivní detail architektury"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                    <!-- Decorative small square -->
+                    <div
+                        class="absolute -bottom-6 -right-6 w-12 h-12 border border-current opacity-20 hidden md:block group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary Hero Content / Quote -->
+            <div class="mt-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start reveal-on-scroll reveal-delay-2">
+                <div class="lg:col-span-4">
+                    <h2 class="text-3xl font-light leading-tight italic decoration-current/30 underline-offset-8">
+                        „Design není jen o estetice, je to o řešení výzev naší budoucnosti.“
+                    </h2>
+                </div>
+                <div class="lg:col-span-8 lg:pl-12">
+                    <p class="text-lg text-text-light dark:text-text-dark leading-relaxed max-w-3xl">
+                        Od samého začátku stojí naše praxe na filozofii inovace, udržitelnosti a kvalitního návrhu.
+                        Stále se učíme z minulosti a kreativně přijímáme výzvy budoucnosti s pevným přesvědčením,
+                        že dobrý design má smysl a každý projekt začíná respektem k místu a končí poctivým řemeslem.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <!-- Zásady / principy -->
@@ -107,7 +155,7 @@
                 <div class="corner-square corner-square-bottom-right"></div>
                 <h3 class="text-2xl font-medium">Respekt k místu</h3>
                 <p class="text-muted-light leading-relaxed">
-                    Kontekst je východisko. Materiály, měřítko i kompozice vychází z charakteru lokality, aby nová
+                    Kontext je východisko. Materiály, měřítko i kompozice vychází z charakteru lokality, aby nová
                     vrstva přirozeně navázala a obohatila existující prostředí.
                 </p>
             </article>
