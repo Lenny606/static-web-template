@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize any micro-animations (e.g., reveal on scroll if needed)
     const observerOptions = {
-        threshold: 0.1
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -45,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.img-container, .content-block').forEach(el => {
+    // Observe elements with reveal classes
+    document.querySelectorAll('.reveal-on-scroll, .img-container, .content-block').forEach(el => {
         observer.observe(el);
     });
 });

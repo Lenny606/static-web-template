@@ -58,24 +58,34 @@ body {
     /* ensure the gradient corners use current text color for light/dark */
     color: inherit;
     /* corner config */
-    --corner-size: 10px; /* initial corner segment length */
+    --corner-size: 10px;
+    /* initial corner segment length */
     --corner-thickness: 1px;
-    --corner-radius: 2px; /* subtle rounding when fully expanded */
+    --corner-radius: 2px;
+    /* subtle rounding when fully expanded */
     background:
-        /* top-left horizontal */ linear-gradient(currentColor, currentColor) left top / var(--corner-size) var(--corner-thickness) no-repeat,
-        /* top-left vertical   */ linear-gradient(currentColor, currentColor) left top / var(--corner-thickness) var(--corner-size) no-repeat,
-        /* bottom-right horizontal */ linear-gradient(currentColor, currentColor) right bottom / var(--corner-size) var(--corner-thickness) no-repeat,
-        /* bottom-right vertical   */ linear-gradient(currentColor, currentColor) right bottom / var(--corner-thickness) var(--corner-size) no-repeat;
+        /* top-left horizontal */
+        linear-gradient(currentColor, currentColor) left top / var(--corner-size) var(--corner-thickness) no-repeat,
+        /* top-left vertical   */
+        linear-gradient(currentColor, currentColor) left top / var(--corner-thickness) var(--corner-size) no-repeat,
+        /* bottom-right horizontal */
+        linear-gradient(currentColor, currentColor) right bottom / var(--corner-size) var(--corner-thickness) no-repeat,
+        /* bottom-right vertical   */
+        linear-gradient(currentColor, currentColor) right bottom / var(--corner-thickness) var(--corner-size) no-repeat;
     transition: background-size 300ms ease, box-shadow 300ms ease, transform 300ms ease;
 }
 
 .square-link:hover {
     /* expand corner lines to form an elegant square frame */
     background-size:
-        /* top */ 100% var(--corner-thickness),
-        /* left */ var(--corner-thickness) 100%,
-        /* bottom */ 100% var(--corner-thickness),
-        /* right */ var(--corner-thickness) 100%;
+        /* top */
+        100% var(--corner-thickness),
+        /* left */
+        var(--corner-thickness) 100%,
+        /* bottom */
+        100% var(--corner-thickness),
+        /* right */
+        var(--corner-thickness) 100%;
     /* subtle inset glow to hint interaction */
     box-shadow: inset 0 0 0 6px transparent, 0 0 0 0 transparent;
 }
@@ -466,6 +476,7 @@ body {
     color: currentColor;
     /* Let opacity handle the lightness */
 }
+
 #lottie {
     background-color: transparent;
     width: 40%;
@@ -475,4 +486,33 @@ body {
     transform: translate3d(0, 0, 0);
     text-align: center;
     opacity: 1;
+}
+
+/* Scroll Reveal Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+    transition-delay: 0.4s;
 }
