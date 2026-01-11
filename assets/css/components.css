@@ -147,8 +147,8 @@
 .mobile-nav .nav-link {
     font-size: var(--fs-lg);
     font-family: var(--font-display);
-    padding: var(--spacing-sm);
-    border: var(--border-width-md) solid var(--color-border);
+    padding: var(--spacing-xs) 0;
+    border: none;
 }
 
 @media (min-width: 1024px) {

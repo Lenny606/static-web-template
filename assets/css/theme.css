@@ -217,80 +217,9 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
-
-/* Decorative Squares */
-.mobile-menu-rectangles {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.mobile-menu-rectangles .rect {
-    position: absolute;
-    border: 2px solid currentColor;
-    opacity: 0.1;
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mobile-menu-overlay.active .mobile-menu-rectangles .rect {
-    opacity: 0.15;
-}
-
-.rect-1 {
-    width: 100px;
-    height: 100px;
-    top: 10%;
-    left: 5%;
-    border-width: 3px;
-    transform: rotate(-5deg);
-}
-
-.mobile-menu-overlay.active .rect-1 {
-    transform: rotate(0deg) scale(1.1);
-}
-
-.rect-2 {
-    width: 120px;
-    height: 120px;
-    top: 20%;
-    right: 10%;
-    border-width: 2px;
-    transform: rotate(8deg);
-}
-
-.mobile-menu-overlay.active .rect-2 {
-    transform: rotate(0deg) scale(1.15);
-}
-
-.rect-3 {
-    width: 140px;
-    height: 140px;
-    bottom: 15%;
-    left: 8%;
-    border-width: 3px;
-    transform: rotate(-10deg);
-}
-
-.mobile-menu-overlay.active .rect-3 {
-    transform: rotate(0deg) scale(1.1);
-}
-
-.rect-4 {
-    width: 90px;
-    height: 90px;
-    bottom: 20%;
-    right: 5%;
-    border-width: 2px;
-    transform: rotate(12deg);
-}
-
-.mobile-menu-overlay.active .rect-4 {
-    transform: rotate(0deg) scale(1.2);
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6rem 2rem 2rem;
 }
 
 /* Mobile Navigation Links */
@@ -299,16 +228,16 @@ body {
     z-index: 10;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+    align-items: flex-start;
 }
 
 /* Mobile Menu Logo */
 .mobile-nav-logo {
     display: inline-block;
     margin-bottom: 1rem;
-    padding: 1rem;
+    /* padding: 1rem; */
     transition: all 0.3s ease;
     transform: translateY(-20px);
     opacity: 0;
@@ -322,12 +251,11 @@ body {
 }
 
 .mobile-nav-logo:hover {
-    border-color: currentColor;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: transparent;
 }
 
 .dark .mobile-nav-logo:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: transparent;
 }
 
 .mobile-nav-logo img {
@@ -342,12 +270,11 @@ body {
 .mobile-nav-link {
     position: relative;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 500;
     color: #1a1a1a;
     text-decoration: none;
-    padding: 1rem 2rem;
-    border: 2px solid transparent;
+    padding: 0.5rem 0;
     transition: all 0.3s ease;
     transform: translateY(20px);
     opacity: 0;
@@ -383,40 +310,15 @@ body {
 }
 
 .mobile-nav-link:hover {
-    border-color: currentColor;
-    background-color: rgba(0, 0, 0, 0.05);
-    transform: translateX(10px);
+    transform: translateX(5px);
+    opacity: 0.7 !important;
 }
 
 .dark .mobile-nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: transparent;
 }
 
-.mobile-nav-link::before,
-.mobile-nav-link::after {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border: 1px solid currentColor;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.mobile-nav-link::before {
-    top: -4px;
-    left: -4px;
-}
-
-.mobile-nav-link::after {
-    bottom: -4px;
-    right: -4px;
-}
-
-.mobile-nav-link:hover::before,
-.mobile-nav-link:hover::after {
-    opacity: 0.6;
-}
+/* Removed link decorations ::before and ::after */
 
 /* Hamburger Menu Animation */
 .menu-toggle {
