@@ -11,9 +11,7 @@
     padding-right: var(--container-padding);
 }
 
-header,
-section,
-footer {
+section {
     border-bottom: var(--border-width-md) solid var(--color-border);
 }
 
