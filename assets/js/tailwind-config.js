@@ -12,8 +12,8 @@ tailwind.config = {
                 "muted-dark": "#9ca3af",
             },
             fontFamily: {
-                display: ["Inter", "sans-serif"],
-                body: ["Inter", "sans-serif"],
+                display: ["Stolzl", "Inter", "sans-serif"],
+                body: ["Stolzl", "Inter", "sans-serif"],
             },
             borderRadius: {
                 DEFAULT: "0px",
