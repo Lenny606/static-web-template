@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="cs">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Corner Villa – Vybrané práce | DBDA studio</title>
+    <meta name="description"
+        content="Detailní pohled na projekt Corner Villa. Architektonické řešení, které skloubí moderní design s funkčností a respektem k okolí.">
+    <link rel="canonical" href="https://example.com/projects/corner-villa.html">
+    <link rel="alternate" hreflang="en" href="https://example.com/en/projects/corner-villa.html">
+
+    <!-- Preconnect for Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/project-detail.css">
+
+    <!-- SEO: JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": "Corner Villa",
+      "description": "Architektonický projekt moderní vily s důrazem na detail a propojení s přírodou.",
+      "image": "https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "DBDA studio"
+      }
+    }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+
+    <header
+        class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 py-6 flex justify-between items-center">
+            <a class="block" href="../index.html">
+                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto" width="100" height="40"
+                    fetchpriority="high">
+            </a>
+            <!-- Desktop Navigation -->
+            <nav id="desktop-nav" class="hidden lg:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
+                <a class="hover-underline-animation font-medium" href="../pages/projects.html">Práce</a>
+                <a class="hover-underline-animation font-medium" href="../pages/philosophy.html">Filozofie</a>
+                <a class="hover-underline-animation font-medium" href="../pages/studio.html">Ateliér</a>
+                <a class="hover-underline-animation font-medium" href="../pages/contact.html">Kontakt</a>
+                <a class="hover-underline-animation font-medium" href="../en/projects/corner-villa.html">EN</a>
+            </nav>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Toggle menu"
+                aria-expanded="false">
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav">
+                <a href="../index.html" class="mobile-nav-logo">
+                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120"
+                        height="48" loading="lazy">
+                </a>
+                <a href="../pages/projects.html" class="mobile-nav-link nav-link">Práce</a>
+                <a href="../pages/philosophy.html" class="mobile-nav-link nav-link">Filozofie</a>
+                <a href="../pages/studio.html" class="mobile-nav-link nav-link">Ateliér</a>
+                <a href="../pages/contact.html" class="mobile-nav-link nav-link">Kontakt</a>
+                <a href="../en/projects/corner-villa.html" class="mobile-nav-link nav-link">EN</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Project Hero -->
+        <section class="project-hero">
+            <div class="project-hero-bg">
+                <img src="https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg"
+                    alt="Corner Villa Exterior" class="reveal-on-scroll">
+            </div>
+            <div class="project-hero-overlay"></div>
+            <div class="max-w-7xl mx-auto px-6 sm:px-12 w-full relative z-10 text-white">
+                <h1 class="text-5xl md:text-7xl font-light mb-4">Corner Villa</h1>
+                <p class="text-xl opacity-80 max-w-xl">Harmonické propojení moderní architektury s okolní krajinou.</p>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-6 sm:px-12 py-24 space-y-32">
+
+            <!-- Narrative Segment 1 -->
+            <div class="narrative-segment-split reveal-on-scroll">
+                <div class="narrative-text">
+                    <h2 class="text-3xl font-light mb-6">Koncept a vize</h2>
+                    <p>Corner Villa představuje unikátní řešení pro rohový pozemek, kde bylo cílem maximalizovat
+                        soukromí a zároveň otevřít prostor světlu.</p>
+                    <p class="mt-4">Každá linie a každý materiál byl zvolen s ohledem na dlouhověkost a estetickou
+                        čistotu, která je pro náš ateliér typická.</p>
+                </div>
+                <div class="narrative-visual">
+                    <img src="https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg"
+                        alt="Corner Villa Detail" class="shadow-2xl">
+                </div>
+            </div>
+
+            <!-- Full-width Gallery Section -->
+            <div class="project-gallery reveal-on-scroll">
+                <div class="gallery-item gallery-span-8 aspect-video">
+                    <img src="https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg"
+                        alt="Corner Villa View 1">
+                </div>
+                <div class="gallery-item gallery-span-4 aspect-square">
+                    <img src="https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg"
+                        alt="Corner Villa View 2">
+                </div>
+            </div>
+
+            <!-- Narrative Segment 2 (Reversed) -->
+            <div class="narrative-segment-split reverse reveal-on-scroll">
+                <div class="narrative-visual">
+                    <img src="https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg"
+                        alt="Corner Villa Interior" class="shadow-2xl">
+                </div>
+                <div class="narrative-text">
+                    <h2 class="text-3xl font-light mb-6">Interiér a materiály</h2>
+                    <p>V interiéru převládají přírodní materiály jako dřevo a kámen, které vytvářejí hřejivý kontrast k
+                        surovému betonu exteriéru.</p>
+                    <p class="mt-4">Velkoformátová okna stírají hranici mezi vnitřním a venkovním prostorem, čímž
+                        opticky zvětšují obytnou plochu.</p>
+                </div>
+            </div>
+
+            <!-- Small Gallery Grid -->
+            <div class="project-gallery reveal-on-scroll">
+                <div class="gallery-item gallery-span-4 aspect-square">
+                    <img src="https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg" alt="Detail 1">
+                </div>
+                <div class="gallery-item gallery-span-4 aspect-square">
+                    <img src="https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg" alt="Detail 2">
+                </div>
+                <div class="gallery-item gallery-span-4 aspect-square">
+                    <img src="https://dbda.cz/templates/rt_clarity/custom/images/01_Corner_E_male.jpg" alt="Detail 3">
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer
+        class="bg-background-light dark:bg-background-dark py-16 lg:py-24 border-t border-gray-100 dark:border-gray-900">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="col-span-1">
+                <a class="text-2xl font-bold tracking-tight text-primary dark:text-white" href="../index.html">DBDA
+                    studio</a>
+                <p class="text-sm text-muted-light dark:text-muted-dark mt-4">Architektonický ateliér</p>
+            </div>
+            <!-- ... same footer content as projects.html ... -->
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 sm:px-12 mt-16 pt-8 text-center text-xs text-muted-light dark:text-muted-dark flex items-center justify-center gap-2">
+            <div class="w-2 h-2 bg-current"></div>
+            © <span id="current-year">2023</span> DBDA studio. Všechna práva vyhrazena.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/nav.js"></script>
+</body>
+
+</html>
