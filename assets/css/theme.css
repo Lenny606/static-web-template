@@ -115,10 +115,10 @@ body {
     left: -16px;
 }
 
-.square-decor-bottom-right::before {
+/* .square-decor-bottom-right::before {
     bottom: -16px;
     right: -16px;
-}
+} */
 
 .square-decor-top-right::before {
     top: -16px;
