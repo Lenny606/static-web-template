@@ -61,7 +61,7 @@ class ImageModal {
     addEventListeners() {
         // click events for images
         this.images.forEach((img, index) => {
-            img.style.cursor = 'zoom-in';
+            img.style.cursor = 'pointer';
             img.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.openModal(index);

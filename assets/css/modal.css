@@ -64,11 +64,12 @@
     z-index: 10001;
     padding: 10px;
     border-radius: 50%;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, border-radius 0.2s ease;
 }
 
 .image-modal-close:hover {
     background-color: var(--modal-arrow-bg);
+    border-radius: 0;
 }
 
 .image-modal-nav {
@@ -82,7 +83,7 @@
     padding: 15px;
     z-index: 10001;
     border-radius: 50%;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease, border-radius 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,6 +91,7 @@
 
 .image-modal-nav:hover {
     background-color: var(--modal-arrow-hover-bg);
+    border-radius: 0;
 }
 
 .image-modal-nav:active {
@@ -138,7 +140,7 @@
     .image-modal-nav {
         padding: 10px;
     }
-    
+
     .image-modal-prev {
         left: 10px;
     }
@@ -146,7 +148,7 @@
     .image-modal-next {
         right: 10px;
     }
-    
+
     .image-modal-close {
         top: 10px;
         right: 10px;
