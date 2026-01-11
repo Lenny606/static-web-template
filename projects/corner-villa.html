@@ -183,6 +183,16 @@
     <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/nav.js"></script>
+
+    <!-- Modal -->
+    <link rel="stylesheet" href="../assets/css/modal.css">
+    <script src="../assets/js/modal.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize modal for all relevant project images
+            new ImageModal('.project-hero-bg img, .narrative-visual img, .project-gallery img');
+        });
+    </script>
 </body>
 
 </html>
