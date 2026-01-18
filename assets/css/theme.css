@@ -446,3 +446,115 @@ body {
 .reveal-delay-4 {
     transition-delay: 0.4s;
 }
+
+/* Bilateral Expansion Link Effect */
+.link-bilateral {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    width: fit-content;
+    /* Prevent stretching in flex containers */
+    padding: 0.5rem 0 0.5rem 2.25rem;
+    /* Room for the initial box */
+    transition: padding-left 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.link-bilateral-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.link-bilateral:hover .link-bilateral-container {
+    width: 100%;
+}
+
+.link-bilateral:hover {
+    padding-left: 0.5rem;
+    /* Move text left to meet the expanding underline */
+}
+
+.link-bilateral-wall {
+    position: absolute;
+    background-color: currentColor;
+    opacity: 0.15;
+    /* Subtler for architectural feel */
+    transition: all 0.5s ease;
+}
+
+/* 1. RIGHT wall: Disappears FIRST */
+.link-bilateral-right {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    transform-origin: bottom;
+}
+
+.link-bilateral:hover .link-bilateral-right {
+    height: 0;
+}
+
+/* 2. TOP wall: Disappears SECOND */
+.link-bilateral-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition-delay: 0.3s;
+    transform-origin: left;
+}
+
+.link-bilateral:hover .link-bilateral-top {
+    width: 0;
+}
+
+/* 3. LEFT wall: Disappears THIRD */
+.link-bilateral-left {
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    transition-delay: 0.6s;
+    transform-origin: top;
+}
+
+.link-bilateral:hover .link-bilateral-left {
+    height: 0;
+}
+
+/* 4. BOTTOM wall: Stays anchored */
+.link-bilateral-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0.15;
+}
+
+.link-bilateral:hover .link-bilateral-bottom {
+    opacity: 0.6;
+    /* Balanced with project theme */
+}
+
+.link-bilateral-text {
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+    position: relative;
+    z-index: 10;
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+.link-bilateral:hover .link-bilateral-text {
+    letter-spacing: 0.15em;
+    opacity: 1;
+}
