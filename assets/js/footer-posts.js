@@ -1,63 +1,128 @@
 /* =========================================
-   Footer Posts Carousel
+   Footer Posts - API Integration
    ========================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const carouselContainer = document.getElementById('footer-posts-carousel');
-    if (!carouselContainer) return;
+    const container = document.getElementById('footer-posts-container');
+    if (!container) return;
 
-    const loadPosts = () => {
+    const API_URL = 'https://www.nodeflow.site/webhook-test/get-ig-posts';
+    const INSTAGRAM_URL = 'https://www.instagram.com/dbdastudio';
+    const CACHE_KEY = 'footer_posts_cache';
+    const CACHE_EXPIRY = 3600000; // 1 hour in milliseconds
+
+    const getCachedData = () => {
+        const cached = localStorage.getItem(CACHE_KEY);
+        if (!cached) return null;
+
         try {
-            // Use global POSTS_DATA instead of fetch to avoid CORS issues on file:// protocol
-            const postsData = window.POSTS_DATA || [];
-            if (postsData.length === 0) {
-                console.warn('No post data found in window.POSTS_DATA');
-                return;
+            const { data, timestamp } = JSON.parse(cached);
+            if (Date.now() - timestamp > CACHE_EXPIRY) {
+                localStorage.removeItem(CACHE_KEY);
+                return null;
             }
-
-            // Limit to last 5 posts
-            const recentPosts = postsData.slice(0, 5);
-
-            renderCarousel(recentPosts);
-        } catch (error) {
-            console.error('Error loading footer posts:', error);
-            carouselContainer.innerHTML = '<p class="text-xs text-muted-light">Nepodařilo se načíst příspěvky.</p>';
+            return data;
+        } catch (e) {
+            return null;
         }
     };
 
-    const renderCarousel = (posts) => {
-        if (posts.length === 0) return;
+    const setCachedData = (data) => {
+        const cacheObj = {
+            data,
+            timestamp: Date.now()
+        };
+        localStorage.setItem(CACHE_KEY, JSON.stringify(cacheObj));
+    };
 
-        let currentIndex = 0;
+    const showFallback = () => {
+        container.innerHTML = `
+            <div class="mt-6">
+                <a href="${INSTAGRAM_URL}" target="_blank" class="inline-flex items-center group text-xs font-bold tracking-widest uppercase">
+                    <span class="w-8 h-[1px] bg-black dark:bg-white mr-4 transition-all group-hover:w-12"></span>
+                    Sledujte nás na Instagramu
+                </a>
+            </div>
+        `;
+    };
+
+    const loadPosts = async () => {
+        // Try to load from cache first
+        const cachedData = getCachedData();
+        if (cachedData) {
+            console.log('Loading footer posts from cache');
+            renderPosts(cachedData);
+            return;
+        }
+
+        try {
+            const response = await fetch(API_URL);
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            const data = await response.json();
+
+            if (!Array.isArray(data) || data.length === 0) {
+                showFallback();
+                return;
+            }
+
+            console.log('Fetched new footer posts from API');
+
+            setCachedData(data);
+            renderPosts(data);
+        } catch (error) {
+            console.error('Error fetching footer posts:', error);
+            showFallback();
+        }
+    };
+
+    const renderPosts = (posts) => {
+        // Clear container
+        container.innerHTML = '';
+        container.className = 'mt-6 relative h-20 overflow-hidden'; // Improved fixed height for carousel
+
         const slides = [];
+        let currentIndex = 0;
 
-        posts.forEach((post, index) => {
-            const slide = document.createElement('div');
-            slide.className = `absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
-            slide.innerHTML = `
-                <div class="flex gap-4 items-start">
-                    <div class="w-16 h-16 flex-shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                        <img src="${post.image_url}" alt="${post.title}" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/64x64?text=Post'">
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <h4 class="text-xs font-bold truncate text-primary dark:text-white uppercase tracking-wider">${post.title}</h4>
-                        <p class="text-[11px] text-muted-light dark:text-muted-dark line-clamp-2 mt-1 leading-snug">${post.content}</p>
-                    </div>
+        // Show up to 6 recent posts in the carousel
+        posts.slice(0, 6).forEach((item, index) => {
+            const caption = item.caption || '';
+            const mediaUrl = item.media_url || '';
+            const permalink = item.permalink || '#';
+
+            const postElement = document.createElement('a');
+            postElement.href = permalink;
+            postElement.target = '_blank';
+            postElement.className = `absolute inset-0 flex gap-3 group items-center transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`;
+
+            postElement.innerHTML = `
+                ${mediaUrl ? `
+                <div class="w-16 h-16 flex-shrink-0 overflow-hidden bg-gray-100 dark:bg-gray-800">
+                    <img src="${mediaUrl}" alt="Instagram post" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                ` : ''}
+                <div class="flex-1 min-w-0">
+                    <p class="text-[11px] text-muted-light dark:text-muted-dark line-clamp-3 leading-snug group-hover:text-primary dark:group-hover:text-white transition-colors">
+                        ${caption}
+                    </p>
                 </div>
             `;
-            carouselContainer.appendChild(slide);
-            slides.push(slide);
+            container.appendChild(postElement);
+            slides.push(postElement);
         });
 
-        const nextSlide = () => {
-            if (slides.length <= 1) return;
-            slides[currentIndex].classList.replace('opacity-100', 'opacity-0');
-            currentIndex = (currentIndex + 1) % slides.length;
-            slides[currentIndex].classList.replace('opacity-0', 'opacity-100');
-        };
-
         if (slides.length > 1) {
-            setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            const nextSlide = () => {
+                slides[currentIndex].classList.remove('opacity-100', 'z-10');
+                slides[currentIndex].classList.add('opacity-0', 'z-0');
+
+                currentIndex = (currentIndex + 1) % slides.length;
+
+                slides[currentIndex].classList.remove('opacity-0', 'z-0');
+                slides[currentIndex].classList.add('opacity-100', 'z-10');
+            };
+
+            setInterval(nextSlide, 5000); // Change every 5 seconds
         }
     };
 
