@@ -3,48 +3,62 @@
 A reusable, mobile‑first, SEO‑friendly static website template for content sites, portfolios, or small business pages.
 
 ## Overview
-This repository contains a pure static site built with HTML, CSS, and vanilla JavaScript. Styling is powered with Tailwind CSS via CDN (no build step) plus a small themed stylesheet. The default content and copy are in Czech (`lang="cs"`).
+This repository contains a static site built with HTML, CSS, and vanilla JavaScript. Styling is powered by **Tailwind CSS v4** (via a build step) using `npm` and `postcss`. The default content and copy are in Czech (`lang="cs"`).
 
 ## Stack & Tooling
-- Language: HTML, CSS, JavaScript (no transpilers)
-- Frameworks: none (Tailwind CSS via CDN)
-- Package manager: none required
-- Build step: none (CDN‑hosted Tailwind + plain CSS/JS)
+- Language: HTML, CSS, JavaScript
+- Frameworks: Tailwind CSS v4
+- Package manager: npm
+- Build step: Tailwind CLI / PostCSS
 - Entry point: `index.html`
 
 ## Features
 - Mobile‑first layout and typography
-- Tailwind CSS via CDN, with a small custom Tailwind config (`assets/js/tailwind-config.js`)
+- Tailwind CSS v4 build setup for optimal performance
 - Privacy‑first analytics with consent banner; Google Tag Manager is disabled until consent
 - Lightweight, fast, and deployable to any static host (GitHub Pages, Netlify, Vercel, S3/CloudFront, etc.)
 - Sitemap (`sitemap.xml`) and `robots.txt` included
 
 ## Requirements
-No mandatory system requirements; you only need a web browser. For local development with live reload or on a local network, a tiny static server is helpful (examples below).
+- **Node.js** and **npm** are required to build the styles.
+- A web browser.
+- For local development, `npm run dev` provides a watch mode for CSS, but you'll still need a static file server to view HTML changes properly if not using a dedicated one.
 
 ## Getting Started
 1. Clone the repository
    - `git clone <your-fork-or-repo-url>`
    - `cd static-web-template`
-2. Open locally
-   - Quick preview: double‑click `index.html` (note: some features like routing to sub‑pages work regardless; analytics consent works in browser)
-   - Or serve with a static server (recommended):
+2. Install dependencies
+   - `npm install`
+3. Start development build
+   - `npm run dev` (starts Tailwind watch mode for CSS changes)
+4. Open locally (in a separate terminal)
+   - Serve with a static server (recommended):
      - Python 3: `python -m http.server 5173`
      - Node (http-server): `npx http-server -p 5173`
      - Node (serve): `npx serve -l 5173`
-3. Visit `http://localhost:5173` (or the port you chose)
+   - Alternatively for simple preview: double‑click `index.html` (some features might be limited)
+5. Visit `http://localhost:5173` (or the port you chose)
+
+## Build Commands
+
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Watches `css` and `html` files and rebuilds styles on change. |
+| `npm run build:css` | ONE-OFF production build (minified). |
 
 ## Configuration
+
 Analytics and consent:
 - File: `assets/js/analytics.js`
   - Set your Google Tag Manager container ID:
     - `const GTM_ID = 'GTM-XXXXXXX'; // Replace with client GTM ID`
   - Consent is stored in `localStorage` under the key `dbda_consent_status`.
 
-Tailwind configuration (CDN mode):
-- File: `assets/js/tailwind-config.js`
-  - Extends colors, fonts, border radius, and enables `darkMode: "class"`.
-  - Loaded in `index.html` after the Tailwind CDN script.
+Tailwind configuration:
+- `tailwind.config.js`: Main configuration file (v4 syntax).
+- `assets/css/input.css`: Source CSS file with `@import "tailwindcss";`.
+- `postcss.config.js`: PostCSS configuration.
 
 Site pages and navigation:
 - Main page: `index.html`
@@ -56,9 +70,8 @@ Site pages and navigation:
 - `assets/js/nav.js`: Mobile menu toggle, sticky header behavior, keyboard/overlay closing, current year.
 - `assets/js/analytics.js`: Consent banner handling and optional GTM initialization; basic click tracking via `dataLayer`.
 - `assets/js/lottie.js`: Lottie animation loader (referenced in `index.html`).
-- `assets/js/tailwind-config.js`: Tailwind CDN configuration.
 
-There is no `package.json` and no npm/yarn scripts; everything runs in the browser.
+(Note: `assets/js/tailwind-config.js` is deprecated in favor of `tailwind.config.js` build step).
 
 ## Environment Variables
 No runtime environment variables are required. The GTM container ID is set inline in `assets/js/analytics.js`.
@@ -91,7 +104,8 @@ Top‑level files and folders:
 │   │   ├── components.css
 │   │   ├── layout.css
 │   │   ├── theme.css
-│   │   └── utilities.css
+│   │   ├── input.css
+│   │   └── output.css (generated)
 │   ├── images/
 │   │   └── DBDA_logo.png
 │   ├── js/
@@ -100,19 +114,19 @@ Top‑level files and folders:
 │   │   ├── lottie.js
 │   │   ├── main.js
 │   │   ├── nav.js
-│   │   └── tailwind-config.js
+│   │   └── tailwind-config.js (legacy)
 │   └── references/ (design references and examples)
 ├── robots.txt
 └── sitemap.xml
 ```
 
 Notes:
-- The page currently loads only `assets/css/theme.css`. The other CSS files are provided for further structuring if needed.
+- The page currently loads `assets/css/theme.css` and the generated `assets/css/output.css`.
 - `assets/references/` contains reference pages and artifacts (e.g., `minimax.html`, `opus.html`) not linked in navigation.
 
 ## Deployment
 Because this is a static site, you can deploy it anywhere that serves static files:
-- GitHub Pages: push to `main` and configure Pages to serve from the repo root
+- GitHub Pages: push to `main` and configure Pages to serve from the repo root (ensure `output.css` is committed or built in CI)
 - Netlify: drag‑and‑drop the folder or connect the repo (publish directory: `/`)
 - Vercel: import the project (framework preset: “Other”) and deploy from root
 - Any static server or object storage + CDN (e.g., S3 + CloudFront)
@@ -132,3 +146,4 @@ TODO:
 
 ## Changelog / Maintenance
 - 2026‑01‑10: README updated to reflect current codebase. Fixed stale note about `analytics.js` (now present), documented Tailwind CDN setup and GTM configuration.
+- 2026-01-21: Migrated to Tailwind CSS v4 build process. Updated Getting Started and Configuration sections.
