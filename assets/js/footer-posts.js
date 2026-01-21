@@ -7,9 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!container) return;
 
     const API_URL = 'https://www.nodeflow.site/webhook-test/get-ig-posts';
-    const INSTAGRAM_URL = 'https://www.instagram.com/dbdastudio';
+    const INSTAGRAM_URL = 'https://www.instagram.com/dbda_arch';
     const CACHE_KEY = 'footer_posts_cache';
     const CACHE_EXPIRY = 3600000; // 1 hour in milliseconds
+
+    const getConsent = () => {
+        const saved = localStorage.getItem('dbda_consent');
+        if (!saved) return null;
+        try {
+            return JSON.parse(saved);
+        } catch (e) {
+            return null;
+        }
+    };
 
     const getCachedData = () => {
         const cached = localStorage.getItem(CACHE_KEY);
@@ -47,10 +57,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const loadPosts = async () => {
+        const consent = getConsent();
+
+        // If no functional consent, show fallback and stop
+        if (!consent || !consent.functional) {
+            showFallback();
+            return;
+        }
+
         // Try to load from cache first
         const cachedData = getCachedData();
         if (cachedData) {
-            console.log('Loading footer posts from cache');
             renderPosts(cachedData);
             return;
         }
@@ -66,8 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            console.log('Fetched new footer posts from API');
-
             setCachedData(data);
             renderPosts(data);
         } catch (error) {
@@ -79,12 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const renderPosts = (posts) => {
         // Clear container
         container.innerHTML = '';
-        container.className = 'mt-6 relative h-20 overflow-hidden'; // Improved fixed height for carousel
+        container.className = 'mt-6 relative h-20 overflow-hidden';
 
         const slides = [];
         let currentIndex = 0;
 
-        // Show up to 6 recent posts in the carousel
         posts.slice(0, 6).forEach((item, index) => {
             const caption = item.caption || '';
             const mediaUrl = item.media_url || '';
@@ -115,16 +129,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const nextSlide = () => {
                 slides[currentIndex].classList.remove('opacity-100', 'z-10');
                 slides[currentIndex].classList.add('opacity-0', 'z-0');
-
                 currentIndex = (currentIndex + 1) % slides.length;
-
                 slides[currentIndex].classList.remove('opacity-0', 'z-0');
                 slides[currentIndex].classList.add('opacity-100', 'z-10');
             };
-
-            setInterval(nextSlide, 5000); // Change every 5 seconds
+            setInterval(nextSlide, 5000);
         }
     };
 
+    // Initial load attempt
     loadPosts();
+
+    // Re-attempt if consent is updated
+    window.addEventListener('dbdaConsentUpdated', (e) => {
+        if (e.detail.functional) {
+            loadPosts();
+        } else {
+            showFallback();
+        }
+    });
 });
