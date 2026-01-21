@@ -1,0 +1,29 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: ["./**/*.{html,js}"],
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                primary: "#111827",
+                "background-light": "#ffffff",
+                "background-dark": "#121212",
+                "text-light": "#1f2937",
+                "text-dark": "#e5e7eb",
+                "muted-light": "#6b7280",
+                "muted-dark": "#9ca3af",
+            },
+            fontFamily: {
+                display: ["Stolzl", "Inter", "sans-serif"],
+                body: ["Stolzl", "Inter", "sans-serif"],
+            },
+            borderRadius: {
+                DEFAULT: "0px",
+            },
+        },
+    },
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+    ],
+}
