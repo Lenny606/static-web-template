@@ -84,7 +84,14 @@
     <main class="py-32 lg:py-48">
         <div
             class="max-w-7xl mx-auto px-6 sm:px-12 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white max-w-2xl">Bohunov</h1>
+            <div class="flex flex-col gap-4">
+                <a href="../pages/projects.html"
+                    class="lg:hidden flex items-center gap-3 text-sm text-muted-light hover:text-primary transition-colors mb-4">
+                    <div class="w-2.5 h-2.5 border border-current opacity-60"></div>
+                    Zpět na projekty
+                </a>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white max-w-2xl">Bohunov</h1>
+            </div>
         </div>
 
         <!-- Main Hero Image (Content Width) -->
@@ -137,22 +144,18 @@
                 <div>
                     <img src="../assets/images/projects/webp/bohunov/axo-den-deti.webp" alt="Axo Den dětí"
                         class="w-full h-auto object-cover shadow-sm">
-                    <p class="mt-2 text-xs text-muted-light">Den dětí</p>
                 </div>
                 <div>
                     <img src="../assets/images/projects/webp/bohunov/axo-hospoda.webp" alt="Axo Hospoda"
                         class="w-full h-auto object-cover shadow-sm">
-                    <p class="mt-2 text-xs text-muted-light">Hospoda</p>
                 </div>
                 <div>
                     <img src="../assets/images/projects/webp/bohunov/axo-koncert.webp" alt="Axo Koncert"
                         class="w-full h-auto object-cover shadow-sm">
-                    <p class="mt-2 text-xs text-muted-light">Koncert</p>
                 </div>
                 <div>
                     <img src="../assets/images/projects/webp/bohunov/axo-trhy.webp" alt="Axo Trhy"
                         class="w-full h-auto object-cover shadow-sm">
-                    <p class="mt-2 text-xs text-muted-light">Trhy</p>
                 </div>
             </div>
 
@@ -161,22 +164,18 @@
                 <div>
                     <img src="../assets/images/projects/webp/bohunov/bohunov-4.webp" alt="Bohunov 4"
                         class="w-full h-auto object-cover shadow-sm">
-                    <p class="mt-2 text-sm text-muted-light">bohunov-4</p>
                 </div>
                 <div>
                     <img src="../assets/images/projects/webp/bohunov/bohunov-5.webp" alt="Bohunov 5"
                         class="w-full h-auto object-cover shadow-sm">
-                    <p class="mt-2 text-sm text-muted-light">bohunov-5</p>
                 </div>
                 <div>
                     <img src="../assets/images/projects/webp/bohunov/bohunov-6.webp" alt="Bohunov 6"
                         class="w-full h-auto object-cover shadow-sm">
-                    <p class="mt-2 text-sm text-muted-light">bohunov-6</p>
                 </div>
                 <div>
                     <img src="../assets/images/projects/webp/bohunov/bohunov-7.webp" alt="Bohunov 7"
                         class="w-full h-auto object-cover shadow-sm">
-                    <p class="mt-2 text-sm text-muted-light">bohunov-7</p>
                 </div>
             </div>
         </section>
@@ -247,9 +246,20 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn"
+        class="fixed bottom-8 right-8 z-50 w-8 h-8 p-0 flex items-center justify-center bg-white text-primary border border-gray-200 shadow-2xl transition-all duration-300 opacity-0 pointer-events-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+        aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
     <!-- Scripts -->
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/scroll-to-top.js"></script>
     <script src="../assets/js/cookies.js"></script>
 
     <!-- Modal -->
