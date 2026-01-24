@@ -9,10 +9,13 @@
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://lh3.googleusercontent.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Preload Tailwind -->
+    <!-- Preload Critical Assets -->
     <link rel="preload" href="https://cdn.tailwindcss.com?plugins=forms,typography" as="script">
-    <link rel="preconnect" href="https://lh3.googleusercontent.com">
+    <link rel="preload" href="../assets/images/projects/webp/2026-01-BOHDALEC/VISOID_03.webp" as="image">
+    <link rel="preload" href="../assets/images/projects/webp/2025-24-hamre/01.webp" as="image">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -37,7 +40,7 @@
         <div class="max-w-7xl mx-auto px-6 sm:px-12 py-4 flex justify-between items-center">
             <a class="block" href="../index.html">
                 <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto" width="100" height="40"
-                    fetchpriority="high">
+                    fetchpriority="high" decoding="async">
             </a>
             <!-- Desktop Navigation -->
             <nav id="desktop-nav" class="hidden lg:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
@@ -63,7 +66,7 @@
             <nav class="mobile-nav">
                 <a href="../index.html" class="mobile-nav-logo">
                     <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120"
-                        height="48" loading="lazy">
+                        height="48" loading="lazy" decoding="async">
                 </a>
                 <a href="projects.html" class="mobile-nav-link nav-link">Práce</a>
                 <a href="philosophy.html" class="mobile-nav-link nav-link">Filozofie</a>
@@ -89,14 +92,31 @@
         <!-- Use the same project grid structure as was in projects.html but cleaned up to match new styling -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
 
+            <!-- Project: Bohdalec -->
+            <a href="../projects/bohdalec.html"
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
+                    <img alt="Bohdalec"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
+                        src="../assets/images/projects/webp/2026-01-BOHDALEC/VISOID_03.webp" width="800" height="600"
+                        fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
+                </div>
+                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
+                    <h3 class="text-xl font-medium">Bohdalec</h3>
+                    <div class="flex items-center gap-2">
+                        <p class="text-sm text-muted-light">2026-01</p>
+                    </div>
+                </div>
+            </a>
+
             <!-- Project: Hamre -->
             <a href="../projects/hamre.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative square-decor square-decor-top-left reveal-on-scroll">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Hamre"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2025-24-hamre/01.webp" width="800" height="600"
-                        fetchpriority="high" />
+                        fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Hamre</h3>
@@ -113,7 +133,7 @@
                     <img alt="Salon Husitska"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2025-21-salon-husitska/hustitska_orez_1.webp" width="800"
-                        height="600" fetchpriority="high" />
+                        height="600" fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Salon Husitska</h3>
@@ -130,7 +150,7 @@
                     <img alt="Vila Novotny"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2025-06-vila-novotny/06.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Vila Novotny</h3>
@@ -147,7 +167,8 @@
                     <img alt="Slivenec Koupelny"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2025-02-slivenec-koupelny/koupelna patro_vana_1.webp"
-                        width="800" height="600" loading="lazy" />
+                        width="800" height="600" loading="lazy" decoding="async"
+                        sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Slivenec Koupelny</h3>
@@ -164,7 +185,7 @@
                     <img alt="Showroom Zizkov Matejovsky"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-32-showroom-zizkov-matejovsky/01.webp" width="800"
-                        height="600" loading="lazy" />
+                        height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Showroom Zizkov Matejovsky</h3>
@@ -181,7 +202,7 @@
                     <img alt="Dzr Trebsko"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-31-dzr-trebsko/01.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Dzr Trebsko</h3>
@@ -198,7 +219,7 @@
                     <img alt="Vocilka"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-30-vocilka/detsky pokoj1 ZMENA.webp" width="800"
-                        height="600" loading="lazy" />
+                        height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Vocilka</h3>
@@ -215,7 +236,7 @@
                     <img alt="RD Herink"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-16-rd-herink/Herink_1_2.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">RD Herink</h3>
@@ -232,7 +253,7 @@
                     <img alt="Bohunov"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-15-bohunov/Bohunov_1_ms.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Bohunov</h3>
@@ -249,7 +270,8 @@
                     <img alt="Velke Popovice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-09-velke-popovice/E_0000_DBDA_VP-Interiors_NP2_Bedroom-B_02.webp"
-                        width="800" height="600" loading="lazy" />
+                        width="800" height="600" loading="lazy" decoding="async"
+                        sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Velke Popovice</h3>
@@ -266,7 +288,8 @@
                     <img alt="Soutez Malesice P10"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-04-soutez-malesice-p10/118   DBDA   Praha10-Malesice   vo vnutri   vez_vpravo_D.webp"
-                        width="800" height="600" loading="lazy" />
+                        width="800" height="600" loading="lazy" decoding="async"
+                        sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Soutez Malesice P10</h3>
@@ -283,7 +306,7 @@
                     <img alt="Pasman"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-03-pasman/01.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Pasman</h3>
@@ -300,7 +323,7 @@
                     <img alt="RD Brevnov"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-02-rd-brevnov/01.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">RD Brevnov</h3>
@@ -317,7 +340,7 @@
                     <img alt="Harachov Dusek"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2024-01-harachov-dusek/Dusek Harachov_1.webp" width="800"
-                        height="600" loading="lazy" />
+                        height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Harachov Dusek</h3>
@@ -334,7 +357,8 @@
                     <img alt="Sportoviste Zbraslav"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2023-23-sportoviste-zbraslav/35_DBDA_Zbraslav_02D.webp"
-                        width="800" height="600" loading="lazy" />
+                        width="800" height="600" loading="lazy" decoding="async"
+                        sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Sportoviste Zbraslav</h3>
@@ -351,7 +375,7 @@
                     <img alt="Kancelare Central Kladno"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2023-16-kancelare-central-kladno/01.webp" width="800"
-                        height="600" loading="lazy" />
+                        height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Kancelare Central Kladno</h3>
@@ -368,7 +392,7 @@
                     <img alt="Semily Sklenik"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2023-15-semily-sklenik/A_1.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Semily Sklenik</h3>
@@ -385,7 +409,7 @@
                     <img alt="Libenice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2023-13-libenice/Libenice1.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Libenice</h3>
@@ -402,7 +426,7 @@
                     <img alt="RD Ricany"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2023-01-rd-ricany/01.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">RD Ricany</h3>
@@ -419,7 +443,8 @@
                     <img alt="RD Velke Karlovice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-24-rd-velke-karlovice/R_11 - Photo (2).webp"
-                        width="800" height="600" loading="lazy" />
+                        width="800" height="600" loading="lazy" decoding="async"
+                        sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">RD Velke Karlovice</h3>
@@ -436,7 +461,7 @@
                     <img alt="Misenska"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-23-misenska/Baroq1708 (1 of 25).webp" width="800"
-                        height="600" loading="lazy" />
+                        height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Misenska</h3>
@@ -453,7 +478,8 @@
                     <img alt="Zloukovice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-14-zloukovice/D_0000_Zloukovice-Exterier03_Vjezd-Close-Up_GF.webp"
-                        width="800" height="600" loading="lazy" />
+                        width="800" height="600" loading="lazy" decoding="async"
+                        sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Zloukovice</h3>
@@ -470,7 +496,8 @@
                     <img alt="Apartmany Slupecna"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-13-apartmany-slupecna/RD Slupečná_1 - Photo.webp"
-                        width="800" height="600" loading="lazy" />
+                        width="800" height="600" loading="lazy" decoding="async"
+                        sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Apartmany Slupecna</h3>
@@ -487,7 +514,7 @@
                     <img alt="Moravska Trebova Muzeum"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/DSC00579.webp" width="800"
-                        height="600" loading="lazy" />
+                        height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Moravska Trebova Muzeum</h3>
@@ -504,7 +531,7 @@
                     <img alt="Haratice2"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-10-haratice2/01_2.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Haratice2</h3>
@@ -521,7 +548,7 @@
                     <img alt="Cakovice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-04-cakovice/01_visoid.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Cakovice</h3>
@@ -538,7 +565,7 @@
                     <img alt="RD Petrv"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-03-rd-petrv/1.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">RD Petrv</h3>
@@ -555,7 +582,7 @@
                     <img alt="RD Nucice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-02-rd-nucice/1.webp" width="800" height="600"
-                        loading="lazy" />
+                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">RD Nucice</h3>
@@ -572,7 +599,7 @@
                     <img alt="Letnany"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                         src="../assets/images/projects/webp/2022-01-letnany/90_Letnany_e1_Zepredu_H.webp" width="800"
-                        height="600" loading="lazy" />
+                        height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Letnany</h3>
@@ -732,9 +759,9 @@
     </div>
 
     <!-- Scripts -->
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/nav.js"></script>
-    <script src="../assets/js/cookies.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/nav.js" defer></script>
+    <script src="../assets/js/cookies.js" defer></script>
 </body>
 
 </html>
