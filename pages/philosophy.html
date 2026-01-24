@@ -326,9 +326,22 @@
             </div>
             <a href="contact.html"
                 class="group flex items-center text-xs font-bold tracking-widest uppercase hover:text-primary dark:hover:text-white transition-colors">
-                <span
-                    class="w-4 h-4 border border-primary dark:border-white mr-4 transition-all group-hover:w-12 group-hover:bg-primary/10 dark:group-hover:bg-white/10"></span>
-                Kontakt
+                <div class="relative flex items-center">
+                    <div
+                        class="relative w-4 h-4 border border-primary/10 dark:border-white/10 group-hover:border-transparent transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                        <!-- Central Axis Pillar -->
+                        <span
+                            class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-primary dark:bg-white opacity-0 transition-all duration-1000 group-hover:opacity-100 group-hover:h-12 group-hover:-top-4 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[height,top]"></span>
+
+                        <!-- Expansion Line -->
+                        <span
+                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-primary dark:bg-white transition-all duration-1000 delay-400 group-hover:w-12 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[width]"></span>
+                    </div>
+                    <span
+                        class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                        Kontakt
+                    </span>
+                </div>
             </a>
         </section>
     </main>

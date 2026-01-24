@@ -94,9 +94,22 @@
                     </h1>
                     <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase mt-4 text-primary dark:text-white"
                         href="pages/philosophy.html">
-                        <span
-                            class="w-4 h-4 border border-primary dark:border-white mr-4 transition-all group-hover:w-12 group-hover:bg-primary/10 dark:group-hover:bg-white/10"></span>
-                        VÍCE O FILOZOFII
+                        <div class="relative flex items-center">
+                            <div
+                                class="relative w-4 h-4 border border-primary/10 dark:border-white/10 group-hover:border-transparent transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                <!-- Central Axis Pillar -->
+                                <span
+                                    class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-primary dark:bg-white opacity-0 transition-all duration-1000 group-hover:opacity-100 group-hover:h-12 group-hover:-top-4 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[height,top]"></span>
+
+                                <!-- Expansion Line -->
+                                <span
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-primary dark:bg-white transition-all duration-1000 delay-400 group-hover:w-12 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[width]"></span>
+                            </div>
+                            <span
+                                class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                VÍCE O FILOZOFII
+                            </span>
+                        </div>
                     </a>
                 </div>
                 <div class="lg:col-span-6 flex justify-center p-4 relative order-1 lg:order-2">
@@ -122,30 +135,62 @@
             </div>
         </section>
         <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 reveal-on-scroll">
-            <div class="flex flex-col space-y-4 relative  square-decor-top-left square-decor-bottom-right">
-                <a class="block group overflow-hidden" href="#">
-                    <img alt="Modern glass house in forest - Vila"
+            <!-- Project: Hamre -->
+            <div class="flex flex-col space-y-4 relative square-decor-top-left square-decor-bottom-right">
+                <a class="block group overflow-hidden" href="projects/hamre.html">
+                    <img alt="Hamre"
                         class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5cT2duUJVRscY59uG_K-EV_XcvC9uKEOn4eXIh34OFr3HmN5SkJy4Ql_TfSq0Hq1fWcHMt4-G27oTa_-81H41bqnn3x9MUfcyvIyzROvM3pcMREfzfeyTjoQY9_D2ZfD_6UWogbgGiufKe8MINUjfruQ0_Ebaef2Lx4uJ-J9x2AFnnWXGID8liuEus1JzZ9L3M9dop5St7MNZBXMZ46AomdABo9XNR54Fo6oHBiyzEhXX2zL0jeld08wf05xFvGau04ZD2ebbChce"
-                        width="800" height="600" loading="lazy" />
+                        src="assets/images/projects/webp/2025-24-hamre/01.webp" width="800" height="600"
+                        loading="lazy" />
                 </a>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <a href="#">
-                        <h3 class="text-xl font-medium">Vila</h3>
+                    <a href="projects/hamre.html">
+                        <h3 class="text-xl font-medium">Hamre</h3>
                     </a>
                     <p class="text-sm text-muted-light dark:text-muted-dark">realizace</p>
                 </div>
             </div>
+            <!-- Project: Vila Novotny -->
             <div class="flex flex-col space-y-4 lg:pt-48 relative">
-                <a class="block group overflow-hidden" href="#">
-                    <img alt="Traditional white building restoration - Zvonička"
-                        class="w-full aspect-[3/2] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlHT_g74KQoaPpcqPMt1rOb85-13H9BcWdCnNr54pLiAm4m4UsRNL3g5hsEdvWDEXzu2IplRyMIStS5TUxaZXWCH9qxgrhqly-zH3yd4TYZ_NyU3Pl0zziBEiR9jrVBLFw1zO6g6BQD031gO22HGiijPgyPWfKJu4UrdcCd5iQb8DvA0CviEP_D4t6HNDUuhX5cRLIuYEvj6XUaBUJuz_JQi4LFlbVkBZug1DN8mSp0Hlra3dTlx_bxFAlEyzTdkGRWTsMcoa844iL"
-                        width="800" height="533" loading="lazy" />
+                <a class="block group overflow-hidden" href="projects/vila-novotny.html">
+                    <img alt="Vila Novotny"
+                        class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
+                        src="assets/images/projects/webp/2025-06-vila-novotny/06.webp" width="800" height="600"
+                        loading="lazy" />
                 </a>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <a href="#">
-                        <h3 class="text-xl font-medium">Zvonička, Bílovice - Lutotín</h3>
+                    <a href="projects/vila-novotny.html">
+                        <h3 class="text-xl font-medium">Vila Novotny</h3>
+                    </a>
+                    <p class="text-sm text-muted-light dark:text-muted-dark">realizace</p>
+                </div>
+            </div>
+            <!-- Project: Harachov Dusek -->
+            <div class="flex flex-col space-y-4 relative">
+                <a class="block group overflow-hidden" href="projects/harachov-dusek.html">
+                    <img alt="Harachov Dusek"
+                        class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
+                        src="assets/images/projects/webp/2024-01-harachov-dusek/Dusek Harachov_1.webp" width="800"
+                        height="600" loading="lazy" />
+                </a>
+                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
+                    <a href="projects/harachov-dusek.html">
+                        <h3 class="text-xl font-medium">Harachov Dusek</h3>
+                    </a>
+                    <p class="text-sm text-muted-light dark:text-muted-dark">realizace</p>
+                </div>
+            </div>
+            <!-- Project: Semily Sklenik -->
+            <div class="flex flex-col space-y-4 lg:pt-48 relative">
+                <a class="block group overflow-hidden" href="projects/semily-sklenik.html">
+                    <img alt="Semily Sklenik"
+                        class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
+                        src="assets/images/projects/webp/2023-15-semily-sklenik/A_1.webp" width="800" height="600"
+                        loading="lazy" />
+                </a>
+                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
+                    <a href="projects/semily-sklenik.html">
+                        <h3 class="text-xl font-medium">Semily Sklenik</h3>
                     </a>
                     <p class="text-sm text-muted-light dark:text-muted-dark">realizace</p>
                 </div>
@@ -167,9 +212,22 @@
                 <div class="mb-8 lg:mb-0">
                     <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase"
                         href="pages/philosophy.html">
-                        <span
-                            class="w-4 h-4 border border-primary dark:border-white mr-4 transition-all group-hover:w-12 group-hover:bg-primary/10 dark:group-hover:bg-white/10"></span>
-                        VÍCE
+                        <div class="relative flex items-center">
+                            <div
+                                class="relative w-4 h-4 border border-primary/10 dark:border-white/10 group-hover:border-transparent transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                <!-- Central Axis Pillar -->
+                                <span
+                                    class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-primary dark:bg-white opacity-0 transition-all duration-1000 group-hover:opacity-100 group-hover:h-12 group-hover:-top-4 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[height,top]"></span>
+
+                                <!-- Expansion Line -->
+                                <span
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-primary dark:bg-white transition-all duration-1000 delay-400 group-hover:w-12 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[width]"></span>
+                            </div>
+                            <span
+                                class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                VÍCE
+                            </span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -212,9 +270,22 @@
                     </h2>
                     <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase"
                         href="pages/studio.html">
-                        <span
-                            class="w-4 h-4 border border-primary dark:border-white mr-4 transition-all group-hover:w-12 group-hover:bg-primary/10 dark:group-hover:bg-white/10"></span>
-                        VÍCE
+                        <div class="relative flex items-center">
+                            <div
+                                class="relative w-4 h-4 border border-primary/10 dark:border-white/10 group-hover:border-transparent transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                <!-- Central Axis Pillar -->
+                                <span
+                                    class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-primary dark:bg-white opacity-0 transition-all duration-1000 group-hover:opacity-100 group-hover:h-12 group-hover:-top-4 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[height,top]"></span>
+
+                                <!-- Expansion Line -->
+                                <span
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-primary dark:bg-white transition-all duration-1000 delay-400 group-hover:w-12 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[width]"></span>
+                            </div>
+                            <span
+                                class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                VÍCE
+                            </span>
+                        </div>
                     </a>
                 </div>
             </div>
