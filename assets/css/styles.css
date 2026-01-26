@@ -4,124 +4,129 @@
    ========================================= */
 
 :root {
-  /* Colors */
-  --color-primary: #007bff;
-  --color-primary-dark: #0056b3;
-  --color-secondary: #6c757d;
-  --color-text-main: #212529;
-  --color-text-light: #6c757d;
-  --color-bg-body: #ffffff;
-  --color-bg-light: #f8f9fa;
-  --color-border: #dee2e6;
-  --color-white: #ffffff;
+    /* 3-Color Mini Palette */
+    --color-primary: #0F0F0F;
+    /* Onyx */
+    --color-secondary: #7A7A7A;
+    /* Stone Grey */
+    --color-bg: #FDFDFD;
+    /* Alabaster */
 
-  /* Typography */
-  --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --line-height-base: 1.5;
+    --color-text-main: var(--color-primary);
+    --color-text-muted: var(--color-secondary);
+    --color-border: rgba(0, 0, 0, 0.08);
+    --color-white: #ffffff;
 
-  /* Fluid Typography System */
-  --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
-  --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.19rem);
-  --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.58rem);
-  --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2.11rem);
-  --fs-xl: clamp(1.95rem, 1.56vi + 1.56rem, 2.81rem);
-  --fs-xxl: clamp(2.44rem, 2.38vi + 1.85rem, 3.75rem);
+    /* Typography - Editorial Focus */
+    --font-display: 'Outfit', sans-serif;
+    --font-body: 'Instrument Sans', sans-serif;
+    --line-height-base: 1.6;
 
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 8rem;
+    /* Fluid Typography System - Refined */
+    --fs-sm: clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem);
+    --fs-base: clamp(1rem, 0.34vi + 0.91rem, 1.15rem);
+    --fs-md: clamp(1.25rem, 0.61vi + 1.1rem, 1.5rem);
+    --fs-lg: clamp(1.56rem, 1vi + 1.31rem, 2rem);
+    --fs-xl: clamp(2rem, 2.5vi + 1.5rem, 3.5rem);
+    --fs-xxl: clamp(2.5rem, 5vi + 2rem, 5.5rem);
 
-  /* Layout */
-  --container-width: 1200px;
-  --container-padding: 1.5rem;
-  --border-radius: 0.375rem;
+    /* Spacing Scale - Fluid */
+    --spacing-xs: clamp(0.5rem, 1vi, 0.75rem);
+    --spacing-sm: clamp(1rem, 2vi, 1.5rem);
+    --spacing-md: clamp(2rem, 4vi, 3rem);
+    --spacing-lg: clamp(4rem, 8vi, 6rem);
+    --spacing-xl: clamp(6rem, 12vi, 10rem);
+
+    /* Layout */
+    --container-width: 1400px;
+    --container-padding: clamp(1.5rem, 5vi, 4rem);
+    --border-radius: 0px;
+    /* Minimalist sharp edges */
 }
 
-/* Reset */
+/* Reset & Base */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: var(--font-family-base);
-  font-size: var(--fs-base);
-  line-height: var(--line-height-base);
-  color: var(--color-text-main);
-  background-color: var(--color-bg-body);
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text-main);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a {
-  color: var(--color-primary);
-  text-decoration: none;
+    color: var(--color-primary);
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 
 button,
 input,
 textarea {
-  font-family: inherit;
-  font-size: inherit;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 /* Typography Helpers */
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-  margin-bottom: var(--spacing-sm);
-  font-weight: 700;
-  line-height: 1.2;
+h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--spacing-sm);
 }
 
 h1 {
-  font-size: var(--fs-xxl);
+    font-size: var(--fs-xxl);
+    text-transform: uppercase;
 }
 
 h2 {
-  font-size: var(--fs-xl);
+    font-size: var(--fs-xl);
 }
 
 h3 {
-  font-size: var(--fs-lg);
+    font-size: var(--fs-lg);
 }
 
 h4 {
-  font-size: var(--fs-md);
+    font-size: var(--fs-md);
 }
 
 p {
-  margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
 }
 
 [hidden] {
-  display: none !important;
+    display: none !important;
 }
+
 /* =========================================
    Layout CSS - Grid, Sections, Spacing
    ========================================= */
@@ -209,45 +214,47 @@ p {
 .justify-between {
     justify-content: space-between;
 }
+
 /* =========================================
    Components CSS
    ========================================= */
 
-/* Buttons */
+/* Buttons - Editorial Style */
 .btn {
     display: inline-flex;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
     border-radius: var(--border-radius);
-    transition: all 0.2s ease;
-    cursor: pointer;
-    border: 2px solid transparent;
     text-align: center;
 }
 
 .btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-bg);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    border-color: var(--color-primary-dark);
-    text-decoration: none;
+    background: transparent;
+    color: var(--color-primary);
 }
 
 .btn-secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    border-color: var(--color-secondary);
+    background: transparent;
+    color: var(--color-primary);
 }
 
 .btn-secondary:hover {
-    opacity: 0.9;
-    text-decoration: none;
+    background: var(--color-primary);
+    color: var(--color-bg);
 }
 
 .btn-outline {
@@ -267,9 +274,8 @@ p {
     font-size: 0.875rem;
 }
 
-/* Header & Nav */
+/* Header & Navigation */
 .site-header {
-    border-bottom: 1px solid var(--color-border);
     position: sticky;
     top: 0;
     background-color: var(--color-bg-body);
@@ -381,38 +387,83 @@ p {
     }
 }
 
-/* Hero */
+/* Hero Section - The "Showpiece" */
 .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     padding: var(--spacing-xl) 0;
-    text-align: center;
-    background-color: var(--color-bg-light);
+    background: var(--color-bg);
+    position: relative;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-title {
+    margin-bottom: var(--spacing-md);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: reveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.hero-text {
+    font-size: var(--fs-md);
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 1s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
 }
 
 .hero-actions {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: var(--spacing-md);
-    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    opacity: 0;
+    animation: reveal 1s cubic-bezier(0.23, 1, 0.32, 1) 0.4s forwards;
 }
 
-/* Cards */
+/* Sections & Grid */
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Cards - Minimalist Editorial */
 .card {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
-    transition: transform 0.2s;
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-md) 0;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transform: translateX(10px);
 }
 
 .card-title {
-    margin-bottom: 1rem;
-    color: var(--color-primary);
+    font-size: var(--fs-md);
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-xs);
+}
+
+.card p {
+    color: var(--color-text-muted);
 }
 
 /* Forms */
@@ -440,33 +491,59 @@ p {
     border-color: var(--color-primary);
 }
 
-/* Footer */
+/* Animations */
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtle Texture Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Cfilter id='noiseFilter'%3%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3%3C/filter%3%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3%3C/svg%3");
+    opacity: 0.03;
+    z-index: 1000;
+}
+
+/* Footer - Minimalist */
 .site-footer {
-    margin-top: auto;
-    background-color: var(--color-text-main);
-    color: var(--color-white);
     padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--spacing-xl);
 }
 
 .footer-content {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.footer-logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    letter-spacing: 0.1em;
 }
 
 .footer-col h4 {
-    color: var(--color-white);
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
 }
 
 .footer-links a {
-    color: #adb5bd;
     display: block;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
-}
-
-.footer-links a:hover {
-    color: var(--color-white);
+    color: var(--color-text-main);
 }
 
 @media (min-width: 768px) {
@@ -508,6 +585,7 @@ p {
         text-align: left;
     }
 }
+
 /* =========================================
    Utilities CSS
    ========================================= */
