@@ -14,8 +14,10 @@
 
     <!-- Preload Critical Assets -->
     <link rel="preload" href="https://cdn.tailwindcss.com?plugins=forms,typography" as="script">
-    <link rel="preload" href="../assets/images/projects/webp/2026-01-BOHDALEC/VISOID_03.webp" as="image">
-    <link rel="preload" href="../assets/images/projects/webp/2025-24-hamre/01.webp" as="image">
+    <link rel="preload" href="../assets/images/projects/avif/2026-01-bohdalec/visoid-03.avif" as="image">
+    <link rel="preload" href="../assets/images/projects/avif/2025-24-hamre/01.avif" as="image">
+    <link rel="preload" href="../assets/images/projects/avif/2025-21-salon-husitska/hustitska-orez-1.avif" as="image">
+    <link rel="preload" href="../assets/images/projects/avif/2025-06-vila-novotny/06.avif" as="image">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -81,11 +83,12 @@
         <!-- Main Content of Projects -->
         <section class="mb-24 relative reveal-on-scroll">
             <!-- <div class="absolute -top-8 -left-8 w-16 h-16 border border-current opacity-10 hidden md:block"></div> -->
-            <h1 class="text-4xl md:text-5xl font-light mb-8 relative inline-block">
+            <h1 class="text-4xl md:text-5xl font-light mb-8 relative inline-block to-anim">
                 Vybrané práce
                 <!-- <span class="absolute -top-2 -right-2 w-2 h-2 bg-current opacity-40"></span> -->
             </h1>
-            <p class="text-xl text-muted-light max-w-2xl">Soubor našich architektonických projektů, kde záleží na každém
+            <p class="text-xl text-muted-light max-w-2xl to-anim">Soubor našich architektonických projektů, kde záleží
+                na každém
                 detailu.</p>
         </section>
 
@@ -94,11 +97,11 @@
 
             <!-- Project: Bohdalec -->
             <a href="../projects/bohdalec.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Bohdalec"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2026-01-BOHDALEC/VISOID_03.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2026-01-bohdalec/visoid-03.avif" width="800" height="600"
                         fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -111,11 +114,11 @@
 
             <!-- Project: Hamre -->
             <a href="../projects/hamre.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Hamre"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2025-24-hamre/01.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2025-24-hamre/01.avif" width="800" height="600"
                         fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -128,12 +131,13 @@
 
             <!-- Project: Salon Husitska -->
             <a href="../projects/salon-husitska.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Salon Husitska"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2025-21-salon-husitska/hustitska_orez_1.webp" width="800"
-                        height="600" fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
+                        src="../assets/images/projects/avif/2025-21-salon-husitska/hustitska-orez-1.avif" width="800"
+                        height="600" fetchpriority="high" loading="eager" decoding="async"
+                        sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Salon Husitska</h3>
@@ -145,12 +149,12 @@
 
             <!-- Project: Vila Novotny -->
             <a href="../projects/vila-novotny.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Vila Novotny"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2025-06-vila-novotny/06.webp" width="800" height="600"
-                        loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
+                        src="../assets/images/projects/avif/2025-06-vila-novotny/06.avif" width="800" height="600"
+                        fetchpriority="high" loading="eager" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Vila Novotny</h3>
@@ -162,11 +166,11 @@
 
             <!-- Project: Slivenec Koupelny -->
             <a href="../projects/slivenec-koupelny.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Slivenec Koupelny"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2025-02-slivenec-koupelny/koupelna patro_vana_1.webp"
+                        src="../assets/images/projects/avif/2025-02-slivenec-koupelny/koupelna-patro-vana-1.avif"
                         width="800" height="600" loading="lazy" decoding="async"
                         sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
@@ -180,11 +184,11 @@
 
             <!-- Project: Showroom Zizkov Matejovsky -->
             <a href="../projects/showroom-zizkov-matejovsky.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Showroom Zizkov Matejovsky"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-32-showroom-zizkov-matejovsky/01.webp" width="800"
+                        src="../assets/images/projects/avif/2024-32-showroom-zizkov-matejovsky/01.avif" width="800"
                         height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -197,11 +201,11 @@
 
             <!-- Project: Dzr Trebsko -->
             <a href="../projects/dzr-trebsko.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Dzr Trebsko"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-31-dzr-trebsko/01.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2024-31-dzr-trebsko/01.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -214,11 +218,11 @@
 
             <!-- Project: Vocilka -->
             <a href="../projects/vocilka.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Vocilka"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-30-vocilka/detsky pokoj1 ZMENA.webp" width="800"
+                        src="../assets/images/projects/avif/2024-30-vocilka/detsky-pokoj1-zmena.avif" width="800"
                         height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -231,11 +235,11 @@
 
             <!-- Project: RD Herink -->
             <a href="../projects/rd-herink.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="RD Herink"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-16-rd-herink/Herink_1_2.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2024-16-rd-herink/herink-1-2.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -248,11 +252,11 @@
 
             <!-- Project: Bohunov -->
             <a href="../projects/bohunov.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Bohunov"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-15-bohunov/Bohunov_1_ms.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2024-15-bohunov/bohunov-1-ms.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -265,11 +269,11 @@
 
             <!-- Project: Velke Popovice -->
             <a href="../projects/velke-popovice.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Velke Popovice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-09-velke-popovice/E_0000_DBDA_VP-Interiors_NP2_Bedroom-B_02.webp"
+                        src="../assets/images/projects/avif/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02.avif"
                         width="800" height="600" loading="lazy" decoding="async"
                         sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
@@ -283,11 +287,11 @@
 
             <!-- Project: Soutez Malesice P10 -->
             <a href="../projects/soutez-malesice-p10.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Soutez Malesice P10"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-04-soutez-malesice-p10/118   DBDA   Praha10-Malesice   vo vnutri   vez_vpravo_D.webp"
+                        src="../assets/images/projects/avif/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d.avif"
                         width="800" height="600" loading="lazy" decoding="async"
                         sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
@@ -301,11 +305,11 @@
 
             <!-- Project: Pasman -->
             <a href="../projects/pasman.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Pasman"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-03-pasman/01.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2024-03-pasman/01.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -318,11 +322,11 @@
 
             <!-- Project: RD Brevnov -->
             <a href="../projects/rd-brevnov.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="RD Brevnov"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-02-rd-brevnov/01.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2024-02-rd-brevnov/01.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -335,11 +339,11 @@
 
             <!-- Project: Harachov Dusek -->
             <a href="../projects/harachov-dusek.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Harachov Dusek"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2024-01-harachov-dusek/Dusek Harachov_1.webp" width="800"
+                        src="../assets/images/projects/avif/2024-01-harachov-dusek/dusek-harachov-1.avif" width="800"
                         height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -352,11 +356,11 @@
 
             <!-- Project: Sportoviste Zbraslav -->
             <a href="../projects/sportoviste-zbraslav.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Sportoviste Zbraslav"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2023-23-sportoviste-zbraslav/35_DBDA_Zbraslav_02D.webp"
+                        src="../assets/images/projects/avif/2023-23-sportoviste-zbraslav/35-dbda-zbraslav-02d.avif"
                         width="800" height="600" loading="lazy" decoding="async"
                         sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
@@ -370,11 +374,11 @@
 
             <!-- Project: Kancelare Central Kladno -->
             <a href="../projects/kancelare-central-kladno.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Kancelare Central Kladno"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2023-16-kancelare-central-kladno/01.webp" width="800"
+                        src="../assets/images/projects/avif/2023-16-kancelare-central-kladno/01.avif" width="800"
                         height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -387,11 +391,11 @@
 
             <!-- Project: Semily Sklenik -->
             <a href="../projects/semily-sklenik.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Semily Sklenik"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2023-15-semily-sklenik/A_1.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2023-15-semily-sklenik/a-1.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -404,11 +408,11 @@
 
             <!-- Project: Libenice -->
             <a href="../projects/libenice.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Libenice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2023-13-libenice/Libenice1.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2023-13-libenice/libenice1.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -421,11 +425,11 @@
 
             <!-- Project: RD Ricany -->
             <a href="../projects/rd-ricany.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="RD Ricany"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2023-01-rd-ricany/01.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2023-01-rd-ricany/01.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -438,11 +442,11 @@
 
             <!-- Project: RD Velke Karlovice -->
             <a href="../projects/rd-velke-karlovice.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="RD Velke Karlovice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-24-rd-velke-karlovice/R_11 - Photo (2).webp"
+                        src="../assets/images/projects/avif/2022-24-rd-velke-karlovice/r-11---photo-2.avif"
                         width="800" height="600" loading="lazy" decoding="async"
                         sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
@@ -456,11 +460,11 @@
 
             <!-- Project: Misenska -->
             <a href="../projects/misenska.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Misenska"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-23-misenska/Baroq1708 (1 of 25).webp" width="800"
+                        src="../assets/images/projects/avif/2022-23-misenska/baroq1708-1-of-25.avif" width="800"
                         height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -473,11 +477,11 @@
 
             <!-- Project: Zloukovice -->
             <a href="../projects/zloukovice.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Zloukovice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-14-zloukovice/D_0000_Zloukovice-Exterier03_Vjezd-Close-Up_GF.webp"
+                        src="../assets/images/projects/avif/2022-14-zloukovice/d-0000-zloukovice-exterier03-vjezd-close-up-gf.avif"
                         width="800" height="600" loading="lazy" decoding="async"
                         sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
@@ -491,11 +495,11 @@
 
             <!-- Project: Apartmany Slupecna -->
             <a href="../projects/apartmany-slupecna.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Apartmany Slupecna"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-13-apartmany-slupecna/RD Slupečná_1 - Photo.webp"
+                        src="../assets/images/projects/avif/2022-13-apartmany-slupecna/rd-slupecna-1---photo.avif"
                         width="800" height="600" loading="lazy" decoding="async"
                         sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
@@ -509,11 +513,11 @@
 
             <!-- Project: Moravska Trebova Muzeum -->
             <a href="../projects/moravska-trebova-muzeum.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Moravska Trebova Muzeum"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/DSC00579.webp" width="800"
+                        src="../assets/images/projects/avif/2022-11-moravska-trebova-muzeum/dsc00579.avif" width="800"
                         height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -526,11 +530,11 @@
 
             <!-- Project: Haratice2 -->
             <a href="../projects/haratice2.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Haratice2"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-10-haratice2/01_2.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2022-10-haratice2/01-2.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -543,11 +547,11 @@
 
             <!-- Project: Cakovice -->
             <a href="../projects/cakovice.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Cakovice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-04-cakovice/01_visoid.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2022-04-cakovice/01-visoid.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -560,11 +564,11 @@
 
             <!-- Project: RD Petrv -->
             <a href="../projects/rd-petrv.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="RD Petrv"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-03-rd-petrv/1.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2022-03-rd-petrv/1.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -577,11 +581,11 @@
 
             <!-- Project: RD Nucice -->
             <a href="../projects/rd-nucice.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 md:pt-24 lg:pt-32 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="RD Nucice"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-02-rd-nucice/1.webp" width="800" height="600"
+                        src="../assets/images/projects/avif/2022-02-rd-nucice/1.avif" width="800" height="600"
                         loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -594,11 +598,11 @@
 
             <!-- Project: Letnany -->
             <a href="../projects/letnany.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <img alt="Letnany"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                        src="../assets/images/projects/webp/2022-01-letnany/90_Letnany_e1_Zepredu_H.webp" width="800"
+                        src="../assets/images/projects/avif/2022-01-letnany/90-letnany-e1-zepredu-h.avif" width="800"
                         height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">

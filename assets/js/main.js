@@ -21,15 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Lazy loading images hint
-    const images = document.querySelectorAll('img');
-    if ('loading' in HTMLImageElement.prototype) {
-        images.forEach(img => {
-            if (!img.getAttribute('loading')) {
-                img.setAttribute('loading', 'lazy');
-            }
-        });
-    }
 
     // Initialize any micro-animations (e.g., reveal on scroll if needed)
     const observerOptions = {
@@ -40,9 +31,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log('Revealing element:', entry.target);
-                entry.target.classList.add('revealed');
-                observer.unobserve(entry.target);
+                const element = entry.target;
+                const images = element.querySelectorAll('img');
+                const reveal = () => {
+                    // Ensure we don't double-animate
+                    if (element.classList.contains('revealed')) return;
+
+                    console.log('Revealing element:', element);
+                    element.classList.add('revealed');
+                    element.classList.add('anim');
+                    observer.unobserve(element);
+                };
+
+                // If element has images, wait for them to load
+                if (images.length > 0) {
+                    let loadedCount = 0;
+                    const totalImages = images.length;
+
+                    // Fallback to avoid hanging forever
+                    const fallbackTimer = setTimeout(() => {
+                        console.warn('Image load timeout, revealing anyway:', element);
+                        reveal();
+                    }, 2000); // 2 second max wait
+
+                    const checkAllLoaded = () => {
+                        loadedCount++;
+                        if (loadedCount >= totalImages) {
+                            clearTimeout(fallbackTimer);
+                            reveal();
+                        }
+                    };
+
+                    images.forEach(img => {
+                        if (img.complete && img.naturalHeight !== 0) {
+                            checkAllLoaded();
+                        } else {
+                            img.addEventListener('load', checkAllLoaded, { once: true });
+                            img.addEventListener('error', checkAllLoaded, { once: true }); // Reveal even on error
+                        }
+                    });
+                } else {
+                    // No images (text only blocks), reveal immediately
+                    reveal();
+                }
             }
         });
     }, observerOptions);

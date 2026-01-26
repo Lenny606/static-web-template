@@ -421,14 +421,20 @@ body {
 /* Scroll Reveal Animations */
 .reveal-on-scroll {
     opacity: 0 !important;
-    transform: translateY(20px) !important;
-    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(30px) scale(0.98) !important;
+    /* Added slight scale for depth */
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
+    /* Ensure no layout shift before load */
+    filter: blur(4px);
+    /* Start slightly blurry for a cinematic focus focus */
+    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease-out;
 }
 
 .reveal-on-scroll.revealed {
     opacity: 1 !important;
-    transform: translateY(0) !important;
+    transform: translateY(0) scale(1) !important;
+    filter: blur(0);
 }
 
 .reveal-delay-1 {
@@ -445,4 +451,38 @@ body {
 
 .reveal-delay-4 {
     transition-delay: 0.4s;
+}
+
+@keyframes move-top-top {
+    0% {
+        transform: translateY(2rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Initial State */
+.to-anim {
+    transform: translateY(2rem);
+    opacity: 0;
+}
+
+/* Triggered State */
+.anim .to-anim {
+    animation-name: move-top-top, fade;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
 }
