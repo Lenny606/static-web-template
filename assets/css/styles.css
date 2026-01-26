@@ -276,11 +276,18 @@ p {
 
 /* Header & Navigation */
 .site-header {
+    padding: var(--spacing-sm) 0;
+    background: rgba(253, 253, 253, 0.7);
+    /* Alabaster with transparency */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
-    background-color: var(--color-bg-body);
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .header-inner {
