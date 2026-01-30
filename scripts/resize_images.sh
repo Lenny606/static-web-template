@@ -1,43 +1,45 @@
 #!/bin/bash
 
 # Konfigurace
-SOURCE_DIR="./images"
-OUTPUT_DIR="./dist/images"
-SIZES=(400 800 1200) # Šířky v pixelech
+SOURCE_DIR="./assets/images/projects/avif"
+OUTPUT_DIR="./assets/images/projects/avif-versions"
+SIZES=(400 800 1200)
 QUALITY=75
 
-# Vytvoření výstupního adresáře
-mkdir -p "$OUTPUT_DIR"
+echo "🚀 Startuji rekurzivní optimalizaci ve složce: $SOURCE_DIR"
 
-echo "🚀 Startuji hromadnou optimalizaci..."
-
-# Prohledá všechny běžné formáty (case-insensitive)
-shopt -s nocaseglob
-for img in "$SOURCE_DIR"/*.{jpg,jpeg,png,webp,avif}; do
-    [ -e "$img" ] || continue
-
+# Najde všechny soubory s danými příponami (case-insensitive)
+find "$SOURCE_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.avif" \) | while read -r img; do
+    
+    # Cesta k souboru bez zdrojové složky (např. blog/foto.jpg)
+    relative_path="${img#$SOURCE_DIR/}"
+    # Adresář souboru (např. blog)
+    rel_dir=$(dirname "$relative_path")
+    # Název souboru bez cesty
     filename=$(basename -- "$img")
-    extension="${filename##*.}"
+    # Název bez přípony
     filename_noext="${filename%.*}"
 
-    # Preskočit soubory, které už mají v názvu rozměr (prevence smyčky)
-    if [[ $filename_noext =~ -[0-9]+w$ ]]; then
+    # Ignorovat již vygenerované varianty
+    if [[ "$filename_noext" =~ -[0-9]+w$ ]]; then
         continue
     fi
 
-    echo "📦 Zpracovávám: $filename"
+    # Vytvoření cílové podsložky
+    target_dir="$OUTPUT_DIR/$rel_dir"
+    mkdir -p "$target_dir"
+
+    echo "📦 Zpracovávám: $relative_path"
 
     for size in "${SIZES[@]}"; do
-        # Varianta WebP
-        magick "$img" -resize "${size}x" -quality "$QUALITY" -strip \
-            "$OUTPUT_DIR/${filename_noext}-${size}w.webp"
+        # Generování WebP
+        # magick "$img" -resize "${size}x" -quality "$QUALITY" -strip \
+        #     "$target_dir/${filename_noext}-${size}w.webp"
         
-        # Varianta AVIF
+        # Generování AVIF
         magick "$img" -resize "${size}x" -quality "$QUALITY" -strip \
-            "$OUTPUT_DIR/${filename_noext}-${size}w.avif"
-            
-        echo "  - vytvořena verze ${size}w (WebP i AVIF)"
+            "$target_dir/${filename_noext}-${size}w.avif"
     done
 done
 
-echo "✅ Hotovo! Všechny varianty jsou v $OUTPUT_DIR"
+echo "✅ Hotovo! Všechny vnořené složky byly zpracovány do $OUTPUT_DIR"
