@@ -4,6 +4,7 @@
 SOURCE_BASE="assets/images/projects/original"
 TARGET_BASE="assets/images/projects/webp"
 QUALITY=80
+TARGET_SIZE=200000 # Default target size in bytes (cca 200kb)
 DRY_RUN=true
 
 # Parse arguments
@@ -11,6 +12,7 @@ while [[ "$#" -gt 0 ]]; do
     case $1 in
         --execute) DRY_RUN=false ;;
         --quality) QUALITY="$2"; shift ;;
+        --target-size) TARGET_SIZE="$2"; shift ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift
@@ -59,7 +61,7 @@ for project_dir in "$SOURCE_BASE"/*; do
             echo "  Would convert: $img_path -> $target_path"
         else
             echo "  Converting: $img_path -> $target_path"
-            cwebp -q "$QUALITY" "$img_path" -o "$target_path" -quiet
+            cwebp -size "$TARGET_SIZE" "$img_path" -o "$target_path" -quiet
         fi
     done
 done

@@ -120,6 +120,6 @@ def rename_folders(target_dir, dry_run=True):
             print("Renaming aborted.")
 
 if __name__ == "__main__":
-    target = "/home/tomas/my-projects/static-web-template/assets/images/projects/original/"
+    target = "/home/tomas/my-projects/static-web-template/assets/images/projects/webp/"
     is_dry_run = "--execute" not in sys.argv
     rename_folders(target, dry_run=is_dry_run)

@@ -4,6 +4,7 @@
 SOURCE_BASE="assets/images/projects/original"
 TARGET_BASE="assets/images/projects/avif"
 QUALITY=60
+TARGET_SIZE=200000 # Default target size in bytes (cca 200kb)
 DRY_RUN=true
 
 # Parse arguments
@@ -11,6 +12,7 @@ while [[ "$#" -gt 0 ]]; do
     case $1 in
         --execute) DRY_RUN=false ;;
         --quality) QUALITY="$2"; shift ;;
+        --target-size) TARGET_SIZE="$2"; shift ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift
@@ -69,10 +71,11 @@ for project_dir in "$SOURCE_BASE"/*; do
             if [ "$Q_VAL" -lt 0 ]; then Q_VAL=0; fi
             if [ "$Q_VAL" -gt 63 ]; then Q_VAL=63; fi
             
-            # Using avifenc with speed 6 (good balance) and mapped quality
+            # Using avifenc with speed 6 (good balance)
+            # If target-size is used, quality flags might be overridden or used as starting point
             # -j 4 for parallel processing
             # Redirecting stdout to /dev/null to simulate -quiet
-            avifenc --min "$Q_VAL" --max "$Q_VAL" --speed 6 --jobs 4 "$img_path" "$target_path" > /dev/null
+            avifenc --target-size "$TARGET_SIZE" --min 0 --max 63 --speed 6 --jobs 4 "$img_path" "$target_path" > /dev/null
         fi
     done
 done
