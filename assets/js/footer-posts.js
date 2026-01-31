@@ -90,15 +90,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(API_URL);
             if (!response.ok) throw new Error('Network response was not ok');
 
-            const data = await response.json();
+            const rawData = await response.json();
 
-            if (!Array.isArray(data) || data.length === 0) {
+            // Handle both new format { data: [...] } and old format [...]
+            let posts = [];
+            if (Array.isArray(rawData)) {
+                posts = rawData;
+            } else if (rawData && Array.isArray(rawData.data)) {
+                posts = rawData.data;
+            }
+
+            if (posts.length === 0) {
                 showFallback();
                 return;
             }
 
-            setCachedData(data);
-            renderPosts(data);
+            setCachedData(posts);
+            renderPosts(posts);
         } catch (error) {
             console.error('Error fetching footer posts:', error);
             showFallback();
