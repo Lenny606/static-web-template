@@ -3,7 +3,7 @@
    ========================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DBA Architects Website Initialized');
+    console.log('DBDA Architects Website Initialized');
 
     // Smooth scroll for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
