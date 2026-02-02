@@ -1,5 +1,5 @@
 :root {
-    --modal-overlay-bg: rgba(0, 0, 0, 0.95);
+    --modal-overlay-bg: rgba(0, 0, 0, 0.5);
     --modal-text-color: #ffffff;
     --modal-arrow-color: #ffffff;
     --modal-arrow-bg: rgba(255, 255, 255, 0.1);
@@ -22,7 +22,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
 }
 
 .image-modal-overlay.open {
@@ -102,8 +102,16 @@
     left: 20px;
 }
 
+.image-modal-prev svg {
+    transform: rotate(-90deg);
+}
+
 .image-modal-next {
     right: 20px;
+}
+
+.image-modal-next svg {
+    transform: rotate(90deg);
 }
 
 .image-modal-caption {
@@ -127,9 +135,10 @@
     opacity: 1;
 }
 
-/* Material Symbols sizing */
-.image-modal-overlay .material-symbols-outlined {
-    font-size: 32px;
+/* Image Modal SVG sizing */
+.image-modal-nav svg {
+    width: 24px;
+    height: 24px;
 }
 
 .image-modal-close .material-symbols-outlined {
