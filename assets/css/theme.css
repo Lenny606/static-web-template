@@ -30,6 +30,11 @@ body {
     object-fit: cover;
 }
 
+.rectangle-image {
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+}
+
 /* Square Pattern Background */
 .square-pattern {
     position: fixed;
