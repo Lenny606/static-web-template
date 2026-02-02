@@ -116,10 +116,19 @@
 
                 <div class="lg:col-span-4 lg:col-start-9 relative group reveal-on-scroll reveal-delay-1">
                     <div class="relative aspect-[4/5] overflow-hidden">
-                        <img src="https://dbda.cz/images/bagallery/gallery-1/compression/0-zimam.jpg"
-                            alt="Imersivní detail architektury"
-                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                            fetchpriority="high">
+                        <picture>
+                            <source
+                                srcset="../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-01-400w.avif 400w,
+                                            ../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-01-800w.avif 800w,
+                                            ../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-01-1200w.avif 1200w"
+                                sizes="(max-width: 1024px) 100vw, 33vw" type="image/avif">
+                            <source srcset="../assets/images/projects/webp/2026-01-bohdalec/visoid-01.webp"
+                                type="image/webp">
+                            <img src="../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-01-800w.avif"
+                                alt="Architektonický detail"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                fetchpriority="high" decoding="async">
+                        </picture>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                 </div>
@@ -189,10 +198,17 @@
                 </div> -->
 
                 <figure class="relative overflow-hidden aspect-[16/10]">
-                    <img alt="Villa"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqn4CvDNNaF-jr0Mc1mF-jLW3LKxLs9KxQ44uRkXATpkb7uEpvuUjuhtlDV9CBzNpWx96ma2fSiGMGRlia5S3S6yQrN6XiRWGMSGPdA8PY-K4-hRvTRj9C8JErrF0Nf2G83sT0UAHJTdll-y8N0fC-64X-5qgnCj2o4ZeY3twl-v_yO6c75dh72gGvfoJAIMQgVdBUCYBB8HSkk9MDw-laIwfScT7gfmy2-t9fObsPpxrGICcRv8wE9ruPRuEBTGe-xV1A6_YKadDi"
-                        width="1280" height="800" loading="lazy" />
+                    <picture>
+                        <source
+                            srcset="../assets/images/projects/avif-versions/2025-06-vila-novotny/06-400w.avif 400w,
+                                        ../assets/images/projects/avif-versions/2025-06-vila-novotny/06-800w.avif 800w,
+                                        ../assets/images/projects/avif-versions/2025-06-vila-novotny/06-1200w.avif 1200w"
+                            sizes="(max-width: 1280px) 100vw, 80vw" type="image/avif">
+                        <source srcset="../assets/images/projects/webp/2025-06-vila-novotny/06.webp" type="image/webp">
+                        <img src="../assets/images/projects/webp/2025-06-vila-novotny/06.webp" alt="Villa"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            loading="lazy" decoding="async">
+                    </picture>
 
                     <!-- Grid Overlay -->
                     <div
