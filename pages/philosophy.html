@@ -151,11 +151,19 @@
             </div> -->
         </section>
 
-        <!-- Zásady / filozofie (Off-grid Layout) -->
-        <section class="space-y-48 lg:space-y-64">
+        <!-- Zásady / filozofie (Row-based Grid Layout) -->
+        <section class="space-y-24 lg:space-y-32">
             <!-- Materiály section -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <article class="lg:col-start-2 lg:col-span-5 space-y-8 reveal-on-scroll">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center reveal-on-scroll">
+                <figure class="relative aspect-[4/5] overflow-hidden group">
+                    <picture>
+                        <source srcset="../assets/images/philosophy/avif/1-materialy.avif" type="image/avif">
+                        <img src="../assets/images/philosophy/webp/1-materialy.webp" alt="Práce s materiálem"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            loading="lazy">
+                    </picture>
+                </figure>
+                <article class="space-y-8">
                     <div>
                         <span
                             class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Materiály</span>
@@ -167,7 +175,7 @@
                         logiku a dokážou důstojně nést čas. Architektura pro nás vzniká tam, kde materiál není dekorací,
                         ale nositelem významu.
                     </p>
-                    <div class="space-y-6 pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                    <div class="space-y-6 italic text-muted-light dark:text-muted-dark font-light">
                         <div class="space-y-2">
                             <p class="text-lg">„Materiály mluví vlastním jazykem a architekt by jim měl především
                                 naslouchat.“</p>
@@ -185,34 +193,19 @@
                         </div>
                     </div>
                 </article>
-
-                <div class="lg:col-start-8 lg:col-span-4 reveal-on-scroll reveal-delay-1">
-                    <figure class="relative aspect-[3/4] overflow-hidden group">
-                        <picture>
-                            <source srcset="../assets/images/philosophy/avif/1-materialy.avif" type="image/avif">
-                            <img src="../assets/images/philosophy/webp/1-materialy.webp" alt="Práce s materiálem"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                loading="lazy">
-                        </picture>
-                    </figure>
-                </div>
             </div>
 
-            <!-- Příroda section (Off-grid) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-start-1 lg:col-span-5 order-2 lg:order-1 reveal-on-scroll">
-                    <figure class="relative aspect-[4/5] overflow-hidden group mb-12 lg:mb-0">
-                        <picture>
-                            <source srcset="../assets/images/philosophy/avif/1-priroda.avif" type="image/avif">
-                            <img src="../assets/images/philosophy/webp/1-priroda.webp" alt="Architektura a příroda"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                loading="lazy">
-                        </picture>
-                    </figure>
-                </div>
-
-                <article
-                    class="lg:col-start-7 lg:col-span-5 order-1 lg:order-2 lg:mt-32 space-y-8 reveal-on-scroll reveal-delay-2">
+            <!-- Příroda section (Alternating) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center reveal-on-scroll">
+                <figure class="relative aspect-[4/5] overflow-hidden group lg:order-2">
+                    <picture>
+                        <source srcset="../assets/images/philosophy/avif/1-priroda.avif" type="image/avif">
+                        <img src="../assets/images/philosophy/webp/1-priroda.webp" alt="Architektura a příroda"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            loading="lazy">
+                    </picture>
+                </figure>
+                <article class="space-y-8 lg:order-1">
                     <div>
                         <span
                             class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Příroda</span>
@@ -224,7 +217,7 @@
                         danému místu vždy patřila. Příroda pro nás není kulisou, ale aktivním partnerem návrhu. Kvalitní
                         architektura podle nás prostředí nevytlačuje, ale posiluje.
                     </p>
-                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                    <div class="italic text-muted-light dark:text-muted-dark font-light">
                         <p class="text-lg">„Architektura by měla vyrůstat z místa stejně přirozeně jako strom z půdy.“
                         </p>
                         <div class="flex items-center gap-3 mt-4">
@@ -235,9 +228,17 @@
                 </article>
             </div>
 
-            <!-- Lidé section (Off-grid) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <article class="lg:col-start-2 lg:col-span-5 space-y-8 reveal-on-scroll">
+            <!-- Lidé section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center reveal-on-scroll">
+                <figure class="relative aspect-[4/5] overflow-hidden group">
+                    <picture>
+                        <source srcset="../assets/images/philosophy/avif/3-lidi.avif" type="image/avif">
+                        <img src="../assets/images/philosophy/webp/3-lidi.webp" alt="Lidské měřítko v architektuře"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            loading="lazy">
+                    </picture>
+                </figure>
+                <article class="space-y-8">
                     <div>
                         <span
                             class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Lidé</span>
@@ -248,7 +249,7 @@
                         jak jej používají a jak ovlivňuje jejich chování i vzájemné vztahy. Architektura má sloužit, ne
                         dominovat. Věříme, že dobrý návrh zůstává funkční, srozumitelný a lidský i po letech.
                     </p>
-                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                    <div class="italic text-muted-light dark:text-muted-dark font-light">
                         <p class="text-lg">„Úkolem architektury je vytvářet prostředí pro lidský život, nikoliv
                             monumenty pro architekty.“</p>
                         <div class="flex items-center gap-3 mt-4">
@@ -257,33 +258,19 @@
                         </div>
                     </div>
                 </article>
-
-                <div class="lg:col-start-7 lg:col-span-6 lg:mt-[-10%] reveal-on-scroll reveal-delay-1">
-                    <figure class="relative aspect-video overflow-hidden group">
-                        <picture>
-                            <source srcset="../assets/images/philosophy/avif/1-lidi.avif" type="image/avif">
-                            <img src="../assets/images/philosophy/webp/1-lidi.webp" alt="Lidské měřítko v architektuře"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                loading="lazy">
-                        </picture>
-                    </figure>
-                </div>
             </div>
 
-            <!-- Důvěra section (Off-grid) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                <div class="lg:col-start-2 lg:col-span-4 reveal-on-scroll">
-                    <figure class="relative aspect-[3/4] overflow-hidden group">
-                        <picture>
-                            <source srcset="../assets/images/philosophy/avif/1-duvera.avif" type="image/avif">
-                            <img src="../assets/images/philosophy/webp/1-duvera.webp" alt="Proces a důvěra"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                loading="lazy">
-                        </picture>
-                    </figure>
-                </div>
-
-                <article class="lg:col-start-7 lg:col-span-5 lg:mt-24 space-y-8 reveal-on-scroll reveal-delay-2">
+            <!-- Důvěra section (Alternating) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center reveal-on-scroll">
+                <figure class="relative aspect-[4/5] overflow-hidden group lg:order-2">
+                    <picture>
+                        <source srcset="../assets/images/philosophy/avif/1-duvera.avif" type="image/avif">
+                        <img src="../assets/images/philosophy/webp/1-duvera.webp" alt="Proces a důvěra"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            loading="lazy">
+                    </picture>
+                </figure>
+                <article class="space-y-8 lg:order-1">
                     <div>
                         <span
                             class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Důvěra</span>
@@ -295,13 +282,29 @@
                         vzdáleného zadavatele. Věříme, že kvalitní architektura vzniká tam, kde je proces stejně poctivý
                         jako výsledná stavba.
                     </p>
-                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                    <div class="italic text-muted-light dark:text-muted-dark font-light">
                         <p class="text-lg">„Architektura je dlouhodobý závazek vůči klientovi, městu i času.“</p>
                         <div class="flex items-center gap-3 mt-4">
                             <div class="w-1.5 h-1.5 bg-primary/20 dark:bg-white/20"></div>
                             <p class="text-sm uppercase tracking-widest opacity-60">Renzo Piano</p>
                         </div>
                     </div>
+                    <a href="contact.html"
+                        class="group flex items-center text-xs font-bold tracking-widest uppercase hover:text-primary dark:hover:text-white transition-colors mt-8">
+                        <div class="relative flex items-center">
+                            <div
+                                class="relative w-4 h-4 border border-primary/10 dark:border-white/10 group-hover:border-transparent transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                <span
+                                    class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-primary dark:bg-white opacity-0 transition-all duration-1000 group-hover:opacity-100 group-hover:h-12 group-hover:-top-4 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[height,top]"></span>
+                                <span
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-primary dark:bg-white transition-all duration-1000 delay-400 group-hover:w-12 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[width]"></span>
+                            </div>
+                            <span
+                                class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                Kontakt
+                            </span>
+                        </div>
+                    </a>
                 </article>
             </div>
         </section>
@@ -394,7 +397,7 @@
             <div class="col-span-1">
 
                 <ul class="space-y-2 text-sm text-text-light dark:text-text-dark">
-                    <li><a class="hover-underline-animation" href="tel:+420693732260">+420 693 732 260</a> / <a class="hover-underline-animation" href="tel:+420603732260">603 732 260</a></li>
+                    <li><a class="hover-underline-animation" href="tel:+420603732260">+420 603 732 260</a></li>
                     <li><a class="hover-underline-animation" href="mailto:info@dbda.cz">info@dbda.cz</a>
                     </li>
                     <li class="mt-4">
