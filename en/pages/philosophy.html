@@ -140,11 +140,19 @@
             </div> -->
         </section>
 
-        <!-- Principles (Off-grid Layout) -->
-        <section class="space-y-48 lg:space-y-64">
+        <!-- Principles (Row-based Grid Layout) -->
+        <section class="space-y-24 lg:space-y-32">
             <!-- Materials section -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-                <article class="lg:col-start-2 lg:col-span-5 space-y-8 reveal-on-scroll">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-stretch reveal-on-scroll">
+                <figure class="relative overflow-hidden group">
+                    <picture>
+                        <source srcset="../../assets/images/philosophy/avif/1-materialy.avif" type="image/avif">
+                        <img src="../../assets/images/philosophy/webp/1-materialy.webp" alt="Working with material"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            loading="lazy">
+                    </picture>
+                </figure>
+                <article class="space-y-8">
                     <div>
                         <span
                             class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Materials</span>
@@ -157,7 +165,7 @@
                         dignity. For us, architecture emerges where material is not a decoration, but a carrier of
                         meaning.
                     </p>
-                    <div class="space-y-6 pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                    <div class="space-y-6 italic text-muted-light dark:text-muted-dark font-light">
                         <div class="space-y-2">
                             <p class="text-lg">“Materials speak their own language, and an architect should primarily
                                 listen to them.”</p>
@@ -175,34 +183,19 @@
                         </div>
                     </div>
                 </article>
-
-                <div class="lg:col-start-8 lg:col-span-4 reveal-on-scroll reveal-delay-1">
-                    <figure class="relative overflow-hidden group">
-                        <picture>
-                            <source srcset="../../assets/images/philosophy/avif/1-materialy.avif" type="image/avif">
-                            <img src="../../assets/images/philosophy/webp/1-materialy.webp" alt="Working with material"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                loading="lazy">
-                        </picture>
-                    </figure>
-                </div>
             </div>
 
-            <!-- Nature section (Off-grid) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-                <div class="lg:col-start-1 lg:col-span-5 order-2 lg:order-1 reveal-on-scroll">
-                    <figure class="relative overflow-hidden group mb-12 lg:mb-0">
-                        <picture>
-                            <source srcset="../../assets/images/philosophy/avif/1-priroda.avif" type="image/avif">
-                            <img src="../../assets/images/philosophy/webp/1-priroda.webp" alt="Architecture and nature"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                loading="lazy">
-                        </picture>
-                    </figure>
-                </div>
-
-                <article
-                    class="lg:col-start-7 lg:col-span-5 order-1 lg:order-2 lg:mt-32 space-y-8 reveal-on-scroll reveal-delay-2">
+            <!-- Nature section (Alternating) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-stretch reveal-on-scroll">
+                <figure class="relative overflow-hidden group lg:order-2">
+                    <picture>
+                        <source srcset="../../assets/images/philosophy/avif/1-priroda.avif" type="image/avif">
+                        <img src="../../assets/images/philosophy/webp/1-priroda.webp" alt="Architecture and nature"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            loading="lazy">
+                    </picture>
+                </figure>
+                <article class="space-y-8 lg:order-1">
                     <div>
                         <span
                             class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Nature</span>
@@ -215,7 +208,7 @@
                         the design. We believe that quality architecture does not push out the environment but
                         strengthens it.
                     </p>
-                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                    <div class="italic text-muted-light dark:text-muted-dark font-light">
                         <p class="text-lg">“Architecture should grow from the site as naturally as a tree from the
                             soil.”</p>
                         <div class="flex items-center gap-3 mt-4">
@@ -226,9 +219,17 @@
                 </article>
             </div>
 
-            <!-- People section (Off-grid) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-                <article class="lg:col-start-2 lg:col-span-5 space-y-8 reveal-on-scroll">
+            <!-- People section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-stretch reveal-on-scroll">
+                <figure class="relative overflow-hidden group">
+                    <picture>
+                        <source srcset="../../assets/images/philosophy/avif/3-lidi.avif" type="image/avif">
+                        <img src="../../assets/images/philosophy/webp/3-lidi.webp" alt="Human scale in architecture"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            loading="lazy">
+                    </picture>
+                </figure>
+                <article class="space-y-8">
                     <div>
                         <span
                             class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">People</span>
@@ -240,7 +241,7 @@
                         Architecture should serve, not dominate. We believe that good design remains functional,
                         understandable, and human even after years.
                     </p>
-                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                    <div class="italic text-muted-light dark:text-muted-dark font-light">
                         <p class="text-lg">“The task of architecture is to create environments for human life, not
                             monuments for architects.”</p>
                         <div class="flex items-center gap-3 mt-4">
@@ -249,33 +250,19 @@
                         </div>
                     </div>
                 </article>
-
-                <div class="lg:col-start-7 lg:col-span-6 lg:mt-[-10%] reveal-on-scroll reveal-delay-1">
-                    <figure class="relative overflow-hidden group">
-                        <picture>
-                            <source srcset="../../assets/images/philosophy/avif/1-lidi.avif" type="image/avif">
-                            <img src="../../assets/images/philosophy/webp/1-lidi.webp" alt="Human scale in architecture"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                loading="lazy">
-                        </picture>
-                    </figure>
-                </div>
             </div>
 
-            <!-- Trust section (Off-grid) -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-                <div class="lg:col-start-2 lg:col-span-4 reveal-on-scroll">
-                    <figure class="relative overflow-hidden group">
-                        <picture>
-                            <source srcset="../../assets/images/philosophy/avif/1-duvera.avif" type="image/avif">
-                            <img src="../../assets/images/philosophy/webp/1-duvera.webp" alt="Process and trust"
-                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                                loading="lazy">
-                        </picture>
-                    </figure>
-                </div>
-
-                <article class="lg:col-start-7 lg:col-span-5 lg:mt-24 space-y-8 reveal-on-scroll reveal-delay-2">
+            <!-- Trust section (Alternating) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-stretch reveal-on-scroll">
+                <figure class="relative overflow-hidden group lg:order-2">
+                    <picture>
+                        <source srcset="../../assets/images/philosophy/avif/1-duvera.avif" type="image/avif">
+                        <img src="../../assets/images/philosophy/webp/1-duvera.webp" alt="Process and trust"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            loading="lazy">
+                    </picture>
+                </figure>
+                <article class="space-y-8 lg:order-1">
                     <div>
                         <span
                             class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Trust</span>
@@ -287,7 +274,7 @@
                         partner, not a distant employer. We believe that quality architecture is born where the process
                         is as honest as the resulting building.
                     </p>
-                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                    <div class="italic text-muted-light dark:text-muted-dark font-light">
                         <p class="text-lg">“Architecture is a long-term commitment to the client, the city, and time.”
                         </p>
                         <div class="flex items-center gap-3 mt-4">
