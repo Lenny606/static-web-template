@@ -142,10 +142,20 @@
                             <!-- <div class="absolute -bottom-3 -left-3 w-3 h-3 bg-primary dark:bg-white opacity-30"></div> -->
 
                             <a class="block group overflow-hidden w-full max-w-lg lg:max-w-full" href="#">
-                                <img alt="Modern glass house in forest"
-                                    class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
-                                    src="../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-400w.avif"
-                                    width="1200" height="800" fetchpriority="high" />
+                                <picture>
+                                    <source
+                                        srcset="../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-400w.avif 400w,
+                                                    ../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-800w.avif 800w,
+                                                    ../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-1200w.avif 1200w"
+                                        sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
+                                    <source
+                                        srcset="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00643-edit.webp"
+                                        type="image/webp">
+                                    <img alt="Modern glass house in forest"
+                                        class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
+                                        src="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00643-edit.webp"
+                                        width="1200" height="800" fetchpriority="high" />
+                                </picture>
                             </a>
                         </div>
                     </div>
