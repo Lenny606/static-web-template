@@ -79,7 +79,16 @@ def rename_files_recursively(root_dir, dry_run=True):
         else:
             print("Renaming aborted.")
 
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser(description="Sanitize filenames recursively.")
+    parser.add_argument("directory", nargs="?", default="/home/tomas/my-projects/static-web-template/assets/images/philosophy/original/", help="Directory to sanitize")
+    parser.add_argument("--execute", action="store_true", help="Actually perform renames")
+    
+    args = parser.parse_args()
+    
+    rename_files_recursively(args.directory, dry_run=not args.execute)
+
 if __name__ == "__main__":
-    target = "/home/tomas/my-projects/static-web-template/assets/images/projects/webp/"
-    is_dry_run = "--execute" not in sys.argv
-    rename_files_recursively(target, dry_run=is_dry_run)
+    main()
