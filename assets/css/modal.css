@@ -4,7 +4,7 @@
     --modal-arrow-color: #ffffff;
     --modal-arrow-bg: rgba(255, 255, 255, 0.1);
     --modal-arrow-hover-bg: rgba(255, 255, 255, 0.2);
-    --modal-caption-bg: rgba(0, 0, 0, 0.7);
+
     --modal-z-index: 10000;
 }
 
@@ -114,26 +114,7 @@
     transform: rotate(90deg);
 }
 
-.image-modal-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--modal-text-color);
-    background-color: var(--modal-caption-bg);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    max-width: 80%;
-    text-align: center;
-}
 
-.image-modal-overlay.open .image-modal-caption {
-    opacity: 1;
-}
 
 /* Image Modal SVG sizing */
 .image-modal-nav svg {

@@ -40,7 +40,6 @@ class ImageModal {
                 
                 <div class="image-modal-content">
                     <img src="" alt="" class="image-modal-img" id="modal-image">
-                    <div class="image-modal-caption" id="modal-caption"></div>
                 </div>
                 
                 <button class="image-modal-nav image-modal-next" aria-label="Next image">
@@ -56,7 +55,6 @@ class ImageModal {
         // Cache elements
         this.modal = document.getElementById('image-modal');
         this.modalImg = document.getElementById('modal-image');
-        this.modalCaption = document.getElementById('modal-caption');
         this.closeBtn = this.modal.querySelector('.image-modal-close');
         this.prevBtn = this.modal.querySelector('.image-modal-prev');
         this.nextBtn = this.modal.querySelector('.image-modal-next');
@@ -146,14 +144,6 @@ class ImageModal {
         // Fade out slightly before changing (optional, keeping it simple for now)
         this.modalImg.src = currentImg.src; // Or define a data-full-size attribute
         this.modalImg.alt = currentImg.alt;
-
-        const caption = currentImg.getAttribute('alt') || '';
-        if (caption) {
-            this.modalCaption.textContent = caption;
-            this.modalCaption.style.display = 'block';
-        } else {
-            this.modalCaption.style.display = 'none';
-        }
 
         // Preload adjacent images
         this.preloadImage(this.currentIndex + 1);
