@@ -140,99 +140,162 @@
             </div>
         </section>
 
-        <!-- Principles (4 pillars) -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-            <!-- Materials -->
-            <article class="space-y-6 reveal-on-scroll">
-                <h3 class="text-3xl font-bold">Materials</h3>
-                <p class="text-lg text-muted-light dark:text-muted-dark leading-relaxed">
-                    We understand material as the fundamental language of architecture. We are interested not only in
-                    its appearance, but also in its origin, durability, how it ages, and its relationship to
-                    craftsmanship. We work with materials that have an internal logic and can carry time with dignity.
-                    For us, architecture emerges where material is not a decoration, but a carrier of meaning.
-                </p>
-                <div
-                    class="space-y-4 pt-4 border-l-2 border-primary/10 pl-6 italic text-muted-light dark:text-muted-dark font-light">
-                    <p>“Materials speak their own language, and an architect should primarily listen to them.”</p>
-                    <p class="text-sm uppercase tracking-widest opacity-60">— Peter Zumthor</p>
-                    <p class="mt-4">“Even a brick wants to be something.”</p>
-                    <p class="text-sm uppercase tracking-widest opacity-60">— Louis Kahn</p>
+        <!-- Principles (Off-grid Layout) -->
+        <section class="space-y-48 lg:space-y-64">
+            <!-- Materials section -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <article class="lg:col-start-2 lg:col-span-5 space-y-8 reveal-on-scroll">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Materials</span>
+                        <h3 class="text-4xl md:text-5xl font-bold">Language of architecture</h3>
+                    </div>
+                    <p class="text-xl text-muted-light dark:text-muted-dark leading-relaxed font-light">
+                        We understand material as the fundamental language of architecture. We are interested not only
+                        in its appearance, but also in its origin, durability, how it ages, and its relationship to
+                        craftsmanship. We work with materials that have an internal logic and can carry time with
+                        dignity. For us, architecture emerges where material is not a decoration, but a carrier of
+                        meaning.
+                    </p>
+                    <div class="space-y-6 pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                        <div class="space-y-2">
+                            <p class="text-lg">“Materials speak their own language, and an architect should primarily
+                                listen to them.”</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 bg-primary/20 dark:bg-white/20"></div>
+                                <p class="text-sm uppercase tracking-widest opacity-60">Peter Zumthor</p>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-lg">“Even a brick wants to be something.”</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 bg-primary/20 dark:bg-white/20"></div>
+                                <p class="text-sm uppercase tracking-widest opacity-60">Louis Kahn</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="lg:col-start-8 lg:col-span-4 reveal-on-scroll reveal-delay-1">
+                    <figure class="relative aspect-[3/4] overflow-hidden group">
+                        <picture>
+                            <source srcset="../../assets/images/philosophy/avif/1-materialy.avif" type="image/avif">
+                            <img src="../../assets/images/philosophy/webp/1-materialy.webp" alt="Working with material"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                loading="lazy">
+                        </picture>
+                    </figure>
                 </div>
-            </article>
+            </div>
 
-            <!-- Nature -->
-            <article class="space-y-6 reveal-on-scroll">
-                <h3 class="text-3xl font-bold">Nature</h3>
-                <p class="text-lg text-muted-light dark:text-muted-dark leading-relaxed">
-                    We perceive architecture as a part of the landscape, not as its opposite. We respect the scale of
-                    the place, light, topography, and climate, striving for the building to feel natural, as if it
-                    always belonged to that location. For us, nature is not a backdrop, but an active partner in the
-                    design. We believe that quality architecture does not push out the environment but strengthens it.
-                </p>
-                <div
-                    class="pt-4 border-l-2 border-primary/10 pl-6 italic text-muted-light dark:text-muted-dark font-light">
-                    <p>“Architecture should grow from the site as naturally as a tree from the soil.”</p>
-                    <p class="text-sm uppercase tracking-widest opacity-60">— Alvar Aalto</p>
+            <!-- Nature section (Off-grid) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-start-1 lg:col-span-5 order-2 lg:order-1 reveal-on-scroll">
+                    <figure class="relative aspect-[4/5] overflow-hidden group mb-12 lg:mb-0">
+                        <picture>
+                            <source srcset="../../assets/images/philosophy/avif/1-priroda.avif" type="image/avif">
+                            <img src="../../assets/images/philosophy/webp/1-priroda.webp" alt="Architecture and nature"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                loading="lazy">
+                        </picture>
+                    </figure>
                 </div>
-            </article>
 
-            <!-- People -->
-            <article class="space-y-6 reveal-on-scroll">
-                <h3 class="text-3xl font-bold">People</h3>
-                <p class="text-lg text-muted-light dark:text-muted-dark leading-relaxed">
-                    We design architecture for people and their daily lives. We are interested in how they feel in the
-                    space, how they use it, and how it influences their behavior and mutual relationships. Architecture
-                    should serve, not dominate. We believe that good design remains functional, understandable, and
-                    human even after years.
-                </p>
-                <div
-                    class="pt-4 border-l-2 border-primary/10 pl-6 italic text-muted-light dark:text-muted-dark font-light">
-                    <p>“The task of architecture is to create environments for human life, not monuments for
-                        architects.”</p>
-                    <p class="text-sm uppercase tracking-widest opacity-60">— Jan Gehl</p>
+                <article
+                    class="lg:col-start-7 lg:col-span-5 order-1 lg:order-2 lg:mt-32 space-y-8 reveal-on-scroll reveal-delay-2">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Nature</span>
+                        <h3 class="text-4xl md:text-5xl font-bold">Context and landscape</h3>
+                    </div>
+                    <p class="text-xl text-muted-light dark:text-muted-dark leading-relaxed font-light">
+                        We perceive architecture as a part of the landscape, not as its opposite. We respect the scale
+                        of the place, light, topography, and climate, striving for the building to feel natural, as if
+                        it always belonged to that location. For us, nature is not a backdrop, but an active partner in
+                        the design. We believe that quality architecture does not push out the environment but
+                        strengthens it.
+                    </p>
+                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                        <p class="text-lg">“Architecture should grow from the site as naturally as a tree from the
+                            soil.”</p>
+                        <div class="flex items-center gap-3 mt-4">
+                            <div class="w-1.5 h-1.5 bg-primary/20 dark:bg-white/20"></div>
+                            <p class="text-sm uppercase tracking-widest opacity-60">Alvar Aalto</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- People section (Off-grid) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <article class="lg:col-start-2 lg:col-span-5 space-y-8 reveal-on-scroll">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">People</span>
+                        <h3 class="text-4xl md:text-5xl font-bold">Space for life</h3>
+                    </div>
+                    <p class="text-xl text-muted-light dark:text-muted-dark leading-relaxed font-light">
+                        We design architecture for people and their daily lives. We are interested in how they feel in
+                        the space, how they use it, and how it influences their behavior and mutual relationships.
+                        Architecture should serve, not dominate. We believe that good design remains functional,
+                        understandable, and human even after years.
+                    </p>
+                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                        <p class="text-lg">“The task of architecture is to create environments for human life, not
+                            monuments for architects.”</p>
+                        <div class="flex items-center gap-3 mt-4">
+                            <div class="w-1.5 h-1.5 bg-primary/20 dark:bg-white/20"></div>
+                            <p class="text-sm uppercase tracking-widest opacity-60">Jan Gehl</p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="lg:col-start-7 lg:col-span-6 lg:mt-[-10%] reveal-on-scroll reveal-delay-1">
+                    <figure class="relative aspect-video overflow-hidden group">
+                        <picture>
+                            <source srcset="../../assets/images/philosophy/avif/1-lidi.avif" type="image/avif">
+                            <img src="../../assets/images/philosophy/webp/1-lidi.webp" alt="Human scale in architecture"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                loading="lazy">
+                        </picture>
+                    </figure>
                 </div>
-            </article>
+            </div>
 
-            <!-- Trust -->
-            <article class="space-y-6 reveal-on-scroll">
-                <h3 class="text-3xl font-bold">Trust</h3>
-                <p class="text-lg text-muted-light dark:text-muted-dark leading-relaxed">
-                    Trust is the foundation of every collaboration for us. We build it through open communication, clear
-                    decisions, and responsibility at every stage of the project. We see the client as a partner, not a
-                    distant employer. We believe that quality architecture is born where the process is as honest as the
-                    resulting building.
-                </p>
-                <div
-                    class="pt-4 border-l-2 border-primary/10 pl-6 italic text-muted-light dark:text-muted-dark font-light">
-                    <p>“Architecture is a long-term commitment to the client, the city, and time.”</p>
-                    <p class="text-sm uppercase tracking-widest opacity-60">— Renzo Piano</p>
+            <!-- Trust section (Off-grid) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-start-2 lg:col-span-4 reveal-on-scroll">
+                    <figure class="relative aspect-[3/4] overflow-hidden group">
+                        <picture>
+                            <source srcset="../../assets/images/philosophy/avif/1-duvera.avif" type="image/avif">
+                            <img src="../../assets/images/philosophy/webp/1-duvera.webp" alt="Process and trust"
+                                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                                loading="lazy">
+                        </picture>
+                    </figure>
                 </div>
-            </article>
-        </section>
 
-        <!-- Illustration (Villa) -->
-        <section class="mt-24 relative">
-            <div class="max-w-5xl mx-auto relative group">
-                <figure class="relative overflow-hidden aspect-[16/10]">
-                    <picture>
-                        <source
-                            srcset="../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-400w.avif 400w,
-                                        ../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-800w.avif 800w,
-                                        ../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-1200w.avif 1200w"
-                            sizes="(max-width: 1280px) 100vw, 80vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2025-06-vila-novotny/06.webp"
-                            type="image/webp">
-                        <img src="../../assets/images/projects/webp/2025-06-vila-novotny/06.webp" alt="Villa"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            loading="lazy" decoding="async">
-                    </picture>
-
-                    <figcaption
-                        class="absolute bottom-0 left-0 right-0 p-6 text-xs text-white/90 bg-gradient-to-t from-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                        <span class="font-medium">Villa</span> – a thoughtful connection of privacy, light, and
-                        landscape.
-                    </figcaption>
-                </figure>
+                <article class="lg:col-start-7 lg:col-span-5 lg:mt-24 space-y-8 reveal-on-scroll reveal-delay-2">
+                    <div>
+                        <span
+                            class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Trust</span>
+                        <h3 class="text-4xl md:text-5xl font-bold">Collaboration values</h3>
+                    </div>
+                    <p class="text-xl text-muted-light dark:text-muted-dark leading-relaxed font-light">
+                        Trust is the foundation of every collaboration for us. We build it through open communication,
+                        clear decisions, and responsibility at every stage of the project. We see the client as a
+                        partner, not a distant employer. We believe that quality architecture is born where the process
+                        is as honest as the resulting building.
+                    </p>
+                    <div class="pt-6 italic text-muted-light dark:text-muted-dark font-light">
+                        <p class="text-lg">“Architecture is a long-term commitment to the client, the city, and time.”
+                        </p>
+                        <div class="flex items-center gap-3 mt-4">
+                            <div class="w-1.5 h-1.5 bg-primary/20 dark:bg-white/20"></div>
+                            <p class="text-sm uppercase tracking-widest opacity-60">Renzo Piano</p>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
