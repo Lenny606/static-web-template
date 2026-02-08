@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="cs">
+<html class="scroll-smooth" lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="DBDA studio | Architektonický ateliér">
-    <meta name="keywords" content="DBDA studio, Architektura, Ateliér">
+    <meta name="description" content="DBDA studio | Architectural Studio">
+    <meta name="keywords" content="DBDA studio, Architecture, Studio">
     <meta name="author" content="DBDA studio">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
@@ -13,10 +13,9 @@
     <meta name="googlebot-video" content="noindex, nofollow">
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>DBDA studio | Architektonický ateliér</title>
+    <title>DBDA studio | Architectural Studio</title>
     <link rel="canonical" href="https://example.com/en/index.html">
 
-    <!-- Preconnect for Fonts -->
     <!-- Preconnect -->
     <link rel="preconnect" href="https://lh3.googleusercontent.com">
 
@@ -26,8 +25,8 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script src="assets/js/tailwind-config.js"></script>
-    <script src="assets/js/lottie.js" defer></script>
+    <script src="../assets/js/tailwind-config.js"></script>
+    <script src="../assets/js/lottie.js" defer></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="../assets/css/fonts.css">
@@ -36,7 +35,7 @@
         rel="stylesheet" />
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
 </head>
 
 <body
@@ -45,10 +44,14 @@
     <!-- <div class="square-pattern"></div> -->
 
     <header class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-6 sm:px-12 py-2 flex justify-between items-center">
-            <a class="block" href="#">
-                <div id="lottie"></div>
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 py-4 flex justify-between items-center">
+            <a class="block" href="./index.html">
+                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio logo" class="h-10 w-auto" width="100"
+                    height="40" fetchpriority="high">
             </a>
+            <!-- <a class="block" href="#">
+                <div id="lottie"></div>
+            </a> -->
             <!-- Desktop Navigation -->
             <nav id="desktop-nav" class="hidden md:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
                 <a class="hover-underline-animation font-medium" href="pages/projects.html">Works</a>
@@ -72,8 +75,8 @@
         <div class="mobile-menu-content">
             <nav class="mobile-nav">
                 <a href="index.html" class="mobile-nav-logo">
-                    <img src="assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120" height="48"
-                        loading="lazy">
+                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120"
+                        height="48" loading="lazy">
                 </a>
                 <a href="pages/projects.html" class="mobile-nav-link nav-link">Works</a>
                 <a href="pages/philosophy.html" class="mobile-nav-link nav-link">Philosophy</a>
@@ -83,141 +86,127 @@
             </nav>
         </div>
     </div>
-    <main class="max-w-7xl mx-auto px-6 sm:px-12 pt-16 pb-8 lg:py-24 space-y-32 relative z-10">
-        <!-- Scroll Track Wrapper for Hero Lock -->
-        <div id="hero-scroll-track" class="relative min-h-[300vh]">
-            <div class="sticky top-0 h-screen w-full overflow-hidden">
-                <section class="relative w-full h-full flex items-center justify-center">
-                    <!-- <video autoplay=""
-                        class="absolute inset-0 w-full h-full object-cover z-0 opacity-20 dark:opacity-10" loop=""
-                        muted="" playsinline="">
-                        <source
-                            src="https://assets.mixkit.co/videos/preview/mixkit-day-light-illuminates-a-modern-corridor-4241-large.mp4"
-                            type="video/mp4" />
-                        Váš prohlížeč nepodporuje prvek video.
-                    </video> -->
-                    <div
-                        class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 w-full max-w-7xl px-6 sm:px-12 items-center">
-                        <div
-                            class="lg:col-span-6 flex flex-col justify-center bg-background-light/80 dark:bg-background-dark/80 p-8 md:p-12 relative order-2 lg:order-1">
-                            <!-- Decorative squares -->
-                            <div class="corner-square corner-square-top-left"></div>
-                            <div class="corner-square corner-square-bottom-right"></div>
-
-                            <h1
-                                class="text-2xl md:text-3xl lg:text-4xl font-normal leading-tight md:leading-snug text-primary dark:text-white mb-8 max-w-xl color-transition-text">
-                                Záleží nám na prostředí, ve kterém žijeme. Proto navrhujeme stavby, které slouží do
-                                posledního
-                                detailu.
-                            </h1>
-                            <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase mt-4 text-primary dark:text-white square-link"
-                                href="pages/philosophy.html">
-                                <div class="relative flex items-center">
-                                    <div
-                                        class="relative w-4 h-4 border border-primary/10 dark:border-white/10 group-hover:border-transparent transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
-                                        <!-- Central Axis Pillar -->
-                                        <span
-                                            class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-primary dark:bg-white opacity-0 transition-all duration-1000 group-hover:opacity-100 group-hover:h-12 group-hover:-top-4 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[height,top]"></span>
-
-                                        <!-- Expansion Line -->
-                                        <span
-                                            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-primary dark:bg-white transition-all duration-1000 delay-400 group-hover:w-12 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[width]"></span>
-                                    </div>
-                                    <span
-                                        class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
-                                        VÍCE O FILOZOFII
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="lg:col-span-6 flex justify-center p-0 lg:p-4 relative order-1 lg:order-2">
-                            <!-- Corner squares around image -->
-                            <!-- <div
-                                class="absolute -top-3 -left-3 w-6 h-6 border border-primary dark:border-white opacity-40">
-                            </div> -->
-                            <div
-                                class="absolute -bottom-3 -right-3 w-6 h-6 border border-primary dark:border-white opacity-40">
-                            </div>
-                            <div class="absolute -top-3 -right-3 w-3 h-3 bg-primary dark:bg-white opacity-30"></div>
-                            <!-- <div class="absolute -bottom-3 -left-3 w-3 h-3 bg-primary dark:bg-white opacity-30"></div> -->
-
-                            <a class="block group overflow-hidden w-full max-w-lg lg:max-w-full" href="#">
-                                <picture>
-                                    <source
-                                        srcset="../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-400w.avif 400w,
-                                                    ../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-800w.avif 800w,
-                                                    ../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-1200w.avif 1200w"
-                                        sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                                    <source
-                                        srcset="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00643-edit.webp"
-                                        type="image/webp">
-                                    <img alt="Modern glass house in forest"
-                                        class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
-                                        src="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00643-edit.webp"
-                                        width="1200" height="800" fetchpriority="high" />
-                                </picture>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
-            <div class="flex flex-col space-y-4 relative square-decor square-decor-top-left square-decor-bottom-right">
-                <!-- Corner accent -->
-                <!-- <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-current opacity-30"></div> -->
-                <!-- <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-current opacity-30"></div> -->
-
-                <a class="block group overflow-hidden" href="#">
-                    <img alt="Modern glass house in forest - Vila"
-                        class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5cT2duUJVRscY59uG_K-EV_XcvC9uKEOn4eXIh34OFr3HmN5SkJy4Ql_TfSq0Hq1fWcHMt4-G27oTa_-81H41bqnn3x9MUfcyvIyzROvM3pcMREfzfeyTjoQY9_D2ZfD_6UWogbgGiufKe8MINUjfruQ0_Ebaef2Lx4uJ-J9x2AFnnWXGID8liuEus1JzZ9L3M9dop5St7MNZBXMZ46AomdABo9XNR54Fo6oHBiyzEhXX2zL0jeld08wf05xFvGau04ZD2ebbChce"
-                        width="800" height="600" loading="lazy" />
-                </a>
-                <div class="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <a href="#">
-                        <h3 class="text-xl font-medium">Vila</h3>
-                    </a>
-                    <div class="w-6 h-6 border border-current flex items-center justify-center opacity-40">
-                        <div class="w-2 h-2 bg-current"></div>
-                    </div>
-                </div>
-                <p class="text-sm text-muted-light dark:text-muted-dark">realizace</p>
-            </div>
+    <main class="max-w-7xl mx-auto px-6 sm:px-12 pt-24 pb-12 lg:py-32 space-y-24 lg:space-y-32 relative z-10">
+        <section class="relative min-h-[70vh] flex items-center justify-center pt-24 lg:pt-0">
             <div
-                class="flex flex-col space-y-4 lg:pt-48 relative square-decor square-decor-top-right square-decor-bottom-left">
-                <!-- Corner accent -->
-                <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-current opacity-30"></div>
-                <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-current opacity-30"></div>
+                class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 w-full  items-center reveal-on-scroll">
+                <div
+                    class="lg:col-span-6 flex flex-col justify-center bg-background-light/80 dark:bg-background-dark/80 p-8 md:p-12 relative order-2 lg:order-1">
+                    <!-- Decorative squares -->
+                    <!-- <div class="corner-square corner-square-top-left"></div> -->
+                    <!-- <div class="corner-square corner-square-bottom-right"></div> -->
 
-                <a class="block group overflow-hidden" href="#">
-                    <img alt="Traditional white building restoration - Zvonička"
-                        class="w-full aspect-[3/2] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlHT_g74KQoaPpcqPMt1rOb85-13H9BcWdCnNr54pLiAm4m4UsRNL3g5hsEdvWDEXzu2IplRyMIStS5TUxaZXWCH9qxgrhqly-zH3yd4TYZ_NyU3Pl0zziBEiR9jrVBLFw1zO6g6BQD031gO22HGiijPgyPWfKJu4UrdcCd5iQb8DvA0CviEP_D4t6HNDUuhX5cRLIuYEvj6XUaBUJuz_JQi4LFlbVkBZug1DN8mSp0Hlra3dTlx_bxFAlEyzTdkGRWTsMcoa844iL"
-                        width="800" height="533" loading="lazy" />
-                </a>
-                <div class="flex items-center justify-between border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <a href="#">
-                        <h3 class="text-xl font-medium">Zvonička, Bílovice - Lutotín</h3>
+                    <h1
+                        class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight md:leading-snug text-primary dark:text-white mb-8 max-w-xl">
+                        We create space for life that resonates with the landscape and honors its history. Architecture
+                        as a silent dialogue between man and place.
+                    </h1>
+                    <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase mt-4 text-primary dark:text-white"
+                        href="pages/philosophy.html">
+                        <div class="relative flex items-center">
+                            <div
+                                class="relative w-4 h-4 border border-primary/10 dark:border-white/10 group-hover:border-transparent transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                <!-- Central Axis Pillar -->
+                                <span
+                                    class="absolute left-1/2 top-0 -translate-x-1/2 w-[1px] h-full bg-primary dark:bg-white opacity-0 transition-all duration-1000 group-hover:opacity-100 group-hover:h-12 group-hover:-top-4 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[height,top]"></span>
+
+                                <!-- Expansion Line -->
+                                <span
+                                    class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-primary dark:bg-white transition-all duration-1000 delay-400 group-hover:w-12 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-[width]"></span>
+                            </div>
+                            <span
+                                class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
+                                MORE ABOUT PHILOSOPHY
+                            </span>
+                        </div>
                     </a>
-                    <div class="w-6 h-6 border border-current flex items-center justify-center opacity-40">
-                        <div class="w-2 h-2 bg-current"></div>
-                    </div>
                 </div>
-                <p class="text-sm text-muted-light dark:text-muted-dark">realizace</p>
+                <div class="lg:col-span-6 flex justify-center p-0 lg:p-4 relative order-1 lg:order-2">
+                    <!-- Corner squares around image -->
+                    <!-- <div class="absolute -top-3 -left-3 w-6 h-6 border border-primary dark:border-white opacity-40">
+                    </div> -->
+                    <!-- <div class="absolute -bottom-3 -right-3 w-6 h-6 border border-primary dark:border-white opacity-40">
+                    </div> -->
+                    <!-- <div class="absolute -top-3 -right-3 w-3 h-3 bg-primary dark:bg-white opacity-30"></div> -->
+                    <!-- <div class="absolute -bottom-3 -left-3 w-3 h-3 bg-primary dark:bg-white opacity-30"></div> -->
+                    <a class="block group overflow-hidden w-full max-w-lg lg:max-w-full" href="#">
+                        <picture>
+                            <source
+                                srcset="../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-400w.avif 400w,
+                                            ../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-800w.avif 800w,
+                                            ../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-1200w.avif 1200w"
+                                sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
+                            <source
+                                srcset="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00643-edit.webp"
+                                type="image/webp">
+                            <img alt="Modern glass house in forest"
+                                class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
+                                src="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00643-edit.webp"
+                                width="1200" height="800" fetchpriority="high" />
+                        </picture>
+                    </a>
+                </div>
             </div>
         </section>
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 reveal-on-scroll">
+            <!-- Project: Hamre -->
+            <div class="flex flex-col space-y-4 relative square-decor-top-left square-decor-bottom-right">
+                <a class="block group overflow-hidden" href="projects/hamre.html">
+                    <picture>
+                        <source srcset="../assets/images/projects/avif-versions/2025-24-hamre/01-400w.avif 400w,
+                                    ../assets/images/projects/avif-versions/2025-24-hamre/01-800w.avif 800w,
+                                    ../assets/images/projects/avif-versions/2025-24-hamre/01-1200w.avif 1200w"
+                            sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
+                        <source srcset="../assets/images/projects/webp/2025-24-hamre/01.webp" type="image/webp">
+                        <img alt="Hamre"
+                            class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
+                            src="../assets/images/projects/webp/2025-24-hamre/01.webp" width="800" height="600"
+                            loading="lazy" />
+                    </picture>
+                </a>
+                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
+                    <a href="projects/hamre.html">
+                        <h3 class="text-xl font-medium">Hamre</h3>
+                    </a>
+                    <!-- <p class="text-sm text-muted-light dark:text-muted-dark">realization</p> -->
+                </div>
+            </div>
+            <!-- Project: Harachov Dusek -->
+            <div class="flex flex-col space-y-4 lg:pt-48 relative">
+                <a class="block group overflow-hidden" href="projects/harachov-dusek.html">
+                    <picture>
+                        <source
+                            srcset="../assets/images/projects/avif-versions/2024-01-harachov-dusek/dusek-harachov-1-400w.avif 400w,
+                                    ../assets/images/projects/avif-versions/2024-01-harachov-dusek/dusek-harachov-1-800w.avif 800w,
+                                    ../assets/images/projects/avif-versions/2024-01-harachov-dusek/dusek-harachov-1-1200w.avif 1200w"
+                            sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
+                        <source srcset="../assets/images/projects/webp/2024-01-harachov-dusek/Dusek Harachov_1.webp"
+                            type="image/webp">
+                        <img alt="Harachov Dusek"
+                            class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
+                            src="../assets/images/projects/webp/2024-01-harachov-dusek/Dusek Harachov_1.webp"
+                            width="800" height="600" loading="lazy" />
+                    </picture>
+                </a>
+                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
+                    <a href="projects/harachov-dusek.html">
+                        <h3 class="text-xl font-medium">Harachov Dusek</h3>
+                    </a>
+                    <!-- <p class="text-sm text-muted-light dark:text-muted-dark">realization</p> -->
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start reveal-on-scroll">
             <div class="lg:col-span-4 flex flex-col h-full relative">
                 <!-- <div class="absolute -top-8 -left-8 w-12 h-12 border border-current opacity-20 hidden lg:block"></div> -->
-                <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-current opacity-10 hidden lg:block"></div>
+                <!-- <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-current opacity-10 hidden lg:block"></div> -->
 
                 <div>
                     <span
-                        class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Filozofie</span>
-                    <h2 class="text-3xl md:text-4xl font-normal leading-tight mb-6">
-                        Dům je pro nás síť vztahů. S uživatelem a jeho potřebami, s prostředím, s místem. Výsledkem je
-                        proto vždy unikát.
+                        class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Philosophy</span>
+                    <h2 class="text-3xl md:text-4xl font-light italic leading-tight mb-6">
+                        Every design begins with listening. We seek a balance between your dreams, function, and the
+                        spirit of the place to create a unique work.
                     </h2>
                 </div>
                 <div class="mb-8 lg:mb-0">
@@ -236,7 +225,7 @@
                             </div>
                             <span
                                 class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
-                                VÍCE
+                                MORE
                             </span>
                         </div>
                     </a>
@@ -244,8 +233,8 @@
             </div>
             <div class="lg:col-span-8 relative">
                 <!-- Decorative corner squares -->
-                <div class="absolute -top-2 -left-2 w-8 h-8 border-t border-l border-current opacity-30 z-10"></div>
-                <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b border-r border-current opacity-30 z-10"></div>
+                <!-- <div class="absolute -top-2 -left-2 w-8 h-8 border-t border-l border-current opacity-30 z-10"></div>
+                <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b border-r border-current opacity-30 z-10"></div> -->
 
                 <a class="block group overflow-hidden" href="pages/philosophy.html">
                     <picture>
@@ -261,23 +250,26 @@
                 </a>
             </div>
         </section>
-        <section class="relative">
+        <section class="relative reveal-on-scroll">
             <!-- Decorative squares -->
-            <div class="absolute -top-12 -right-12 w-16 h-16 border border-current opacity-10 hidden lg:block"></div>
-            <div class="absolute -top-8 -right-8 w-4 h-4 bg-current opacity-10 hidden lg:block"></div>
+            <!-- <div class="absolute -top-12 -right-12 w-16 h-16 border border-current opacity-10 hidden lg:block"></div> -->
+            <!-- <div class="absolute -top-8 -right-8 w-4 h-4 bg-current opacity-10 hidden lg:block"></div> -->
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-32">
                 <div class="lg:col-span-3 relative">
                     <span
-                        class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium">Ateliér</span>
-                    <div class="absolute -left-4 -top-4 w-8 h-8 border border-current opacity-20"></div>
+                        class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium"></span>
+                    <!-- <div class="absolute -left-4 -top-4 w-8 h-8 border border-current opacity-20"></div> -->
                 </div>
                 <div class="lg:col-span-9">
+                    <span
+                        class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Studio</span>
                     <h2
-                        class="text-2xl md:text-3xl lg:text-4xl font-normal leading-tight md:leading-snug mb-8 max-w-3xl">
-                        Jsme autorský atelier, to znamená, že dům pod značkou DBDA studio je navržený výhradně námi.
+                        class="text-2xl md:text-3xl lg:text-4xl font-light leading-tight italic md:leading-snug mb-6 max-w-3xl">
+                        We are creators who believe in the honesty of design. From the first sketch to the last detail –
+                        we stand behind every line of our studio.
                     </h2>
-                    <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase mt-4"
+                    <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase"
                         href="pages/studio.html">
                         <div class="relative flex items-center">
                             <div
@@ -292,35 +284,20 @@
                             </div>
                             <span
                                 class="ml-4 text-primary dark:text-white transition-all duration-1000 group-hover:-translate-x-2 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform">
-                                VÍCE
+                                MORE
                             </span>
                         </div>
                     </a>
                 </div>
             </div>
             <div class="w-full relative">
-                <!-- Grid overlay squares -->
-                <div
-                    class="absolute inset-0 grid grid-cols-4 grid-rows-3 z-10 opacity-15 pointer-events-none hidden lg:grid">
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                    <div class="border border-current"></div>
-                </div>
+
 
                 <!-- Corner squares -->
-                <div class="absolute top-0 left-0 w-12 h-12 border-t border-l border-current opacity-30 z-10"></div>
+                <!-- <div class="absolute top-0 left-0 w-12 h-12 border-t border-l border-current opacity-30 z-10"></div>
                 <div class="absolute top-0 right-0 w-12 h-12 border-t border-r border-current opacity-30 z-10"></div>
                 <div class="absolute bottom-0 left-0 w-12 h-12 border-b border-l border-current opacity-30 z-10"></div>
-                <div class="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-current opacity-30 z-10"></div>
+                <div class="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-current opacity-30 z-10"></div> -->
 
                 <a href="pages/studio.html" class="block w-full max-w-4xl mx-auto">
                     <img alt="Portrait of the two architects"
@@ -335,16 +312,16 @@
     </main>
     <footer class="bg-background-light dark:bg-background-dark pt-8 pb-16 lg:py-24 mt-8 lg:mt-24 relative">
         <!-- Decorative squares in footer -->
-        <div
+        <!-- <div
             class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-current to-transparent opacity-20">
-        </div>
-        <div class="absolute -top-3 left-12 w-4 h-4 border border-current opacity-30 hidden md:block"></div>
-        <div class="absolute -top-2 right-12 w-2 h-2 bg-current opacity-20 hidden md:block"></div>
+        </div> -->
+        <!-- <div class="absolute -top-3 left-12 w-4 h-4 border border-current opacity-30 hidden md:block"></div> -->
+        <!-- <div class="absolute -top-2 right-12 w-2 h-2 bg-current opacity-20 hidden md:block"></div> -->
 
         <div class="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div class="col-span-1">
                 <a class="text-2xl font-bold tracking-tight text-primary dark:text-white" href="#">DBDA studio</a>
-                <p class="text-sm text-muted-light dark:text-muted-dark mt-4">Architektonický ateliér</p>
+                <p class="text-sm text-muted-light dark:text-muted-dark mt-4">Architectural Studio</p>
             </div>
             <div class="col-span-1">
 
@@ -354,7 +331,7 @@
                     </li>
                     <li class="mt-4">
                         <p class="text-muted-light dark:text-muted-dark">Na Zlatnici 144/8</p>
-                        <p class="text-muted-light dark:text-muted-dark">Praha 4, 147 00</p>
+                        <p class="text-muted-light dark:text-muted-dark">Prague 4, 147 00</p>
                     </li>
                 </ul>
             </div>
@@ -396,7 +373,7 @@
             <div class="col-span-1">
 
                 <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed">
-                    Nahlédněte do našeho světa designu a inspirace.
+                    Take a look into our world of design and inspiration.
                 </p>
                 <div id="footer-posts-container" class="mt-6">
                     <!-- Dynamic posts will be injected here -->
@@ -405,8 +382,8 @@
         </div>
         <div
             class="max-w-7xl mx-auto px-6 sm:px-12 mt-16 pt-8 text-center text-xs text-muted-light dark:text-muted-dark flex items-center justify-center gap-2">
-            <div class="w-2 h-2 bg-current"></div>
-            © <span id="current-year">2023</span> DBDA studio. Všechna práva vyhrazena.
+            <!-- <div class="w-2 h-2 bg-current"></div> -->
+            © <span id="current-year">2023</span> DBDA studio. All rights reserved.
         </div>
     </footer>
     <div id="cookie-banner"
@@ -415,7 +392,7 @@
 
             <!-- Main Actions -->
             <div id="cookie-main-actions" class="w-full flex flex-col items-center space-y-4">
-                <h4 class="font-bold text-sm">To make the website work better for you (Cookie Consent)</h4>
+                <h4 class="font-bold text-sm">To make the website work well for you (Cookie Consent)</h4>
                 <p class="text-xs text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
                     For the most comfortable use of the website, we need your <a
                         class="underline hover:text-black dark:hover:text-white" href="#">consent</a> to the processing
@@ -483,10 +460,21 @@
         </div>
     </div>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn"
+        class="fixed bottom-8 right-8 z-50 w-8 h-8 p-0 flex items-center justify-center bg-white text-primary border border-gray-200 shadow-2xl transition-all duration-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary opacity-0 pointer-events-none"
+        aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
+            </path>
+        </svg>
+    </button>
+
     <!-- Navigation Script -->
-    <script src="../assets/js/scroll-reveal.js"></script>
+    <script src="../assets/js/main.js"></script>
     <script src="../assets/js/nav.js"></script>
-    <script src="assets/js/footer-posts.js"></script>
+    <script src="../assets/js/footer-posts.js"></script>
     <script src="../assets/js/cookies.js"></script>
 </body>
 
