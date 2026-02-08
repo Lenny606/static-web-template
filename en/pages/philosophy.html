@@ -40,6 +40,8 @@
 
 <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    <!-- Square Pattern Background -->
+    <!-- <div class="square-pattern"></div> -->
 
     <header class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-6 sm:px-12 py-4 flex justify-between items-center">
@@ -47,7 +49,9 @@
                 <img src="../../assets/images/DBDA_logo.png" alt="DBDA Studio logo" class="h-10 w-auto" width="100"
                     height="40" fetchpriority="high">
             </a>
-
+            <!-- <a class="block" href="../index.html">
+                <div id="lottie"></div>
+            </a> -->
             <!-- Desktop Navigation -->
             <nav id="desktop-nav" class="hidden md:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
                 <a class="hover-underline-animation font-medium" href="projects.html">Works</a>
@@ -121,23 +125,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Secondary Hero Content / Quote -->
-            <!-- <div class="mt-48 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start reveal-on-scroll reveal-delay-2">
-                <div class="lg:col-span-7 lg:col-start-2">
-                    <p class="text-lg text-text-light dark:text-text-dark leading-relaxed max-w-2xl">
-                        From the very beginning, our practice has been based on a philosophy of innovation,
-                        sustainability, and quality design. We continue to learn from the past and creatively embrace
-                        the challenges of the future with a firm belief that good design matters and every project
-                        starts with respect for the place and ends with honest craftsmanship.
-                    </p>
-                </div>
-                <div class="lg:col-span-4 lg:col-start-9 lg:mt-12">
-                    <h2 class="text-3xl font-light leading-tight italic decoration-current/30 underline-offset-8">
-                        “Design is not just about aesthetics, it is about solving the challenges of our future.”
-                    </h2>
-                </div>
-            </div> -->
         </section>
 
         <!-- Principles (Row-based Grid Layout) -->
@@ -194,11 +181,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-stretch reveal-on-scroll">
                 <figure class="relative overflow-hidden group lg:order-2">
                     <picture>
-                        <source srcset="../../assets/images/philosophy/avif-versions/1-priroda-400w.avif 400w,
-                                    ../../assets/images/philosophy/avif-versions/1-priroda-800w.avif 800w,
-                                    ../../assets/images/philosophy/avif-versions/1-priroda-1200w.avif 1200w"
+                        <source srcset="../../assets/images/philosophy/avif-versions/2-priroda-400w.avif 400w,
+                                    ../../assets/images/philosophy/avif-versions/2-priroda-800w.avif 800w,
+                                    ../../assets/images/philosophy/avif-versions/2-priroda-1200w.avif 1200w"
                             sizes="(max-width: 1024px) 100vw, 50vw" type="image/avif">
-                        <img src="../../assets/images/philosophy/avif-versions/1-priroda-800w.avif"
+                        <source srcset="../../assets/images/philosophy/webp/2-priroda.webp" type="image/webp">
+                        <img src="../../assets/images/philosophy/avif-versions/2-priroda-800w.avif"
                             alt="Architecture and nature"
                             class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                             loading="lazy" decoding="async">
@@ -351,8 +339,8 @@
                     <li><a class="hover-underline-animation" href="mailto:info@dbda.cz">info@dbda.cz</a>
                     </li>
                     <li class="mt-4">
-                        <p class="text-muted-light dark:text-muted-dark">Main Street 123</p>
-                        <p class="text-muted-light dark:text-muted-dark">100 00 Prague</p>
+                        <p class="text-muted-light dark:text-muted-dark">Na Zlatnici 144/8</p>
+                        <p class="text-muted-light dark:text-muted-dark">Prague 4, 147 00</p>
                     </li>
                 </ul>
             </div>

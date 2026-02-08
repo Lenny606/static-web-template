@@ -16,9 +16,8 @@
     <title>DBDA studio – Contact</title>
     <link rel="canonical" href="https://example.com/en/pages/contact.html">
 
-    <!-- Preconnect for Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://lh3.googleusercontent.com">
 
     <!-- Preload Tailwind -->
     <link rel="preload" href="https://cdn.tailwindcss.com?plugins=forms,typography" as="script">
@@ -26,32 +25,31 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <script src="../assets/js/tailwind-config.js"></script>
+    <script src="../../assets/js/tailwind-config.js"></script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/fonts.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../../assets/css/theme.css">
 </head>
 
 <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
     <!-- Square Pattern Background -->
-    <div class="square-pattern"></div>
+    <!-- <div class="square-pattern"></div> -->
 
     <header class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-6 sm:px-12 py-6 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 py-4 flex justify-between items-center">
             <a class="block" href="../index.html">
-                <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto" width="100" height="40"
-                    fetchpriority="high">
+                <img src="../../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto" width="100"
+                    height="40" fetchpriority="high">
             </a>
             <!-- Desktop Navigation -->
-            <nav id="desktop-nav" class="hidden lg:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
+            <nav id="desktop-nav" class="hidden md:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
                 <a class="hover-underline-animation font-medium" href="projects.html">Works</a>
                 <a class="hover-underline-animation font-medium" href="philosophy.html">Philosophy</a>
                 <a class="hover-underline-animation font-medium" href="studio.html">Studio</a>
@@ -59,7 +57,7 @@
                 <a class="hover-underline-animation font-medium" href="../../pages/contact.html">CZ</a>
             </nav>
             <!-- Mobile Menu Toggle Button -->
-            <button class="menu-toggle lg:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Toggle menu"
+            <button class="menu-toggle md:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Toggle menu"
                 aria-expanded="false">
                 <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
                 <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
@@ -73,7 +71,7 @@
         <div class="mobile-menu-content">
             <nav class="mobile-nav">
                 <a href="../index.html" class="mobile-nav-logo">
-                    <img src="../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120"
+                    <img src="../../assets/images/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120"
                         height="48" loading="lazy">
                 </a>
                 <a href="projects.html" class="mobile-nav-link nav-link">Works</a>
@@ -85,22 +83,19 @@
         </div>
     </div>
 
-    <main class="max-w-7xl mx-auto px-6 sm:px-12 py-32 lg:py-48 space-y-24 relative z-10">
+    <main class="max-w-7xl mx-auto px-6 sm:px-12 py-32 lg:py-48 space-y-24 lg:space-y-32 relative z-10">
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-1 gap-16 reveal-on-scroll">
             <!-- Left Column: Info -->
             <div>
-                <span
-                    class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-8">Contact
-                    us</span>
                 <h1 class="text-3xl md:text-4xl font-light mb-16">Let's create something together.</h1>
 
                 <div class="space-y-12">
                     <div>
-                        <h2 class="text-lg font-medium mb-4 uppercase tracking-wider">DBDA studio</h2>
+                        <h2 class="text-2xl font-bold tracking-tight text-primary dark:text-white mb-4">DBDA studio</h2>
                         <ul class="space-y-2 text-muted-light dark:text-muted-dark leading-relaxed">
                             <li>Na Zlatnici 144/8</li>
-                            <li>Praha 4, 147 00</li>
+                            <li>Prague 4, 147 00</li>
                             <li><a href="mailto:info@dbda.cz"
                                     class="hover:text-primary dark:hover:text-white transition-colors">info@dbda.cz</a>
                             </li>
@@ -108,41 +103,29 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="mt-16">
-                    <div class="relative w-full aspect-video grayscale opacity-80">
-                        <!-- Map Placeholder / Decorative -->
-                        <div
-                            class="absolute inset-0 bg-gray-200 dark:bg-gray-800 flex items-center justify-center border border-gray-300 dark:border-gray-700">
-                            <span class="text-xs uppercase tracking-widest opacity-50">Map</span>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <!-- Right Column: Form -->
-            <div class="bg-gray-50 dark:bg-gray-900 p-8 md:p-12 border border-gray-200 dark:border-gray-800">
+            <!-- Right Column: Form (Commented out) -->
+            <!-- <div class="bg-gray-50 dark:bg-gray-900 p-8 md:p-12 border border-gray-200 dark:border-gray-800">
                 <h3 class="text-2xl font-light mb-8">General Inquiries</h3>
                 <form id="contact-form" class="space-y-8">
                     <div>
                         <label for="name"
-                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Name</label>
+                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Full Name</label>
                         <input type="text" id="name"
                             class="block w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-white focus:ring-0 px-0 py-2 transition-colors"
                             placeholder="JOHN DOE">
                     </div>
                     <div>
                         <label for="email"
-                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Email
-                            Address</label>
+                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Email Address</label>
                         <input type="email" id="email"
                             class="block w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-white focus:ring-0 px-0 py-2 transition-colors"
                             placeholder="EMAIL@EXAMPLE.COM">
                     </div>
                     <div>
                         <label for="message"
-                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Your
-                            Message</label>
+                            class="block text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark mb-2">Your Message</label>
                         <textarea id="message" rows="4"
                             class="block w-full bg-transparent border-0 border-b border-gray-300 dark:border-gray-700 focus:border-primary dark:focus:border-white focus:ring-0 px-0 py-2 transition-colors resize-none"
                             placeholder="HOW CAN WE HELP YOU?"></textarea>
@@ -153,12 +136,12 @@
                         <span class="w-8 h-[1px] bg-primary dark:bg-white ml-4 transition-all group-hover:w-12"></span>
                     </button>
                 </form>
-            </div>
+            </div> -->
         </div>
 
     </main>
 
-    <footer class="bg-background-light dark:bg-background-dark py-16 lg:py-24 relative">
+    <footer class="bg-background-light dark:bg-background-dark py-16 lg:py-24 mt-16 lg:mt-24 relative">
         <div class="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div class="col-span-1">
                 <a class="text-2xl font-bold tracking-tight text-primary dark:text-white" href="#">DBDA studio</a>
@@ -172,7 +155,7 @@
                     </li>
                     <li class="mt-4">
                         <p class="text-muted-light dark:text-muted-dark">Na Zlatnici 144/8</p>
-                        <p class="text-muted-light dark:text-muted-dark">Praha 4, 147 00</p>
+                        <p class="text-muted-light dark:text-muted-dark">Prague 4, 147 00</p>
                     </li>
                 </ul>
             </div>
@@ -223,7 +206,7 @@
         </div>
         <div
             class="max-w-7xl mx-auto px-6 sm:px-12 mt-16 pt-8 text-center text-xs text-muted-light dark:text-muted-dark flex items-center justify-center gap-2">
-            <div class="w-2 h-2 bg-current"></div>
+            <!-- <div class="w-2 h-2 bg-current"></div> -->
             © <span id="current-year">2023</span> DBDA studio. All rights reserved.
         </div>
     </footer>
@@ -234,7 +217,7 @@
 
             <!-- Main Actions -->
             <div id="cookie-main-actions" class="w-full flex flex-col items-center space-y-4">
-                <h4 class="font-bold text-sm">To make the website work better for you (Cookie Consent)</h4>
+                <h4 class="font-bold text-sm">To make the website work well for you (Cookie Consent)</h4>
                 <p class="text-xs text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
                     For the most comfortable use of the website, we need your <a
                         class="underline hover:text-black dark:hover:text-white" href="#">consent</a> to the processing
@@ -303,9 +286,9 @@
     </div>
 
     <!-- Navigation Script -->
+    <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/nav.js"></script>
     <script src="../../assets/js/footer-posts.js"></script>
-    <script src="../../assets/js/contact-form.js"></script>
     <script src="../../assets/js/cookies.js"></script>
 </body>
 
