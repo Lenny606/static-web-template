@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configuration
-SOURCE_BASE="assets/images/philosophy/original"
-TARGET_BASE="assets/images/philosophy/webp"
+SOURCE_BASE="assets/images/team/original"
+TARGET_BASE="assets/images/team/webp"
 QUALITY=80
 TARGET_SIZE=200000 # Default target size in bytes (cca 200kb)
 DRY_RUN=true

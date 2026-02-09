@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configuration
-SOURCE_BASE="assets/images/philosophy/original"
-TARGET_BASE="assets/images/philosophy/avif"
+SOURCE_BASE="assets/images/team/original"
+TARGET_BASE="assets/images/team/avif"
 QUALITY=60
 TARGET_SIZE=200000 # Default target size in bytes (cca 200kb)
 DRY_RUN=true

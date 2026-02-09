@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Konfigurace
-SOURCE_DIR="./assets/images/projects/avif"
-OUTPUT_DIR="./assets/images/projects/avif-versions"
+SOURCE_DIR="./assets/images/team/avif"
+OUTPUT_DIR="./assets/images/team/avif-versions"
 SIZES=(400 800 1200)
 QUALITY=75
 

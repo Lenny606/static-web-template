@@ -300,10 +300,16 @@
                 <div class="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-current opacity-30 z-10"></div> -->
 
                 <a href="pages/studio.html" class="block w-full max-w-4xl mx-auto">
-                    <img alt="Portrait of the two architects"
-                        class="w-full grayscale object-cover aspect-[4/3] md:aspect-[16/9] lg:aspect-[3/2] bg-gray-200 dark:bg-gray-800"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC28xotUexhiyBnPCtX5jBu3iGa5Fqo7sME964_mBGWp6F4FDCmexrWwN2Ux69vOmdfJIfzMqH-jwgSGD2ClkccvNC4AP4zacczrPjkW31TKUe3EEYoCxIpqT3wQ56YTTcsv__fZztA8Zl2dti402-OYIice7c3chkzfOshJKjpfucQh-Zw82z1gil7u3ccIDZHeT_Y8BO211-BrZRg7HE8uBhaUOl8V8GhoaKKb60jflDcoif0lzwmvLb7BpB8VE9p5s-g2GNNGBsT"
-                        width="1200" height="800" loading="lazy" />
+                    <picture>
+                        <source srcset="assets/images/team/avif-versions/martin-petr-400w.avif 400w,
+                                        assets/images/team/avif-versions/martin-petr-800w.avif 800w,
+                                        assets/images/team/avif-versions/martin-petr-1200w.avif 1200w"
+                            sizes="(max-width: 1024px) 100vw, 1024px" type="image/avif">
+                        <source srcset="assets/images/team/webp/martin-petr.webp" type="image/webp">
+                        <img alt="Portrait of the two architects"
+                            class="w-full grayscale object-contain aspect-[4/3] md:aspect-[16/9] lg:aspect-[3/2]"
+                            src="assets/images/team/webp/martin-petr.webp" width="1200" height="800" loading="lazy" />
+                    </picture>
                 </a>
             </div>
         </section>
