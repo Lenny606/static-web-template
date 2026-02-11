@@ -105,5 +105,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
         });
-    }
-});
+        // Project Slider Logic
+        const initProjectSlider = () => {
+            const sliders = document.querySelectorAll('.project-slider');
+
+            sliders.forEach(slider => {
+                const slides = slider.querySelectorAll('.project-slide');
+                if (slides.length <= 1) return;
+
+                let currentIndex = 0;
+                const rotationInterval = 3000; // 3 seconds
+
+                const showSlide = (index) => {
+                    slides.forEach((slide, i) => {
+                        if (i === index) {
+                            slide.classList.add('active');
+                            // Small delay to allow 'active' (display: block equivalent) to kick in before animation
+                            setTimeout(() => {
+                                slide.classList.add('revealed', 'anim');
+                            }, 50);
+                        } else {
+                            slide.classList.remove('active', 'revealed', 'anim');
+                        }
+                    });
+                };
+
+                // Start rotation
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    showSlide(currentIndex);
+                }, rotationInterval);
+            });
+        };
+
+        initProjectSlider();
+    });
