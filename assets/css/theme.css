@@ -491,3 +491,37 @@ body {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
 }
+
+/* Project Slider */
+.project-slider {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.project-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    z-index: 1;
+}
+
+.project-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+/* Ensure slides start unrevealed so we can re-trigger animations */
+.project-slide:not(.active) .reveal-on-scroll {
+    opacity: 0 !important;
+    transform: translateY(30px) scale(0.98) !important;
+    filter: blur(4px);
+    transition: none !important;
+}
