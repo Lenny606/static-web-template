@@ -105,38 +105,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
         });
-        // Project Slider Logic
-        const initProjectSlider = () => {
-            const sliders = document.querySelectorAll('.project-slider');
+    }
 
-            sliders.forEach(slider => {
-                const slides = slider.querySelectorAll('.project-slide');
-                if (slides.length <= 1) return;
+    // Project Slider Logic
+    const initProjectSlider = () => {
+        const sliders = document.querySelectorAll('.project-slider');
 
-                let currentIndex = 0;
-                const rotationInterval = 3000; // 3 seconds
+        sliders.forEach(slider => {
+            const slides = slider.querySelectorAll('.project-slide');
+            if (slides.length <= 1) {
+                if (slides.length === 1) {
+                    slides[0].classList.add('active', 'revealed', 'anim');
+                }
+                return;
+            }
 
-                const showSlide = (index) => {
-                    slides.forEach((slide, i) => {
-                        if (i === index) {
-                            slide.classList.add('active');
-                            // Small delay to allow 'active' (display: block equivalent) to kick in before animation
-                            setTimeout(() => {
-                                slide.classList.add('revealed', 'anim');
-                            }, 50);
-                        } else {
-                            slide.classList.remove('active', 'revealed', 'anim');
-                        }
-                    });
-                };
+            let currentIndex = 0;
+            const rotationInterval = 3000; // 3 seconds
 
-                // Start rotation
-                setInterval(() => {
-                    currentIndex = (currentIndex + 1) % slides.length;
-                    showSlide(currentIndex);
-                }, rotationInterval);
-            });
-        };
+            const showSlide = (index) => {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add('active');
+                        // Small delay to allow 'active' (display: block equivalent) to kick in before animation
+                        setTimeout(() => {
+                            slide.classList.add('revealed', 'anim');
+                        }, 50);
+                    } else {
+                        slide.classList.remove('active', 'revealed', 'anim');
+                    }
+                });
+            };
 
-        initProjectSlider();
-    });
+            // Initialize first slide state
+            showSlide(0);
+
+            // Start rotation
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }, rotationInterval);
+        });
+    };
+
+    initProjectSlider();
+});
