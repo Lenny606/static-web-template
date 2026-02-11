@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             let currentIndex = 0;
-            const rotationInterval = 3000; // 3 seconds
+            const rotationInterval = 5000; // 5 seconds
 
             const showSlide = (index) => {
                 slides.forEach((slide, i) => {
