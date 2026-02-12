@@ -4,14 +4,34 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('form');
+    const contactForm = document.getElementById('contact-form');
     if (!contactForm) return;
 
-    // Add required IDs if they don't exist (though we'll add them in HTML too)
+    // MailerSend Configuration
+    // IMPORTANT: In production, it is recommended to use a server-side proxy
+    // to avoid exposing your API token in the frontend.
+    const MAILERSEND_API_TOKEN = 'mlsn.9e8b9261b8c502124e9109daed81a7ef36cca56d9b34b66ebcaa9d758fe648b8'; // Replace with your token
+    const SENDER_EMAIL = 'info@nodeflow.site'; // Replace with your verified sender email
+    const RECIPIENT_EMAIL = "thomas.kravcik@gmail.com";
+
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
     const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    // Detect language
+    const isEn = document.documentElement.lang === 'en';
+
+    // Translations
+    const translations = {
+        sending: isEn ? 'Sending...' : 'Odesílám...',
+        success: isEn ? 'Thank you! Your message has been sent.' : 'Děkujeme! Vaše zpráva byla odeslána.',
+        error: isEn ? 'Sorry, something went wrong. Please try again later.' : 'Omlouváme se, něco se nepovedlo. Zkuste to prosím později.',
+        nameRequired: isEn ? 'Name is required.' : 'Jméno je povinné.',
+        emailRequired: isEn ? 'Email is required.' : 'Email je povinný.',
+        emailInvalid: isEn ? 'Please enter a valid email.' : 'Zadejte platný email.',
+        messageRequired: isEn ? 'Message is required.' : 'Zpráva je povinná.'
+    };
 
     // Create feedback message container
     const feedbackContainer = document.createElement('div');
@@ -50,13 +70,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Validation
         let errors = [];
-        if (!name) errors.push('Jméno je povinné.');
+        if (!name) errors.push(translations.nameRequired);
         if (!email) {
-            errors.push('Email je povinný.');
+            errors.push(translations.emailRequired);
         } else if (!validateEmail(email)) {
-            errors.push('Zadejte platný email.');
+            errors.push(translations.emailInvalid);
         }
-        if (!message) errors.push('Zpráva je povinná.');
+        if (!message) errors.push(translations.messageRequired);
 
         if (errors.length > 0) {
             showFeedback(errors.join(' '), true);
@@ -66,36 +86,52 @@ document.addEventListener('DOMContentLoaded', () => {
         // Processing state
         const originalBtnContent = submitBtn.innerHTML;
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span>Odesílám...</span><span class="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin ml-4"></span>';
+        submitBtn.innerHTML = `<span>${translations.sending}</span><span class="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin ml-4"></span>`;
 
         try {
-            // Using a placeholder URL for demonstration
-            // In production, replace with actual API endpoint
-            const response = await fetch('https://httpbin.org/post', {
+            const response = await fetch('https://api.mailersend.com/v1/email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${MAILERSEND_API_TOKEN}`,
+                    'X-Requested-With': 'XMLHttpRequest'
                 },
                 body: JSON.stringify({
-                    name,
-                    email,
-                    message,
-                    timestamp: new Date().toISOString()
+                    from: {
+                        email: SENDER_EMAIL,
+                        name: 'DBDA Contact Form'
+                    },
+                    to: [
+                        {
+                            email: RECIPIENT_EMAIL,
+                            name: 'DBDA Studio'
+                        }
+                    ],
+                    reply_to: {
+                        email: email,
+                        name: name
+                    },
+                    subject: `New Contact Form Submission: ${name}`,
+                    text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+                    html: `<h3>New Contact Form Submission</h3><p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g, '<br>')}</p>`
                 }),
             });
 
-            if (response.ok) {
-                showFeedback('Děkujeme! Vaše zpráva byla odeslána.', false);
+            if (response.ok || response.status === 202) {
+                showFeedback(translations.success, false);
                 contactForm.reset();
             } else {
+                const errorData = await response.json().catch(() => ({}));
+                console.error('MailerSend Error:', errorData);
                 throw new Error('Chyba při odesílání.');
             }
         } catch (error) {
             console.error('Form submission error:', error);
-            showFeedback('Omlouváme se, něco se nepovedlo. Zkuste to prosím později.', true);
+            showFeedback(translations.error, true);
         } finally {
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnContent;
         }
     });
 });
+
