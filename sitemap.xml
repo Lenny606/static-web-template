@@ -1,23 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/index.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <loc>https://dbda.cz/index.html</loc>
+    <lastmod>2026-02-15</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/pages/about.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <loc>https://dbda.cz/pages/projects.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/pages/philosophy.html</loc>
+    <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/pages/services.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <loc>https://dbda.cz/pages/studio.html</loc>
+    <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/pages/contact.html</loc>
-    <lastmod>2026-01-06</lastmod>
+    <loc>https://dbda.cz/pages/contact.html</loc>
+    <lastmod>2026-02-15</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/pages/services.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <!-- Projects -->
+  <url>
+    <loc>https://dbda.cz/projects/apartmany-slupecna.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/bohdalec.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/bohunov.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/dzr-trebsko.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/hamre.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/harachov-dusek.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/haratice2.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/kancelare-central-kladno.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/letnany.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/misenska.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/moravska-trebova-muzeum.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/pasman.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/rd-brevnov.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/rd-herink.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/rd-nucice.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/rd-petrv.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/rd-ricany.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/rd-velke-karlovice.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/salon-husitska.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/semily-sklenik.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/slivenec-koupelny.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/soutez-malesice-p10.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/velke-popovice.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/vila-novotny.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dbda.cz/projects/zloukovice.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
