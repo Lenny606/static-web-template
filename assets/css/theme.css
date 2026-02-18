@@ -499,7 +499,7 @@ body {
 }
 
 .project-slide {
-    display: none;
+    display: none !important;
     width: 100%;
     opacity: 0;
     transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -507,7 +507,7 @@ body {
 }
 
 .project-slide.active {
-    display: grid;
+    display: grid !important;
     z-index: 2;
 }
 
