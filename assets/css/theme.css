@@ -428,7 +428,7 @@ body {
     opacity: 0 !important;
     transform: translateY(30px) scale(0.98) !important;
     /* Added slight scale for depth */
-    transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1), transform 1.6s cubic-bezier(0.22, 1, 0.36, 1), filter 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1), filter 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity, transform, filter;
     /* Start slightly blurry for a cinematic focus focus */
     filter: blur(4px);
