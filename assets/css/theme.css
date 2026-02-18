@@ -499,21 +499,20 @@ body {
 }
 
 .project-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: none;
     width: 100%;
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1), visibility 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: opacity 1.6s cubic-bezier(0.22, 1, 0.36, 1);
     z-index: 1;
 }
 
 .project-slide.active {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
+    display: grid;
     z-index: 2;
+}
+
+.project-slide.active.revealed {
+    opacity: 1;
 }
 
 /* Extra slow cinematic reveal for slider projects only */

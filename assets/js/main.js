@@ -125,17 +125,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const showSlide = (index) => {
                 slides.forEach((slide, i) => {
-                    const revealElements = slide.querySelectorAll('.reveal-on-scroll');
+                    const childrenToReveal = slide.querySelectorAll('.reveal-on-scroll');
                     if (i === index) {
                         slide.classList.add('active');
-                        // Small delay to allow 'active' (display: block equivalent) to kick in before animation
+                        // Small delay to allow 'display: grid' to kick in before opacity transition
                         setTimeout(() => {
                             slide.classList.add('revealed', 'anim');
-                            revealElements.forEach(el => el.classList.add('revealed', 'anim'));
+                            childrenToReveal.forEach(el => {
+                                el.classList.add('revealed', 'anim');
+                            });
                         }, 50);
                     } else {
                         slide.classList.remove('active', 'revealed', 'anim');
-                        revealElements.forEach(el => el.classList.remove('revealed', 'anim'));
+                        childrenToReveal.forEach(el => {
+                            el.classList.remove('revealed', 'anim');
+                        });
                     }
                 });
             };
