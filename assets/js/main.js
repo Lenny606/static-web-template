@@ -140,11 +140,46 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             };
 
+            // Swipe Support
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const minSwipeDistance = 50;
+
+            slider.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            slider.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            const handleSwipe = () => {
+                const swipeDistance = touchEndX - touchStartX;
+                if (Math.abs(swipeDistance) > minSwipeDistance) {
+                    if (swipeDistance < 0) {
+                        // Swipe Left -> Next
+                        currentIndex = (currentIndex + 1) % slides.length;
+                    } else {
+                        // Swipe Right -> Prev
+                        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    }
+                    showSlide(currentIndex);
+
+                    // Reset interval to avoid immediate jump after manual swipe
+                    clearInterval(rotationTimer);
+                    rotationTimer = setInterval(() => {
+                        currentIndex = (currentIndex + 1) % slides.length;
+                        showSlide(currentIndex);
+                    }, rotationInterval);
+                }
+            };
+
             // Initialize first slide state
             showSlide(0);
 
             // Start rotation
-            setInterval(() => {
+            let rotationTimer = setInterval(() => {
                 currentIndex = (currentIndex + 1) % slides.length;
                 showSlide(currentIndex);
             }, rotationInterval);
