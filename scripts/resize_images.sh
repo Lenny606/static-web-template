@@ -33,8 +33,8 @@ find "$SOURCE_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png
 
     for size in "${SIZES[@]}"; do
         # Generování WebP
-        # magick "$img" -resize "${size}x" -quality "$QUALITY" -strip \
-        #     "$target_dir/${filename_noext}-${size}w.webp"
+        magick "$img" -resize "${size}x" -quality "$QUALITY" -strip \
+            "$target_dir/${filename_noext}-${size}w.webp"
         
         # Generování AVIF
         magick "$img" -resize "${size}x" -quality "$QUALITY" -strip \
