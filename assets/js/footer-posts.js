@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showFallback = () => {
         container.innerHTML = `
-            <div class="mt-6">
+            <div class="mt-6 flex justify-center md:justify-start">
                 <a href="${INSTAGRAM_URL}" target="_blank" class="inline-flex items-center group text-xs font-bold tracking-widest uppercase">
                     <div class="relative flex items-center">
                         <div
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const postElement = document.createElement('a');
             postElement.href = permalink;
             postElement.target = '_blank';
-            postElement.className = `absolute inset-0 flex gap-3 group items-center transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`;
+            postElement.className = `absolute inset-0 flex gap-3 group items-center justify-center md:justify-start transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`;
 
             postElement.innerHTML = `
                 ${mediaUrl ? `
