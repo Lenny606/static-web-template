@@ -3,30 +3,67 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="DBDA studio | Architectural Studio">
-    <meta name="keywords" content="DBDA studio, Architecture, Studio">
+    <title>DBDA studio | Architectural Practice Prague – Design and Engineering</title>
+    <meta name="description"
+        content="DBDA studio is a Prague-based architectural practice focused on modern architecture in harmony with landscape and history. We create space for life.">
+    <meta name="keywords" content="DBDA studio, Architecture, Practice, Prague, Design, Interior">
     <meta name="author" content="DBDA studio">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
-    <meta name="googlebot-news" content="noindex, nofollow">
-    <meta name="googlebot-image" content="noindex, nofollow">
-    <meta name="googlebot-video" content="noindex, nofollow">
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>DBDA studio | Architectural Studio</title>
-    <link rel="canonical" href="https://example.com/en/index.html">
+    <link rel="canonical" href="https://dbda.cz/en/index.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dbda.cz/en/">
+    <meta property="og:title" content="DBDA studio | Architectural Practice Prague">
+    <meta property="og:description"
+        content="We create space for life that harmonizes with the landscape and honors its history.">
+    <meta property="og:image" content="https://dbda.cz/assets/images/logo/DBDA_logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dbda.cz/en/">
+    <meta property="twitter:title" content="DBDA studio | Architectural Practice Prague">
+    <meta property="twitter:description"
+        content="We create space for life that harmonizes with the landscape and honors its history.">
+    <meta property="twitter:image" content="https://dbda.cz/assets/images/logo/DBDA_logo.png">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DBDA studio",
+      "url": "https://dbda.cz/en/",
+      "logo": "https://dbda.cz/assets/images/logo/DBDA_logo.png",
+      "description": "Architectural studio in Prague focused on residential and commercial projects.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Na Zlatnici 144/8",
+        "addressLocality": "Prague 4",
+        "postalCode": "147 00",
+        "addressCountry": "CZ"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+420603732260",
+        "contactType": "sales",
+        "email": "info@dbda.cz"
+      }
+    }
+    </script>
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://lh3.googleusercontent.com">
 
     <!-- Preload Tailwind -->
     <link rel="preload" href="https://cdn.tailwindcss.com?plugins=forms,typography" as="script">
-    <link rel="preconnect" href="https://lh3.googleusercontent.com">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <script src="../assets/js/tailwind-config.js"></script>
-    <script src="../assets/js/lottie.js" defer></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="../assets/css/fonts.css">
@@ -47,8 +84,6 @@
 
 <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
-    <!-- Square Pattern Background -->
-    <!-- <div class="square-pattern"></div> -->
 
     <header class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-6 sm:px-12 py-4 flex justify-between items-center">
@@ -56,9 +91,6 @@
                 <img src="../assets/images/logo/DBDA_logo.png" alt="DBDA Studio logo" class="h-10 w-auto" width="100"
                     height="40" fetchpriority="high">
             </a>
-            <!-- <a class="block" href="#">
-                <div id="lottie"></div>
-            </a> -->
             <!-- Desktop Navigation -->
             <nav id="desktop-nav" class="hidden md:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
                 <a class="hover-underline-animation font-medium" href="pages/projects.html">Works</a>
@@ -93,19 +125,15 @@
             </nav>
         </div>
     </div>
-    <main class="max-w-7xl mx-auto px-6 sm:px-12 pt-24 pb-12 lg:py-32 space-y-24 lg:space-y-32 relative z-10">
+    <main class="max-w-7xl mx-auto px-6 sm:px-12 py-24 lg:py-32 space-y-24 lg:space-y-32 relative z-10">
         <section class="relative min-h-[70vh] flex items-center justify-center pt-24 lg:pt-0">
             <div
                 class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 w-full  items-center reveal-on-scroll">
                 <div
                     class="lg:col-span-6 flex flex-col justify-center bg-background-light/80 dark:bg-background-dark/80 p-8 md:p-12 relative order-2 lg:order-1">
-                    <!-- Decorative squares -->
-                    <!-- <div class="corner-square corner-square-top-left"></div> -->
-                    <!-- <div class="corner-square corner-square-bottom-right"></div> -->
-
                     <h1
                         class="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight md:leading-snug text-primary dark:text-white mb-8 max-w-xl">
-                        We create space for life that resonates with the landscape and honors its history. Architecture
+                        We create space for life that harmonizes with the landscape and honors its history. Architecture
                         as a silent dialogue between man and place.
                     </h1>
                     <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase mt-4 text-primary dark:text-white"
@@ -129,13 +157,6 @@
                     </a>
                 </div>
                 <div class="lg:col-span-6 flex justify-center p-0 lg:p-4 relative order-1 lg:order-2">
-                    <!-- Corner squares around image -->
-                    <!-- <div class="absolute -top-3 -left-3 w-6 h-6 border border-primary dark:border-white opacity-40">
-                    </div> -->
-                    <!-- <div class="absolute -bottom-3 -right-3 w-6 h-6 border border-primary dark:border-white opacity-40">
-                    </div> -->
-                    <!-- <div class="absolute -top-3 -right-3 w-3 h-3 bg-primary dark:bg-white opacity-30"></div> -->
-                    <!-- <div class="absolute -bottom-3 -left-3 w-3 h-3 bg-primary dark:bg-white opacity-30"></div> -->
                     <a class="block group overflow-hidden w-full max-w-lg lg:max-w-full" href="#">
                         <picture>
                             <source
@@ -143,10 +164,7 @@
                                             ../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-800w.avif 800w,
                                             ../assets/images/projects/avif-versions/2022-11-moravska-trebova-muzeum/dsc00643-edit-1200w.avif 1200w"
                                 sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                            <source
-                                srcset="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00643-edit.webp"
-                                type="image/webp">
-                            <img alt="Museum Moravská Třebová"
+                            <img alt="Moravská Třebová museum"
                                 class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
                                 src="../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00643-edit.webp"
                                 width="1200" height="800" fetchpriority="high" />
@@ -157,7 +175,7 @@
         </section>
         <section class="project-slider reveal-on-scroll">
             <!-- Project: Hamre -->
-            <div class="project-slide active grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            <div class="project-slide active grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
                 <div class="lg:col-span-6 reveal-on-scroll">
                     <a class="block group overflow-hidden relative square-decor-top-left" href="projects/hamre.html">
                         <picture>
@@ -165,22 +183,20 @@
                                         ../assets/images/projects/avif-versions/2025-24-hamre/01-800w.avif 800w,
                                         ../assets/images/projects/avif-versions/2025-24-hamre/01-1200w.avif 1200w"
                                 sizes="(max-width: 768px) 100vw, 60vw" type="image/avif">
-                            <source srcset="../assets/images/projects/webp/2025-24-hamre/01.webp" type="image/webp">
-                            <img alt="Hut Hamre"
+                            <img alt="Hamre Cabin"
                                 class="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
                                 src="../assets/images/projects/webp/2025-24-hamre/01.webp" width="1200" height="750"
                                 loading="lazy" />
                         </picture>
                     </a>
-                    <div
-                        class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4 mt-4">
-                        <a href="projects/hamre.html" class="hover:underline">
-                            <h3 class="text-xl font-medium">Hut Hamre</h3>
+                    <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
+                        <a href="projects/hamre.html">
+                            <h3 class="text-xl font-medium">Hamre Cabin</h3>
                         </a>
                     </div>
                 </div>
                 <div class="lg:col-span-6 flex flex-col justify-center reveal-on-scroll reveal-delay-1">
-                    <div class="flex flex-col gap-6 lg:gap-12 lg:pt-12 items-start">
+                    <div class="flex flex-col gap-6 lg:gap-12 items-start">
                         <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
                             Hamre represents the concept of an open house that draws from its location. Generous glass
                             surfaces offer constant visual contact with nature, while the internal layout ensures
@@ -191,14 +207,13 @@
             </div>
 
             <!-- Project: Harachov Dusek -->
-            <div class="project-slide grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            <div class="project-slide grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
                 <div
                     class="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1 reveal-on-scroll reveal-delay-1">
-                    <div class="flex flex-col gap-6 lg:gap-12 lg:pt-12 items-start">
+                    <div class="flex flex-col gap-6 lg:gap-12 items-start">
                         <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
-                            The apartment in Harrachov is designed with respect for local materials. Wood and stone take
-                            center stage here, creating an authentic atmosphere of a mountain residence in a modern
-                            guise.
+                            The apartment in Harrachov is designed with respect for local materials. Wood and stone play
+                            a primary role, creating an authentic atmosphere of a mountain home in a modern wrap.
                         </p>
                     </div>
                 </div>
@@ -210,25 +225,22 @@
                                         ../assets/images/projects/avif-versions/2024-01-harachov-dusek/dusek-harachov-1-800w.avif 800w,
                                         ../assets/images/projects/avif-versions/2024-01-harachov-dusek/dusek-harachov-1-1200w.avif 1200w"
                                 sizes="(max-width: 768px) 100vw, 60vw" type="image/avif">
-                            <source srcset="../assets/images/projects/webp/2024-01-harachov-dusek/Dusek Harachov_1.webp"
-                                type="image/webp">
-                            <img alt="Harachov Dusek"
+                            <img alt="Harrachov Apartment"
                                 class="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
                                 src="../assets/images/projects/webp/2024-01-harachov-dusek/Dusek Harachov_1.webp"
                                 width="1200" height="750" loading="lazy" />
                         </picture>
                     </a>
-                    <div
-                        class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4 mt-4">
+                    <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                         <a href="projects/harachov-dusek.html">
-                            <h3 class="text-xl font-medium">Harachov Dusek</h3>
+                            <h3 class="text-xl font-medium">Harrachov Apartment</h3>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project: Villa Říčany -->
-            <div class="project-slide grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            <!-- Project: Vila Říčany -->
+            <div class="project-slide grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
                 <div class="lg:col-span-6 reveal-on-scroll">
                     <a class="block group overflow-hidden relative" href="projects/rd-ricany.html">
                         <picture>
@@ -236,36 +248,34 @@
                                         ../assets/images/projects/avif-versions/2023-01-rd-ricany/01-800w.avif 800w,
                                         ../assets/images/projects/avif-versions/2023-01-rd-ricany/01-1200w.avif 1200w"
                                 sizes="(max-width: 768px) 100vw, 60vw" type="image/avif">
-                            <source srcset="../assets/images/projects/webp/2023-01-rd-ricany/01.webp" type="image/webp">
                             <img alt="Villa Říčany"
                                 class="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
                                 src="../assets/images/projects/webp/2023-01-rd-ricany/01.webp" width="1200" height="750"
                                 loading="lazy" />
                         </picture>
                     </a>
-                    <div
-                        class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4 mt-4">
+                    <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                         <a href="projects/rd-ricany.html">
                             <h3 class="text-xl font-medium">Villa Říčany</h3>
                         </a>
                     </div>
                 </div>
                 <div class="lg:col-span-6 flex flex-col justify-center reveal-on-scroll reveal-delay-1">
-                    <div class="flex flex-col gap-6 lg:gap-12 lg:pt-12 items-start">
+                    <div class="flex flex-col gap-6 lg:gap-12 items-start">
                         <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
                             The family house is conceived as a clear, rational structure set into the terrain. The
-                            architecture works with reduction, proportion, and a precise definition of the relationship
-                            between the interior and the landscape. Every element has its reason, nothing is extra.
+                            architecture works with reduction, proportion, and accurate definition of the relationship
+                            between interior and landscape. Every element has its reason, nothing is extra.
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Project: Apartments Slupečná -->
-            <div class="project-slide grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            <!-- Project: Apartmány Slupečná -->
+            <div class="project-slide grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
                 <div
                     class="lg:col-span-6 flex flex-col justify-center order-2 lg:order-1 reveal-on-scroll reveal-delay-1">
-                    <div class="flex flex-col gap-6 lg:gap-12 lg:pt-12 items-start">
+                    <div class="flex flex-col gap-6 lg:gap-12 items-start">
                         <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
                             The house resembles an archetypal rural building divided into two calm masses. Simple
                             gables, saddle roofs, and modest materiality connect to the memory of the place and the
@@ -281,26 +291,22 @@
                                         ../assets/images/projects/avif-versions/2022-13-apartmany-slupecna/rd-slupecna-1---photo-800w.avif 800w,
                                         ../assets/images/projects/avif-versions/2022-13-apartmany-slupecna/rd-slupecna-1---photo-1200w.avif 1200w"
                                 sizes="(max-width: 768px) 100vw, 60vw" type="image/avif">
-                            <source
-                                srcset="../assets/images/projects/webp/2022-13-apartmany-slupecna/rd-slupecna-1---photo.webp"
-                                type="image/webp">
-                            <img alt="Apartments Slupečná"
+                            <img alt="Slupečná Apartments"
                                 class="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
                                 src="../assets/images/projects/webp/2022-13-apartmany-slupecna/rd-slupecna-1---photo.webp"
                                 width="1200" height="750" loading="lazy" />
                         </picture>
                     </a>
-                    <div
-                        class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4 mt-4">
+                    <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                         <a href="projects/apartmany-slupecna.html">
-                            <h3 class="text-xl font-medium">Apartments Slupečná</h3>
+                            <h3 class="text-xl font-medium">Slupečná Apartments</h3>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project: Apartment building Pašman island -->
-            <div class="project-slide grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+            <!-- Project: Bytový dům Pašman -->
+            <div class="project-slide grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
                 <div class="lg:col-span-6 reveal-on-scroll">
                     <a class="block group overflow-hidden relative" href="projects/pasman.html">
                         <picture>
@@ -309,23 +315,20 @@
                                         ../assets/images/projects/avif-versions/2024-03-pasman/pasman-01-800w.avif 800w,
                                         ../assets/images/projects/avif-versions/2024-03-pasman/pasman-01-1200w.avif 1200w"
                                 sizes="(max-width: 768px) 100vw, 60vw" type="image/avif">
-                            <source srcset="../assets/images/projects/webp/2024-03-pasman/pasman-01.webp"
-                                type="image/webp">
-                            <img alt="Apartment building Pašman island"
+                            <img alt="Pašman Apartment House"
                                 class="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
                                 src="../assets/images/projects/webp/2024-03-pasman/pasman-01.webp" width="1200"
                                 height="750" loading="lazy" />
                         </picture>
                     </a>
-                    <div
-                        class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4 mt-4">
+                    <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                         <a href="projects/pasman.html">
-                            <h3 class="text-xl font-medium">Apartment building Pašman island</h3>
+                            <h3 class="text-xl font-medium">Pašman Apartment House</h3>
                         </a>
                     </div>
                 </div>
                 <div class="lg:col-span-6 flex flex-col justify-center reveal-on-scroll reveal-delay-1">
-                    <div class="flex flex-col gap-6 lg:gap-12 lg:pt-12 items-start">
+                    <div class="flex flex-col gap-6 lg:gap-12 items-start">
                         <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl">
                             The apartment building is designed as a calm horizontal line set into the Mediterranean
                             landscape. The rhythm of loggias and shading creates a variable facade that reacts to the
@@ -337,15 +340,12 @@
         </section>
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start reveal-on-scroll">
             <div class="lg:col-span-4 flex flex-col h-full relative">
-                <!-- <div class="absolute -top-8 -left-8 w-12 h-12 border border-current opacity-20 hidden lg:block"></div> -->
-                <!-- <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-current opacity-10 hidden lg:block"></div> -->
-
                 <div>
                     <span
                         class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Philosophy</span>
-                    <h2 class="text-3xl md:text-4xl font-light italic leading-tight mb-6">
-                        Every design begins with listening. We seek a balance between your dreams, function, and the
-                        spirit of the place to create a unique work.
+                    <h2 class="text-3xl md:text-4xl font-light italic leading-tight mb-12">
+                        Every design begins with listening. We look for a balance between your dreams, function, and the
+                        soul of the place to create a unique piece of work.
                     </h2>
                 </div>
                 <div class="mb-8 lg:mb-0">
@@ -371,10 +371,6 @@
                 </div>
             </div>
             <div class="lg:col-span-8 relative">
-                <!-- Decorative corner squares -->
-                <!-- <div class="absolute -top-2 -left-2 w-8 h-8 border-t border-l border-current opacity-30 z-10"></div>
-                <div class="absolute -bottom-2 -right-2 w-8 h-8 border-b border-r border-current opacity-30 z-10"></div> -->
-
                 <a class="block group overflow-hidden" href="pages/philosophy.html">
                     <picture>
                         <source srcset="../assets/images/philosophy/avif-versions/1-priroda-400w.avif 400w,
@@ -384,29 +380,22 @@
                         <img alt="Philosophy - Architecture with respect"
                             class="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105 bg-gray-200 dark:bg-gray-800"
                             src="../assets/images/philosophy/avif-versions/1-priroda-800w.avif" width="1280"
-                            height="800" loading="lazy" decoding="async" />
+                            height="800" loading="lazy" />
                     </picture>
                 </a>
             </div>
         </section>
         <section class="relative reveal-on-scroll">
-            <!-- Decorative squares -->
-            <!-- <div class="absolute -top-12 -right-12 w-16 h-16 border border-current opacity-10 hidden lg:block"></div> -->
-            <!-- <div class="absolute -top-8 -right-8 w-4 h-4 bg-current opacity-10 hidden lg:block"></div> -->
-
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-32">
                 <div class="lg:col-span-3 relative">
-                    <span
-                        class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium"></span>
-                    <!-- <div class="absolute -left-4 -top-4 w-8 h-8 border border-current opacity-20"></div> -->
                 </div>
                 <div class="lg:col-span-9">
                     <span
                         class="text-xs uppercase tracking-widest text-muted-light dark:text-muted-dark font-medium block mb-4 lg:mb-6">Studio</span>
                     <h2
-                        class="text-2xl md:text-3xl lg:text-4xl font-light leading-tight italic md:leading-snug mb-6 max-w-3xl">
+                        class="text-2xl md:text-3xl lg:text-4xl font-light leading-tight italic md:leading-snug mb-12 max-w-3xl">
                         We are creators who believe in the honesty of design. From the first sketch to the last detail –
-                        we stand behind every line of our studio.
+                        we stand by every line of our studio.
                     </h2>
                     <a class="inline-flex items-center group text-xs font-bold tracking-widest uppercase"
                         href="pages/studio.html">
@@ -430,23 +419,14 @@
                 </div>
             </div>
             <div class="w-full relative">
-
-
-                <!-- Corner squares -->
-                <!-- <div class="absolute top-0 left-0 w-12 h-12 border-t border-l border-current opacity-30 z-10"></div>
-                <div class="absolute top-0 right-0 w-12 h-12 border-t border-r border-current opacity-30 z-10"></div>
-                <div class="absolute bottom-0 left-0 w-12 h-12 border-b border-l border-current opacity-30 z-10"></div>
-                <div class="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-current opacity-30 z-10"></div> -->
-
                 <a href="pages/studio.html" class="block w-full max-w-4xl mx-auto">
                     <picture>
                         <source srcset="../assets/images/team/avif-versions/martin-petr-400w.avif 400w,
                                         ../assets/images/team/avif-versions/martin-petr-800w.avif 800w,
                                         ../assets/images/team/avif-versions/martin-petr-1200w.avif 1200w"
                             sizes="(max-width: 1024px) 100vw, 1024px" type="image/avif">
-                        <source srcset="../assets/images/team/webp/martin-petr.webp" type="image/webp">
                         <img alt="Portrait of the two architects"
-                            class="w-full grayscale object-contain aspect-[4/3] md:aspect-[16/9] lg:aspect-[3/2] bg-gray-200 dark:bg-gray-800"
+                            class="w-full grayscale object-contain aspect-[4/3] md:aspect-[16/9] lg:aspect-[3/2]"
                             src="../assets/images/team/webp/martin-petr.webp" width="1200" height="800"
                             loading="lazy" />
                     </picture>
@@ -456,14 +436,7 @@
 
 
     </main>
-    <footer class="bg-background-light dark:bg-background-dark pt-8 pb-16 lg:py-24 mt-8 lg:mt-24 relative">
-        <!-- Decorative squares in footer -->
-        <!-- <div
-            class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-current to-transparent opacity-20">
-        </div> -->
-        <!-- <div class="absolute -top-3 left-12 w-4 h-4 border border-current opacity-30 hidden md:block"></div> -->
-        <!-- <div class="absolute -top-2 right-12 w-2 h-2 bg-current opacity-20 hidden md:block"></div> -->
-
+    <footer class="bg-background-light dark:bg-background-dark py-16 lg:py-24 mt-16 lg:mt-24 relative">
         <div class="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div class="col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
                 <a class="text-2xl font-bold tracking-tight text-primary dark:text-white" href="#">DBDA studio</a>
@@ -556,8 +529,7 @@
                 </div>
                 <div class="pt-2">
                     <a id="decline-cookies" class="text-[10px] text-gray-400 dark:text-gray-600 underline" href="#">You
-                        can refuse consent
-                        here</a>
+                        can refuse consent here</a>
                 </div>
             </div>
 
@@ -618,10 +590,10 @@
     </button>
 
     <!-- Navigation Script -->
-    <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/nav.js"></script>
-    <script src="../assets/js/footer-posts.js"></script>
-    <script src="../assets/js/cookies.js"></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/nav.js" defer></script>
+    <script src="../assets/js/footer-posts.js" defer></script>
+    <script src="../assets/js/cookies.js" defer></script>
 </body>
 
 </html>

@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="DBDA studio | Architectural Studio">
-    <meta name="keywords" content="DBDA studio, Architecture, Studio">
+    <title>Selected Works | Architectural Portfolio DBDA studio</title>
+    <meta name="description"
+        content="Browse our portfolio of projects. From family houses and villas to public buildings and interiors. Architecture based on context.">
+    <meta name="keywords" content="DBDA studio projects, Architectural portfolio, Family houses, Interior design">
     <meta name="author" content="DBDA studio">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
@@ -13,8 +15,32 @@
     <meta name="googlebot-video" content="noindex, nofollow">
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>DBDA studio – Selected Works</title>
-    <link rel="canonical" href="https://example.com/en/pages/projects.html">
+    <link rel="canonical" href="https://dbda.cz/en/pages/projects.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dbda.cz/en/pages/projects.html">
+    <meta property="og:title" content="Selected Works | DBDA studio">
+    <meta property="og:description" content="Portfolio of architectural projects of the DBDA studio.">
+    <meta property="og:image" content="https://dbda.cz/assets/images/logo/DBDA_logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dbda.cz/en/pages/projects.html">
+    <meta property="twitter:title" content="Selected Works | DBDA studio">
+    <meta property="twitter:description" content="Get inspired by our projects and designs.">
+    <meta property="twitter:image" content="https://dbda.cz/assets/images/logo/DBDA_logo.png">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Projects - DBDA studio",
+      "description": "List of architectural projects and works of the DBDA studio.",
+      "url": "https://dbda.cz/en/pages/projects.html"
+    }
+    </script>
 
     <!-- Preconnect -->
     <link rel="preconnect" href="https://lh3.googleusercontent.com">
@@ -25,6 +51,9 @@
     <link rel="preload" href="https://cdn.tailwindcss.com?plugins=forms,typography" as="script">
     <link rel="preload" href="../../assets/images/projects/avif/2026-01-bohdalec/visoid-03.avif" as="image">
     <link rel="preload" href="../../assets/images/projects/avif/2025-24-hamre/01.avif" as="image">
+    <link rel="preload" href="../../assets/images/projects/avif/2025-21-salon-husitska/hustitska-orez-1.avif"
+        as="image">
+    <link rel="preload" href="../../assets/images/projects/avif/2025-06-vila-novotny/06.avif" as="image">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -49,12 +78,16 @@
 
 <body
     class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    <!-- Square Pattern Background -->
+    <!-- <div class="square-pattern"></div> -->
+
     <header class="fixed top-0 left-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-6 sm:px-12 py-4 flex justify-between items-center">
             <a class="block" href="../index.html">
                 <img src="../../assets/images/logo/DBDA_logo.png" alt="DBDA Studio" class="h-10 w-auto" width="100"
                     height="40" fetchpriority="high" decoding="async">
             </a>
+            <!-- Desktop Navigation -->
             <nav id="desktop-nav" class="hidden md:flex gap-x-6 gap-y-2 text-sm text-gray-800 dark:text-gray-300">
                 <a class="hover-underline-animation font-medium" href="projects.html">Works</a>
                 <a class="hover-underline-animation font-medium" href="philosophy.html">Philosophy</a>
@@ -62,6 +95,7 @@
                 <a class="hover-underline-animation font-medium" href="contact.html">Contact</a>
                 <a class="hover-underline-animation font-medium" href="../../pages/projects.html">CZ</a>
             </nav>
+            <!-- Mobile Menu Toggle Button -->
             <button class="menu-toggle md:hidden flex flex-col gap-1.5 p-2 focus:outline-none" aria-label="Toggle menu"
                 aria-expanded="false">
                 <span class="w-6 h-0.5 bg-gray-800 dark:bg-gray-300 transition-all duration-300"></span>
@@ -71,6 +105,7 @@
         </div>
     </header>
 
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="mobile-menu-overlay">
         <div class="mobile-menu-content">
             <nav class="mobile-nav">
@@ -88,28 +123,34 @@
     </div>
 
     <main class="max-w-7xl mx-auto px-6 sm:px-12 py-24 lg:py-32 space-y-24 lg:space-y-32 relative z-10">
+        <!-- Main Content of Projects -->
         <section class="mb-24 relative reveal-on-scroll">
-            <h1 class="text-3xl md:text-4xl font-bold mb-8 relative inline-block to-anim">Selected Works</h1>
+            <h1 class="text-3xl md:text-4xl font-bold mb-8 relative inline-block to-anim">
+                Selected Works
+            </h1>
             <p class="text-xl text-muted-light max-w-2xl to-anim">
-                Architecture with an emphasis on detail, context, and functionality.
+                Architecture with emphasis on detail, context, and functionality.
             </p>
         </section>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+
             <!-- Project: Bohdalec -->
             <a href="../projects/bohdalec.html"
                 class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-03-400w.avif 400w, ../../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-03-800w.avif 800w, ../../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-03-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-03-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-03-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2026-01-bohdalec/visoid-03-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2026-01-bohdalec/visoid-03.webp"
                             type="image/webp">
                         <img alt="Family house Bohdalec"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2026-01-bohdalec/visoid-03.webp" width="800"
-                            height="600" fetchpriority="high" decoding="async" />
+                            height="600" fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -122,18 +163,19 @@
                 class="flex flex-col space-y-4 group cursor-pointer pt-0 relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
-                        <source
-                            srcset="../../assets/images/projects/avif-versions/2025-24-hamre/01-400w.avif 400w, ../../assets/images/projects/avif-versions/2025-24-hamre/01-800w.avif 800w, ../../assets/images/projects/avif-versions/2025-24-hamre/01-1200w.avif 1200w"
+                        <source srcset="../../assets/images/projects/avif-versions/2025-24-hamre/01-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2025-24-hamre/01-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2025-24-hamre/01-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2025-24-hamre/01.webp" type="image/webp">
-                        <img alt="Hut Hamre"
+                        <img alt="Cabin Hamre"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2025-24-hamre/01.webp" width="800" height="600"
-                            fetchpriority="high" decoding="async" />
+                            fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Hut Hamre</h3>
+                    <h3 class="text-xl font-medium">Cabin Hamre</h3>
                 </div>
             </a>
 
@@ -143,14 +185,17 @@
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2025-21-salon-husitska/hustitska-orez-1-400w.avif 400w, ../../assets/images/projects/avif-versions/2025-21-salon-husitska/hustitska-orez-1-800w.avif 800w, ../../assets/images/projects/avif-versions/2025-21-salon-husitska/hustitska-orez-1-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2025-21-salon-husitska/hustitska-orez-1-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2025-21-salon-husitska/hustitska-orez-1-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2025-21-salon-husitska/hustitska-orez-1-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2025-21-salon-husitska/hustitska-orez-1.webp"
                             type="image/webp">
                         <img alt="Beauty salon Husitská"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2025-21-salon-husitska/hustitska-orez-1.webp"
-                            width="800" height="600" fetchpriority="high" loading="eager" decoding="async" />
+                            width="800" height="600" fetchpriority="high" loading="eager" decoding="async"
+                            sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -158,35 +203,39 @@
                 </div>
             </a>
 
-            <!-- Project: Vila Novotny (Not in Master List)
+            <!-- Project: Vila Novotny -->
             <a href="../projects/vila-novotny.html"
                 class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-400w.avif 400w, ../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-800w.avif 800w, ../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2025-06-vila-novotny/06-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2025-06-vila-novotny/06.webp"
                             type="image/webp">
-                        <img alt="Vila Novotny"
+                        <img alt="Villa Novotny"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2025-06-vila-novotny/06.webp" width="800"
-                            height="600" fetchpriority="high" loading="eager" decoding="async" />
+                            height="600" fetchpriority="high" loading="eager" decoding="async"
+                            sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Vila Novotny</h3>
+                    <h3 class="text-xl font-medium">Villa Novotny</h3>
                 </div>
             </a>
-            -->
 
-            <!-- Project: Slivenec Koupelny (Not in Master List)
+            <!-- Project: Slivenec Koupelny -->
             <a href="../projects/slivenec-koupelny.html"
                 class="flex flex-col space-y-4 group cursor-pointer pt-0 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2025-02-slivenec-koupelny/koupelna-patro-vana-1-400w.avif 400w, ../../assets/images/projects/avif-versions/2025-02-slivenec-koupelny/koupelna-patro-vana-1-800w.avif 800w, ../../assets/images/projects/avif-versions/2025-02-slivenec-koupelny/koupelna-patro-vana-1-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2025-02-slivenec-koupelny/koupelna-patro-vana-1-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2025-02-slivenec-koupelny/koupelna-patro-vana-1-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2025-02-slivenec-koupelny/koupelna-patro-vana-1-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source
                             srcset="../../assets/images/projects/webp/2025-02-slivenec-koupelny/koupelna-patro-vana-1.webp"
@@ -194,51 +243,30 @@
                         <img alt="Slivenec Bathrooms"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2025-02-slivenec-koupelny/koupelna-patro-vana-1.webp"
-                            width="800" height="600" loading="lazy" decoding="async" />
+                            width="800" height="600" loading="lazy" decoding="async"
+                            sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
                     <h3 class="text-xl font-medium">Slivenec Bathrooms</h3>
                 </div>
             </a>
-            -->
-
-            <!-- Project: Showroom Zizkov Matejovsky (Not in Master List)
-            <a href="../projects/showroom-zizkov-matejovsky.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
-                <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
-                    <picture>
-                        <source
-                            srcset="../../assets/images/projects/avif-versions/2024-32-showroom-zizkov-matejovsky/01-400w.avif 400w, ../../assets/images/projects/avif-versions/2024-32-showroom-zizkov-matejovsky/01-800w.avif 800w, ../../assets/images/projects/avif-versions/2024-32-showroom-zizkov-matejovsky/01-1200w.avif 1200w"
-                            sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2024-32-showroom-zizkov-matejovsky/01.webp"
-                            type="image/webp">
-                        <img alt="Showroom Zizkov Matejovsky"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../assets/images/projects/webp/2024-32-showroom-zizkov-matejovsky/01.webp"
-                            width="800" height="600" loading="lazy" decoding="async" />
-                    </picture>
-                </div>
-                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Showroom Zizkov Matejovsky</h3>
-                </div>
-            </a>
-            -->
 
             <!-- Project: Dzr Trebsko -->
             <a href="../projects/dzr-trebsko.html"
                 class="flex flex-col space-y-4 group cursor-pointer pt-0 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
-                        <source
-                            srcset="../../assets/images/projects/avif-versions/2024-31-dzr-trebsko/01-400w.avif 400w, ../../assets/images/projects/avif-versions/2024-31-dzr-trebsko/01-800w.avif 800w, ../../assets/images/projects/avif-versions/2024-31-dzr-trebsko/01-1200w.avif 1200w"
+                        <source srcset="../../assets/images/projects/avif-versions/2024-31-dzr-trebsko/01-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2024-31-dzr-trebsko/01-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2024-31-dzr-trebsko/01-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2024-31-dzr-trebsko/01.webp"
                             type="image/webp">
                         <img alt="Special care home Třebsko"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2024-31-dzr-trebsko/01.webp" width="800" height="600"
-                            loading="lazy" decoding="async" />
+                            loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -246,42 +274,22 @@
                 </div>
             </a>
 
-            <!-- Project: Vocilka (Not in Master List)
-            <a href="../projects/vocilka.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
-                <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
-                    <picture>
-                        <source
-                            srcset="../../assets/images/projects/avif-versions/2024-30-vocilka/detsky-pokoj1-zmena-400w.avif 400w, ../../assets/images/projects/avif-versions/2024-30-vocilka/detsky-pokoj1-zmena-800w.avif 800w, ../../assets/images/projects/avif-versions/2024-30-vocilka/detsky-pokoj1-zmena-1200w.avif 1200w"
-                            sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2024-30-vocilka/detsky-pokoj1-zmena.webp"
-                            type="image/webp">
-                        <img alt="Vocilka"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../assets/images/projects/webp/2024-30-vocilka/detsky-pokoj1-zmena.webp" width="800"
-                            height="600" loading="lazy" decoding="async" />
-                    </picture>
-                </div>
-                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Vocilka</h3>
-                </div>
-            </a>
-            -->
-
             <!-- Project: RD Herink -->
             <a href="../projects/rd-herink.html"
                 class="flex flex-col space-y-4 group cursor-pointer pt-0 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2024-16-rd-herink/herink-1-2-400w.avif 400w, ../../assets/images/projects/avif-versions/2024-16-rd-herink/herink-1-2-800w.avif 800w, ../../assets/images/projects/avif-versions/2024-16-rd-herink/herink-1-2-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2024-16-rd-herink/herink-1-2-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2024-16-rd-herink/herink-1-2-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2024-16-rd-herink/herink-1-2-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2024-16-rd-herink/herink-1-2.webp"
                             type="image/webp">
                         <img alt="Family house Herink"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2024-16-rd-herink/herink-1-2.webp" width="800"
-                            height="600" loading="lazy" decoding="async" />
+                            height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -295,18 +303,20 @@
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2024-15-bohunov/bohunov-1-ms-400w.avif 400w, ../../assets/images/projects/avif-versions/2024-15-bohunov/bohunov-1-ms-800w.avif 800w, ../../assets/images/projects/avif-versions/2024-15-bohunov/bohunov-1-ms-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2024-15-bohunov/bohunov-1-ms-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2024-15-bohunov/bohunov-1-ms-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2024-15-bohunov/bohunov-1-ms-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2024-15-bohunov/bohunov-1-ms.webp"
                             type="image/webp">
-                        <img alt="Kindergarten Bohuňov"
+                        <img alt="Childcare group Bohuňov"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2024-15-bohunov/bohunov-1-ms.webp" width="800"
-                            height="600" loading="lazy" decoding="async" />
+                            height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Kindergarten Bohuňov</h3>
+                    <h3 class="text-xl font-medium">Childcare group Bohuňov</h3>
                 </div>
             </a>
 
@@ -316,7 +326,9 @@
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02-400w.avif 400w, ../../assets/images/projects/avif-versions/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02-800w.avif 800w, ../../assets/images/projects/avif-versions/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source
                             srcset="../../assets/images/projects/webp/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02.webp"
@@ -324,7 +336,8 @@
                         <img alt="Family houses Velké Popovice"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2024-09-velke-popovice/e-0000-dbda-vp-interiors-np2-bedroom-b-02.webp"
-                            width="800" height="600" loading="lazy" decoding="async" />
+                            width="800" height="600" loading="lazy" decoding="async"
+                            sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -338,7 +351,9 @@
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d-400w.avif 400w, ../../assets/images/projects/avif-versions/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d-800w.avif 800w, ../../assets/images/projects/avif-versions/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source
                             srcset="../../assets/images/projects/webp/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d.webp"
@@ -346,7 +361,8 @@
                         <img alt="Garden restaurant Malešice"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2024-04-soutez-malesice-p10/118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d.webp"
-                            width="800" height="600" loading="lazy" decoding="async" />
+                            width="800" height="600" loading="lazy" decoding="async"
+                            sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -356,17 +372,17 @@
 
             <!-- Project: Pasman -->
             <a href="../projects/pasman.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
-                        <source srcset="../../assets/images/projects/avif-versions/2023-28-pasman/01-400w.avif 400w,
-                                    ../../assets/images/projects/avif-versions/2023-28-pasman/01-800w.avif 800w,
-                                    ../../assets/images/projects/avif-versions/2023-28-pasman/01-1200w.avif 1200w"
+                        <source srcset="../../assets/images/projects/avif-versions/2024-03-pasman/01-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2024-03-pasman/01-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2024-03-pasman/01-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2023-28-pasman/01.webp" type="image/webp">
+                        <source srcset="../../assets/images/projects/webp/2024-03-pasman/01.webp" type="image/webp">
                         <img alt="Apartment building Pašman island"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../assets/images/projects/webp/2023-28-pasman/01.webp" width="800" height="600"
+                            src="../../assets/images/projects/webp/2024-03-pasman/01.webp" width="800" height="600"
                             loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
@@ -377,18 +393,18 @@
 
             <!-- Project: RD Brevnov -->
             <a href="../projects/rd-brevnov.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 relative reveal-on-scroll to-anim">
+                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
-                        <source srcset="../../assets/images/projects/avif-versions/2023-25-rd-brevnov/1-400w.avif 400w,
-                                    ../../assets/images/projects/avif-versions/2023-25-rd-brevnov/1-800w.avif 800w,
-                                    ../../assets/images/projects/avif-versions/2023-25-rd-brevnov/1-1200w.avif 1200w"
+                        <source srcset="../../assets/images/projects/avif-versions/2024-02-rd-brevnov/01-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2024-02-rd-brevnov/01-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2024-02-rd-brevnov/01-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2023-25-rd-brevnov/1.webp" type="image/webp">
+                        <source srcset="../../assets/images/projects/webp/2024-02-rd-brevnov/01.webp" type="image/webp">
                         <img alt="Family house Břevnov"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../=" ../../assets/images/projects/webp/2023-25-rd-brevnov/1.webp" width="800"
-                            height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
+                            src="../../assets/images/projects/webp/2024-02-rd-brevnov/01.webp" width="800" height="600"
+                            loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
@@ -396,124 +412,75 @@
                 </div>
             </a>
 
-            <!-- Project: Harachov Dusek (Not in Master List)
+            <!-- Project: Harachov Dusek -->
             <a href="../projects/harachov-dusek.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
-                <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
-                    <picture>
-                        <source
-                            srcset="../../assets/images/projects/avif-versions/2023-24-harachov-dusek/01-400w.avif 400w,
-                                    ../../assets/images/projects/avif-versions/2023-24-harachov-dusek/01-800w.avif 800w,
-                                    ../../assets/images/projects/avif-versions/2023-24-harachov-dusek/01-1200w.avif 1200w"
-                            sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2023-24-harachov-dusek/01.webp"
-                            type="image/webp">
-                        <img alt="Harachov Dusek"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../assets/images/projects/webp/2023-24-harachov-dusek/01.webp" width="800"
-                            height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
-                    </picture>
-                </div>
-                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Harachov Dusek</h3>
-                </div>
-            </a>
-            -->
-
-            <!-- Project: Sportoviste Zbraslav (Not in Master List)
-            <a href="../projects/sportoviste-zbraslav.html"
                 class="flex flex-col space-y-4 group cursor-pointer pt-0 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2023-20-sportoviste-zbraslav/zbraslav-situace1-v-400w.avif 400w,
-                                    ../../assets/images/projects/avif-versions/2023-20-sportoviste-zbraslav/zbraslav-situace1-v-800w.avif 800w,
-                                    ../../assets/images/projects/avif-versions/2023-20-sportoviste-zbraslav/zbraslav-situace1-v-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2024-01-harachov-dusek/dusek-harachov-1-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2024-01-harachov-dusek/dusek-harachov-1-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2024-01-harachov-dusek/dusek-harachov-1-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source
-                            srcset="../../assets/images/projects/webp/2023-20-sportoviste-zbraslav/zbraslav-situace1-v.webp"
+                        <source srcset="../../assets/images/projects/webp/2024-01-harachov-dusek/dusek-harachov-1.webp"
                             type="image/webp">
-                        <img alt="Sportoviste Zbraslav"
+                        <img alt="Harrachov Dušek"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../assets/images/projects/webp/2023-20-sportoviste-zbraslav/zbraslav-situace1-v.webp"
+                            src="../../assets/images/projects/webp/2024-01-harachov-dusek/dusek-harachov-1.webp"
                             width="800" height="600" loading="lazy" decoding="async"
                             sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Sportoviste Zbraslav</h3>
+                    <h3 class="text-xl font-medium">Harrachov Dušek</h3>
                 </div>
             </a>
-            -->
 
             <!-- Project: Kancelare Central Kladno -->
             <a href="../projects/kancelare-central-kladno.html"
-                class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
+                class="flex flex-col space-y-4 group cursor-pointer pt-0 relative reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
                         <source
-                            srcset="../../assets/images/projects/avif-versions/2023-17-central-kladno/1-400w.avif 400w,
-                                    ../../assets/images/projects/avif-versions/2023-17-central-kladno/1-800w.avif 800w,
-                                    ../../assets/images/projects/avif-versions/2023-17-central-kladno/1-1200w.avif 1200w"
+                            srcset="../../assets/images/projects/avif-versions/2023-16-kancelare-central-kladno/01-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2023-16-kancelare-central-kladno/01-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2023-16-kancelare-central-kladno/01-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2023-17-central-kladno/1.webp"
+                        <source srcset="../../assets/images/projects/webp/2023-16-kancelare-central-kladno/01.webp"
                             type="image/webp">
-                        <img alt="Office spaces Central Kladno"
+                        <img alt="Central Kladno office spaces"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../assets/images/projects/webp/2023-17-central-kladno/1.webp" width="800"
+                            src="../../assets/images/projects/webp/2023-16-kancelare-central-kladno/01.webp" width="800"
                             height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Office spaces Central Kladno</h3>
+                    <h3 class="text-xl font-medium">Central Kladno office spaces</h3>
                 </div>
             </a>
 
             <!-- Project: Semily Sklenik -->
             <a href="../projects/semily-sklenik.html"
-                class="flex flex-col space-y-4 group cursor-pointer pt-0 relative reveal-on-scroll to-anim">
-                <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
-                    <picture>
-                        <source
-                            srcset="../../assets/images/projects/avif-versions/2023-14-semily-sklenik/1-400w.avif 400w,
-                                    ../../assets/images/projects/avif-versions/2023-14-semily-sklenik/1-800w.avif 800w,
-                                    ../../assets/images/projects/avif-versions/2023-14-semily-sklenik/1-1200w.avif 1200w"
-                            sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2023-14-semily-sklenik/1.webp"
-                            type="image/webp">
-                        <img alt="Relaxation center Semily"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../assets/images/projects/webp/2023-14-semily-sklenik/1.webp" width="800"
-                            height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
-                    </picture>
-                </div>
-                <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Relaxation center Semily</h3>
-                </div>
-            </a>
-
-            <!-- Project: Libenice (Not in Master List)
-            <a href="../projects/libenice.html"
                 class="flex flex-col space-y-4 group cursor-pointer relative square-decor square-decor-top-left reveal-on-scroll to-anim">
                 <div class="relative overflow-hidden aspect-[4/3] bg-gray-100 dark:bg-gray-800">
                     <picture>
-                        <source srcset="../../assets/images/projects/avif-versions/2023-13-libenice/libenice1-400w.avif 400w,
-                                    ../../assets/images/projects/avif-versions/2023-13-libenice/libenice1-800w.avif 800w,
-                                    ../../assets/images/projects/avif-versions/2023-13-libenice/libenice1-1200w.avif 1200w"
+                        <source
+                            srcset="../../assets/images/projects/avif-versions/2023-15-semily-sklenik/a-1-400w.avif 400w,
+                                    ../../assets/images/projects/avif-versions/2023-15-semily-sklenik/a-1-800w.avif 800w,
+                                    ../../assets/images/projects/avif-versions/2023-15-semily-sklenik/a-1-1200w.avif 1200w"
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
-                        <source srcset="../../assets/images/projects/webp/2023-13-libenice/libenice1.webp"
+                        <source srcset="../../assets/images/projects/webp/2023-15-semily-sklenik/A_1.webp"
                             type="image/webp">
-                        <img alt="Libenice"
+                        <img alt="Semily relaxation center"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
-                            src="../../assets/images/projects/webp/2023-13-libenice/libenice1.webp" width="800"
+                            src="../../assets/images/projects/webp/2023-15-semily-sklenik/A_1.webp" width="800"
                             height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Libenice</h3>
+                    <h3 class="text-xl font-medium">Semily relaxation center</h3>
                 </div>
             </a>
-            -->
 
             <!-- Project: RD Ricany -->
             <a href="../projects/rd-ricany.html"
@@ -573,14 +540,14 @@
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2022-23-misenska/baroq1708-1-of-25.webp"
                             type="image/webp">
-                        <img alt="Restaurant Baroq"
+                        <img alt="Baroq Restaurant"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2022-23-misenska/baroq1708-1-of-25.webp" width="800"
                             height="600" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Restaurant Baroq</h3>
+                    <h3 class="text-xl font-medium">Baroq Restaurant</h3>
                 </div>
             </a>
 
@@ -597,7 +564,7 @@
                         <source
                             srcset="../../assets/images/projects/webp/2022-14-zloukovice/d-0000-zloukovice-exterier03-vjezd-close-up-gf.webp"
                             type="image/webp">
-                        <img alt="Holiday house Zloukovice"
+                        <img alt="Zloukovice recreation house"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2022-14-zloukovice/d-0000-zloukovice-exterier03-vjezd-close-up-gf.webp"
                             width="800" height="600" loading="lazy" decoding="async"
@@ -605,7 +572,7 @@
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Holiday house Zloukovice</h3>
+                    <h3 class="text-xl font-medium">Zloukovice recreation house</h3>
                 </div>
             </a>
 
@@ -622,7 +589,7 @@
                         <source
                             srcset="../../assets/images/projects/webp/2022-13-apartmany-slupecna/rd-slupecna-1---photo.webp"
                             type="image/webp">
-                        <img alt="Apartments Slupečná"
+                        <img alt="Slupečná apartments"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2022-13-apartmany-slupecna/rd-slupecna-1---photo.webp"
                             width="800" height="600" loading="lazy" decoding="async"
@@ -630,7 +597,7 @@
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Apartments Slupečná</h3>
+                    <h3 class="text-xl font-medium">Slupečná apartments</h3>
                 </div>
             </a>
 
@@ -646,7 +613,7 @@
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00579.webp"
                             type="image/webp">
-                        <img alt="Museum Moravská Třebová"
+                        <img alt="Moravská Třebová museum"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2022-11-moravska-trebova-muzeum/dsc00579.webp"
                             width="800" height="600" loading="lazy" decoding="async"
@@ -654,7 +621,7 @@
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Museum Moravská Třebová</h3>
+                    <h3 class="text-xl font-medium">Moravská Třebová museum</h3>
                 </div>
             </a>
 
@@ -669,14 +636,14 @@
                             sizes="(max-width: 768px) 100vw, 50vw" type="image/avif">
                         <source srcset="../../assets/images/projects/webp/2022-10-haratice2/01-2.webp"
                             type="image/webp">
-                        <img alt="Bus stop Haratice"
+                        <img alt="Haratice stop"
                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.025]"
                             src="../../assets/images/projects/webp/2022-10-haratice2/01-2.webp" width="800" height="600"
                             loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" />
                     </picture>
                 </div>
                 <div class="flex flex-col items-start gap-1 border-t border-gray-200 dark:border-gray-800 pt-4">
-                    <h3 class="text-xl font-medium">Bus stop Haratice</h3>
+                    <h3 class="text-xl font-medium">Haratice stop</h3>
                 </div>
             </a>
 
@@ -748,21 +715,154 @@
         </div>
     </main>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn"
-        class="fixed bottom-8 right-8 z-50 w-8 h-8 p-0 flex items-center justify-center bg-white text-primary border border-gray-200 shadow-2xl transition-all duration-300 opacity-0 pointer-events-none hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-        aria-label="Scroll to top">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-    </button>
+    <footer class="bg-background-light dark:bg-background-dark py-16 lg:py-24 mt-16 lg:mt-24 relative">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
+                <a class="text-2xl font-bold tracking-tight text-primary dark:text-white" href="#">DBDA studio</a>
+                <p class="text-sm text-muted-light dark:text-muted-dark mt-4">Architectural Studio</p>
+            </div>
+            <div class="col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
 
-    <!-- Scripts -->
-    <script src="../../assets/js/main.js"></script>
-    <script src="../../assets/js/nav.js"></script>
-    <script src="../../assets/js/footer-posts.js"></script>
-    <script src="../../assets/js/cookies.js"></script>
+                <ul class="space-y-2 text-sm text-text-light dark:text-text-dark">
+                    <li><a class="hover-underline-animation" href="tel:+420603732260">+420 603 732 260</a></li>
+                    <li><a class="hover-underline-animation" href="mailto:info@dbda.cz">info@dbda.cz</a>
+                    </li>
+                    <li class="mt-4">
+                        <p class="text-muted-light dark:text-muted-dark">Na Zlatnici 144/8</p>
+                        <p class="text-muted-light dark:text-muted-dark">Prague 4, 147 00</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-1 flex flex-col items-center md:items-start">
+
+                <ul class="flex space-x-4 justify-center md:justify-start">
+                    <li>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                            href="https://facebook.com/dbdastudio" rel="noopener noreferrer" target="_blank">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                            href="https://instagram.com/dbda_arch" rel="noopener noreferrer" target="_blank">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                            href="https://linkedin.com/company/dbdastudio" rel="noopener noreferrer" target="_blank">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
+
+                <p class="text-sm text-muted-light dark:text-muted-dark leading-relaxed">
+                    Take a look into our world of design and inspiration.
+                </p>
+                <div id="footer-posts-container" class="mt-6">
+                    <!-- Dynamic posts will be injected here -->
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 sm:px-12 mt-16 pt-8 text-center text-xs text-muted-light dark:text-muted-dark flex items-center justify-center gap-2">
+            <!-- <div class="w-2 h-2 bg-current"></div> -->
+            © <span id="current-year">2023</span> DBDA studio. All rights reserved.
+        </div>
+    </footer>
+
+    <div id="cookie-banner"
+        class="fixed bottom-0 left-0 w-full bg-white dark:bg-[#1a1a1a] border-t border-gray-100 dark:border-gray-800 p-6 z-50 shadow-lg hidden">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+
+            <!-- Main Actions -->
+            <div id="cookie-main-actions" class="w-full flex flex-col items-center space-y-4">
+                <h4 class="font-bold text-sm">To make the website work well for you (Cookie Consent)</h4>
+                <p class="text-xs text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
+                    For the most comfortable use of the website, we need your <a
+                        class="underline hover:text-black dark:hover:text-white" href="#">consent</a> to the processing
+                    of cookies. You give your consent by clicking the "Allow all" button.
+                </p>
+                <div class="flex gap-4 pt-2">
+                    <button id="settings-cookies"
+                        class="px-8 py-3 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200 text-xs font-bold uppercase tracking-wider hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        Settings
+                    </button>
+                    <button id="accept-cookies"
+                        class="px-8 py-3 bg-primary text-white text-xs font-bold uppercase tracking-wider hover:bg-black dark:hover:bg-gray-900 transition-colors">
+                        Allow all
+                    </button>
+                </div>
+                <div class="pt-2">
+                    <a id="decline-cookies" class="text-[10px] text-gray-400 dark:text-gray-600 underline" href="#">You
+                        can refuse consent here</a>
+                </div>
+            </div>
+
+            <!-- Settings Panel (Hidden by default) -->
+            <div id="cookie-settings-panel" class="w-full hidden space-y-6 py-2">
+                <h4 class="font-bold text-sm">Privacy Settings</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto">
+                    <!-- Necessary -->
+                    <div class="space-y-2 opacity-60">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-tight">Necessary</span>
+                            <input type="checkbox" checked disabled class="text-primary opacity-60">
+                        </div>
+                        <p class="text-[10px] text-gray-500 leading-snug">Required for the website to function properly
+                            and to store your preferences.</p>
+                    </div>
+                    <!-- Analytical -->
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-tight">Analytical</span>
+                            <input type="checkbox" id="cookie-analytical" checked
+                                class="text-primary focus:ring-primary cursor-pointer w-4 h-4 rounded border-gray-300">
+                        </div>
+                        <p class="text-[10px] text-gray-500 leading-snug">They help us understand how you use the
+                            website so we can improve it.</p>
+                    </div>
+                    <!-- Functional -->
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-tight">Functional</span>
+                            <input type="checkbox" id="cookie-functional" checked
+                                class="text-primary focus:ring-primary cursor-pointer w-4 h-4 rounded border-gray-300">
+                        </div>
+                        <p class="text-[10px] text-gray-500 leading-snug">Allow advanced features like Instagram feed or
+                            saving settings.</p>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <button id="save-cookie-settings"
+                        class="px-12 py-3 bg-primary text-white text-xs font-bold uppercase tracking-wider hover:bg-black dark:hover:bg-gray-900 transition-colors mx-auto block">
+                        Save Settings
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Navigation Script -->
+    <script src="../../assets/js/main.js" defer></script>
+    <script src="../../assets/js/nav.js" defer></script>
+    <script src="../../assets/js/footer-posts.js" defer></script>
+    <script src="../../assets/js/cookies.js" defer></script>
     <script src="../../assets/js/scroll-to-top.js" defer></script>
 </body>
 
