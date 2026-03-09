@@ -3,7 +3,8 @@ name: Deploy via SCP
 on:
   push:
     branches:
-      - dbda
+      - main
+      - feat/design-refactor
   workflow_dispatch:
 
 jobs:
@@ -14,6 +15,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build CSS
+        run: npm run build:css
+
       - name: Copy Files to Server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -21,7 +34,7 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           password: ${{ secrets.DEPLOY_PASSWORD }}
           port: ${{ secrets.DEPLOY_PORT || 22 }}
-          source: ".,!assets/images/projects/original,!assets/images/philosophy/original,!assets/references,!infrastructure/"
-          target: ${{ secrets.DEPLOY_TARGET }}
+          source: ".,!assets/images/projects/original,!assets/references,!infrastructure/,!node_modules"
+          target: ${{ github.ref_name == 'main' && '/var/www/html/sites/jenkostudio/public' || '/var/www/html/sites/dev/public' }}
           strip_components: 0
           overwrite: true
