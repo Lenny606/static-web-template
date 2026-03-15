@@ -29,7 +29,6 @@ function loadGTM() {
     })(window, document, 'script', 'dataLayer', GTM_ID);
 
     window.gtmLoaded = true;
-    console.log('DBDA studio: GTM initialized');
 }
 
 // Push to dataLayer helper

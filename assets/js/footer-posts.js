@@ -159,15 +159,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Initial load attempt
-    loadPosts();
-
+    // Initial load attempt - TURNED OFF FOR NOW
+    // loadPosts();
+    showFallback()
     // Re-attempt if consent is updated
-    window.addEventListener('dbdaConsentUpdated', (e) => {
-        if (e.detail.functional) {
-            loadPosts();
-        } else {
-            showFallback();
-        }
-    });
+    // window.addEventListener('dbdaConsentUpdated', (e) => {
+    //     if (e.detail.functional) {
+    //         loadPosts();
+    //     } else {
+    //         showFallback();
+    //     }
+    // });
 });

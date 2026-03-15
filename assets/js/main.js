@@ -3,7 +3,6 @@
    ========================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DBDA Architects Website Initialized');
 
     // Smooth scroll for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Ensure we don't double-animate
                     if (element.classList.contains('revealed')) return;
 
-                    console.log('Revealing element:', element);
                     element.classList.add('revealed');
                     element.classList.add('anim');
                     observer.unobserve(element);
@@ -50,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // Fallback to avoid hanging forever
                     const fallbackTimer = setTimeout(() => {
-                        console.warn('Image load timeout, revealing anyway:', element);
                         reveal();
                     }, 2000); // 2 second max wait
 
@@ -80,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Observe elements with reveal classes
     const revealElements = document.querySelectorAll('.reveal-on-scroll, .img-container, .content-block');
-    console.log(`Found ${revealElements.length} elements to observe for reveal`);
 
     revealElements.forEach(el => {
         observer.observe(el);
