@@ -199,6 +199,7 @@ body {
     width: 100%;
     height: 100vh;
     z-index: 9999;
+    background-color: #ffffff; /* Fallback */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,9 +208,35 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
+@media (prefers-color-scheme: dark) {
+    .mobile-menu-overlay {
+        background-color: #1a1a1a; /* Match background-dark */
+    }
+}
+
 .mobile-menu-overlay.active {
     opacity: 1;
     pointer-events: all;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu-close svg {
+    width: 2rem;
+    height: 2rem;
 }
 
 .mobile-menu-content {

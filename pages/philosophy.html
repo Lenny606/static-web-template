@@ -47,7 +47,7 @@
     <link rel="preconnect" href="https://lh3.googleusercontent.com">
 
     <!-- Tailwind & Custom Assets -->
-    <link rel="stylesheet" href="../assets/css/styles.css?v=cc84ee54" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=5989c9d0" />
     <!-- <script src="../assets/js/lottie.js?v=9ed9deaf" defer></script> -->
 
     <!-- Fonts -->
@@ -57,7 +57,7 @@
         rel="stylesheet" />
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="../assets/css/theme.css?v=5014faea">
+    <link rel="stylesheet" href="../assets/css/theme.css?v=662719f5">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo/favicon/apple-touch-icon.png">
@@ -68,7 +68,7 @@
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300">
+    class="bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light transition-colors duration-300">
     <!-- Square Pattern Background -->
     <!-- <div class="square-pattern"></div> -->
 
@@ -100,18 +100,24 @@
     </header>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="mobile-menu-overlay bg-background-light/98 dark:bg-background-dark/98">
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <button class="mobile-menu-close text-text-dark dark:text-text-light" aria-label="Close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
         <div class="mobile-menu-content">
             <nav class="mobile-nav">
                 <a href="../index.html" class="mobile-nav-logo">
                     <img src="../assets/images/logo/DBDA_logo.png" alt="DBDA Studio" class="h-12 w-auto" width="120"
                         height="48" loading="lazy">
                 </a>
-                <a href="projects.html" class="mobile-nav-link nav-link text-text-light dark:text-text-dark">Práce</a>
-                <a href="philosophy.html" class="mobile-nav-link nav-link text-text-light dark:text-text-dark">Filozofie</a>
-                <a href="studio.html" class="mobile-nav-link nav-link text-text-light dark:text-text-dark">Ateliér</a>
-                <a href="contact.html" class="mobile-nav-link nav-link text-text-light dark:text-text-dark">Kontakt</a>
-                <a href="../en/pages/philosophy.html" class="mobile-nav-link nav-link text-text-light dark:text-text-dark">EN</a>
+                <a href="projects.html" class="mobile-nav-link nav-link text-text-dark dark:text-text-light">Práce</a>
+                <a href="philosophy.html" class="mobile-nav-link nav-link text-text-dark dark:text-text-light">Filozofie</a>
+                <a href="studio.html" class="mobile-nav-link nav-link text-text-dark dark:text-text-light">Ateliér</a>
+                <a href="contact.html" class="mobile-nav-link nav-link text-text-dark dark:text-text-light">Kontakt</a>
+                <a href="../en/pages/philosophy.html" class="mobile-nav-link nav-link text-text-dark dark:text-text-light">EN</a>
             </nav>
         </div>
     </div>
@@ -166,7 +172,7 @@
             <!-- Secondary Hero Content / Quote -->
             <!-- <div class="mt-48 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start reveal-on-scroll reveal-delay-2">
                 <div class="lg:col-span-7 lg:col-start-2">
-                    <p class="text-lg text-text-light dark:text-text-dark leading-relaxed max-w-2xl">
+                    <p class="text-lg text-text-dark dark:text-text-light leading-relaxed max-w-2xl">
                         Od samého začátku stojí naše praxe na filozofii inovace, udržitelnosti a kvalitního návrhu.
                         Stále se učíme z minulosti a kreativně přijímáme výzvy budoucnosti s pevným přesvědčením,
                         že dobrý design má smysl a každý projekt začíná respektem k místu a končí poctivým řemeslem.
@@ -435,7 +441,7 @@
             </div>
             <div class="col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
 
-                <ul class="space-y-2 text-sm text-text-light dark:text-text-dark">
+                <ul class="space-y-2 text-sm text-text-dark dark:text-text-light">
                     <li><a class="hover-underline-animation" href="tel:+420603732260">+420 603 732 260</a></li>
                     <li><a class="hover-underline-animation" href="mailto:info@dbda.cz">info@dbda.cz</a>
                     </li>
@@ -449,7 +455,7 @@
 
                 <ul class="flex space-x-4 justify-center md:justify-start">
                     <li>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                        <a class="text-text-dark dark:text-text-light hover:text-primary dark:hover:text-white transition-colors"
                             href="https://facebook.com/dbdastudio" rel="noopener noreferrer" target="_blank">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -459,7 +465,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                        <a class="text-text-dark dark:text-text-light hover:text-primary dark:hover:text-white transition-colors"
                             href="https://instagram.com/dbda_arch" rel="noopener noreferrer" target="_blank">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -469,7 +475,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-white transition-colors"
+                        <a class="text-text-dark dark:text-text-light hover:text-primary dark:hover:text-white transition-colors"
                             href="https://linkedin.com/company/dbdastudio" rel="noopener noreferrer" target="_blank">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
@@ -585,7 +591,7 @@
 
     <!-- Scripts -->
     <script src="../assets/js/main.js?v=bfdd22fb"></script>
-    <script src="../assets/js/nav.js?v=bc1f6cc9"></script>
+    <script src="../assets/js/nav.js?v=ba1566f0"></script>
     <script src="../assets/js/footer-posts.js?v=48002533"></script>
     <script src="../assets/js/cookies.js?v=91066537"></script>
 </body>

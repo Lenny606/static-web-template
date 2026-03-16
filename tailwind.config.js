@@ -12,8 +12,8 @@ module.exports = {
                 primary: '#1a1a1a',
                 'background-light': '#ffffff',
                 'background-dark': '#1a1a1a',
-                'text-light': '#1a1a1a',
-                'text-dark': '#ffffff',
+                'text-dark': '#1a1a1a',
+                'text-light': '#ffffff',
             }
         },
     },

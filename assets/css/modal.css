@@ -1,5 +1,5 @@
 :root {
-    --modal-overlay-bg: rgba(0, 0, 0, 0.5);
+    --modal-overlay-bg: rgba(0, 0, 0, 0.9);
     --modal-text-color: #ffffff;
     --modal-arrow-color: #ffffff;
     --modal-arrow-bg: rgba(255, 255, 255, 0.1);
@@ -102,16 +102,8 @@
     left: 20px;
 }
 
-.image-modal-prev svg {
-    transform: rotate(-90deg);
-}
-
 .image-modal-next {
     right: 20px;
-}
-
-.image-modal-next svg {
-    transform: rotate(90deg);
 }
 
 
