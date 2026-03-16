@@ -441,19 +441,19 @@ body {
 }
 
 .reveal-delay-1 {
-    transition-delay: 0.15s;
+    transition-delay: 0.1s;
 }
 
 .reveal-delay-2 {
-    transition-delay: 0.3s;
+    transition-delay: 0.2s;
 }
 
 .reveal-delay-3 {
-    transition-delay: 0.45s;
+    transition-delay: 0.3s;
 }
 
 .reveal-delay-4 {
-    transition-delay: 0.6s;
+    transition-delay: 0.4s;
 }
 
 @keyframes move-top-top {
@@ -517,7 +517,7 @@ body {
 
 /* Extra slow cinematic reveal for slider projects only */
 .project-slide .reveal-on-scroll {
-    transition: opacity 2.8s cubic-bezier(0.22, 1, 0.36, 1), transform 2.8s cubic-bezier(0.22, 1, 0.36, 1), filter 2.8s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1), transform 1.5s cubic-bezier(0.22, 1, 0.36, 1), filter 1.5s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
 /* Ensure slides start unrevealed so we can re-trigger animations */
