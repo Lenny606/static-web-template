@@ -5,11 +5,15 @@
     "main": "index.html",
     "scripts": {
         "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --minify",
-        "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --watch"
+        "dev": "tailwindcss -i ./assets/css/input.css -o ./assets/css/styles.css --watch",
+        "build:js": "esbuild assets/js/*.js --minify --outdir=assets/js --allow-overwrite",
+        "build:hash": "python3 scripts/cache_busting.py",
+        "build": "npm run build:css && npm run build:js && npm run build:hash"
     },
     "devDependencies": {
-        "tailwindcss": "^3.4.1",
         "autoprefixer": "^10.4.17",
-        "postcss": "^8.4.35"
+        "esbuild": "^0.27.4",
+        "postcss": "^8.4.35",
+        "tailwindcss": "^3.4.1"
     }
 }
