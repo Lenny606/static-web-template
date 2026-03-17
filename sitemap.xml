@@ -1,159 +1,483 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dbda.cz/index.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/index.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/index.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/index.html" />
   </url>
   <url>
     <loc>https://dbda.cz/pages/projects.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/pages/projects.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/pages/projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/pages/projects.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/pages/projects.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/pages/projects.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/pages/projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/pages/projects.html" />
   </url>
   <url>
     <loc>https://dbda.cz/pages/philosophy.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/pages/philosophy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/pages/philosophy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/pages/philosophy.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/pages/philosophy.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/pages/philosophy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/pages/philosophy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/pages/philosophy.html" />
   </url>
   <url>
     <loc>https://dbda.cz/pages/studio.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/pages/studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/pages/studio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/pages/studio.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/pages/studio.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/pages/studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/pages/studio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/pages/studio.html" />
   </url>
   <url>
     <loc>https://dbda.cz/pages/contact.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/pages/contact.html" />
   </url>
   <url>
-    <loc>https://dbda.cz/pages/services.html</loc>
-    <lastmod>2026-02-15</lastmod>
-    <priority>0.7</priority>
+    <loc>https://dbda.cz/en/pages/contact.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/pages/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/pages/contact.html" />
   </url>
-  <!-- Projects -->
   <url>
     <loc>https://dbda.cz/projects/apartmany-slupecna.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/apartmany-slupecna.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/apartmany-slupecna.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/apartmany-slupecna.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/apartmany-slupecna.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/apartmany-slupecna.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/apartmany-slupecna.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/apartmany-slupecna.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/bohdalec.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/bohdalec.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/bohdalec.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/bohdalec.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/bohdalec.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/bohdalec.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/bohdalec.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/bohdalec.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/bohunov.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/bohunov.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/bohunov.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/bohunov.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/bohunov.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/bohunov.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/bohunov.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/bohunov.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/dzr-trebsko.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/dzr-trebsko.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/dzr-trebsko.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/dzr-trebsko.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/dzr-trebsko.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/dzr-trebsko.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/dzr-trebsko.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/dzr-trebsko.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/hamre.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/hamre.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/hamre.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/hamre.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/hamre.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/hamre.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/hamre.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/hamre.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/harachov-dusek.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/harachov-dusek.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/harachov-dusek.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/harachov-dusek.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/harachov-dusek.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/harachov-dusek.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/harachov-dusek.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/harachov-dusek.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/haratice2.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/haratice2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/haratice2.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/haratice2.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/haratice2.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/haratice2.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/haratice2.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/haratice2.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/kancelare-central-kladno.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/kancelare-central-kladno.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/kancelare-central-kladno.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/kancelare-central-kladno.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/kancelare-central-kladno.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/kancelare-central-kladno.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/kancelare-central-kladno.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/kancelare-central-kladno.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/letnany.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/letnany.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/letnany.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/letnany.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/letnany.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/letnany.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/letnany.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/letnany.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/misenska.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/misenska.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/misenska.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/misenska.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/misenska.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/misenska.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/misenska.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/misenska.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/moravska-trebova-muzeum.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/moravska-trebova-muzeum.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/moravska-trebova-muzeum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/moravska-trebova-muzeum.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/moravska-trebova-muzeum.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/moravska-trebova-muzeum.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/moravska-trebova-muzeum.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/moravska-trebova-muzeum.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/pasman.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/pasman.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/pasman.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/pasman.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/pasman.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/pasman.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/pasman.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/pasman.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/rd-brevnov.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-brevnov.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-brevnov.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-brevnov.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/rd-brevnov.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-brevnov.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-brevnov.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-brevnov.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/rd-herink.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-herink.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-herink.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-herink.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/rd-herink.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-herink.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-herink.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-herink.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/rd-nucice.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-nucice.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-nucice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-nucice.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/rd-nucice.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-nucice.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-nucice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-nucice.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/rd-petrv.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-petrv.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-petrv.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-petrv.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/rd-petrv.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-petrv.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-petrv.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-petrv.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/rd-ricany.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-ricany.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-ricany.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-ricany.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/rd-ricany.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-ricany.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-ricany.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-ricany.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/rd-velke-karlovice.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-velke-karlovice.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-velke-karlovice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-velke-karlovice.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/rd-velke-karlovice.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/rd-velke-karlovice.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/rd-velke-karlovice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/rd-velke-karlovice.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/salon-husitska.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/salon-husitska.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/salon-husitska.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/salon-husitska.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/salon-husitska.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/salon-husitska.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/salon-husitska.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/salon-husitska.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/semily-sklenik.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/semily-sklenik.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/semily-sklenik.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/semily-sklenik.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/semily-sklenik.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/semily-sklenik.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/semily-sklenik.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/semily-sklenik.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/slivenec-koupelny.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/slivenec-koupelny.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/slivenec-koupelny.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/slivenec-koupelny.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/slivenec-koupelny.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/slivenec-koupelny.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/slivenec-koupelny.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/slivenec-koupelny.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/soutez-malesice-p10.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/soutez-malesice-p10.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/soutez-malesice-p10.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/soutez-malesice-p10.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/soutez-malesice-p10.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/soutez-malesice-p10.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/soutez-malesice-p10.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/soutez-malesice-p10.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/velke-popovice.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/velke-popovice.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/velke-popovice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/velke-popovice.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/velke-popovice.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/velke-popovice.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/velke-popovice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/velke-popovice.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/vila-novotny.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/vila-novotny.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/vila-novotny.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/vila-novotny.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/vila-novotny.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/vila-novotny.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/vila-novotny.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/vila-novotny.html" />
   </url>
   <url>
     <loc>https://dbda.cz/projects/zloukovice.html</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/zloukovice.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/zloukovice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/zloukovice.html" />
+  </url>
+  <url>
+    <loc>https://dbda.cz/en/projects/zloukovice.html</loc>
+    <lastmod>2026-03-17</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://dbda.cz/projects/zloukovice.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dbda.cz/en/projects/zloukovice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dbda.cz/projects/zloukovice.html" />
   </url>
 </urlset>
