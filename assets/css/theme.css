@@ -208,11 +208,8 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-    .mobile-menu-overlay {
-        background-color: #1a1a1a; /* Match background-dark */
-    }
-}
+/* Removed system-preference dark mode media query */
+
 
 .mobile-menu-overlay.active {
     opacity: 1;
