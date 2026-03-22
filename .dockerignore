@@ -4,6 +4,8 @@
 .agents
 .idea
 .vscode
+.gitignore
+.dockerignore
 node_modules
 infrastructure/
 assets/images/projects/original
@@ -13,4 +15,5 @@ package-lock.json
 tailwind.config.js
 *.log
 README.md
+scripts/
 reusable_static_web_template_technical_business_blueprint.md
