@@ -106,25 +106,6 @@ body {
     position: relative;
 }
 
-/* .square-decor::before {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    border: 1px solid currentColor;
-    transition: all 0.3s ease;
-} */
-/* 
-.square-decor-top-left::before {
-    top: -16px;
-    left: -16px;
-} */
-
-/* .square-decor-bottom-right::before {
-    bottom: -16px;
-    right: -16px;
-} */
-
 .square-decor-top-right::before {
     top: -16px;
     right: -16px;
