@@ -1,0 +1,16 @@
+.git
+.github
+.agent
+.agents
+.idea
+.vscode
+node_modules
+infrastructure/
+assets/images/projects/original
+assets/references
+package.json
+package-lock.json
+tailwind.config.js
+*.log
+README.md
+reusable_static_web_template_technical_business_blueprint.md
