@@ -15,7 +15,7 @@ This skill provides a comprehensive way to manage and optimize media assets for 
 
 ## Usage Guide
 
-The skill is built around the `process_media.sh` script located in the skill's `scripts/` directory (or the project's `scripts/` directory).
+The skill is built around the `process_media` command, which is available globally in your terminal. You can also find the source script in `scripts/process_media.sh`.
 
 ### Command Arguments
 - `source_dir`: (Optional) The directory to process. Defaults to current directory.
@@ -27,11 +27,11 @@ The skill is built around the `process_media.sh` script located in the skill's `
 1.  **Place raw assets**: Add new project folders/images to a temporary or source directory.
 2.  **Preview**: Run with `--dry-run` to verify naming and output structure.
     ```bash
-    ./scripts/process_media.sh path/to/source path/to/output --dry-run
+    process_media path/to/source path/to/output --dry-run
     ```
 3.  **Process**: Run without `--dry-run` to sanitize the source and generate optimized assets.
     ```bash
-    ./scripts/process_media.sh path/to/source path/to/output
+    process_media path/to/source path/to/output
     ```
 
 ## Implementation Details
