@@ -1,0 +1,548 @@
+[
+  {
+    "id": "2026-01",
+    "slug": "apartmany-slupecna",
+    "title": "Apartmány Slupečná",
+    "folder": "2026-01-apartmany-slupecna",
+    "images": [
+      "slupecna-01",
+      "slupecna-02",
+      "slupecna-03a",
+      "slupecna-04",
+      "slupecna-05"
+    ],
+    "count": 5
+  },
+  {
+    "id": "2026-02",
+    "slug": "beuty-salon-husitska",
+    "title": "Salón, Husitská",
+    "folder": "2026-02-beuty-salon-husitska",
+    "images": [
+      "dsc00964-edit-2",
+      "dsc00973-edit-2",
+      "dsc01006-2",
+      "dsc01015-edit",
+      "dsc01027-edit",
+      "dsc01030",
+      "dsc01036-edit",
+      "dsc01048",
+      "dsc01054",
+      "dsc01068-edit",
+      "dsc01074-edit",
+      "dsc01083",
+      "dsc01086",
+      "dsc01095-edit-2",
+      "hustitska-orez-na-sirku-1",
+      "hustitska-orez-na-sirku-5",
+      "hustitska-orez-na-sirku-6",
+      "hustitska-orez-na-sirku-7",
+      "hustitska-orez-na-sirku-8"
+    ],
+    "count": 19
+  },
+  {
+    "id": "2026-03",
+    "slug": "bytovy-dum-tynec-nad-sazavou",
+    "title": "Bytový dům Týnec nad Sázavou",
+    "folder": "2026-03-bytovy-dum-tynec-nad-sazavou",
+    "images": [
+      "bdch-1---photo",
+      "bdch-10---photo",
+      "bdch-11---photo",
+      "bdch-12---photo",
+      "bdch-2---photo",
+      "bdch-3---photo",
+      "bdch-4---photo",
+      "bdch-5---photo",
+      "bdch-6---photo",
+      "bdch-7---photo",
+      "bdch-8---photo",
+      "bdch-9---photo",
+      "bdch-b-11---photo",
+      "bdch-b-12---photo"
+    ],
+    "count": 14
+  },
+  {
+    "id": "2026-04",
+    "slug": "bytovy-dum-zbraslav",
+    "title": "Bytový dům Zbraslav",
+    "folder": "2026-04-bytovy-dum-zbraslav",
+    "images": [
+      "visoid-01-pro",
+      "visoid-02-pro",
+      "visoid-03-pro",
+      "x1"
+    ],
+    "count": 4
+  },
+  {
+    "id": "2026-05",
+    "slug": "bytovy-dum-ostrov-pasman",
+    "title": "BD Pašman, Chorvatsko",
+    "folder": "2026-05-bytovy-dum-ostrov-pasman",
+    "images": [
+      "pasman-01",
+      "pasman-01-b",
+      "pasman-02",
+      "pasman-03",
+      "pudorys-1np",
+      "pudorys-1pp",
+      "pudorys-2np",
+      "situace"
+    ],
+    "count": 8
+  },
+  {
+    "id": "2026-06",
+    "slug": "chata-hamre",
+    "title": "Chata Hamre",
+    "folder": "2026-06-chata-hamre",
+    "images": [
+      "pudorys-1np",
+      "pudorys-podkrovi"
+    ],
+    "count": 2
+  },
+  {
+    "id": "2026-07",
+    "slug": "domov-se-zvlastnim-rezimem-trebsko",
+    "title": "Domov Se Zvlastnim Rezimem Trebsko",
+    "folder": "2026-07-domov-se-zvlastnim-rezimem-trebsko",
+    "images": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "pudorys-1np",
+      "pudorys-1pp",
+      "situace"
+    ],
+    "count": 7
+  },
+  {
+    "id": "2026-08",
+    "slug": "detska-skupina-bohunov",
+    "title": "Detská skupina, Bohuňov",
+    "folder": "2026-08-detska-skupina-bohunov",
+    "images": [
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "1np",
+      "axo-den-deti",
+      "axo-hospoda",
+      "axo-koncert",
+      "axo-trhy",
+      "ds-bohunov",
+      "situace"
+    ],
+    "count": 12
+  },
+  {
+    "id": "2026-09",
+    "slug": "kancelarske-prostory-central-kladno",
+    "title": "Kancelarske Prostory Central Kladno",
+    "folder": "2026-09-kancelarske-prostory-central-kladno",
+    "images": [
+      "01",
+      "06",
+      "07",
+      "08",
+      "09",
+      "make-a-hyperrealistic-visualization-adjust-the-materials-to-look-as-realistic-as-possible-add-qual",
+      "make-a-hyperrealistic-visualization-adjust-the-materials-to-look-as-realistic-as-possible-add-qual-1",
+      "make-a-hyperrealistic-visualization-adjust-the-materials-to-look-as-realistic-as-possible-add-qual-2",
+      "make-a-hyperrealistic-visualization-adjust-the-materials-to-look-as-realistic-as-possible-add-qual-3",
+      "pudorys"
+    ],
+    "count": 10
+  },
+  {
+    "id": "2026-10",
+    "slug": "moravska-trebova-muzeum",
+    "title": "Obnova muzea Moravská Třebová",
+    "folder": "2026-10-moravska-trebova-muzeum",
+    "images": [],
+    "count": 0
+  },
+  {
+    "id": "2026-11",
+    "slug": "polyfunkcni-objekt-letnany",
+    "title": "Bytový dům Letňany",
+    "folder": "2026-11-polyfunkcni-objekt-letnany",
+    "images": [
+      "90-letnany-e1-zepredu-h",
+      "90-letnany-e2-parkoviste-h",
+      "90-letnany-e3-roh-h",
+      "90-letnany-e6-mezi-h"
+    ],
+    "count": 4
+  },
+  {
+    "id": "2026-12",
+    "slug": "relaxacni-centrum-semily",
+    "title": "Relaxacni Centrum Semily",
+    "folder": "2026-12-relaxacni-centrum-semily",
+    "images": [
+      "a-1",
+      "a-2",
+      "a-3",
+      "a-4-zlata",
+      "a-5-zlata",
+      "a-6-zlata",
+      "nadhled-zlata",
+      "sklenik-1---den",
+      "sklenik-1---noc",
+      "sklenik-2---den",
+      "sklenik-2---noc"
+    ],
+    "count": 11
+  },
+  {
+    "id": "2026-13",
+    "slug": "restarace-baroq",
+    "title": "Restarace Baroq",
+    "folder": "2026-13-restarace-baroq",
+    "images": [
+      "baroq1708-1-of-25",
+      "baroq1708-12-of-25",
+      "baroq1708-13-of-25",
+      "baroq1708-14-of-25",
+      "baroq1708-15-of-25",
+      "baroq1708-16-of-25",
+      "baroq1708-17-of-25",
+      "baroq1708-19-of-25",
+      "baroq1708-2-of-25",
+      "baroq1708-20-of-25",
+      "baroq1708-22-of-25",
+      "baroq1708-23-of-25",
+      "baroq1708-26-of-26",
+      "baroq1708-27-of-27",
+      "baroq1708-3-of-25",
+      "baroq1708-4-of-25",
+      "baroq1708-5-of-25",
+      "baroq1708-6-of-25",
+      "baroq1708-8-of-25"
+    ],
+    "count": 19
+  },
+  {
+    "id": "2026-14",
+    "slug": "rodinne-domy-nucice",
+    "title": "Rodinne Domy Nucice",
+    "folder": "2026-14-rodinne-domy-nucice",
+    "images": [
+      "1",
+      "2",
+      "28-a1-c",
+      "28-x2-e",
+      "28-x3-f",
+      "28-x4-e",
+      "28-x5-f",
+      "28-x6-f",
+      "3",
+      "4",
+      "5",
+      "nucicetrojdomy-1",
+      "nucicetrojdomy-10",
+      "nucicetrojdomy-11",
+      "nucicetrojdomy-12",
+      "nucicetrojdomy-14",
+      "nucicetrojdomy-15",
+      "nucicetrojdomy-18",
+      "nucicetrojdomy-2",
+      "nucicetrojdomy-22",
+      "nucicetrojdomy-24",
+      "nucicetrojdomy-25",
+      "nucicetrojdomy-26",
+      "nucicetrojdomy-5",
+      "nucicetrojdomy-7",
+      "porovnani1",
+      "porovnani2"
+    ],
+    "count": 27
+  },
+  {
+    "id": "2026-15",
+    "slug": "rodinne-domy-velke-popovice",
+    "title": "RD Velké Popovice",
+    "folder": "2026-15-rodinne-domy-velke-popovice",
+    "images": [
+      "e-0000-dbda-vp-interiors-np2-bedroom-b-02",
+      "e-0001-dbda-vp-interiors-np2-bedroom-b-01",
+      "e-0002-dbda-vp-interiors-np2-bedroom-a-02",
+      "e-0003-dbda-vp-interiors-np2-bedroom-a-01",
+      "e-0004-dbda-vp-interiors-np2-bathroom-b-02",
+      "e-0005-dbda-vp-interiors-np2-bathroom-b-01",
+      "e-0006-dbda-vp-interiors-np2-bathroom-a-02",
+      "e-0007-dbda-vp-interiors-np2-bathroom-a-01",
+      "e-0008-dbda-vp-interiors-np1-office",
+      "e-0009-dbda-vp-interiors-np1-livingroom-03",
+      "e-0010-dbda-vp-interiors-np1-livingroom-02b",
+      "e-0011-dbda-vp-interiors-np1-livingroom-02",
+      "e-0012-dbda-vp-interiors-np1-livingroom-01",
+      "e-0013-dbda-vp-interiors-np1-kitchen-03",
+      "e-0014-dbda-vp-interiors-np1-kitchen-02",
+      "e-0015-dbda-vp-interiors-np1-kitchen-01",
+      "e-0016-dbda-vp-interiors-np1-hallway-02",
+      "e-0017-dbda-vp-interiors-np1-hallway-01",
+      "e-0018-dbda-vp-interiors-np1-bathroom-03",
+      "e-0019-dbda-vp-interiors-np1-bathroom-02",
+      "e-0020-dbda-vp-interiors-np1-bathroom-01",
+      "e-0021-dbda-vp-interiors-np2-childrensroom-02",
+      "e-dbda-vp-interiors-np2-childrensroom-01",
+      "h3-0001-19-dbda-pool-01",
+      "h3-0002-19-dbda-garage-front-05",
+      "h3-0003-19-dbda-garage-back-06",
+      "h3-0004-19-dbda-garage-04",
+      "h3-0005-19-dbda-fire-03",
+      "pudorysy"
+    ],
+    "count": 29
+  },
+  {
+    "id": "2026-16",
+    "slug": "rodinne-domy-zloukovice",
+    "title": "Rodinný dům Zloukovice",
+    "folder": "2026-16-rodinne-domy-zloukovice",
+    "images": [
+      "d-0000-zloukovice-exterier03-vjezd-close-up-gf",
+      "d-0003-zloukovice-exterier03-vjezd-blize-gf",
+      "d-0007-zloukovice-exterier01c-detail-krajni-gf",
+      "d-0010-zloukovice-exterier01b-kraj-gf",
+      "d-0013-zloukovice-exterier01-dvur-terasa03",
+      "d-0016-zloukovice-exterier01-dvur-terasa02",
+      "d-0019-zloukovice-exterier01-dvur-terasa01",
+      "d-zloukovice-a-livingroom-01d",
+      "d-zloukovice-a-livingroom-02d",
+      "d-zloukovice-a-livingroom-03d",
+      "d-zloukovice-a-livingroom-04d",
+      "d-zloukovice-b-bathroom-01d",
+      "d-zloukovice-b-bathroom-02d",
+      "d-zloukovice-b-bathroom-03d",
+      "d-zloukovice-b-bedroom-01d",
+      "d-zloukovice-b-bedroom-02d",
+      "d-zloukovice-b-bedroom-03d",
+      "d-zloukovice-b-bedroom-04d",
+      "d-zloukovice-b-livingroom-1d",
+      "d-zloukovice-b-livingroom-2d",
+      "d-zloukovice-b-livingroom-3d",
+      "zloukovice-exterier03-vjezd-gf"
+    ],
+    "count": 22
+  },
+  {
+    "id": "2026-17",
+    "slug": "rodinny-dum-bohdalec",
+    "title": "Rodinný dům Bohdalec",
+    "folder": "2026-17-rodinny-dum-bohdalec",
+    "images": [
+      "08-visoid",
+      "pudorys-1np",
+      "pudorys-2np",
+      "pudorys-podkrovi",
+      "visoid-01",
+      "visoid-02",
+      "visoid-03"
+    ],
+    "count": 7
+  },
+  {
+    "id": "2026-18",
+    "slug": "rodinny-dum-brevnov",
+    "title": "Rodinny Dum Brevnov",
+    "folder": "2026-18-rodinny-dum-brevnov",
+    "images": [
+      "01",
+      "02-visoid",
+      "03",
+      "pudorys-1np",
+      "pudorys-2np",
+      "pudorys-podkorvi",
+      "situace"
+    ],
+    "count": 7
+  },
+  {
+    "id": "2026-19",
+    "slug": "rodinny-dum-haratice",
+    "title": "Rodinny Dum Haratice",
+    "folder": "2026-19-rodinny-dum-haratice",
+    "images": [
+      "0202jpeg",
+      "03-2",
+      "cc"
+    ],
+    "count": 3
+  },
+  {
+    "id": "2026-20",
+    "slug": "rodinny-dum-herink",
+    "title": "Rodinny Dum Herink",
+    "folder": "2026-20-rodinny-dum-herink",
+    "images": [
+      "1np",
+      "2np",
+      "3np",
+      "axo1",
+      "axo2",
+      "herink-1-2",
+      "herink-2",
+      "herink-3",
+      "herink-4",
+      "herink-5",
+      "herink-6-2",
+      "herink-int-1",
+      "herink-int-2",
+      "herink-int-3",
+      "herink-int-4",
+      "herink-int-5",
+      "herink-int-6"
+    ],
+    "count": 17
+  },
+  {
+    "id": "2026-21",
+    "slug": "rodinny-dum-petrov",
+    "title": "Rodinny Dum Petrov",
+    "folder": "2026-21-rodinny-dum-petrov",
+    "images": [
+      "chatgpt-pokus",
+      "gemini-pokus",
+      "scene9"
+    ],
+    "count": 3
+  },
+  {
+    "id": "2026-22",
+    "slug": "rodinny-dum-tuchlovice",
+    "title": "RD Tuchlovice",
+    "folder": "2026-22-rodinny-dum-tuchlovice",
+    "images": [
+      "detsky-pokoj1-zmena",
+      "detsky-pokoj2-1-zmena",
+      "detsky-pokoj2-zmena",
+      "koupelna-mala1",
+      "koupelnamala1",
+      "kuchyne-zmena",
+      "loznice-z-postele",
+      "obyvak-zmena",
+      "pudorys-1np",
+      "velka-koupelna-zmena",
+      "velka-koupelna-zmena2"
+    ],
+    "count": 11
+  },
+  {
+    "id": "2026-23",
+    "slug": "rodinny-dum-velke-karlovice",
+    "title": "Rodinny Dum Velke Karlovice",
+    "folder": "2026-23-rodinny-dum-velke-karlovice",
+    "images": [
+      "r-11---photo",
+      "r-11---photo-2",
+      "r-11---photo-3",
+      "r-11---photo-4"
+    ],
+    "count": 4
+  },
+  {
+    "id": "2026-24",
+    "slug": "swisstotel-marianske-lazne",
+    "title": "Swisstotel Mariánské Lázně",
+    "folder": "2026-24-swisstotel-marianske-lazne",
+    "images": [
+      "600927880-122149254182901310-7772478910208418224-njpg",
+      "601809273-122149254716901310-254587455674157441-njpg",
+      "601978607-122149254482901310-8336391643342516576-njpg",
+      "601998666-122149254422901310-4719770117923060311-njpg",
+      "602285193-122149254944901310-8304915784749205895-njpg",
+      "602315488-122149254728901310-4126529887024159828-njpg",
+      "602438582-122149254470901310-1787566042407709167-njpg",
+      "602493428-122149254104901310-6823398293420456444-njpg",
+      "602897422-122149254518901310-2946454976525922674-njpg",
+      "602911155-122149254908901310-264917105410373659-njpg",
+      "602911175-122149255040901310-1036947314003965288-njpg",
+      "603000666-122149254050901310-1362616754486556076-njpg",
+      "603833849-122149254380901310-788510348099530427-njpg",
+      "603844495-122149254176901310-6723510328927159638-njpg",
+      "603845639-122149254554901310-5265408502185271312-njpg",
+      "603923645-122149254116901310-3986487703876929162-njpg",
+      "603923645-122149254902901310-3273069266703952623-njpg",
+      "605223047-122149254722901310-5032621255838568413-njpg",
+      "605714487-122149254212901310-5000572256558807962-njpg",
+      "c129-ho-00-p-2048x1536",
+      "c129-ho-01-p-2048x1536",
+      "c129-ho-02-p-2048x1536",
+      "c129-ho-03-p-2048x1536",
+      "c129-ho-04-p-2048x1536",
+      "c129-ho-06-p-2048x1536",
+      "c129-sl-00-p-2048x1536",
+      "c129-sm-01-p-2048x1536",
+      "c129-sp-00-p-2048x1536",
+      "c129-sp-01-p-2048x1536",
+      "c129-sp-02-p-2048x1536"
+    ],
+    "count": 30
+  },
+  {
+    "id": "2026-25",
+    "slug": "vila-slivenec",
+    "title": "Vila Slivenec",
+    "folder": "2026-25-vila-slivenec",
+    "images": [
+      "06",
+      "06-uprava",
+      "07",
+      "07-uprava",
+      "08",
+      "08-uprava",
+      "25-07-11-lv-rd-novotny-titul",
+      "pudorys-1np",
+      "pudorys-2np"
+    ],
+    "count": 9
+  },
+  {
+    "id": "2026-26",
+    "slug": "vila-ricany",
+    "title": "Vila Ricany",
+    "folder": "2026-26-vila-ricany",
+    "images": [
+      "01",
+      "02",
+      "03",
+      "pudorys-1np",
+      "pudorys-2np"
+    ],
+    "count": 5
+  },
+  {
+    "id": "2026-27",
+    "slug": "zahradni-restaurace-malesice",
+    "title": "Zahradni Restaurace Malesice",
+    "folder": "2026-27-zahradni-restaurace-malesice",
+    "images": [
+      "118-dbda-praha10-malesice-vo-vnutri-d",
+      "118-dbda-praha10-malesice-vo-vnutri-vez-vpravo-d",
+      "118-dbda-praha10-malesice-z-lesa-d",
+      "118-dbda-praha10-malesice-zopredu-e",
+      "6-bonusik-summer-mq-2000-azure-sun-bonus-c",
+      "vizu-1",
+      "vizu-10",
+      "vizu-2",
+      "vizu-3",
+      "vizu-4",
+      "vizu-5",
+      "vizu-6",
+      "vizu-7",
+      "vizu-8",
+      "vizu-9"
+    ],
+    "count": 15
+  }
+]
